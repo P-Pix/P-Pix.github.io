@@ -43,8 +43,7 @@ nav a:hover {
 
 /* Hero */
 .hero {
-  background-color: #696969;
-  background: url('../../assets/pp_b.png') center/cover no-repeat;
+  /* background: url('../../assets/pp_b.png') center/cover no-repeat; */
   color: white;
   text-align: center;
   padding: 100px 20px;
