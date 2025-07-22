@@ -76,6 +76,14 @@ nav a:hover {
   border-radius: 8px;
   text-align: center;
 }
+.services a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+.services a:hover {
+  color: #000;
+}
 
 /* Footer */
 footer {
