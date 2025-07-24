@@ -1,0 +1,121 @@
+# LaTeX temporary files
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+*.bbl
+*.blg
+*.idx
+*.ind
+*.ilg
+*.lof
+*.lot
+*.loa
+*.thm
+*.figlist
+*.makefile
+*.glg
+*.glo
+*.gls
+*.ist
+*.acn
+*.acr
+*.alg
+*.glsdefs
+*.lol
+*.bcf
+*.run.xml
+*.xdv
+
+# LaTeX Beamer
+*.snm
+*.nav
+*.vrb
+
+# LaTeX TikZ & PGF
+*.figlist
+*.makefile
+*.fls
+*.fdb_latexmk
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Node.js (if using build tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Build outputs
+dist/
+build/
+*.min.js
+*.min.css
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+logs/
+*.log
+
+# Cache directories
+.cache/
+.parcel-cache/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Dependencies
+node_modules/
+bower_components/
+
+# Production builds
+/build
+/dist
+
+# Documentation build files (keep source, ignore compiled)
+# docs/*.aux
+# docs/*.log
+# docs/*.out
+# docs/*.toc
+# docs/*.synctex.gz
+
+# Keep the PDF documentation
+!docs/*.pdf
+!docs/*.tex
+!docs/*.md
