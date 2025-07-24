@@ -247,55 +247,6 @@
 
     <section class="section">
       <div class="container">
-        <h2>🏥 Projets Biomédicaux Réalisés</h2>
-        <div class="projects-showcase">
-          <div class="project-item">
-            <h3>DataWare Hospitalier Multi-Sites</h3>
-            <p><strong>Contexte :</strong> Centralisation de données cliniques de 5 établissements</p>
-            <p><strong>Architecture :</strong> PostgreSQL clustered + Redis + ClickHouse analytics</p>
-            <p><strong>Volume :</strong> 50M+ dossiers patients, 2TB données cliniques</p>
-            <p><strong>Performance :</strong> Requêtes analytics <100ms sur 99% des cas</p>
-            <div class="project-tech">
-              <span class="tech-tag">PostgreSQL 15</span>
-              <span class="tech-tag">Redis Cluster</span>
-              <span class="tech-tag">ClickHouse</span>
-              <span class="tech-tag">TimescaleDB</span>
-            </div>
-          </div>
-
-          <div class="project-item">
-            <h3>Base Recherche Génomique</h3>
-            <p><strong>Contexte :</strong> Stockage et analyse de variants génétiques</p>
-            <p><strong>Architecture :</strong> MongoDB sharded + PostgreSQL annotations</p>
-            <p><strong>Volume :</strong> 100K+ génomes, 500M+ variants catalogués</p>
-            <p><strong>Spécificités :</strong> Requêtes géospatiales sur chromosomes</p>
-            <div class="project-tech">
-              <span class="tech-tag">MongoDB 6.0</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">GridFS</span>
-              <span class="tech-tag">Elasticsearch</span>
-            </div>
-          </div>
-
-          <div class="project-item">
-            <h3>Plateforme IoMT (Internet of Medical Things)</h3>
-            <p><strong>Contexte :</strong> Ingestion temps réel de données capteurs</p>
-            <p><strong>Architecture :</strong> TimescaleDB + Redis Streams + InfluxDB</p>
-            <p><strong>Volume :</strong> 10K+ capteurs, 1M+ mesures/seconde</p>
-            <p><strong>Fonctionnalités :</strong> Alertes temps réel, prédictions anomalies</p>
-            <div class="project-tech">
-              <span class="tech-tag">TimescaleDB</span>
-              <span class="tech-tag">InfluxDB</span>
-              <span class="tech-tag">Redis Streams</span>
-              <span class="tech-tag">Apache Kafka</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
         <h2>🔧 Outils & DevOps</h2>
         <div class="devops-tools">
           <div class="tools-category">
@@ -303,38 +254,15 @@
             <ul>
               <li><strong>Docker Compose</strong> - Environnements de développement</li>
               <li><strong>Kubernetes</strong> - Orchestration production</li>
-              <li><strong>Helm Charts</strong> - Déploiements reproductibles</li>
-              <li><strong>Operators</strong> - Gestion automatisée SGBD</li>
             </ul>
           </div>
 
           <div class="tools-category">
             <h3>📊 Monitoring</h3>
             <ul>
-              <li><strong>Prometheus</strong> - Métriques systèmes et applicatives</li>
-              <li><strong>Grafana</strong> - Dashboards de monitoring</li>
-              <li><strong>AlertManager</strong> - Alertes intelligentes</li>
               <li><strong>pgAdmin, MongoDB Compass</strong> - Administration</li>
-            </ul>
-          </div>
-
-          <div class="tools-category">
-            <h3>🔄 CI/CD</h3>
-            <ul>
-              <li><strong>GitLab CI</strong> - Pipelines de déploiement</li>
-              <li><strong>Flyway, Liquibase</strong> - Migrations de schémas</li>
-              <li><strong>Terraform</strong> - Infrastructure as Code</li>
-              <li><strong>Ansible</strong> - Configuration automatisée</li>
-            </ul>
-          </div>
-
-          <div class="tools-category">
-            <h3>💾 Backup & Recovery</h3>
-            <ul>
-              <li><strong>pg_dump, mongodump</strong> - Sauvegardes logiques</li>
-              <li><strong>WAL-E, pgBackRest</strong> - Sauvegarde continue</li>
-              <li><strong>Point-in-time recovery</strong> - Restauration précise</li>
-              <li><strong>Cross-region replication</strong> - Disaster recovery</li>
+              <li><strong>PHPMyAdmin</strong> - Interface web pour MySQL</li>
+              <li><strong>GraphQL</strong> - API flexible pour requêtes</li>
             </ul>
           </div>
         </div>
@@ -362,7 +290,8 @@
 
   <footer>
     <div class="container">
-      &copy; 2025 Guillaume Lemonnier - Tous droits réservés
+      &copy; 2025 Guillaume Lemonnier - Tous droits réservés | 
+      <a href="../../LICENSE" style="color: #6366f1; text-decoration: none;">Licence</a>
     </div>
   </footer>
 

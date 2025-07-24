@@ -62,84 +62,11 @@
               
               <h4>Parallel Computing</h4>
               <ul>
-                <li><strong>MPI (mpi4py)</strong> - Calcul distribué multi-nœuds</li>
+                <li><strong>MPI</strong> - Calcul distribué multi-nœuds</li>
                 <li><strong>OpenMP</strong> - Parallélisation shared-memory</li>
-                <li><strong>CUDA/cuPy</strong> - Accélération GPU NVIDIA</li>
-                <li><strong>Dask</strong> - Parallélisme Python scalable</li>
+                <li><strong>CUDA</strong> - Accélération GPU NVIDIA</li>
               </ul>
             </div>
-          </div>
-
-          <div class="hpc-category">
-            <h3>🏗️ Infrastructure HPC</h3>
-            <div class="tool-details">
-              <h4>Job Schedulers</h4>
-              <ul>
-                <li>SLURM pour clusters académiques</li>
-                <li>PBS/Torque pour calculs batch</li>
-                <li>Kubernetes pour orchestration cloud</li>
-                <li>Docker Swarm pour déploiements légers</li>
-              </ul>
-              
-              <h4>Storage & I/O</h4>
-              <ul>
-                <li><strong>Lustre, GPFS</strong> - Systèmes de fichiers parallèles</li>
-                <li><strong>HDF5</strong> - Format données scientifiques</li>
-                <li><strong>NetCDF</strong> - Données multidimensionnelles</li>
-                <li><strong>Zarr</strong> - Arrays cloud-optimized</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>🧬 Bioinformatique & Genomics</h2>
-        <div class="bioinfo-tools">
-          <div class="bioinfo-section">
-            <h3>🔍 Sequence Analysis</h3>
-            <ul>
-              <li><strong>BLAST+</strong> - Recherche de similarités séquences</li>
-              <li><strong>BWA, Bowtie2</strong> - Alignement reads NGS</li>
-              <li><strong>GATK</strong> - Variant calling best practices</li>
-              <li><strong>SAMtools, BCFtools</strong> - Manipulation fichiers genomiques</li>
-              <li><strong>BEDtools</strong> - Analyse intervals génomiques</li>
-            </ul>
-          </div>
-
-          <div class="bioinfo-section">
-            <h3>📊 Genomics Pipelines</h3>
-            <ul>
-              <li><strong>Nextflow</strong> - Workflows reproductibles scalables</li>
-              <li><strong>Snakemake</strong> - Pipeline management Python-based</li>
-              <li><strong>CWL</strong> - Common Workflow Language</li>
-              <li><strong>Galaxy</strong> - Interface web collaborative</li>
-              <li><strong>Cromwell</strong> - Orchestrateur WDL workflows</li>
-            </ul>
-          </div>
-
-          <div class="bioinfo-section">
-            <h3>🧪 Specialized Analysis</h3>
-            <ul>
-              <li><strong>PLINK</strong> - Analyses d'association GWAS</li>
-              <li><strong>VEP, SnpEff</strong> - Annotation variants</li>
-              <li><strong>ANNOVAR</strong> - Annotation fonctionnelle</li>
-              <li><strong>MultiQC</strong> - Rapports qualité agrégés</li>
-              <li><strong>IGV</strong> - Visualisation génomique interactive</li>
-            </ul>
-          </div>
-
-          <div class="bioinfo-section">
-            <h3>🔬 Single-Cell & Omics</h3>
-            <ul>
-              <li><strong>Scanpy</strong> - Single-cell analysis Python</li>
-              <li><strong>Seurat</strong> - scRNA-seq R package</li>
-              <li><strong>Cell Ranger</strong> - 10X Genomics pipeline</li>
-              <li><strong>DESeq2, edgeR</strong> - Differential expression</li>
-              <li><strong>MetaboAnalyst</strong> - Metabolomics analysis</li>
-            </ul>
           </div>
         </div>
       </div>
@@ -154,18 +81,9 @@
             <div class="r-packages">
               <h4>Core Statistics</h4>
               <ul>
-                <li><strong>tidyverse</strong> - Manipulation données moderne</li>
                 <li><strong>ggplot2</strong> - Visualisations publication-ready</li>
-                <li><strong>dplyr, data.table</strong> - Manipulation efficace</li>
-                <li><strong>Biocondutor</strong> - Packages bioinformatiques</li>
-              </ul>
-              
-              <h4>Advanced Modeling</h4>
-              <ul>
-                <li><strong>survival</strong> - Analyse de survie</li>
-                <li><strong>nlme, lme4</strong> - Modèles mixtes</li>
-                <li><strong>randomForest, caret</strong> - Machine learning</li>
-                <li><strong>meta</strong> - Meta-analyses</li>
+                <li><strong>R Markdown</strong> - Rapport dynamique</li>
+                <li><strong>shiny</strong> - Applications web interactives</li>
               </ul>
             </div>
           </div>
@@ -175,122 +93,16 @@
             <div class="python-packages">
               <h4>Statistical Libraries</h4>
               <ul>
-                <li><strong>statsmodels</strong> - Modèles statistiques classiques</li>
                 <li><strong>scikit-learn</strong> - Machine learning</li>
                 <li><strong>scipy.stats</strong> - Tests statistiques</li>
-                <li><strong>lifelines</strong> - Analyse de survie</li>
               </ul>
               
               <h4>Specialized Tools</h4>
               <ul>
                 <li><strong>pingouin</strong> - Statistiques simplifiées</li>
-                <li><strong>pystan, PyMC</strong> - Statistiques bayésiennes</li>
                 <li><strong>networkx</strong> - Analyse de réseaux</li>
-                <li><strong>biopython</strong> - Bioinformatique Python</li>
               </ul>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>🔬 Imagerie & Microscopy</h2>
-        <div class="imaging-tools">
-          <div class="imaging-category">
-            <h3>🖼️ Image Processing</h3>
-            <ul>
-              <li><strong>ImageJ/FIJI</strong> - Traitement d'images biologiques</li>
-              <li><strong>CellProfiler</strong> - Analyse quantitative cellules</li>
-              <li><strong>QuPath</strong> - Analyse pathologie numérique</li>
-              <li><strong>Icy</strong> - Plateforme bioimage analysis</li>
-              <li><strong>napari</strong> - Visualisation multidimensionnelle</li>
-            </ul>
-          </div>
-
-          <div class="imaging-category">
-            <h3>🔬 Microscopy Software</h3>
-            <ul>
-              <li><strong>Micro-Manager</strong> - Contrôle microscopes</li>
-              <li><strong>CZI, LSM viewers</strong> - Formats propriétaires</li>
-              <li><strong>Imaris</strong> - Analyse 3D/4D avancée</li>
-              <li><strong>MetaMorph</strong> - Acquisition et analyse</li>
-              <li><strong>ZEN</strong> - Suite Zeiss complète</li>
-            </ul>
-          </div>
-
-          <div class="imaging-category">
-            <h3>🧠 Medical Imaging</h3>
-            <ul>
-              <li><strong>3D Slicer</strong> - Visualisation médicale 3D</li>
-              <li><strong>ITK-SNAP</strong> - Segmentation interactive</li>
-              <li><strong>FSL</strong> - Analyse neuroimaging</li>
-              <li><strong>FreeSurfer</strong> - Reconstruction cortex</li>
-              <li><strong>DICOM tools</strong> - Standards imagerie médicale</li>
-            </ul>
-          </div>
-
-          <div class="imaging-category">
-            <h3>⚡ GPU-Accelerated</h3>
-            <ul>
-              <li><strong>CuPy, RAPIDS</strong> - Traitement GPU Python</li>
-              <li><strong>CUDA ImageJ</strong> - Plugins accélérés</li>
-              <li><strong>clEsperanto</strong> - OpenCL image processing</li>
-              <li><strong>ArrayFire</strong> - Computing GPU multi-platform</li>
-              <li><strong>TensorRT</strong> - Inférence deep learning optimisée</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>📋 Gestion de Données & LIMS</h2>
-        <div class="data-management">
-          <div class="dm-section">
-            <h3>🗄️ Laboratory Information Management</h3>
-            <ul>
-              <li><strong>OpenELIS</strong> - LIMS open source</li>
-              <li><strong>LabWare</strong> - Solution enterprise</li>
-              <li><strong>STARLIMS</strong> - Plateforme configurable</li>
-              <li><strong>Benchling</strong> - R&D collaborative platform</li>
-              <li><strong>PerkinElmer LIMS</strong> - Solution intégrée</li>
-            </ul>
-          </div>
-
-          <div class="dm-section">
-            <h3>📊 Electronic Lab Notebooks</h3>
-            <ul>
-              <li><strong>LabArchives</strong> - ELN cloud collaborative</li>
-              <li><strong>RSpace</strong> - Research workspace</li>
-              <li><strong>SciNote</strong> - Protocols et inventory</li>
-              <li><strong>eLabFTW</strong> - ELN open source</li>
-              <li><strong>Jupyter Lab</strong> - Notebooks computationnels</li>
-            </ul>
-          </div>
-
-          <div class="dm-section">
-            <h3>🔄 Data Integration</h3>
-            <ul>
-              <li><strong>Apache Airflow</strong> - Orchestration ETL</li>
-              <li><strong>Talend</strong> - Intégration données enterprise</li>
-              <li><strong>KNIME</strong> - Analytics platform visuelle</li>
-              <li><strong>Galaxy</strong> - Workflow management system</li>
-              <li><strong>Apache NiFi</strong> - Data flow automation</li>
-            </ul>
-          </div>
-
-          <div class="dm-section">
-            <h3>☁️ Cloud Platforms</h3>
-            <ul>
-              <li><strong>Terra (Broad)</strong> - Genomics cloud platform</li>
-              <li><strong>DNAnexus</strong> - Bioinformatics cloud</li>
-              <li><strong>Seven Bridges</strong> - Genomics analysis platform</li>
-              <li><strong>Google Cloud Life Sciences</strong> - GCP bio tools</li>
-              <li><strong>AWS HealthLake</strong> - FHIR data lake</li>
-            </ul>
           </div>
         </div>
       </div>
@@ -305,7 +117,6 @@
             <ul>
               <li><strong>PyTorch</strong> - Recherche et prototypage rapide</li>
               <li><strong>TensorFlow/Keras</strong> - Production et déploiement</li>
-              <li><strong>JAX</strong> - Computing différentiable haute performance</li>
               <li><strong>Hugging Face</strong> - NLP et transformers</li>
               <li><strong>Lightning</strong> - Organisation code PyTorch</li>
             </ul>
@@ -314,33 +125,24 @@
           <div class="ml-framework">
             <h3>🔬 Scientific ML Libraries</h3>
             <ul>
+                <li><strong>RDKit</strong> - Chimie computationnelle</li>
               <li><strong>DeepChem</strong> - Chimie computationnelle</li>
-              <li><strong>MDAnalysis</strong> - Dynamique moléculaire</li>
               <li><strong>PyTorch Geometric</strong> - Graph neural networks</li>
-              <li><strong>DiffEqFlux</strong> - Équations différentielles ML</li>
-              <li><strong>SciANN</strong> - Physics-informed neural networks</li>
             </ul>
           </div>
 
           <div class="ml-framework">
             <h3>🎯 AutoML & Optimization</h3>
             <ul>
-              <li><strong>Optuna</strong> - Hyperparameter optimization</li>
-              <li><strong>Ray Tune</strong> - Distributed hyperparameter tuning</li>
               <li><strong>AutoML-Zero</strong> - Automated ML discovery</li>
-              <li><strong>TPOT</strong> - Genetic programming AutoML</li>
-              <li><strong>MLflow</strong> - ML lifecycle management</li>
             </ul>
           </div>
 
           <div class="ml-framework">
             <h3>🔍 Interpretability & Fairness</h3>
             <ul>
-              <li><strong>SHAP</strong> - Explainable AI values</li>
               <li><strong>LIME</strong> - Local interpretable explanations</li>
-              <li><strong>Captum</strong> - Model interpretability PyTorch</li>
-              <li><strong>Fairlearn</strong> - Fairness assessment et mitigation</li>
-              <li><strong>What-If Tool</strong> - Interactive model probing</li>
+              <li><strong>Tensorboard</strong> - Visualisation des métriques et des graphes</li>
             </ul>
           </div>
         </div>
@@ -352,7 +154,7 @@
         <h2>🔬 Projets Scientifiques Réalisés</h2>
         <div class="scientific-projects">
           <div class="project-highlight">
-            <h3>� Détection d'Hypovigilance</h3>
+            <h3>🔍 Détection d'Hypovigilance</h3>
             <p><strong>Objectif :</strong> Analyse de signaux physiologiques pour détecter l'hypovigilance</p>
             <p><strong>Stack technique :</strong> Python + PyTorch + Pandas + Matplotlib + Jupyter</p>
             <div class="project-metrics">
@@ -392,7 +194,7 @@
           </div>
 
           <div class="project-highlight">
-            <h3>� Méta-descripteurs de Graphes</h3>
+            <h3>🔍 Méta-descripteurs de Graphes</h3>
             <p><strong>Objectif :</strong> Caractérisation automatique de datasets de graphes complexes</p>
             <p><strong>Stack technique :</strong> Python + NetworkX + Pandas + Git + Jupyter</p>
             <div class="project-metrics">
@@ -411,39 +213,6 @@
             </div>
           </div>
         </div>
-                <p>50K images/jour<br>384-well plates</p>
-              </div>
-              <div class="metric-item">
-                <h4>Features</h4>
-                <p>200+ paramètres/cellule<br>ML classification automatique</p>
-              </div>
-              <div class="metric-item">
-                <h4>Impact</h4>
-                <p>5+ hits thérapeutiques<br>2 brevets déposés</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-highlight">
-            <h3>📊 Meta-Analysis Framework</h3>
-            <p><strong>Objectif :</strong> Synthèse automatisée littérature biomédicale</p>
-            <p><strong>Stack technique :</strong> R + Shiny + Docker + PubMed API</p>
-            <div class="project-metrics">
-              <div class="metric-item">
-                <h4>Corpus</h4>
-                <p>100K+ publications<br>Extraction NLP automatisée</p>
-              </div>
-              <div class="metric-item">
-                <h4>Analytics</h4>
-                <p>Forest plots interactifs<br>Bias assessment automatique</p>
-              </div>
-              <div class="metric-item">
-                <h4>Usage</h4>
-                <p>50+ méta-analyses publiées<br>IF moyen >8</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -454,20 +223,9 @@
           <div class="practice-item">
             <h3>♻️ Reproducible Science</h3>
             <ul>
-              <li>Version control avec Git-LFS pour gros fichiers</li>
               <li>Containerisation Docker/Singularity</li>
               <li>Documentation workflows automatisée</li>
               <li>Environment management (conda, pip)</li>
-            </ul>
-          </div>
-
-          <div class="practice-item">
-            <h3>🔐 Data Security & Compliance</h3>
-            <ul>
-              <li>Chiffrement end-to-end données sensibles</li>
-              <li>Audit trails complets</li>
-              <li>GDPR/HIPAA compliance by design</li>
-              <li>Access control granulaire (RBAC)</li>
             </ul>
           </div>
 
@@ -477,7 +235,6 @@
               <li>Profiling systématique code critique</li>
               <li>Parallélisation intelligente</li>
               <li>Memory-efficient algorithms</li>
-              <li>Cloud-burst pour pics de charge</li>
             </ul>
           </div>
 
@@ -485,7 +242,6 @@
             <h3>🤝 Collaboration & Sharing</h3>
             <ul>
               <li>APIs RESTful documentées (OpenAPI)</li>
-              <li>Standards FAIR data principles</li>
               <li>Notebooks reproductibles partagés</li>
               <li>Continuous integration scientifique</li>
             </ul>
@@ -499,11 +255,11 @@
         <h2>🎓 Formation & Veille Technologique</h2>
         <p>
           <strong>Formation continue</strong> sur les dernières avancées en calcul scientifique, 
-          participation à des conférences spécialisées (SciPy, ISMB, PSB).
+          participation à des conférences spécialisées (SciPy).
         </p>
         <p>
           <strong>Contribution open source</strong> à des projets communautaires 
-          et développement d'outils spécialisés pour la recherche biomédicale.
+          et développement d'outils spécialisés.
         </p>
         <p>
           <strong>Mentoring</strong> d'équipes de recherche pour adopter les meilleures 
@@ -515,7 +271,11 @@
 
   <footer>
     <div class="container">
-      &copy; 2025 Guillaume Lemonnier - Tous droits réservés
+      <p>&copy; 2025 Guillaume Lemonnier - Tous droits réservés</p>
+      <p style="font-size: 0.9rem; margin-top: 10px;">
+        Ce code est protégé par licence. Toute utilisation nécessite l'attribution à l'auteur. 
+        <a href="../../LICENSE" style="color: var(--secondary-color);">Voir la licence</a>
+      </p>
     </div>
   </footer>
 
