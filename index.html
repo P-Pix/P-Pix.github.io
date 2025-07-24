@@ -3,84 +3,157 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Guillaume Lemonnier - Informaticien spécialisé en IA & Data Science appliquée à la santé. Expert en modélisation d'algorithmes d'apprentissage automatique et développement de solutions biomédicales." />
+  <meta name="keywords" content="Guillaume Lemonnier, IA, Intelligence Artificielle, Data Science, Santé, Biomédical, Python, PyTorch, Machine Learning" />
+  <meta name="author" content="Guillaume Lemonnier" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Guillaume Lemonnier - IA & Data Science Santé" />
+  <meta property="og:description" content="Informaticien spécialisé en IA & Data Science appliquée à la santé" />
+  <meta property="og:url" content="https://p-pix.github.io" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Guillaume Lemonnier - IA & Data Science Santé" />
+  <meta name="twitter:description" content="Informaticien spécialisé en IA & Data Science appliquée à la santé" />
+  
   <title>Guillaume Lemonnier - IA & Data Science Santé</title>
   <link rel="stylesheet" href="./src/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <div class="container">
-      <nav>
-        <a href="index.html">Accueil</a>
-        <a href="src/html/projets.html">Projets</a>
-        <a href="src/html/cv.html">CV</a>
-        <a href="src/html/asso.html">Associatif</a>
-        <a href="src/html/contact.html">Contact</a>
-    </nav>
+      <nav role="navigation" aria-label="Navigation principale">
+        <a href="#about" aria-label="Aller à la section Profil">Profil</a>
+        <a href="#skills" aria-label="Aller à la section Compétences">Compétences</a>
+        <a href="src/html/projets.html" aria-label="Voir mes projets">Projets</a>
+        <a href="src/html/cv.html" aria-label="Voir mon CV">CV</a>
+        <a href="src/html/associatif.html" aria-label="Voir mon engagement associatif">Associatif</a>
+        <a href="#contact" aria-label="Me contacter">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <section class="hero" style="background: url('./assets/pp_b.png') center/cover no-repeat;">
-    <div class="container">
-      <h1>Guillaume LEMONNIER</h1>
-      <p>Informaticien spécialisé<br>IA & Data Science appliquée à la santé</p>
-    </div>
-  </section>
+  <main>
+    <section class="hero" role="banner">
+      <div class="container">
+        <h1>Guillaume LEMONNIER</h1>
+        <p>Informaticien spécialisé<br>IA & Data Science appliquée à la santé</p>
+      </div>
+    </section>
 
-  <section id="about" class="section">
-    <div class="container">
-      <h2>Profil</h2>
-      <p>
-        Informaticien diplômé d'un Master en Intelligence Artificielle et Sciences des Données appliquées à la santé, je conçois des solutions data-driven pour des problématiques biomédicales, cliniques ou pharmaceutiques.
-      </p>
-      <p>
-        Mes compétences couvrent la modélisation d'algorithmes d'apprentissage automatique (supervisé, non supervisé), le traitement de données de santé hétérogènes (biologiques, cliniques, temporelles) ainsi que le développement de pipelines complets en Python, SQL Web et Docker.
-      </p>
-      <p>
-        J'ai acquis une solide expérience en recherche via plusieurs stages en laboratoire (GREYC, CERMN, COMETE), et je travaille avec des outils comme PyTorch, scikit-learn, NetworkX ou MySQL.
-      </p>
-      <p>
-        Passionné également par le developpement logiciel, j'ai réalisé plusieurs projets personnels et professionnels en C++, Java et Python, ainsi que des interfaces graphiques avec GTKmm et Swing mais également des applications web en HTML, JavaScript et PHP.
-      </p>
-      <p>
-        Je suis également apte à travailler en équipe et à communiquer efficacement avec des interlocuteurs variés (scientifiques, cliniciens, patients).
-      </p>
-      <p>
-        Autonome, rigoureux et curieux, je m'investis également dans des projets associatifs et interdisciplinaires liés à l'innovation en santé.
-      </p>
-    </div>
-  </section>
+    <section id="about" class="section">
+      <div class="container">
+        <h2>Profil Professionnel</h2>
+        <p>
+          <strong>Étudiant en Master 2 d'informatique parcours Intelligence Artificielle, Sciences des Données et Santé</strong> à l'Université de Caen Normandie, je développe des compétences solides en IA et data science avec une ouverture sur les applications dans le domaine de la santé.
+        </p>
+        <p>
+          Mes compétences techniques couvrent la <strong>programmation en C++ et Python</strong>, avec une préférence pour Python dans les domaines mathématiques et IA, et C++ pour le développement d'interfaces et d'applications performantes nécessitant une exécution rapide.
+        </p>
+        <p>
+          J'ai une <strong>forte expérience en développement de moteurs graphiques</strong> et d'applications natives, 
+          avec plusieurs projets personnels incluant des moteurs 2D/3D, des applications de dessin, la visualisation 
+          du problème de N-corps, et des interfaces graphiques avancées. Je développe aussi des applications web 
+          comme un cloud personnel sécurisé et des outils utilitaires.
+        </p>
+        <p>
+          Dans le domaine de l'IA, j'ai travaillé sur des projets concrets comme la <strong>détection d'hypovigilance</strong>, 
+          la classification automatique de codes médicaux CCAM, l'<strong>analyse et prédiction de la bourse</strong> avec RNN et LLM, 
+          et l'analyse de données de graphes complexes. Plus récemment, j'explore la transformation de vidéos en environnements 3D.
+        </p>
+        <p>
+          Polyvalent et autodidacte, je maîtrise de nombreux langages (C++, Python, Java, JavaScript, PHP) et m'adapte rapidement aux nouvelles technologies selon les besoins des projets.
+        </p>
+        <p>
+          Mon engagement dans la <strong>représentation étudiante</strong> (Vice-Président AFNEUS, élu dans 4 conseils universitaires) démontre mes capacités de leadership et ma vision pour l'amélioration des formations universitaires.
+        </p>
+      </div>
+    </section>
 
-  <section id="skills" class="section">
-    <div class="container">
-      <h2>Compétences</h2>
-      <ul class="services">
-        <a href="#"><li>🧠 Modélisation IA (PyTorch, scikit-learn)</li></a>
-        <a href="#"><li>📊 Analyse de données biomédicales (Pandas, NumPy)</li></a>
-        <a href="#"><li>📈 Visualisation de données (Matplotlib, Seaborn)</li></a>
-        <a href="#"><li>🔬 Recherche, prototypage et actualité de la recherche</li></a>
-        <a href="#"><li>📚 Documentation et rédaction scientifique</li></a>
-        <a href="#"><li>💾 Bases de données (MySQL, MongoDB)</li></a>
-        <a href="#"><li>🌐 Développement web (HTML, JavaScript, PHP)</li></a>
-        <a href="#"><li>🔧 Développement logiciel et interface utilisateur (C++, Java, Python)</li></a>
-        <a href="#"><li>🧪 Outils scientifiques (Jupyter, Git, Docker)</li></a>
-      </ul>
-    </div>
-  </section>
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Expertises Techniques</h2>
+        <ul class="services">
+          <a href="src/html/modelisation_ia.html" aria-label="Modélisation IA"><li>🧠 <strong>Modélisation IA</strong><br>PyTorch, scikit-learn, TensorFlow</li></a>
+          <a href="src/html/analyse_donnees_biomedicales.html" aria-label="Analyse de données"><li>📊 <strong>Analyse de Données</strong><br>Pandas, NumPy, données pluridisciplinaire</li></a>
+          <a href="src/html/visualisation_donnees.html" aria-label="Visualisation de données"><li>📈 <strong>Visualisation de Données</strong><br>Matplotlib, Seaborn, Plotly</li></a>
+          <a href="src/html/recherche_prototypage.html" aria-label="Recherche et prototypage"><li>🔬 <strong>Recherche & Prototypage</strong><br>Innovation, veille technologique</li></a>
+          <a href="src/html/redaction_documentation.html" aria-label="Documentation scientifique"><li>📚 <strong>Documentation Scientifique</strong><br>Rédaction, communication technique</li></a>
+          <a href="src/html/bases_donnees_sql.html" aria-label="Bases de données"><li>💾 <strong>Bases de Données</strong><br>MySQL, MongoDB, PostgreSQL</li></a>
+          <a href="src/html/developpement_web.html" aria-label="Développement web"><li>🌐 <strong>Développement Web</strong><br>HTML, JavaScript, PHP, React</li></a>
+          <a href="src/html/developpement_logiciel.html" aria-label="Développement logiciel"><li>🔧 <strong>Développement Logiciel</strong><br>C++, Java, Python, interfaces UI</li></a>
+          <a href="src/html/outils_scientifiques.html" aria-label="Outils scientifiques"><li>🧪 <strong>Outils Scientifiques</strong><br>Jupyter, Git, Docker, Linux</li></a>
+        </ul>
+      </div>
+    </section>
 
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>Email : <a href="mailto:lemonnier.guillaume.pro@gmail.com">lemonnier.guillaume.pro@gmail.com</a></p>
-      <p>GitHub : <a href="https://github.com/P-Pix/Presentation" target="_blank">https://github.com/P-Pix/Presentation</a></p>
-      <p>LinkedIn : <a href="https://linkedin.com/in/lemonnier-guillaume" target="_blank">https://www.linkedin.com/in/lemonnier-guillaume/</a></p>
-    </div>
-  </section>
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Me Contacter</h2>
+        <p>Email : <a href="mailto:lemonnier.guillaume.pro@gmail.com" aria-label="Envoyer un email">lemonnier.guillaume.pro@gmail.com</a></p>
+        <p>GitHub : <a href="https://github.com/P-Pix" target="_blank" rel="noopener noreferrer" aria-label="Visiter mon profil GitHub">https://github.com/P-Pix</a></p>
+        <p>LinkedIn : <a href="https://linkedin.com/in/lemonnier-guillaume" target="_blank" rel="noopener noreferrer" aria-label="Visiter mon profil LinkedIn">https://www.linkedin.com/in/lemonnier-guillaume/</a></p>
+        
+        <div class="cv-download-section">
+          <p>📄 <strong>Télécharger mon CV</strong></p>
+          <p>
+            <a href="assets/pdf/cv.pdf" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Télécharger CV PDF">
+              Télécharger le CV (PDF)
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <div class="container">
-      &copy; 2025 Guillaume Lemonnier - Tous droits réservés
+      <p>&copy; 2025 Guillaume Lemonnier - Tous droits réservés</p>
+      <p style="font-size: 0.9rem; margin-top: 10px;">
+        Ce code est protégé par licence. Toute utilisation nécessite l'attribution à l'auteur. 
+        <a href="LICENSE" style="color: var(--secondary-color);">Voir la licence</a>
+      </p>
     </div>
   </footer>
+
+  <script src="src/js/script.js"></script>
+
+  <style>
+    .cv-download-section {
+      text-align: center;
+      background: var(--primary-color);
+      color: white;
+      padding: 25px;
+      border-radius: 15px;
+      margin-top: 30px;
+    }
+
+    .cv-download-section strong {
+      color: white;
+    }
+
+    .cv-download-section .btn {
+      background: white;
+      color: var(--primary-color);
+      margin-top: 10px;
+      font-weight: 600;
+      border: 2px solid white;
+    }
+
+    .cv-download-section .btn:hover {
+      background: var(--secondary-color);
+      color: white;
+      border-color: var(--secondary-color);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+  </style>
 </body>
-<script src="src/js/script.js"></script>
 </html>

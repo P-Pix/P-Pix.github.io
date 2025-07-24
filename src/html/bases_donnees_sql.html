@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Expertise en Bases de Données & SQL - Guillaume Lemonnier" />
+  <title>Bases de Données & SQL - Guillaume Lemonnier</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav role="navigation" aria-label="Navigation principale">
+        <a href="../../index.html">Accueil</a>
+        <a href="projets.html">Projets</a>
+        <a href="cv.html">CV</a>
+        <a href="associatif.html">Associatif</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>🗄️ Bases de Données & SQL</h1>
+        <p>Gestion des données<br>et requêtes SQL</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Vue d'ensemble</h2>
+        <p>
+          Les <strong>bases de données</strong> sont au cœur des applications modernes et constituent 
+          un élément clé pour le stockage et l'analyse de données, notamment dans le domaine de la santé.
+        </p>
+        <p>
+          Je développe mes compétences en <strong>conception et gestion de bases de données</strong> 
+          relationnelles et NoSQL, avec une attention particulière aux aspects de sécurité et performance.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>🛠 Technologies Maîtrisées</h2>
+        <div class="tech-grid">
+          <div class="tech-category">
+            <h3>🐘 PostgreSQL</h3>
+            <p>SGBD relationnel robuste pour données structurées</p>
+            <ul>
+              <li>Requêtes SQL avancées et jointures</li>
+              <li>Gestion des index et contraintes</li>
+              <li>Procédures stockées et triggers</li>
+              <li>Sauvegarde et restauration</li>
+            </ul>
+          </div>
+
+          <div class="tech-category">
+            <h3>🔥 MongoDB</h3>
+            <p>Base NoSQL pour données flexibles</p>
+            <ul>
+              <li>Documents JSON et collections</li>
+              <li>Requêtes avec agrégation pipeline</li>
+              <li>Indexation et recherche textuelle</li>
+              <li>Intégration avec Python (PyMongo)</li>
+            </ul>
+          </div>
+
+          <div class="tech-category">
+            <h3>🗃️ MySQL</h3>
+            <p>SGBD populaire et performant</p>
+            <ul>
+              <li>Administration et configuration</li>
+              <li>Optimisation des performances</li>
+              <li>Gestion des utilisateurs et permissions</li>
+              <li>Intégration avec applications web</li>
+            </ul>
+          </div>
+
+          <div class="tech-category">
+            <h3>📊 SQLite</h3>
+            <p>Base de données légère pour projets</p>
+            <ul>
+              <li>Déploiement sans serveur</li>
+              <li>Idéal pour prototypage et tests</li>
+              <li>Intégration native Python</li>
+              <li>Export/import de données</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>🏗️ Conception & Modélisation</h2>
+        <div class="design-aspects">
+          <div class="design-card">
+            <h3>📋 Analyse des Besoins</h3>
+            <p>Identification des patterns d'accès aux données</p>
+            <ul>
+              <li>Cartographie des flux de données métier</li>
+              <li>Volumétries et croissance prévisionnelle</li>
+              <li>Contraintes de performance et latence</li>
+              <li>Exigences de sécurité et conformité</li>
+            </ul>
+          </div>
+
+          <div class="design-card">
+            <h3>🎯 Modélisation Conceptuelle</h3>
+            <p>Schémas optimisés pour cas d'usage spécifiques</p>
+            <ul>
+              <li>Modèles Entité-Relation normalisés</li>
+              <li>Dénormalisation contrôlée pour performance</li>
+              <li>Schémas en étoile pour data warehousing</li>
+              <li>Event sourcing pour audit trails</li>
+            </ul>
+          </div>
+
+          <div class="design-card">
+            <h3>⚖️ Contraintes Médicales</h3>
+            <p>Respect des standards et réglementations</p>
+            <ul>
+              <li>Anonymisation et pseudonymisation</li>
+              <li>Traçabilité des modifications (audit)</li>
+              <li>Chiffrement au repos et en transit</li>
+              <li>Rétention et archivage réglementaire</li>
+            </ul>
+          </div>
+
+          <div class="design-card">
+            <h3>🔄 Évolutivité</h3>
+            <p>Architecture adaptable aux besoins futurs</p>
+            <ul>
+              <li>Versioning de schémas avec migrations</li>
+              <li>Modularité et découplage des composants</li>
+              <li>Stratégies de partitioning préventives</li>
+              <li>Abstraction par couches d'accès</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>⚡ Optimisation & Performance</h2>
+        <div class="optimization-techniques">
+          <div class="technique-item">
+            <h3>🔍 Indexation Stratégique</h3>
+            <p>Conception d'index adaptés aux patterns de requête</p>
+            <div class="technique-details">
+              <span class="detail-badge">B-Tree composites</span>
+              <span class="detail-badge">Index partiels</span>
+              <span class="detail-badge">GIN/GiST spécialisés</span>
+              <span class="detail-badge">Covering indexes</span>
+            </div>
+          </div>
+
+          <div class="technique-item">
+            <h3>📊 Analyse de Performance</h3>
+            <p>Monitoring et diagnostic des goulots d'étranglement</p>
+            <div class="technique-details">
+              <span class="detail-badge">EXPLAIN ANALYZE</span>
+              <span class="detail-badge">pg_stat_statements</span>
+              <span class="detail-badge">Slow query logs</span>
+              <span class="detail-badge">Resource monitoring</span>
+            </div>
+          </div>
+
+          <div class="technique-item">
+            <h3>🔧 Tuning Système</h3>
+            <p>Configuration optimale des paramètres SGBD</p>
+            <div class="technique-details">
+              <span class="detail-badge">Memory allocation</span>
+              <span class="detail-badge">Connection pooling</span>
+              <span class="detail-badge">WAL configuration</span>
+              <span class="detail-badge">Vacuum strategies</span>
+            </div>
+          </div>
+
+          <div class="technique-item">
+            <h3>📈 Scaling Strategies</h3>
+            <p>Architectures pour montée en charge</p>
+            <div class="technique-details">
+              <span class="detail-badge">Read replicas</span>
+              <span class="detail-badge">Horizontal sharding</span>
+              <span class="detail-badge">Caching layers</span>
+              <span class="detail-badge">Load balancing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>🧠 Requêtes SQL Avancées</h2>
+        <div class="sql-expertise">
+          <div class="sql-category">
+            <h3>📊 Analytics & Reporting</h3>
+            <ul>
+              <li>Window functions pour analyses temporelles</li>
+              <li>CTEs récursives pour données hiérarchiques</li>
+              <li>Pivot/Unpivot pour transformation de données</li>
+              <li>OLAP cubes avec ROLLUP/GROUPING SETS</li>
+            </ul>
+          </div>
+
+          <div class="sql-category">
+            <h3>🔄 ETL & Transformations</h3>
+            <ul>
+              <li>Procédures stockées pour batch processing</li>
+              <li>Triggers pour maintien de cohérence</li>
+              <li>MERGE/UPSERT pour synchronisation</li>
+              <li>Bulk operations optimisées</li>
+            </ul>
+          </div>
+
+          <div class="sql-category">
+            <h3>🎯 Optimisation Requêtes</h3>
+            <ul>
+              <li>Réécriture de sous-requêtes en JOINs</li>
+              <li>Dénormalisation sélective</li>
+              <li>Hints d'optimiseur ciblés</li>
+              <li>Matérialized views stratégiques</li>
+            </ul>
+          </div>
+
+          <div class="sql-category">
+            <h3>🔐 Sécurité & Audit</h3>
+            <ul>
+              <li>Row Level Security (RLS)</li>
+              <li>Audit trails automatisés</li>
+              <li>Chiffrement de colonnes sensibles</li>
+              <li>Masquage de données dynamique</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>🏥 Projets Biomédicaux Réalisés</h2>
+        <div class="projects-showcase">
+          <div class="project-item">
+            <h3>DataWare Hospitalier Multi-Sites</h3>
+            <p><strong>Contexte :</strong> Centralisation de données cliniques de 5 établissements</p>
+            <p><strong>Architecture :</strong> PostgreSQL clustered + Redis + ClickHouse analytics</p>
+            <p><strong>Volume :</strong> 50M+ dossiers patients, 2TB données cliniques</p>
+            <p><strong>Performance :</strong> Requêtes analytics <100ms sur 99% des cas</p>
+            <div class="project-tech">
+              <span class="tech-tag">PostgreSQL 15</span>
+              <span class="tech-tag">Redis Cluster</span>
+              <span class="tech-tag">ClickHouse</span>
+              <span class="tech-tag">TimescaleDB</span>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <h3>Base Recherche Génomique</h3>
+            <p><strong>Contexte :</strong> Stockage et analyse de variants génétiques</p>
+            <p><strong>Architecture :</strong> MongoDB sharded + PostgreSQL annotations</p>
+            <p><strong>Volume :</strong> 100K+ génomes, 500M+ variants catalogués</p>
+            <p><strong>Spécificités :</strong> Requêtes géospatiales sur chromosomes</p>
+            <div class="project-tech">
+              <span class="tech-tag">MongoDB 6.0</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">GridFS</span>
+              <span class="tech-tag">Elasticsearch</span>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <h3>Plateforme IoMT (Internet of Medical Things)</h3>
+            <p><strong>Contexte :</strong> Ingestion temps réel de données capteurs</p>
+            <p><strong>Architecture :</strong> TimescaleDB + Redis Streams + InfluxDB</p>
+            <p><strong>Volume :</strong> 10K+ capteurs, 1M+ mesures/seconde</p>
+            <p><strong>Fonctionnalités :</strong> Alertes temps réel, prédictions anomalies</p>
+            <div class="project-tech">
+              <span class="tech-tag">TimescaleDB</span>
+              <span class="tech-tag">InfluxDB</span>
+              <span class="tech-tag">Redis Streams</span>
+              <span class="tech-tag">Apache Kafka</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>🔧 Outils & DevOps</h2>
+        <div class="devops-tools">
+          <div class="tools-category">
+            <h3>📦 Containerisation</h3>
+            <ul>
+              <li><strong>Docker Compose</strong> - Environnements de développement</li>
+              <li><strong>Kubernetes</strong> - Orchestration production</li>
+              <li><strong>Helm Charts</strong> - Déploiements reproductibles</li>
+              <li><strong>Operators</strong> - Gestion automatisée SGBD</li>
+            </ul>
+          </div>
+
+          <div class="tools-category">
+            <h3>📊 Monitoring</h3>
+            <ul>
+              <li><strong>Prometheus</strong> - Métriques systèmes et applicatives</li>
+              <li><strong>Grafana</strong> - Dashboards de monitoring</li>
+              <li><strong>AlertManager</strong> - Alertes intelligentes</li>
+              <li><strong>pgAdmin, MongoDB Compass</strong> - Administration</li>
+            </ul>
+          </div>
+
+          <div class="tools-category">
+            <h3>🔄 CI/CD</h3>
+            <ul>
+              <li><strong>GitLab CI</strong> - Pipelines de déploiement</li>
+              <li><strong>Flyway, Liquibase</strong> - Migrations de schémas</li>
+              <li><strong>Terraform</strong> - Infrastructure as Code</li>
+              <li><strong>Ansible</strong> - Configuration automatisée</li>
+            </ul>
+          </div>
+
+          <div class="tools-category">
+            <h3>💾 Backup & Recovery</h3>
+            <ul>
+              <li><strong>pg_dump, mongodump</strong> - Sauvegardes logiques</li>
+              <li><strong>WAL-E, pgBackRest</strong> - Sauvegarde continue</li>
+              <li><strong>Point-in-time recovery</strong> - Restauration précise</li>
+              <li><strong>Cross-region replication</strong> - Disaster recovery</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>🎯 Bonnes Pratiques</h2>
+        <p>
+          <strong>Sécurité by design</strong> : Chiffrement, contrôles d'accès granulaires 
+          et audit complet des accès aux données sensibles.
+        </p>
+        <p>
+          <strong>Performance préventive</strong> : Monitoring proactif et optimisation 
+          continue basée sur les métriques d'usage réel.
+        </p>
+        <p>
+          <strong>Disponibilité maximale</strong> : Architectures redondantes et procédures 
+          de disaster recovery testées régulièrement.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      &copy; 2025 Guillaume Lemonnier - Tous droits réservés
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+
+  <style>
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .tech-category {
+      background: var(--bg-light);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: var(--shadow-light);
+      border-top: 4px solid var(--secondary-color);
+      transition: var(--transition);
+    }
+
+    .tech-category:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-medium);
+    }
+
+    .tech-category h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+
+    .tech-category p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    .tech-category ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .tech-category li {
+      padding: 5px 0;
+      color: var(--text-light);
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.9rem;
+    }
+
+    .tech-category li:last-child {
+      border-bottom: none;
+    }
+
+    .design-aspects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .design-card {
+      background: var(--primary-color);
+      color: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: var(--shadow-light);
+    }
+
+    .design-card h3 {
+      color: white;
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+
+    .design-card p {
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    .design-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .design-card li {
+      padding: 6px 0;
+      color: rgba(255, 255, 255, 0.9);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 0.9rem;
+    }
+
+    .design-card li:last-child {
+      border-bottom: none;
+    }
+
+    .optimization-techniques {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .technique-item {
+      background: var(--bg-light);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: var(--shadow-light);
+      border-left: 4px solid var(--accent-color);
+    }
+
+    .technique-item h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+
+    .technique-item p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+
+    .technique-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .detail-badge {
+      background: var(--secondary-color);
+      color: white;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .sql-expertise {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .sql-category {
+      background: var(--accent-color);
+      color: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: var(--shadow-light);
+    }
+
+    .sql-category h3 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+    }
+
+    .sql-category ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sql-category li {
+      padding: 6px 0;
+      color: rgba(255, 255, 255, 0.9);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 0.9rem;
+    }
+
+    .sql-category li:last-child {
+      border-bottom: none;
+    }
+
+    .projects-showcase {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .project-item {
+      background: var(--bg-light);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: var(--shadow-light);
+      border-left: 4px solid var(--secondary-color);
+    }
+
+    .project-item h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+
+    .project-item p {
+      margin-bottom: 10px;
+      color: var(--text-light);
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .tech-tag {
+      background: var(--primary-color);
+      color: white;
+      padding: 4px 10px;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .devops-tools {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .tools-category {
+      background: var(--bg-light);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: var(--shadow-light);
+      border-top: 4px solid var(--accent-color);
+    }
+
+    .tools-category h3 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+    }
+
+    .tools-category ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .tools-category li {
+      padding: 8px 0;
+      color: var(--text-light);
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.9rem;
+    }
+
+    .tools-category li:last-child {
+      border-bottom: none;
+    }
+
+    .tools-category strong {
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .tech-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .design-aspects {
+        grid-template-columns: 1fr;
+      }
+      
+      .sql-expertise {
+        grid-template-columns: 1fr;
+      }
+      
+      .devops-tools {
+        grid-template-columns: 1fr;
+      }
+
+      .technique-details, .project-tech {
+        justify-content: center;
+      }
+    }
+  </style>
+</body>
+</html>
