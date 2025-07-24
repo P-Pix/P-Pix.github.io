@@ -30,19 +30,6 @@ Toute utilisation de ce code doit inclure :
 
 ## 🚀 Fonctionnalités
 
-### Design & UX
-- ✅ Design moderne et professionnel
-- ✅ Interface responsive (mobile, tablette, desktop)
-- ✅ Animations fluides et transitions CSS
-- ✅ Typographie optimisée (Google Fonts - Inter)
-- ✅ Accessibilité web (ARIA labels, navigation clavier)
-
-### Performance
-- ✅ Chargement optimisé des images
-- ✅ CSS organisé avec variables personnalisées
-- ✅ JavaScript moderne avec debouncing
-- ✅ SEO optimisé (meta tags, structure sémantique)
-
 ### Contenu
 - 🏠 **Page d'accueil** : Présentation et compétences clés
 - 📁 **Portfolio projets** : 40+ projets GitHub authentiques organisés par catégories
@@ -61,14 +48,6 @@ Toute utilisation de ce code doit inclure :
 - 🗄️ **Bases de Données SQL** : PostgreSQL, MySQL, optimisation
 - 📝 **Rédaction Documentation** : LaTeX, Markdown, documentation technique
 - 🔍 **Recherche & Prototypage** : Méthodologies, veille technologique
-
-## 🛠 Technologies Utilisées
-
-- **Frontend** : HTML5, CSS3, JavaScript (ES6+)
-- **Styling** : CSS Grid, Flexbox, CSS Custom Properties
-- **Fonts** : Google Fonts (Inter)
-- **SEO** : Meta tags, Open Graph, Schema.org
-- **Accessibilité** : ARIA labels, navigation clavier
 
 ## 📁 Structure du Projet
 
@@ -163,30 +142,6 @@ P-Pix.github.io/
 - 📍 **Localisation** : Normandie, France (télétravail possible)
 - 🕒 **Réponse** : Sous 24-48h pour les demandes professionnelles
 - 💼 **Domaines d'intérêt** : Santé numérique, IA biomédicale, recherche
-
-## � Statistiques du Projet
-
-### Métriques Techniques
-
-- 📄 **Pages** : 14 pages HTML (1 accueil + 9 expertises + 4 sections)
-- 🎨 **Lignes CSS** : 2000+ lignes de styles optimisés
-- ⚡ **JavaScript** : ES6+ moderne avec optimisations
-- 🖼️ **Assets** : Images optimisées, polices web
-- 📱 **Responsive** : 3 breakpoints (mobile, tablette, desktop)
-
-### Contenu du Site
-
-- 🚀 **Projets présentés** : 40+ repositories GitHub authentiques
-- 🎓 **Domaines d'expertise** : 9 spécialisations détaillées
-- 📊 **Technologies** : 15+ langages et frameworks
-- 🔬 **Projets de recherche** : 10+ projets académiques documentés
-
-### Metrics de Performance
-
-- ⚡ **Lighthouse Score** : Performance 95+, Accessibilité 98+
-- 📱 **Mobile-friendly** : 100% responsive design
-- 🔍 **SEO Score** : 95+ avec métadonnées complètes
-- ♿ **Accessibilité** : WCAG 2.1 AA compliance
 
 ## ⚖️ Licence
 
