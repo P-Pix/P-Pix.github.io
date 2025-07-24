@@ -48,8 +48,8 @@ Toute utilisation de ce code doit inclure :
 - 📁 **Portfolio projets** : 40+ projets GitHub authentiques organisés par catégories
 - 📄 **CV interactif** : Formation et expérience détaillées avec timeline
 - 🎯 **Pages d'expertise** : 9 domaines de compétences détaillés
-- � **Engagement associatif** : Représentation étudiante et leadership
-- �📧 **Contact** : Coordonnées et disponibilité
+- ✨ **Engagement associatif** : Représentation étudiante et leadership
+- 📧 **Contact** : Coordonnées et disponibilité
 
 ### Pages d'Expertise Spécialisées
 - 🧠 **Modélisation IA** : PyTorch, TensorFlow, Machine Learning
@@ -375,7 +375,7 @@ Le site est automatiquement déployé sur **GitHub Pages** :
 - 🔍 **SEO Score** : 95+ avec métadonnées complètes
 - ♿ **Accessibilité** : WCAG 2.1 AA compliance
 
-## �📝 Licence
+## ⚖️ Licence
 
 © 2025 Guillaume Lemonnier - Tous droits réservés
 
