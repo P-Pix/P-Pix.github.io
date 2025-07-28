@@ -31,14 +31,22 @@ Toute utilisation de ce code doit inclure :
 ## 🚀 Fonctionnalités
 
 ### Contenu
+
 - 🏠 **Page d'accueil** : Présentation et compétences clés
-- 📁 **Portfolio projets** : 40+ projets GitHub authentiques organisés par catégories
+- 📁 **Portfolio projets** : 40+ projets GitHub + 3 projets web interactifs
 - 📄 **CV interactif** : Formation et expérience détaillées avec timeline
 - 🎯 **Pages d'expertise** : 9 domaines de compétences détaillés
 - ✨ **Engagement associatif** : Représentation étudiante et leadership
 - 📧 **Contact** : Coordonnées et disponibilité
 
+### Projets Web Interactifs
+
+- 🗺️ **Carte Twisto** : Transport public de Caen (Leaflet.js + données GTFS)
+- 🏪 **Marchés de Caen** : Géolocalisation des marchés hebdomadaires
+- 💰 **Dashboard Budget CUCLM** : Analyse de 19M€ sur 10 communes (Plotly.js)
+
 ### Pages d'Expertise Spécialisées
+
 - 🧠 **Modélisation IA** : PyTorch, TensorFlow, Machine Learning
 - 📊 **Analyse de Données Biomédicales** : Signal processing, statistiques
 - 🔬 **Outils Scientifiques** : NumPy, SciPy, R, calcul haute performance
@@ -53,57 +61,90 @@ Toute utilisation de ce code doit inclure :
 
 ```
 P-Pix.github.io/
-├── index.html              # Page d'accueil
-├── README.md               # Documentation
-├── LICENSE                 # Licence avec attribution obligatoire
-├── assets/                 # Images et ressources
-│   ├── pp_b.png           # Photo de profil (arrière-plan)
-│   ├── pp.png             # Photo de profil
-│   └── pp_d.png           # Photo de profil (dark)
-└── src/
+├── index.html                           # Page d'accueil principale
+├── README.md                            # Documentation du projet
+├── LICENSE                              # Licence avec attribution obligatoire
+├── ARCHITECTURE.md                      # Documentation architecture
+├── budget-cuclm-optimized-final.json   # Données budget CUCLM (19M€)
+├── assets/                              # Ressources statiques
+│   ├── images/                          # Images du site
+│   │   ├── pp.png                       # Photo de profil principale
+│   │   ├── pp_b.png                     # Photo de profil (variant)
+│   │   └── pp_d.png                     # Photo de profil (dark)
+│   └── pdf/
+│       └── cv.pdf                       # CV téléchargeable
+└── src/                                 # Code source
     ├── css/
-    │   └── style.css      # Styles principaux
-    ├── html/
-    │   ├── contact.html           # Page de contact
-    │   ├── cv.html                # CV interactif
-    │   ├── projets.html           # Portfolio projets
-    │   ├── associatif.html        # Engagement associatif
-    │   ├── modelisation_ia.html   # Expertise IA & ML
-    │   ├── analyse_donnees_biomedicales.html  # Biomédicale
-    │   ├── outils_scientifiques.html          # Calcul scientifique
-    │   ├── visualisation_donnees.html         # Data viz
-    │   ├── developpement_logiciel.html        # Software dev
-    │   ├── developpement_web.html             # Web dev
-    │   ├── bases_donnees_sql.html             # Bases de données
-    │   ├── redaction_documentation.html       # Documentation
-    │   └── recherche_prototypage.html         # R&D
-    └── js/
-        └── script.js      # Interactions JavaScript
+    │   └── style.css                    # Styles CSS principaux
+    ├── html/                            # Pages HTML
+    │   ├── projets.html                 # Portfolio projets
+    │   ├── cv.html                      # CV interactif
+    │   ├── associatif.html              # Engagement associatif
+    │   ├── contact.html                 # Page de contact
+    │   ├── carte-twisto.html            # Carte transport Twisto
+    │   ├── marches-caen.html            # Carte marchés de Caen
+    │   ├── budget-cuclm.html            # Dashboard budget CUCLM
+    │   ├── modelisation_ia.html         # Expertise IA & ML
+    │   ├── analyse_donnees_biomedicales.html  # Analyse biomédicale
+    │   ├── visualisation_donnees.html   # Visualisation de données
+    │   ├── recherche_prototypage.html   # Recherche & prototypage
+    │   ├── redaction_documentation.html # Documentation technique
+    │   ├── bases_donnees_sql.html       # Bases de données
+    │   ├── developpement_web.html       # Développement web
+    │   ├── developpement_logiciel.html  # Développement logiciel
+    │   └── outils_scientifiques.html    # Outils scientifiques
+    └── js/                              # Scripts JavaScript
+        ├── script.js                    # Script commun
+        ├── carte-twisto.js              # Logique carte Twisto
+        ├── marches-caen.js              # Logique carte marchés
+        ├── budget-cuclm-updated.js      # Dashboard budget CUCLM
+        ├── twisto-stops-data.json       # Données arrêts Twisto
+        └── marches-caen-data.json       # Données marchés Caen
 ```
 
 ## 📊 Projets & Technologies
 
-### Projets Authentiques Intégrés (40+ repositories)
+### 🎯 Projets Interactifs Intégrés
 
-**🧠 Intelligence Artificielle & Machine Learning**
+Le site présente **3 projets web interactifs** développés avec des données réelles :
+
+- **🗺️ Carte Interactive Twisto** : Visualisation des arrêts de transport public
+  - Technologies : Leaflet.js, données GTFS temps réel
+  - Données : 500+ arrêts géolocalisés du réseau Twisto
+
+- **🏪 Carte des Marchés de Caen** : Localisation des marchés hebdomadaires  
+  - Technologies : Leaflet.js, données municipales
+  - Données : Marchés géolocalisés avec horaires et spécialités
+
+- **💰 Dashboard Budget CUCLM** : Analyse budgétaire interactive
+  - Technologies : Plotly.js, Leaflet.js, données financières réelles
+  - Données : Budget 2020 de 19M€ sur 10 communes, 7 fonctions
+
+### 🚀 Portfolio GitHub (40+ Repositories)
+
+#### 🧠 Intelligence Artificielle & Machine Learning
+
 - Classification d'états de vigilance (EEG + ML)
 - Prédiction financière via RNN et analyse journalistique
 - Systèmes de recommandation personnalisés
 - Analyse de réseaux sociaux et détection de communautés
 
-**🔬 Recherche & Science des Données**
+#### 🔬 Recherche & Science des Données
+
 - Méta-descripteurs de graphes complexes
 - Analyse prédictive en biomédical
 - Modélisation de données physiologiques
 - Traitement et analyse de signaux
 
-**💻 Développement Logiciel**
+#### 💻 Développement Logiciel
+
 - Applications de bureau (C++, Java)
 - Jeux 2D/3D (OpenGL, SDL2)
 - Outils de développement et utilitaires
 - Architecture logicielle moderne
 
-**🌐 Technologies Web**
+#### 🌐 Technologies Web
+
 - Applications full-stack
 - Sites web responsives
 - API REST et intégrations
@@ -112,6 +153,7 @@ P-Pix.github.io/
 ### Stack Technique Principale
 
 **Langages de programmation :**
+
 - 🐍 **Python** (PyTorch, Pandas, NumPy, SciPy)
 - ⚡ **C++** (Applications haute performance, OpenGL)
 - ☕ **Java** (Applications entreprise, Android)
@@ -121,6 +163,7 @@ P-Pix.github.io/
 - 📝 **LaTeX** (Publications, documentation scientifique)
 
 **Frameworks & Outils :**
+
 - 🧠 **IA/ML** : PyTorch, TensorFlow, scikit-learn, Hugging Face
 - 📊 **Data Science** : Jupyter, Pandas, Matplotlib, Plotly, Seaborn
 - 🌐 **Web** : HTML5, CSS3, JavaScript, frameworks modernes
@@ -153,6 +196,6 @@ Voir le fichier [LICENSE](LICENSE) pour les conditions complètes d'utilisation.
 
 ---
 
-*Dernière mise à jour : Janvier 2025*  
-*Version : 3.0*  
-*Build : Production Ready*
+*Dernière mise à jour : Juillet 2025*  
+*Version : 4.0*  
+*Build : Production Ready - Optimisé*
