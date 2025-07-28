@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "source": "Test minimal",
+    "population_totale": 100000,
+    "budget_total": 1000000
+  },
+  "fonctions": [
+    {
+      "code": 0,
+      "nom": "Services généraux",
+      "depenses": 100000,
+      "recettes": 50000,
+      "total": 150000,
+      "montant_total": 150000,
+      "solde": -50000,
+      "description": "Test"
+    },
+    {
+      "code": 9,
+      "nom": "Impositions",
+      "depenses": 0,
+      "recettes": 200000,
+      "total": 200000,
+      "montant_total": 200000,
+      "solde": 200000,
+      "description": "Test"
+    }
+  ],
+  "villes": [
+    {
+      "nom": "Caen",
+      "coordonnees": [49.1829, -0.3707],
+      "population": 50000,
+      "proportion": 50.0,
+      "total_depenses": 50000,
+      "total_recettes": 125000,
+      "total_budget": 175000,
+      "solde_global": 75000,
+      "budget_par_habitant": 3500,
+      "fonctions": {
+        "0": {
+          "nom": "Services généraux",
+          "depenses": 50000,
+          "recettes": 25000,
+          "total": 75000,
+          "solde": -25000
+        },
+        "9": {
+          "nom": "Impositions",
+          "depenses": 0,
+          "recettes": 100000,
+          "total": 100000,
+          "solde": 100000
+        }
+      }
+    },
+    {
+      "nom": "Hérouville",
+      "coordonnees": [49.2014, -0.3361],
+      "population": 50000,
+      "proportion": 50.0,
+      "total_depenses": 50000,
+      "total_recettes": 125000,
+      "total_budget": 175000,
+      "solde_global": 75000,
+      "budget_par_habitant": 3500,
+      "fonctions": {
+        "0": {
+          "nom": "Services généraux",
+          "depenses": 50000,
+          "recettes": 25000,
+          "total": 75000,
+          "solde": -25000
+        },
+        "9": {
+          "nom": "Impositions",
+          "depenses": 0,
+          "recettes": 100000,
+          "total": 100000,
+          "solde": 100000
+        }
+      }
+    }
+  ]
+}

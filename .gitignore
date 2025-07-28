@@ -119,3 +119,5 @@ bower_components/
 !docs/*.pdf
 !docs/*.tex
 !docs/*.md
+
+pre-data

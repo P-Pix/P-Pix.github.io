@@ -1,0 +1,465 @@
+{
+  "metadata": {
+    "source": "CUCLM Budget 2020 - Analyse Optimisée",
+    "date_generation": "2025-07-28 14:07:18",
+    "nb_communes": 10,
+    "budget_total": 19102072.32,
+    "methode": "Extraction CSV avec analyse des vraies communes CUCLM"
+  },
+  "villes": [
+    {
+      "nom": "Caen",
+      "coordonnees": [
+        49.1829,
+        -0.3707
+      ],
+      "population": 105512,
+      "budget": {
+        "total": 9965391.98,
+        "recettes": 220000.0,
+        "depenses": 9745391.98,
+        "delta": -9525391.98
+      },
+      "fonctions": [
+        {
+          "code": 5,
+          "nom": "Interventions sociales et santé",
+          "recettes": 0.0,
+          "depenses": 629561.34,
+          "total": 629561.34
+        },
+        {
+          "code": 8,
+          "nom": "Aménagement et services urbains",
+          "recettes": 0.0,
+          "depenses": 8313610.5600000005,
+          "total": 8313610.5600000005
+        },
+        {
+          "code": 0,
+          "nom": "Services généraux",
+          "recettes": 0.0,
+          "depenses": 556150.05,
+          "total": 556150.05
+        },
+        {
+          "code": 7,
+          "nom": "Logement",
+          "recettes": 220000.0,
+          "depenses": 246070.03,
+          "total": 466070.03
+        }
+      ],
+      "stats": {
+        "budget_par_habitant": 94.44794885889758,
+        "nb_lignes_budget": 36
+      }
+    },
+    {
+      "nom": "Ouistreham",
+      "coordonnees": [
+        49.2742,
+        -0.2581
+      ],
+      "population": 9451,
+      "budget": {
+        "total": 997263.4299999999,
+        "recettes": 0.0,
+        "depenses": 997263.4299999999,
+        "delta": -997263.4299999999
+      },
+      "fonctions": [
+        {
+          "code": 8,
+          "nom": "Aménagement et services urbains",
+          "recettes": 0.0,
+          "depenses": 956401.05,
+          "total": 956401.05
+        },
+        {
+          "code": 0,
+          "nom": "Services généraux",
+          "recettes": 0.0,
+          "depenses": 40862.380000000005,
+          "total": 40862.380000000005
+        }
+      ],
+      "stats": {
+        "budget_par_habitant": 105.51935562374351,
+        "nb_lignes_budget": 13
+      }
+    },
+    {
+      "nom": "Lion-sur-Mer",
+      "coordonnees": [
+        49.3001,
+        -0.3189
+      ],
+      "population": 2503,
+      "budget": {
+        "total": 1395232.6300000001,
+        "recettes": 211400.0,
+        "depenses": 1183832.6300000001,
+        "delta": -972432.6300000001
+      },
+      "fonctions": [
+        {
+          "code": 8,
+          "nom": "Aménagement et services urbains",
+          "recettes": 0.0,
+          "depenses": 958171.36,
+          "total": 958171.36
+        },
+        {
+          "code": 0,
+          "nom": "Services généraux",
+          "recettes": 0.0,
+          "depenses": 18486.809999999998,
+          "total": 18486.809999999998
+        },
+        {
+          "code": 6,
+          "nom": "Famille",
+          "recettes": 211400.0,
+          "depenses": 207174.46,
+          "total": 418574.45999999996
+        }
+      ],
+      "stats": {
+        "budget_par_habitant": 557.424143028366,
+        "nb_lignes_budget": 17
+      }
+    },
+    {
+      "nom": "Louvigny",
+      "coordonnees": [
+        49.1656,
+        -0.4042
+      ],
+      "population": 2850,
+      "budget": {
+        "total": 293183.23,
+        "recettes": 0.0,
+        "depenses": 293183.23,
+        "delta": -293183.23
+      },
+      "fonctions": [
+        {
+          "code": 8,
+          "nom": "Aménagement et services urbains",
+          "recettes": 0.0,
+          "depenses": 291193.43,
+          "total": 291193.43
+        },
+        {
+          "code": 0,
+          "nom": "Services généraux",
+          "recettes": 0.0,
+          "depenses": 1989.8,
+          "total": 1989.8
+        }
+      ],
+      "stats": {
+        "budget_par_habitant": 102.87130877192982,
+        "nb_lignes_budget": 9
+      }
+    },
+    {
+      "nom": "Ifs",
+      "coordonnees": [
+        49.1433,
+        -0.3522
+      ],
+      "population": 11881,
+      "budget": {
+        "total": 3539245.46,
+        "recettes": 100000.0,
+        "depenses": 3439245.46,
+        "delta": -3339245.46
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "nom": "Services généraux",
+          "recettes": 0.0,
+          "depenses": 12579.5,
+          "total": 12579.5
+        },
+        {
+          "code": 8,
+          "nom": "Aménagement et services urbains",
+          "recettes": 0.0,
+          "depenses": 266539.13,
+          "total": 266539.13
+        },
+        {
+          "code": 4,
+          "nom": "Sports et jeunesse",
+          "recettes": 100000.0,
+          "depenses": 100000.0,
+          "total": 200000.0
+        },
+        {
+          "code": 3,
+          "nom": "Culture - Vie sociale",
+          "recettes": 0.0,
+          "depenses": 3060126.83,
+          "total": 3060126.83
+        }
+      ],
+      "stats": {
+        "budget_par_habitant": 297.8912094941503,
+        "nb_lignes_budget": 13
+      }
+    },
+    {
+      "nom": "Mondeville",
+      "coordonnees": [
+        49.1664,
+        -0.3139
+      ],
+      "population": 9312,
+      "budget": {
+        "total": 1481499.7600000002,
+        "recettes": 74325.12,
+        "depenses": 1407174.6400000001,
+        "delta": -1332849.52
+      },
+      "fonctions": [
+        {
+          "code": 8,
+          "nom": "Aménagement et services urbains",
+          "recettes": 0.0,
+          "depenses": 1329819.0899999999,
+          "total": 1329819.0899999999
+        },
+        {
+          "code": 0,
+          "nom": "Services généraux",
+          "recettes": 0.0,
+          "depenses": 3030.43,
+          "total": 3030.43
+        },
+        {
+          "code": 7,
+          "nom": "Logement",
+          "recettes": 74325.12,
+          "depenses": 74325.12,
+          "total": 148650.24
+        }
+      ],
+      "stats": {
+        "budget_par_habitant": 159.09576460481102,
+        "nb_lignes_budget": 22
+      }
+    },
+    {
+      "nom": "Hermanville-sur-Mer",
+      "coordonnees": [
+        49.2869,
+        -0.3075
+      ],
+      "population": 3021,
+      "budget": {
+        "total": 209078.3,
+        "recettes": 0.0,
+        "depenses": 209078.3,
+        "delta": -209078.3
+      },
+      "fonctions": [
+        {
+          "code": 8,
+          "nom": "Aménagement et services urbains",
+          "recettes": 0.0,
+          "depenses": 198221.24,
+          "total": 198221.24
+        },
+        {
+          "code": 5,
+          "nom": "Interventions sociales et santé",
+          "recettes": 0.0,
+          "depenses": 1.94,
+          "total": 1.94
+        },
+        {
+          "code": 0,
+          "nom": "Services généraux",
+          "recettes": 0.0,
+          "depenses": 10855.119999999999,
+          "total": 10855.119999999999
+        }
+      ],
+      "stats": {
+        "budget_par_habitant": 69.20830850711684,
+        "nb_lignes_budget": 9
+      }
+    },
+    {
+      "nom": "Benouville",
+      "coordonnees": [
+        49.2394,
+        -0.2881
+      ],
+      "population": 2069,
+      "budget": {
+        "total": 567792.6699999999,
+        "recettes": 108000.0,
+        "depenses": 459792.67,
+        "delta": -351792.67
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "nom": "Services généraux",
+          "recettes": 0.0,
+          "depenses": 30.0,
+          "total": 30.0
+        },
+        {
+          "code": 8,
+          "nom": "Aménagement et services urbains",
+          "recettes": 0.0,
+          "depenses": 351762.67,
+          "total": 351762.67
+        },
+        {
+          "code": 7,
+          "nom": "Logement",
+          "recettes": 108000.0,
+          "depenses": 108000.0,
+          "total": 216000.0
+        }
+      ],
+      "stats": {
+        "budget_par_habitant": 274.4285500241662,
+        "nb_lignes_budget": 8
+      }
+    },
+    {
+      "nom": "Colleville-Montgomery",
+      "coordonnees": [
+        49.2844,
+        -0.2892
+      ],
+      "population": 2507,
+      "budget": {
+        "total": 567292.0,
+        "recettes": 36000.0,
+        "depenses": 531292.0,
+        "delta": -495292.0
+      },
+      "fonctions": [
+        {
+          "code": 8,
+          "nom": "Aménagement et services urbains",
+          "recettes": 0.0,
+          "depenses": 491518.0,
+          "total": 491518.0
+        },
+        {
+          "code": 0,
+          "nom": "Services généraux",
+          "recettes": 0.0,
+          "depenses": 3774.0,
+          "total": 3774.0
+        },
+        {
+          "code": 7,
+          "nom": "Logement",
+          "recettes": 36000.0,
+          "depenses": 36000.0,
+          "total": 72000.0
+        }
+      ],
+      "stats": {
+        "budget_par_habitant": 226.28320702034304,
+        "nb_lignes_budget": 10
+      }
+    },
+    {
+      "nom": "Mathieu",
+      "coordonnees": [
+        49.2503,
+        -0.3981
+      ],
+      "population": 2387,
+      "budget": {
+        "total": 86092.86,
+        "recettes": 0.0,
+        "depenses": 86092.86,
+        "delta": -86092.86
+      },
+      "fonctions": [
+        {
+          "code": 5,
+          "nom": "Interventions sociales et santé",
+          "recettes": 0.0,
+          "depenses": 827.54,
+          "total": 827.54
+        },
+        {
+          "code": 8,
+          "nom": "Aménagement et services urbains",
+          "recettes": 0.0,
+          "depenses": 66169.44,
+          "total": 66169.44
+        },
+        {
+          "code": 0,
+          "nom": "Services généraux",
+          "recettes": 0.0,
+          "depenses": 19095.879999999997,
+          "total": 19095.879999999997
+        }
+      ],
+      "stats": {
+        "budget_par_habitant": 36.067390029325516,
+        "nb_lignes_budget": 9
+      }
+    }
+  ],
+  "fonctions": [
+    {
+      "code": 0,
+      "nom": "Services généraux",
+      "total": 666853.9700000001
+    },
+    {
+      "code": 3,
+      "nom": "Culture - Vie sociale",
+      "total": 3060126.83
+    },
+    {
+      "code": 4,
+      "nom": "Sports et jeunesse",
+      "total": 200000.0
+    },
+    {
+      "code": 5,
+      "nom": "Interventions sociales et santé",
+      "total": 630390.82
+    },
+    {
+      "code": 6,
+      "nom": "Famille",
+      "total": 418574.45999999996
+    },
+    {
+      "code": 7,
+      "nom": "Logement",
+      "total": 902720.27
+    },
+    {
+      "code": 8,
+      "nom": "Aménagement et services urbains",
+      "total": 13223405.97
+    }
+  ],
+  "statistiques": {
+    "budget_total": 19102072.32,
+    "nb_communes": 10,
+    "total_depenses": 18352347.200000003,
+    "total_recettes": 749725.12,
+    "commune_principale": "Caen"
+  }
+}

@@ -1,0 +1,2338 @@
+{
+  "fonctions": [
+    {
+      "code": 0,
+      "nom": "Services généraux",
+      "montant_total": 408209541.75,
+      "montant_depenses": 147772296.82,
+      "montant_recettes": 260437244.93,
+      "nombre_lignes": 654,
+      "principaux_chapitres": [
+        {
+          "nom": "IMPOSITIONS DIRECTES",
+          "montant": 97389600.0
+        },
+        {
+          "nom": "EMPRUNTS ET DETTES ASSIMILEES",
+          "montant": 69180900.0
+        },
+        {
+          "nom": "DOTATIONS, FONDS DIVERS ET RESERVES",
+          "montant": 56370069.97
+        },
+        {
+          "nom": "IMPOTS ET TAXES",
+          "montant": 49994286.0
+        },
+        {
+          "nom": "DOTATIONS, SUBVENTIONS ET PARTICIPATIONS",
+          "montant": 40485632.0
+        }
+      ],
+      "principales_natures": [
+        {
+          "nom": "TAXES FONCIERES ET D'HABITATION",
+          "montant": 67561576.0
+        },
+        {
+          "nom": "EMPRUNTS EN EUROS",
+          "montant": 58293400.0
+        },
+        {
+          "nom": "ATTRIBUTION DE COMPENSATION",
+          "montant": 34480153.0
+        },
+        {
+          "nom": "EXCEDENTS DE FONCTIONNEMENT CAPITALISES",
+          "montant": 33573251.06
+        },
+        {
+          "nom": "SOLDE D'EXECUTION DE LA SECTION D'INVESTISSEMENT REPORTE",
+          "montant": 28195412.27
+        }
+      ]
+    },
+    {
+      "code": 1,
+      "nom": "Sécurité et salubrité publiques",
+      "montant_total": 14715765.0,
+      "montant_depenses": 14583165.0,
+      "montant_recettes": 132600.0,
+      "nombre_lignes": 48,
+      "principaux_chapitres": [
+        {
+          "nom": "AUTRES CHARGES DE GESTION COURANTE",
+          "montant": 14254061.0
+        },
+        {
+          "nom": "CHARGES DE PERSONNEL ET FRAIS ASSIMILES",
+          "montant": 270500.0
+        },
+        {
+          "nom": "DOTATIONS, SUBVENTIONS ET PARTICIPATIONS",
+          "montant": 92600.0
+        },
+        {
+          "nom": "IMMOBILISATIONS EN COURS",
+          "montant": 40000.0
+        },
+        {
+          "nom": "PRODUITS DES SERVICES, DU DOMAINE ET VENTES DIVERSES",
+          "montant": 40000.0
+        }
+      ],
+      "principales_natures": [
+        {
+          "nom": "SERVICE INCENDIE",
+          "montant": 14254061.0
+        },
+        {
+          "nom": "REMUNERATION PRINCIPALE ",
+          "montant": 138000.0
+        },
+        {
+          "nom": "AUTRES COMMUNES",
+          "montant": 92600.0
+        },
+        {
+          "nom": "AUTRES INDEMNITES ",
+          "montant": 54500.0
+        },
+        {
+          "nom": "AUTRES PRESTATIONS DE SERVICES",
+          "montant": 40000.0
+        }
+      ]
+    },
+    {
+      "code": 2,
+      "nom": "Enseignement - Formation",
+      "montant_total": 2356969.0,
+      "montant_depenses": 782285.0,
+      "montant_recettes": 1574684.0,
+      "nombre_lignes": 40,
+      "principaux_chapitres": [
+        {
+          "nom": "SUBVENTIONS D'INVESTISSEMENT",
+          "montant": 1574684.0
+        },
+        {
+          "nom": "ENSI3",
+          "montant": 400000.0
+        },
+        {
+          "nom": "Chaire universitaire",
+          "montant": 200000.0
+        },
+        {
+          "nom": "SUBVENTIONS D'EQUIPEMENT VERSEES",
+          "montant": 165000.0
+        },
+        {
+          "nom": "AUTRES CHARGES DE GESTION COURANTE",
+          "montant": 6998.0
+        }
+      ],
+      "principales_natures": [
+        {
+          "nom": "ETAT ET ETABLISSEMENTS NATIONAUX",
+          "montant": 1324684.0
+        },
+        {
+          "nom": "REGIONS",
+          "montant": 250000.0
+        },
+        {
+          "nom": "FRAIS D'ETUDES",
+          "montant": 205287.0
+        },
+        {
+          "nom": "BIENS MOBILIERS, MATERIEL ET ETUDES",
+          "montant": 200000.0
+        },
+        {
+          "nom": "CONSTRUCTIONS",
+          "montant": 195000.0
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "nom": "Culture - Vie sociale",
+      "montant_total": 33396015.709999997,
+      "montant_depenses": 28796916.24,
+      "montant_recettes": 4599099.47,
+      "nombre_lignes": 480,
+      "principaux_chapitres": [
+        {
+          "nom": "CHARGES DE PERSONNEL ET FRAIS ASSIMILES",
+          "montant": 20257296.0
+        },
+        {
+          "nom": "AUTRES CHARGES DE GESTION COURANTE",
+          "montant": 4928830.0
+        },
+        {
+          "nom": "PRODUITS DES SERVICES, DU DOMAINE ET VENTES DIVERSES",
+          "montant": 2708096.0
+        },
+        {
+          "nom": "CHARGES A CARACTERE GENERAL",
+          "montant": 1424095.96
+        },
+        {
+          "nom": "Equipements sportifs-Rehabilition",
+          "montant": 1397342.6400000001
+        }
+      ],
+      "principales_natures": [
+        {
+          "nom": "REMUNERATION PRINCIPALE ",
+          "montant": 9908000.0
+        },
+        {
+          "nom": "AUTRES ETABLISSEMENTS PUBLICS LOCAUX",
+          "montant": 3460000.0
+        },
+        {
+          "nom": "COTISATIONS AUX CAISSES DE RETRAITES",
+          "montant": 3281000.0
+        },
+        {
+          "nom": "AUTRES INDEMNITES ",
+          "montant": 2330000.0
+        },
+        {
+          "nom": "COTISATIONS A L'U.R.S.S.A.F.",
+          "montant": 2080000.0
+        }
+      ]
+    },
+    {
+      "code": 4,
+      "nom": "Sports et jeunesse",
+      "montant_total": 470273.0,
+      "montant_depenses": 334583.0,
+      "montant_recettes": 135690.0,
+      "nombre_lignes": 54,
+      "principaux_chapitres": [
+        {
+          "nom": "AUTRES CHARGES DE GESTION COURANTE",
+          "montant": 228600.0
+        },
+        {
+          "nom": "Construction RAM Ifs",
+          "montant": 200000.0
+        },
+        {
+          "nom": "DOTATIONS, SUBVENTIONS ET PARTICIPATIONS",
+          "montant": 35690.0
+        },
+        {
+          "nom": "CHARGES A CARACTERE GENERAL",
+          "montant": 5983.0
+        },
+        {
+          "nom": "CHARGES DE PERSONNEL ET FRAIS ASSIMILES",
+          "montant": 0.0
+        }
+      ],
+      "principales_natures": [
+        {
+          "nom": "ETAT",
+          "montant": 200000.0
+        },
+        {
+          "nom": "DEPENSES",
+          "montant": 100000.0
+        },
+        {
+          "nom": "RECETTES",
+          "montant": 100000.0
+        },
+        {
+          "nom": "AUTRES",
+          "montant": 35690.0
+        },
+        {
+          "nom": "AUTRES CONTRIBUTIONS OBLIGATOIRES",
+          "montant": 28600.0
+        }
+      ]
+    },
+    {
+      "code": 5,
+      "nom": "Interventions sociales et santé",
+      "montant_total": 19061424.17,
+      "montant_depenses": 16476218.64,
+      "montant_recettes": 2585205.5300000003,
+      "nombre_lignes": 464,
+      "principaux_chapitres": [
+        {
+          "nom": "CHARGES DE PERSONNEL ET FRAIS ASSIMILES",
+          "montant": 8752720.0
+        },
+        {
+          "nom": "SUBVENTIONS D'EQUIPEMENT VERSEES",
+          "montant": 2062800.0
+        },
+        {
+          "nom": "AUTRES IMMOBILISATIONS FINANCIERES",
+          "montant": 1133000.0
+        },
+        {
+          "nom": "CHARGES A CARACTERE GENERAL",
+          "montant": 1073961.44
+        },
+        {
+          "nom": "AUTRES CHARGES DE GESTION COURANTE",
+          "montant": 938983.0
+        }
+      ],
+      "principales_natures": [
+        {
+          "nom": "REMUNERATION PRINCIPALE ",
+          "montant": 4472000.0
+        },
+        {
+          "nom": "BATIMENTS ET INSTALLATIONS",
+          "montant": 3150711.31
+        },
+        {
+          "nom": "COTISATIONS AUX CAISSES DE RETRAITES",
+          "montant": 1471000.0
+        },
+        {
+          "nom": "AUTRES INDEMNITES ",
+          "montant": 1175500.0
+        },
+        {
+          "nom": "FRAIS D'ETUDES",
+          "montant": 970223.97
+        }
+      ]
+    },
+    {
+      "code": 6,
+      "nom": "Famille",
+      "montant_total": 43933315.88,
+      "montant_depenses": 33083471.44,
+      "montant_recettes": 10849844.44,
+      "nombre_lignes": 308,
+      "principaux_chapitres": [
+        {
+          "nom": "MOHO",
+          "montant": 8957272.21
+        },
+        {
+          "nom": "IMMOBILISATIONS CORPORELLES",
+          "montant": 7420784.36
+        },
+        {
+          "nom": "SUBVENTIONS D'EQUIPEMENT VERSEES",
+          "montant": 4633342.0
+        },
+        {
+          "nom": "AUTRES IMMOBILISATIONS FINANCIERES",
+          "montant": 4507734.0
+        },
+        {
+          "nom": "SUBVENTIONS D'INVESTISSEMENT",
+          "montant": 3823960.0
+        }
+      ],
+      "principales_natures": [
+        {
+          "nom": "IMMEUBLES DE RAPPORT",
+          "montant": 8957272.21
+        },
+        {
+          "nom": "TERRAINS NUS",
+          "montant": 5800000.0
+        },
+        {
+          "nom": "BATIMENTS ET INSTALLATIONS",
+          "montant": 5431192.0
+        },
+        {
+          "nom": "AVANCES REMBOURSABLES",
+          "montant": 3507734.0
+        },
+        {
+          "nom": "Subventions aux entreprises",
+          "montant": 2500000.0
+        }
+      ]
+    },
+    {
+      "code": 7,
+      "nom": "Logement",
+      "montant_total": 34165052.120000005,
+      "montant_depenses": 29024636.66,
+      "montant_recettes": 5140415.460000001,
+      "nombre_lignes": 359,
+      "principaux_chapitres": [
+        {
+          "nom": "IMPOSITIONS DIRECTES",
+          "montant": 31354306.0
+        },
+        {
+          "nom": "CHARGES DE PERSONNEL ET FRAIS ASSIMILES",
+          "montant": 9436140.0
+        },
+        {
+          "nom": "AUTRES CHARGES DE GESTION COURANTE",
+          "montant": 8302890.0
+        },
+        {
+          "nom": "IMMOBILISATIONS CORPORELLES",
+          "montant": 4181872.08
+        },
+        {
+          "nom": "DOTATIONS, SUBVENTIONS ET PARTICIPATIONS",
+          "montant": 2748600.0
+        }
+      ],
+      "principales_natures": [
+        {
+          "nom": "Taxe d'enlevement des ordures menageres et assimilees",
+          "montant": 31354306.0
+        },
+        {
+          "nom": "AUTRES CONTRIBUTIONS OBLIGATOIRES",
+          "montant": 7519110.0
+        },
+        {
+          "nom": "REMUNERATION PRINCIPALE ",
+          "montant": 4496000.0
+        },
+        {
+          "nom": "AUTRES INSTALLATIONS, MATERIEL ET OUTILLAGE TECHNIQUES",
+          "montant": 3922372.08
+        },
+        {
+          "nom": "AUTRES",
+          "montant": 3261827.0
+        }
+      ]
+    },
+    {
+      "code": 8,
+      "nom": "Aménagement et environnement",
+      "montant_total": 50313004.18,
+      "montant_depenses": 45110236.86,
+      "montant_recettes": 5202767.32,
+      "nombre_lignes": 406,
+      "principaux_chapitres": [
+        {
+          "nom": "CHARGES DE PERSONNEL ET FRAIS ASSIMILES",
+          "montant": 19359700.0
+        },
+        {
+          "nom": "AUTRES CHARGES DE GESTION COURANTE",
+          "montant": 11413848.0
+        },
+        {
+          "nom": "Boulevard Urbain Nord est",
+          "montant": 4600948.44
+        },
+        {
+          "nom": "SUBVENTIONS D'INVESTISSEMENT",
+          "montant": 3556004.32
+        },
+        {
+          "nom": "PRODUITS DES SERVICES, DU DOMAINE ET VENTES DIVERSES",
+          "montant": 1452033.0
+        }
+      ],
+      "principales_natures": [
+        {
+          "nom": "Subvention fonctionnement aux budgets annexes et aux regies",
+          "montant": 11000000.0
+        },
+        {
+          "nom": "REMUNERATION PRINCIPALE ",
+          "montant": 9900000.0
+        },
+        {
+          "nom": "INSTALLATIONS,MATERIEL ET OUTILLAGE TECHNIQUES",
+          "montant": 6141260.4
+        },
+        {
+          "nom": "COTISATIONS AUX CAISSES DE RETRAITES",
+          "montant": 3250000.0
+        },
+        {
+          "nom": "AUTRES INDEMNITES ",
+          "montant": 2800000.0
+        }
+      ]
+    },
+    {
+      "code": 9,
+      "nom": "Impositions et Fiscalité",
+      "montant_total": 127397011.0,
+      "montant_depenses": 0.0,
+      "montant_recettes": 127397011.0,
+      "nombre_lignes": 4,
+      "principaux_chapitres": [
+        {
+          "nom": "Impôts et taxes directes",
+          "montant": 67561576.0
+        },
+        {
+          "nom": "Taxes sur ordures ménagères",
+          "montant": 31354306.0
+        },
+        {
+          "nom": "Cotisations entreprises",
+          "montant": 23481129.0
+        },
+        {
+          "nom": "Taxes d'aménagement",
+          "montant": 4999999.0
+        }
+      ],
+      "principales_natures": [
+        {
+          "nom": "Taxes foncières et d'habitation",
+          "montant": 67561576.0
+        },
+        {
+          "nom": "Taxe enlèvement ordures ménagères",
+          "montant": 31354306.0
+        },
+        {
+          "nom": "Cotisation valeur ajoutée entreprises",
+          "montant": 23481129.0
+        },
+        {
+          "nom": "Autres contributions obligatoires",
+          "montant": 5000000.0
+        }
+      ]
+    }
+  ],
+  "villes": [
+    {
+      "nom": "Caen",
+      "coordonnees": [
+        49.1829,
+        -0.3707
+      ],
+      "population": 27463,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 1373189.1199999999,
+        "total": 1373189.1199999999
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 304460.16000000003
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 258473.76999999996
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 26070.03
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 784185.16
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Ouistreham",
+      "coordonnees": [
+        49.2825,
+        -0.2583
+      ],
+      "population": 4341,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 217068.84,
+        "total": 217068.84
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 115201.2
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 101867.64
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Lion-sur-Mer",
+      "coordonnees": [
+        49.3028,
+        -0.3192
+      ],
+      "population": 3316,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 165807.45,
+        "total": 165807.45
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 21423.53
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 144383.92
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Carpiquet",
+      "coordonnees": [
+        49.1836,
+        -0.4594
+      ],
+      "population": 2878,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 143937.6,
+        "total": 143937.6
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 10963.0
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 132974.6
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Saint-Contest",
+      "coordonnees": [
+        49.2256,
+        -0.4097
+      ],
+      "population": 2809,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 140499.66,
+        "total": 140499.66
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 25602.66
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 114897.0
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Mondeville",
+      "coordonnees": [
+        49.1675,
+        -0.3236
+      ],
+      "population": 2775,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 138758.88,
+        "total": 138758.88
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 22852.0
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 115906.88
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Benouville",
+      "coordonnees": [
+        49.2436,
+        -0.2781
+      ],
+      "population": 2475,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 123772.4,
+        "total": 123772.4
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 230.0
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 123542.4
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Bretteville-sur-Odon",
+      "coordonnees": [
+        49.1647,
+        -0.4244
+      ],
+      "population": 2372,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 118600.0,
+        "total": 118600.0
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 27400.0
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 91200.0
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Colombelles",
+      "coordonnees": [
+        49.2089,
+        -0.2956
+      ],
+      "population": 1394,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 69715.57,
+        "total": 69715.57
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 20800.68
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 24000.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 24914.89
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Blainville-sur-Orne",
+      "coordonnees": [
+        49.2325,
+        -0.3097
+      ],
+      "population": 1112,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 55635.73,
+        "total": 55635.73
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 26869.050000000003
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 28766.68
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Fleury-sur-Orne",
+      "coordonnees": [
+        49.1422,
+        -0.3764
+      ],
+      "population": 1021,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 51096.0,
+        "total": 51096.0
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 18436.0
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 19760.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 12900.0
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Saint-Aubin-d'Arquenay",
+      "coordonnees": [
+        49.2964,
+        -0.3361
+      ],
+      "population": 939,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 46959.62,
+        "total": 46959.62
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 2588.0
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 44371.62
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Bieville-Beuville",
+      "coordonnees": [
+        49.2442,
+        -0.3381
+      ],
+      "population": 886,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 44318.9,
+        "total": 44318.9
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 44318.9
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Villons-les-Buissons",
+      "coordonnees": [
+        49.2133,
+        -0.4058
+      ],
+      "population": 604,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 30207.42,
+        "total": 30207.42
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 22.01
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 30185.41
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Mathieu",
+      "coordonnees": [
+        49.2581,
+        -0.3756
+      ],
+      "population": 603,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 30183.030000000002,
+        "total": 30183.030000000002
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 17589.14
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 827.54
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 11766.35
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Hermanville-sur-Mer",
+      "coordonnees": [
+        49.2836,
+        -0.3036
+      ],
+      "population": 589,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 29454.64,
+        "total": 29454.64
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 6671.04
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 6000.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 16783.6
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Epron",
+      "coordonnees": [
+        49.2203,
+        -0.3633
+      ],
+      "population": 481,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 24051.35,
+        "total": 24051.35
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 109.67
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 23941.68
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Cambes-en-plaine",
+      "coordonnees": [
+        49.2333,
+        -0.2617
+      ],
+      "population": 454,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 22706.34,
+        "total": 22706.34
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 10353.17
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 12353.17
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Cormelles-le-Royal",
+      "coordonnees": [
+        49.1583,
+        -0.3333
+      ],
+      "population": 393,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 19685.2,
+        "total": 19685.2
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 5000.0
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 14685.2
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Ifs",
+      "coordonnees": [
+        49.1419,
+        -0.3489
+      ],
+      "population": 330,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 16506.0,
+        "total": 16506.0
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 8253.0
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 8253.0
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Rots",
+      "coordonnees": [
+        49.2081,
+        -0.4636
+      ],
+      "population": 294,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 14707.4,
+        "total": 14707.4
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 9675.65
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 5031.75
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Authie",
+      "coordonnees": [
+        49.2103,
+        -0.3764
+      ],
+      "population": 289,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 14492.16,
+        "total": 14492.16
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 2827.86
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 11664.3
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Giberville",
+      "coordonnees": [
+        49.1839,
+        -0.2833
+      ],
+      "population": 260,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 13000.0,
+        "total": 13000.0
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 1500.0
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 11500.0
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Colleville-Montgomery",
+      "coordonnees": [
+        49.2911,
+        -0.3044
+      ],
+      "population": 138,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 6933.0599999999995,
+        "total": 6933.0599999999995
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 5600.0
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 1333.06
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Thaon",
+      "coordonnees": [
+        49.2597,
+        -0.4708
+      ],
+      "population": 133,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 6680.0,
+        "total": 6680.0
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 5957.0
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 723.0
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    },
+    {
+      "nom": "Saint-Germain-la-Blanche-Herbe",
+      "coordonnees": [
+        49.2064,
+        -0.3903
+      ],
+      "population": 26,
+      "budget": {
+        "recettes": 0.0,
+        "depenses": 1340.0,
+        "total": 1340.0
+      },
+      "fonctions": [
+        {
+          "code": 0,
+          "recettes": 0.0,
+          "depenses": 1100.0
+        },
+        {
+          "code": 1,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 2,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 3,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 4,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 5,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 6,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 7,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 8,
+          "recettes": 0.0,
+          "depenses": 240.0
+        },
+        {
+          "code": 9,
+          "recettes": 0.0,
+          "depenses": 0.0
+        },
+        {
+          "code": 10,
+          "recettes": 0.0,
+          "depenses": 0.0
+        }
+      ]
+    }
+  ]
+}

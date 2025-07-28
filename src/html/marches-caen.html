@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Interactive - Marchés de Caen</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .marches-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            margin: 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .nav-controls {
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-controls a {
+            background: #6c757d;
+            color: white;
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-controls a:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+
+        .nav-controls .current-market-btn {
+            background: #28a745;
+        }
+
+        .nav-controls .current-market-btn:hover {
+            background: #218838;
+        }
+
+        .nav-controls .current-market-btn.inactive {
+            background: #6c757d;
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .map-section {
+            flex: 1;
+            position: relative;
+            display: flex;
+        }
+
+        .search-panel {
+            width: 350px;
+            background: white;
+            border-right: 1px solid #e0e0e0;
+            padding: 1.5rem;
+            overflow-y: auto;
+            max-height: calc(100vh - 200px);
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .day-filter {
+            margin-bottom: 1.5rem;
+        }
+
+        .day-filter h3 {
+            margin: 0 0 0.8rem 0;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .day-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .day-btn {
+            padding: 0.5rem 0.8rem;
+            border: 2px solid #e0e0e0;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .day-btn:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+
+        .day-btn.active {
+            background: #667eea;
+            border-color: #667eea;
+            color: white;
+        }
+
+        .market-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .market-item {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .market-item:hover {
+            background: #e9ecef;
+            border-color: #667eea;
+            transform: translateY(-1px);
+        }
+
+        .market-item.active {
+            background: #667eea;
+            border-color: #667eea;
+            color: white;
+        }
+
+        .market-name {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+        }
+
+        .market-details {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .market-stats {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        #map {
+            flex: 1;
+            min-height: 500px;
+        }
+
+        .info-section {
+            background: #f8f9fa;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .info-section h2 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.3rem;
+        }
+
+        @media (max-width: 768px) {
+            .map-section {
+                flex-direction: column;
+            }
+            
+            .search-panel {
+                width: 100%;
+                max-height: 300px;
+            }
+            
+            .nav-controls {
+                padding: 0.8rem;
+            }
+            
+            .nav-controls a {
+                padding: 0.5rem 0.8rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        .current-day-indicator {
+            background: #28a745;
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        footer {
+            background: var(--bg-dark, #2c3e50);
+            color: var(--text-light, #ecf0f1);
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: var(--secondary-color, #3498db);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav role="navigation" aria-label="Navigation principale">
+                <a href="../../index.html">Accueil</a>
+                <a href="projets.html">Projets</a>
+                <a href="cv.html">CV</a>
+                <a href="associatif.html">Associatif</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="marches-container">
+        <div class="header">
+            <h1>🛒 Marchés de Caen</h1>
+            <p>Découvrez tous les marchés de la ville avec leurs horaires et spécialités</p>
+        </div>
+
+        <div class="nav-controls">
+            <a href="../html/projets.html">← Retour aux projets</a>
+            <a href="#info-section" id="scroll-to-info">ℹ Infos</a>
+            <button id="current-market-btn" class="current-market-btn">📍 Marché actuel</button>
+            <button id="fit-bounds">🗺 Voir tout</button>
+            <button id="toggle-style">🎨 Style</button>
+        </div>
+
+        <div class="map-section">
+            <div class="search-panel">
+                <input type="text" id="search-box" class="search-box" placeholder="Rechercher un marché...">
+                
+                <div class="day-filter">
+                    <h3>Filtrer par jour</h3>
+                    <div class="day-buttons">
+                        <button class="day-btn" data-day="all">Tous</button>
+                        <button class="day-btn" data-day="1">Lundi</button>
+                        <button class="day-btn" data-day="2">Mardi</button>
+                        <button class="day-btn" data-day="3">Mercredi</button>
+                        <button class="day-btn" data-day="4">Jeudi</button>
+                        <button class="day-btn" data-day="5">Vendredi</button>
+                        <button class="day-btn" data-day="6">Samedi</button>
+                        <button class="day-btn" data-day="0">Dimanche</button>
+                    </div>
+                </div>
+
+                <div class="market-list" id="market-list">
+                    <!-- Les marchés seront ajoutés ici dynamiquement -->
+                </div>
+            </div>
+
+            <div id="map"></div>
+        </div>
+
+        <div class="info-section" id="info-section">
+            <h2>À propos des marchés de Caen</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="total-markets">10</div>
+                    <div class="stat-label">Marchés actifs</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="total-vendors">0</div>
+                    <div class="stat-label">Commerçants</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="total-food">0</div>
+                    <div class="stat-label">Stands alimentaires</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="biggest-market">-</div>
+                    <div class="stat-label">Plus grand marché</div>
+                </div>
+            </div>
+
+            <p>Cette carte interactive présente tous les marchés de la ville de Caen avec leurs horaires, leur localisation et leurs spécialités. Les données sont issues des services municipaux et permettent de découvrir la richesse du commerce local caennais.</p>
+            
+            <h3>Fonctionnalités</h3>
+            <ul>
+                <li><strong>Recherche</strong> : Trouvez rapidement un marché par son nom</li>
+                <li><strong>Filtrage par jour</strong> : Affichez seulement les marchés d'un jour donné</li>
+                <li><strong>Marché actuel</strong> : Localisez automatiquement le marché en cours si il y en a un</li>
+                <li><strong>Informations détaillées</strong> : Nombre de commerçants, types de produits, horaires</li>
+                <li><strong>Navigation intuitive</strong> : Cliquez sur un marché pour le centrer sur la carte</li>
+            </ul>
+
+            <p><em>Données mises à jour en avril 2021 - Ville de Caen - <a href="https://www.data.gouv.fr/datasets/ville-de-caen-marches/" target="_blank">data.gouv.fr</a></em></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Guillaume Lemonnier - Tous droits réservés</p>
+            <p style="font-size: 0.9rem; margin-top: 10px;">
+                Ce code est protégé par licence. Toute utilisation nécessite l'attribution à l'auteur. 
+                <a href="../../LICENSE" style="color: var(--secondary-color);">Voir la licence</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/marches-caen.js"></script>
+</body>
+</html>

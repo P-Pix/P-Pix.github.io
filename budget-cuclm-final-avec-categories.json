@@ -1,0 +1,724 @@
+{
+  "meta": {
+    "titre": "Budget CUCLM 2020 - Données Détaillées avec Catégories",
+    "description": "Données budgétaires réelles avec catégories de recettes et dépenses",
+    "source": "opendata-cuclm-budget-2020.csv",
+    "date_extraction": "2025-01-28",
+    "nb_communes": 10,
+    "budget_total": 19102072.32
+  },
+  "categories": {
+    "recettes": [
+      "RECETTES"
+    ],
+    "depenses": [
+      "AGENCEMENTS ET AMENAGEMENTS DE TERRAINS",
+      "AUTRE MATERIEL ET OUTILLAGE DE VOIRIE",
+      "AUTRE MATERIEL INFORMATIQUE",
+      "AUTRES",
+      "AUTRES IMMOBILISATIONS CORPORELLES",
+      "AUTRES IMMOBILISATIONS CORPORELLES INSTAL GENERALE, AGENCE. ET AMENAGE.",
+      "AUTRES INSTALLATIONS, MATERIEL ET OUTILLAGE TECHNIQUES",
+      "AUTRES MATERIELS DE BUREAU ET MOBILIERS",
+      "AUTRES MATERIELS DE TRANSPORT",
+      "AVANCES ET ACOMPTES VERSES SUR COMMANDES D'IMMOBILISATIONS CORPORELLES",
+      "BATIMENTS ET INSTALLATIONS",
+      "CONSTRUCTIONS",
+      "DEPENSES",
+      "FRAIS D'ETUDES",
+      "FRAIS D'INSERTION",
+      "INSTALLATIONS DE VOIRIE",
+      "INSTALLATIONS,MATERIEL ET OUTILLAGE TECHNIQUES",
+      "MATERIEL DE TELEPHONIE",
+      "MATERIEL ROULANT",
+      "PLANTATIONS D'ARBRES ET D'ARBUSTES",
+      "PROJETS D'INFRASTRUCTURES D'INTERET NATIONAL",
+      "RESEAUX DE VOIRIE",
+      "TERRAINS NUS"
+    ]
+  },
+  "communes": {
+    "Caen": {
+      "nom": "Caen",
+      "latitude": 49.1829,
+      "longitude": -0.3707,
+      "population": 105000,
+      "budget": {
+        "total": 9965391.98,
+        "recettes": 220000.0,
+        "depenses": 9745391.98,
+        "delta": -9525391.98
+      },
+      "categories": {
+        "DEPENSE": {
+          "FRAIS D'ETUDES": {
+            "montant": 679545.1,
+            "fonction": 5.0
+          },
+          "BATIMENTS ET INSTALLATIONS": {
+            "montant": 127008.77,
+            "fonction": 5.0
+          },
+          "TERRAINS NUS": {
+            "montant": 0.0,
+            "fonction": 8.0
+          },
+          "PLANTATIONS D'ARBRES ET D'ARBUSTES": {
+            "montant": 37629.81,
+            "fonction": 5.0
+          },
+          "RESEAUX DE VOIRIE": {
+            "montant": 360000.0,
+            "fonction": 8.0
+          },
+          "MATERIEL ROULANT": {
+            "montant": 10944.58,
+            "fonction": 0
+          },
+          "AUTRE MATERIEL ET OUTILLAGE DE VOIRIE": {
+            "montant": 240750.98,
+            "fonction": 0
+          },
+          "AUTRES INSTALLATIONS, MATERIEL ET OUTILLAGE TECHNIQUES": {
+            "montant": 76679.27,
+            "fonction": 0
+          },
+          "AUTRES IMMOBILISATIONS CORPORELLES INSTAL GENERALE, AGENCE. ET AMENAGE.": {
+            "montant": 2255.42,
+            "fonction": 5.0
+          },
+          "AUTRES MATERIELS DE TRANSPORT": {
+            "montant": 11603.04,
+            "fonction": 0
+          },
+          "AUTRE MATERIEL INFORMATIQUE": {
+            "montant": 1.0,
+            "fonction": 5.0
+          },
+          "AUTRES MATERIELS DE BUREAU ET MOBILIERS": {
+            "montant": 0.0,
+            "fonction": 0
+          },
+          "MATERIEL DE TELEPHONIE": {
+            "montant": 4980.16,
+            "fonction": 0
+          },
+          "AUTRES": {
+            "montant": 59993.909999999996,
+            "fonction": 0
+          },
+          "AGENCEMENTS ET AMENAGEMENTS DE TERRAINS": {
+            "montant": 679127.12,
+            "fonction": 0
+          },
+          "INSTALLATIONS,MATERIEL ET OUTILLAGE TECHNIQUES": {
+            "montant": 7136249.000000001,
+            "fonction": 5.0
+          },
+          "AUTRES IMMOBILISATIONS CORPORELLES": {
+            "montant": 50931.9,
+            "fonction": 5.0
+          },
+          "AVANCES ET ACOMPTES VERSES SUR COMMANDES D'IMMOBILISATIONS CORPORELLES": {
+            "montant": 22691.92,
+            "fonction": 8.0
+          },
+          "DEPENSES": {
+            "montant": 220000.0,
+            "fonction": 7.0
+          },
+          "FRAIS D'INSERTION": {
+            "montant": 0.0,
+            "fonction": 8.0
+          },
+          "PROJETS D'INFRASTRUCTURES D'INTERET NATIONAL": {
+            "montant": 25000.0,
+            "fonction": 8.0
+          }
+        },
+        "RECETTE": {
+          "RECETTES": {
+            "montant": 220000.0,
+            "fonction": 7.0
+          }
+        }
+      },
+      "stats": {
+        "budget_par_habitant": 94.90849504761906,
+        "recettes_par_habitant": 2.0952380952380953,
+        "depenses_par_habitant": 92.81325695238095
+      }
+    },
+    "Ouistreham": {
+      "nom": "Ouistreham",
+      "latitude": 49.2742,
+      "longitude": -0.2581,
+      "population": 9500,
+      "budget": {
+        "total": 997263.43,
+        "recettes": 0,
+        "depenses": 997263.43,
+        "delta": -997263.43
+      },
+      "categories": {
+        "DEPENSE": {
+          "BATIMENTS ET INSTALLATIONS": {
+            "montant": 229642.78,
+            "fonction": 8.0
+          },
+          "TERRAINS NUS": {
+            "montant": 0.0,
+            "fonction": 8.0
+          },
+          "PLANTATIONS D'ARBRES ET D'ARBUSTES": {
+            "montant": 383.24,
+            "fonction": 0
+          },
+          "INSTALLATIONS DE VOIRIE": {
+            "montant": 19708.68,
+            "fonction": 0
+          },
+          "MATERIEL ROULANT": {
+            "montant": 1290.0,
+            "fonction": 0
+          },
+          "AUTRE MATERIEL ET OUTILLAGE DE VOIRIE": {
+            "montant": 14960.6,
+            "fonction": 0
+          },
+          "AUTRES INSTALLATIONS, MATERIEL ET OUTILLAGE TECHNIQUES": {
+            "montant": 1711.86,
+            "fonction": 0
+          },
+          "AUTRES": {
+            "montant": 2808.0,
+            "fonction": 0
+          },
+          "INSTALLATIONS,MATERIEL ET OUTILLAGE TECHNIQUES": {
+            "montant": 726758.27,
+            "fonction": 8.0
+          },
+          "AVANCES ET ACOMPTES VERSES SUR COMMANDES D'IMMOBILISATIONS CORPORELLES": {
+            "montant": 0.0,
+            "fonction": 8.0
+          },
+          "FRAIS D'ETUDES": {
+            "montant": 0.0,
+            "fonction": 8.0
+          }
+        }
+      },
+      "stats": {
+        "budget_par_habitant": 104.97509789473685,
+        "recettes_par_habitant": 0.0,
+        "depenses_par_habitant": 104.97509789473685
+      }
+    },
+    "Lion-sur-Mer": {
+      "nom": "Lion-sur-Mer",
+      "latitude": 49.3001,
+      "longitude": -0.3189,
+      "population": 2500,
+      "budget": {
+        "total": 1395232.63,
+        "recettes": 211400.0,
+        "depenses": 1183832.63,
+        "delta": -972432.6299999999
+      },
+      "categories": {
+        "DEPENSE": {
+          "FRAIS D'ETUDES": {
+            "montant": 16251.2,
+            "fonction": 8.0
+          },
+          "BATIMENTS ET INSTALLATIONS": {
+            "montant": 49244.0,
+            "fonction": 8.0
+          },
+          "TERRAINS NUS": {
+            "montant": 1440.29,
+            "fonction": 8.0
+          },
+          "PLANTATIONS D'ARBRES ET D'ARBUSTES": {
+            "montant": 0.0,
+            "fonction": 8.0
+          },
+          "INSTALLATIONS DE VOIRIE": {
+            "montant": 0.0,
+            "fonction": 0
+          },
+          "MATERIEL ROULANT": {
+            "montant": 4575.45,
+            "fonction": 0
+          },
+          "AUTRE MATERIEL ET OUTILLAGE DE VOIRIE": {
+            "montant": 10724.25,
+            "fonction": 0
+          },
+          "AUTRES INSTALLATIONS, MATERIEL ET OUTILLAGE TECHNIQUES": {
+            "montant": 1859.33,
+            "fonction": 0
+          },
+          "AUTRES": {
+            "montant": 1327.78,
+            "fonction": 0
+          },
+          "INSTALLATIONS,MATERIEL ET OUTILLAGE TECHNIQUES": {
+            "montant": 890355.87,
+            "fonction": 8.0
+          },
+          "AVANCES ET ACOMPTES VERSES SUR COMMANDES D'IMMOBILISATIONS CORPORELLES": {
+            "montant": 0.0,
+            "fonction": 8.0
+          },
+          "DEPENSES": {
+            "montant": 207174.46,
+            "fonction": 6.0
+          },
+          "FRAIS D'INSERTION": {
+            "montant": 880.0,
+            "fonction": 8.0
+          }
+        },
+        "RECETTE": {
+          "RECETTES": {
+            "montant": 211400.0,
+            "fonction": 6.0
+          }
+        }
+      },
+      "stats": {
+        "budget_par_habitant": 558.093052,
+        "recettes_par_habitant": 84.56,
+        "depenses_par_habitant": 473.53305199999994
+      }
+    },
+    "Louvigny": {
+      "nom": "Louvigny",
+      "latitude": 49.1656,
+      "longitude": -0.4042,
+      "population": 2800,
+      "budget": {
+        "total": 293183.23,
+        "recettes": 0,
+        "depenses": 293183.23,
+        "delta": -293183.23
+      },
+      "categories": {
+        "DEPENSE": {
+          "BATIMENTS ET INSTALLATIONS": {
+            "montant": 70000.0,
+            "fonction": 8.0
+          },
+          "INSTALLATIONS DE VOIRIE": {
+            "montant": 391.63,
+            "fonction": 0
+          },
+          "MATERIEL ROULANT": {
+            "montant": 161.0,
+            "fonction": 0
+          },
+          "AUTRE MATERIEL ET OUTILLAGE DE VOIRIE": {
+            "montant": 359.08,
+            "fonction": 0
+          },
+          "AUTRES INSTALLATIONS, MATERIEL ET OUTILLAGE TECHNIQUES": {
+            "montant": 1078.09,
+            "fonction": 0
+          },
+          "AUTRES": {
+            "montant": 0.0,
+            "fonction": 0
+          },
+          "AGENCEMENTS ET AMENAGEMENTS DE TERRAINS": {
+            "montant": 0.0,
+            "fonction": 8.0
+          },
+          "INSTALLATIONS,MATERIEL ET OUTILLAGE TECHNIQUES": {
+            "montant": 212298.43,
+            "fonction": 8.0
+          },
+          "AVANCES ET ACOMPTES VERSES SUR COMMANDES D'IMMOBILISATIONS CORPORELLES": {
+            "montant": 8895.0,
+            "fonction": 8.0
+          }
+        }
+      },
+      "stats": {
+        "budget_par_habitant": 104.70829642857142,
+        "recettes_par_habitant": 0.0,
+        "depenses_par_habitant": 104.70829642857142
+      }
+    },
+    "Ifs": {
+      "nom": "Ifs",
+      "latitude": 49.1433,
+      "longitude": -0.3522,
+      "population": 11500,
+      "budget": {
+        "total": 3539245.46,
+        "recettes": 100000.0,
+        "depenses": 3439245.46,
+        "delta": -3339245.46
+      },
+      "categories": {
+        "DEPENSE": {
+          "MATERIEL ROULANT": {
+            "montant": 0.0,
+            "fonction": 0
+          },
+          "AUTRE MATERIEL ET OUTILLAGE DE VOIRIE": {
+            "montant": 5322.29,
+            "fonction": 0
+          },
+          "AUTRES INSTALLATIONS, MATERIEL ET OUTILLAGE TECHNIQUES": {
+            "montant": 7257.21,
+            "fonction": 0
+          },
+          "INSTALLATIONS,MATERIEL ET OUTILLAGE TECHNIQUES": {
+            "montant": 266539.13,
+            "fonction": 8.0
+          },
+          "AVANCES ET ACOMPTES VERSES SUR COMMANDES D'IMMOBILISATIONS CORPORELLES": {
+            "montant": 0.0,
+            "fonction": 8.0
+          },
+          "DEPENSES": {
+            "montant": 100000.0,
+            "fonction": 4.0
+          },
+          "FRAIS D'ETUDES": {
+            "montant": 64000.0,
+            "fonction": 3.0
+          },
+          "CONSTRUCTIONS": {
+            "montant": 2996126.83,
+            "fonction": 3.0
+          }
+        },
+        "RECETTE": {
+          "RECETTES": {
+            "montant": 100000.0,
+            "fonction": 4.0
+          }
+        }
+      },
+      "stats": {
+        "budget_par_habitant": 307.7604747826087,
+        "recettes_par_habitant": 8.695652173913043,
+        "depenses_par_habitant": 299.06482260869564
+      }
+    },
+    "Mondeville": {
+      "nom": "Mondeville",
+      "latitude": 49.1664,
+      "longitude": -0.3139,
+      "population": 9600,
+      "budget": {
+        "total": 1481499.7599999998,
+        "recettes": 74325.12,
+        "depenses": 1407174.64,
+        "delta": -1332849.52
+      },
+      "categories": {
+        "DEPENSE": {
+          "FRAIS D'ETUDES": {
+            "montant": 20000.0,
+            "fonction": 8.0
+          },
+          "BATIMENTS ET INSTALLATIONS": {
+            "montant": 208361.13,
+            "fonction": 8.0
+          },
+          "TERRAINS NUS": {
+            "montant": 0.0,
+            "fonction": 8.0
+          },
+          "INSTALLATIONS DE VOIRIE": {
+            "montant": 0.0,
+            "fonction": 8.0
+          },
+          "MATERIEL ROULANT": {
+            "montant": 2852.0,
+            "fonction": 0
+          },
+          "AUTRE MATERIEL ET OUTILLAGE DE VOIRIE": {
+            "montant": 178.43,
+            "fonction": 0
+          },
+          "AUTRES INSTALLATIONS, MATERIEL ET OUTILLAGE TECHNIQUES": {
+            "montant": 0.0,
+            "fonction": 0
+          },
+          "AUTRES": {
+            "montant": 10405.869999999999,
+            "fonction": 8.0
+          },
+          "INSTALLATIONS,MATERIEL ET OUTILLAGE TECHNIQUES": {
+            "montant": 680145.21,
+            "fonction": 8.0
+          },
+          "AVANCES ET ACOMPTES VERSES SUR COMMANDES D'IMMOBILISATIONS CORPORELLES": {
+            "montant": 40906.88,
+            "fonction": 8.0
+          },
+          "DEPENSES": {
+            "montant": 74325.12,
+            "fonction": 7.0
+          },
+          "FRAIS D'INSERTION": {
+            "montant": 0.0,
+            "fonction": 8.0
+          },
+          "PROJETS D'INFRASTRUCTURES D'INTERET NATIONAL": {
+            "montant": 370000.0,
+            "fonction": 8.0
+          }
+        },
+        "RECETTE": {
+          "RECETTES": {
+            "montant": 74325.12,
+            "fonction": 7.0
+          }
+        }
+      },
+      "stats": {
+        "budget_par_habitant": 154.32289166666664,
+        "recettes_par_habitant": 7.7421999999999995,
+        "depenses_par_habitant": 146.58069166666667
+      }
+    },
+    "Hermanville-sur-Mer": {
+      "nom": "Hermanville-sur-Mer",
+      "latitude": 49.2869,
+      "longitude": -0.3075,
+      "population": 3000,
+      "budget": {
+        "total": 209078.3,
+        "recettes": 0,
+        "depenses": 209078.3,
+        "delta": -209078.3
+      },
+      "categories": {
+        "DEPENSE": {
+          "BATIMENTS ET INSTALLATIONS": {
+            "montant": 30032.0,
+            "fonction": 8.0
+          },
+          "PLANTATIONS D'ARBRES ET D'ARBUSTES": {
+            "montant": 1.94,
+            "fonction": 5.0
+          },
+          "INSTALLATIONS DE VOIRIE": {
+            "montant": 0.05,
+            "fonction": 0
+          },
+          "MATERIEL ROULANT": {
+            "montant": 0.0,
+            "fonction": 0
+          },
+          "AUTRE MATERIEL ET OUTILLAGE DE VOIRIE": {
+            "montant": 10781.67,
+            "fonction": 0
+          },
+          "AUTRES INSTALLATIONS, MATERIEL ET OUTILLAGE TECHNIQUES": {
+            "montant": 73.4,
+            "fonction": 0
+          },
+          "AUTRES": {
+            "montant": 0.0,
+            "fonction": 0
+          },
+          "INSTALLATIONS,MATERIEL ET OUTILLAGE TECHNIQUES": {
+            "montant": 164996.24,
+            "fonction": 8.0
+          },
+          "AVANCES ET ACOMPTES VERSES SUR COMMANDES D'IMMOBILISATIONS CORPORELLES": {
+            "montant": 3193.0,
+            "fonction": 8.0
+          }
+        }
+      },
+      "stats": {
+        "budget_par_habitant": 69.69276666666666,
+        "recettes_par_habitant": 0.0,
+        "depenses_par_habitant": 69.69276666666666
+      }
+    },
+    "Benouville": {
+      "nom": "Benouville",
+      "latitude": 49.2394,
+      "longitude": -0.2881,
+      "population": 2100,
+      "budget": {
+        "total": 567792.6699999999,
+        "recettes": 108000.0,
+        "depenses": 459792.67,
+        "delta": -351792.67
+      },
+      "categories": {
+        "DEPENSE": {
+          "INSTALLATIONS DE VOIRIE": {
+            "montant": 0.0,
+            "fonction": 0
+          },
+          "MATERIEL ROULANT": {
+            "montant": 0.0,
+            "fonction": 0
+          },
+          "AUTRE MATERIEL ET OUTILLAGE DE VOIRIE": {
+            "montant": 30.0,
+            "fonction": 0
+          },
+          "AUTRES INSTALLATIONS, MATERIEL ET OUTILLAGE TECHNIQUES": {
+            "montant": 0.0,
+            "fonction": 0
+          },
+          "INSTALLATIONS,MATERIEL ET OUTILLAGE TECHNIQUES": {
+            "montant": 351602.82,
+            "fonction": 8.0
+          },
+          "AVANCES ET ACOMPTES VERSES SUR COMMANDES D'IMMOBILISATIONS CORPORELLES": {
+            "montant": 159.85,
+            "fonction": 8.0
+          },
+          "DEPENSES": {
+            "montant": 108000.0,
+            "fonction": 7.0
+          }
+        },
+        "RECETTE": {
+          "RECETTES": {
+            "montant": 108000.0,
+            "fonction": 7.0
+          }
+        }
+      },
+      "stats": {
+        "budget_par_habitant": 270.37746190476184,
+        "recettes_par_habitant": 51.42857142857143,
+        "depenses_par_habitant": 218.94889047619046
+      }
+    },
+    "Colleville-Montgomery": {
+      "nom": "Colleville-Montgomery",
+      "latitude": 49.2844,
+      "longitude": -0.2892,
+      "population": 2400,
+      "budget": {
+        "total": 567292.0,
+        "recettes": 36000.0,
+        "depenses": 531292.0,
+        "delta": -495292.0
+      },
+      "categories": {
+        "DEPENSE": {
+          "FRAIS D'ETUDES": {
+            "montant": 0.0,
+            "fonction": 8.0
+          },
+          "BATIMENTS ET INSTALLATIONS": {
+            "montant": 2000.0,
+            "fonction": 8.0
+          },
+          "INSTALLATIONS DE VOIRIE": {
+            "montant": 0.0,
+            "fonction": 0
+          },
+          "MATERIEL ROULANT": {
+            "montant": 1250.0,
+            "fonction": 0
+          },
+          "AUTRE MATERIEL ET OUTILLAGE DE VOIRIE": {
+            "montant": 1274.0,
+            "fonction": 0
+          },
+          "AUTRES INSTALLATIONS, MATERIEL ET OUTILLAGE TECHNIQUES": {
+            "montant": 1250.0,
+            "fonction": 0
+          },
+          "INSTALLATIONS,MATERIEL ET OUTILLAGE TECHNIQUES": {
+            "montant": 489518.0,
+            "fonction": 8.0
+          },
+          "AVANCES ET ACOMPTES VERSES SUR COMMANDES D'IMMOBILISATIONS CORPORELLES": {
+            "montant": 0.0,
+            "fonction": 8.0
+          },
+          "DEPENSES": {
+            "montant": 36000.0,
+            "fonction": 7.0
+          }
+        },
+        "RECETTE": {
+          "RECETTES": {
+            "montant": 36000.0,
+            "fonction": 7.0
+          }
+        }
+      },
+      "stats": {
+        "budget_par_habitant": 236.37166666666667,
+        "recettes_par_habitant": 15.0,
+        "depenses_par_habitant": 221.37166666666667
+      }
+    },
+    "Mathieu": {
+      "nom": "Mathieu",
+      "latitude": 49.2503,
+      "longitude": -0.3981,
+      "population": 2300,
+      "budget": {
+        "total": 86092.86,
+        "recettes": 0,
+        "depenses": 86092.86,
+        "delta": -86092.86
+      },
+      "categories": {
+        "DEPENSE": {
+          "BATIMENTS ET INSTALLATIONS": {
+            "montant": 827.54,
+            "fonction": 5.0
+          },
+          "PLANTATIONS D'ARBRES ET D'ARBUSTES": {
+            "montant": 301.27,
+            "fonction": 8.0
+          },
+          "INSTALLATIONS DE VOIRIE": {
+            "montant": 179.85,
+            "fonction": 0
+          },
+          "MATERIEL ROULANT": {
+            "montant": 3665.0,
+            "fonction": 0
+          },
+          "AUTRE MATERIEL ET OUTILLAGE DE VOIRIE": {
+            "montant": 7602.63,
+            "fonction": 0
+          },
+          "AUTRES INSTALLATIONS, MATERIEL ET OUTILLAGE TECHNIQUES": {
+            "montant": 7648.4,
+            "fonction": 0
+          },
+          "AUTRES": {
+            "montant": 0.0,
+            "fonction": 0
+          },
+          "INSTALLATIONS,MATERIEL ET OUTILLAGE TECHNIQUES": {
+            "montant": 65368.17,
+            "fonction": 8.0
+          },
+          "AVANCES ET ACOMPTES VERSES SUR COMMANDES D'IMMOBILISATIONS CORPORELLES": {
+            "montant": 500.0,
+            "fonction": 8.0
+          }
+        }
+      },
+      "stats": {
+        "budget_par_habitant": 37.43167826086957,
+        "recettes_par_habitant": 0.0,
+        "depenses_par_habitant": 37.43167826086957
+      }
+    }
+  }
+}
