@@ -32,6 +32,7 @@
         <a href="#skills" aria-label="Aller à la section Compétences">Compétences</a>
         <a href="src/html/projets.html" aria-label="Voir mes projets">Projets</a>
         <a href="src/html/cv.html" aria-label="Voir mon CV">CV</a>
+        <a href="src/html/recherche-emploi.html" aria-label="Ma recherche d'emploi" class="nav-highlight">🚀 Recherche d'emploi</a>
         <a href="src/html/associatif.html" aria-label="Voir mon engagement associatif">Associatif</a>
         <a href="#contact" aria-label="Me contacter">Contact</a>
       </nav>
@@ -42,35 +43,54 @@
     <section class="hero" role="banner">
       <div class="container">
         <h1>Guillaume LEMONNIER</h1>
-        <p>Informaticien spécialisé<br>IA & Data Science appliquée à la santé</p>
+        <p>Développeur IA & Data Science<br>🚀 Prêt pour l'industrie - Disponible immédiatement</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn-primary">📧 Me contacter</a>
+          <a href="assets/pdf/cv.pdf" class="btn-secondary">📄 Télécharger CV</a>
+        </div>
       </div>
     </section>
 
     <section id="about" class="section">
       <div class="container">
+        <div class="value-proposition">
+          <h2>🎯 Ce que j'apporte à votre entreprise</h2>
+          <div class="value-grid">
+            <div class="value-item">
+              <h3>🚀 Prêt pour la production</h3>
+              <p>40+ projets GitHub • Python/C++/Java • Applications déployées</p>
+            </div>
+            <div class="value-item">
+              <h3>📊 ROI Immédiat</h3>
+              <p>IA appliquée • Automatisation • Réduction des coûts</p>
+            </div>
+            <div class="value-item">
+              <h3>🔧 Polyvalence technique</h3>
+              <p>Full-stack • DevOps • Adaptabilité rapide</p>
+            </div>
+            <div class="value-item">
+              <h3>💼 Leadership</h3>
+              <p>VP National • Gestion d'équipes • Management de projets</p>
+            </div>
+          </div>
+        </div>
+
         <h2>Profil Professionnel</h2>
         <p>
-          <strong>Étudiant en Master 2 d'informatique parcours Intelligence Artificielle, Sciences des Données et Santé</strong> à l'Université de Caen Normandie, je développe des compétences solides en IA et data science avec une ouverture sur les applications dans le domaine de la santé.
+          <strong>Développeur IA & Data Science passionné</strong> avec un Master spécialisé et plus de 40 projets concrets. 
+          Je transforme les données en solutions business pour optimiser les performances et automatiser les processus.
         </p>
         <p>
-          Mes compétences techniques couvrent la <strong>programmation en C++ et Python</strong>, avec une préférence pour Python dans les domaines mathématiques et IA, et C++ pour le développement d'interfaces et d'applications performantes nécessitant une exécution rapide.
+          <strong>Expertise technique complète</strong> : Python (PyTorch, TensorFlow), C++ (performances), Java (enterprise), 
+          avec une capacité démontrée à livrer des applications de production robustes et scalables.
         </p>
         <p>
-          J'ai une <strong>forte expérience en développement de moteurs graphiques</strong> et d'applications natives, 
-          avec plusieurs projets personnels incluant des moteurs 2D/3D, des applications de dessin, la visualisation 
-          du problème de N-corps, et des interfaces graphiques avancées. Je développe aussi des applications web 
-          comme un cloud personnel sécurisé et des outils utilitaires.
+          <strong>Track record prouvé</strong> : Projets réels incluant analyse financière (RNN/LLM), détection automatique en médical, 
+          applications haute performance, et dashboards interactifs avec données de 19M€. Capable de passer de la conception au déploiement.
         </p>
         <p>
-          Dans le domaine de l'IA, j'ai travaillé sur des projets concrets comme la <strong>détection d'hypovigilance</strong>, 
-          la classification automatique de codes médicaux CCAM, l'<strong>analyse et prédiction de la bourse</strong> avec RNN et LLM, 
-          et l'analyse de données de graphes complexes. Plus récemment, j'explore la transformation de vidéos en environnements 3D.
-        </p>
-        <p>
-          Polyvalent et autodidacte, je maîtrise de nombreux langages (C++, Python, Java, JavaScript, PHP) et m'adapte rapidement aux nouvelles technologies selon les besoins des projets.
-        </p>
-        <p>
-          Mon engagement dans la <strong>représentation étudiante</strong> (Vice-Président AFNEUS, élu dans 4 conseils universitaires) démontre mes capacités de leadership et ma vision pour l'amélioration des formations universitaires.
+          <strong>Leadership et impact</strong> : Vice-Président d'organisation nationale, gestion d'équipes multiples, 
+          négociation de partenariats stratégiques. Je combine excellence technique et vision business pour maximiser le ROI.
         </p>
       </div>
     </section>
@@ -126,6 +146,97 @@
   <script src="src/js/script.js"></script>
 
   <style>
+    .nav-highlight {
+      background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+      color: white !important;
+      padding: 8px 16px !important;
+      border-radius: 20px !important;
+      font-weight: 600 !important;
+      animation: pulse 2s infinite !important;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+    }
+
+    .hero-cta {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary, .btn-secondary {
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: var(--primary-color);
+      color: white;
+      border: 2px solid var(--primary-color);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--primary-color);
+      border: 2px solid var(--primary-color);
+    }
+
+    .btn-primary:hover, .btn-secondary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .value-proposition {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 40px;
+      border-radius: 20px;
+      margin-bottom: 40px;
+    }
+
+    .value-proposition h2 {
+      color: white;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .value-item {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+    }
+
+    .value-item h3 {
+      color: white;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .value-item p {
+      color: rgba(255,255,255,0.9);
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
     .cv-download-section {
       text-align: center;
       background: var(--primary-color);

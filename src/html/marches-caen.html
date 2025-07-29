@@ -292,6 +292,7 @@
                 <a href="../../index.html">Accueil</a>
                 <a href="projets.html">Projets</a>
                 <a href="cv.html">CV</a>
+                <a href="recherche-emploi.html" class="nav-highlight">🚀 Recherche d'emploi</a>
                 <a href="associatif.html">Associatif</a>
                 <a href="contact.html">Contact</a>
             </nav>
@@ -384,6 +385,23 @@
             </p>
         </div>
     </footer>
+
+    <style>
+        .nav-highlight {
+            background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+            color: white !important;
+            padding: 8px 16px !important;
+            border-radius: 20px !important;
+            font-weight: 600 !important;
+            animation: pulse 2s infinite !important;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
+    </style>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="../js/script.js"></script>
