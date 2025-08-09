@@ -21,7 +21,8 @@
     <!-- Navigation -->
     <header>
         <div class="container">
-            <nav role="navigation" aria-label="Navigation principale">
+            <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+            <nav id="primary-nav" role="navigation" aria-label="Navigation principale">
                 <a href="../../index.html">Accueil</a>
                 <a href="projets.html">Projets</a>
                 <a href="cv.html">CV</a>
@@ -815,6 +816,69 @@
 
             .charts-grid {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        /* Menu hamburger */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .menu-toggle:hover {
+            background: var(--secondary-color);
+        }
+
+        .menu-toggle .bar {
+            width: 20px;
+            height: 2px;
+            background: white;
+            margin: 3px 0;
+            transition: var(--transition);
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav {
+                position: absolute;
+                top: 70px;
+                right: 20px;
+                background: white;
+                border-radius: 8px;
+                padding: 1rem;
+                box-shadow: var(--shadow-medium);
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                width: 200px;
+                z-index: 1000;
+            }
+
+            nav a {
+                padding: 10px 15px;
+                font-size: 14px;
+                border-radius: 5px;
+                transition: var(--transition);
+            }
+
+            nav a:hover {
+                background: var(--bg-section);
+            }
+
+            .menu-toggle[aria-expanded="true"] + nav {
+                display: flex;
             }
         }
     </style>

@@ -153,3 +153,31 @@ function preloadImages() {
 
 // Initialize everything when DOM is ready
 document.addEventListener('DOMContentLoaded', preloadImages);
+
+// Ajout : Menu hamburger responsive
+function initResponsiveMenu(){
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('primary-nav');
+  if(!toggle || !nav) return;
+  toggle.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    nav.classList.toggle('open');
+  });
+  nav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      if(window.innerWidth <= 1000){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+  window.addEventListener('resize', () => {
+    if(window.innerWidth > 1000){
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initResponsiveMenu);

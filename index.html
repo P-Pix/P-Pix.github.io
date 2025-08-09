@@ -27,7 +27,12 @@
 <body>
   <header>
     <div class="container">
-      <nav role="navigation" aria-label="Navigation principale">
+      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav id="primary-nav" role="navigation" aria-label="Navigation principale">
         <a href="#about" aria-label="Aller à la section Profil">Profil</a>
         <a href="#skills" aria-label="Aller à la section Compétences">Compétences</a>
         <a href="src/html/projets.html" aria-label="Voir mes projets">Projets</a>
@@ -264,6 +269,24 @@
       border-color: var(--secondary-color);
       transform: translateY(-2px);
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Styles ajoutés pour le menu responsive */
+    .menu-toggle { display:none; position:relative; background:transparent; border:none; cursor:pointer; width:48px; height:42px; border-radius:8px; justify-content:center; align-items:center; flex-direction:column; gap:6px; padding:6px; transition:var(--transition); }
+    .menu-toggle:focus { outline:2px solid var(--secondary-color); outline-offset:4px; }
+    .menu-toggle .bar { width:28px; height:3px; background:var(--primary-color); border-radius:2px; transition:var(--transition); }
+    .menu-toggle[aria-expanded="true"] .bar:nth-child(1){ transform:translateY(9px) rotate(45deg); }
+    .menu-toggle[aria-expanded="true"] .bar:nth-child(2){ opacity:0; }
+    .menu-toggle[aria-expanded="true"] .bar:nth-child(3){ transform:translateY(-9px) rotate(-45deg); }
+
+    @media (max-width: 1000px) {
+      header .container { justify-content:space-between; }
+      .menu-toggle { display:flex; }
+      #primary-nav { position:absolute; top:100%; left:0; right:0; background:var(--bg-light); display:flex; flex-direction:column; gap:0; padding:10px 0 20px; box-shadow:var(--shadow-medium); max-height:0; overflow:hidden; opacity:0; pointer-events:none; transform:translateY(-10px); transition:max-height .4s ease, opacity .3s ease, transform .3s ease; }
+      #primary-nav.open { max-height:500px; opacity:1; pointer-events:auto; transform:translateY(0); }
+      #primary-nav a { padding:14px 25px; border-radius:0; width:100%; }
+      #primary-nav a:hover { background:var(--bg-section); transform:none; }
+      #primary-nav a.nav-highlight { margin:8px 12px 0; border-radius:12px; }
     }
   </style>
 </body>

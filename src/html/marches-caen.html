@@ -283,12 +283,59 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            margin-left: auto;
+        }
+
+        .menu-toggle .bar {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            #primary-nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background: white;
+                width: 250px;
+                padding: 1rem;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            }
+
+            #primary-nav.show {
+                display: flex;
+            }
+
+            .nav-controls {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <nav role="navigation" aria-label="Navigation principale">
+            <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+            <nav id="primary-nav" role="navigation" aria-label="Navigation principale">
                 <a href="../../index.html">Accueil</a>
                 <a href="projets.html">Projets</a>
                 <a href="cv.html">CV</a>
