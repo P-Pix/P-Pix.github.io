@@ -16,7 +16,6 @@ class BudgetInteractiveCUCLM {
             montant: 0
         };
         
-        
         this.init();
     }
 
