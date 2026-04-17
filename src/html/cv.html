@@ -3,71 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CV de Guillaume Lemonnier - Expert en IA & Data Science appliquée à la santé" />
+  <meta name="description" content="CV de Guillaume Lemonnier : IA santé, données sensibles, déploiement, GREYC, ARS Normandie, projets et publication." />
   <title>CV - Guillaume Lemonnier</title>
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <div class="container">
-      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+
+      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
       <nav id="primary-nav" role="navigation" aria-label="Navigation principale">
         <a href="../../index.html">Accueil</a>
         <a href="projets.html">Projets</a>
         <a href="cv.html" class="active">CV</a>
-        <a href="recherche-emploi.html" class="nav-highlight">🚀 Recherche d'emploi</a>
+        <a href="recherche-emploi.html" class="nav-highlight">Positionnement</a>
         <a href="associatif.html">Associatif</a>
         <a href="contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
   <main>
     <section class="hero">
       <div class="container">
-        <h1>Curriculum Vitae</h1>
-        <p>Parcours académique et professionnel<br>en IA & Data Science Santé</p>
+        <span class="hero-kicker">CV et trajectoire</span>
+        <h1>IA pour la santé, données sensibles et déploiement</h1>
+        <p>
+          Diplômé d'un Master Informatique en IA, science des données et santé, avec un parcours mêlant stage de recherche,
+          environnement institutionnel de santé et développement de solutions robustes et documentées.
+        </p>
+        <div class="hero-status">
+          <span class="status-pill">ARS Normandie</span>
+          <span class="status-pill">GREYC</span>
+          <span class="status-pill">Publication IDA 2026</span>
+        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <h2>🎓 Formation</h2>
-        <div class="cv-timeline">
-          <div class="cv-item">
-            <div class="cv-year">2023-2025</div>
-            <div class="cv-content">
-              <h3>Master Intelligence Artificielle et Sciences des Données</h3>
-              <p><strong>Université de Caen Normandie</strong></p>
-              <p>Spécialisation : Applications à la Santé</p>
+        <h2>Expérience de recherche et professionnelle</h2>
+        <div class="timeline">
+          <article class="timeline-card">
+            <div class="timeline-date">Déc. 2025 - présent</div>
+            <div>
+              <h3>Chargé d'appui à la performance numérique - ARS Normandie</h3>
+              <p class="timeline-meta">Caen - données, outil web interne, usages responsables de l'IA</p>
               <ul>
-                <li>Apprentissage automatique (supervisé, non supervisé, par renforcement)</li>
-                <li>Analyse de données massives (Big Data)</li>
-                <li>Adaptation des modèles d'apprentissage en fonction des données</li>
-                <li>Traitement de données biomédicales et cliniques</li>
-                <li>Vision par ordinateur et traitement d'images médicales</li>
-                <li>Éthique de l'IA en santé et réglementation RGPD</li>
+                <li>Fiabilisation et exploitation de données via PostgreSQL ; paramétrage d'outils et amélioration continue.</li>
+                <li>Développement autonome d'un outil web interne : authentification, contrôle d'accès, exports XLSX, historisation et intégrité.</li>
+                <li>Documentation, vulgarisation technique, accompagnement des agents et suivi des besoins métier.</li>
+                <li>Référent IA sur le cadrage responsable des usages dans un environnement à forte confidentialité.</li>
               </ul>
             </div>
+          </article>
+
+          <article class="timeline-card">
+            <div class="timeline-date">Mars - août 2025</div>
+            <div>
+              <h3>Stage recherche M2 - Explicabilité des GNN - GREYC</h3>
+              <p class="timeline-meta">Caen - graphes moléculaires, expérimentation, article</p>
+              <ul>
+                <li>Pipeline de caractérisation de datasets de graphes moléculaires avec 583 descripteurs sur 57 jeux de données.</li>
+                <li>Extraction de motifs fréquents avec gSpan / cgSpan et entraînement d'un GCN sous PyTorch Geometric.</li>
+                <li>Méta-modèle interprétable reliant structure des données et performance ; mémoire de M2 et article co-signé à IDA 2026.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-card">
+            <div class="timeline-date">Juin - juil. 2024</div>
+            <div>
+              <h3>Stage - Visualisation 3D moléculaire - CERMN</h3>
+              <p class="timeline-meta">Caen - visualisation, alignement moléculaire, documentation</p>
+              <ul>
+                <li>Développement d'une visualisation 3D et d'un module d'alignement moléculaire pour un logiciel existant.</li>
+                <li>Travail orienté performance, ergonomie, validation fonctionnelle et documentation des évolutions.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container">
+        <h2>Formation, publication et projets académiques</h2>
+        <div class="cards-grid">
+          <div class="info-card">
+            <h3>Master Informatique</h3>
+            <p>Université de Caen Normandie, 2023-2025 - parcours IA, science des données et santé.</p>
           </div>
-          
-          <div class="cv-item">
-            <div class="cv-year">2020-2023</div>
-            <div class="cv-content">
-              <h3>Licence Informatique</h3>
-              <p><strong>Université de Caen Normandie</strong></p>
-              <p>Pluridisciplinaire</p>
-              <ul>
-                <li>Programmation orientée objet (Java, C++, Python)</li>
-                <li>Structures de données et algorithmes</li>
-                <li>Bases de données relationnelles, SQL et NoSQL</li>
-                <li>Développement web (HTML, CSS, JavaScript, PHP)</li>
-                <li>Administration système Linux</li>
-              </ul>
-            </div>
+          <div class="info-card">
+            <h3>Licence Informatique</h3>
+            <p>Université de Caen Normandie, 2020-2023 - parcours pluridisciplinaire.</p>
+          </div>
+          <div class="info-card">
+            <h3>Publication</h3>
+            <p>IDA 2026 - article co-signé issu du mémoire de M2 sur l'explicabilité des GNN appliquée aux graphes moléculaires.</p>
+          </div>
+          <div class="info-card">
+            <h3>Projet santé</h3>
+            <p>Attribution automatique de CCAM : pipeline NLP pour prédire des codes à partir de comptes rendus médicaux.</p>
+          </div>
+          <div class="info-card">
+            <h3>Algo challenge</h3>
+            <p>Détection d'hypovigilance : features, données physiologiques et modèle récurrent avec restitution de la solution.</p>
+          </div>
+          <div class="info-card">
+            <h3>Portfolio technique</h3>
+            <p>Plus de 60 dépôts et prototypes : algorithmique, dashboards web, IA, visualisation et projets personnels.</p>
           </div>
         </div>
       </div>
@@ -75,115 +128,97 @@
 
     <section class="section">
       <div class="container">
-        <h2>💼 Expérience Professionnelle</h2>
-        <div class="cv-timeline">
-        <div class="cv-item">
-            <div class="cv-year">2025</div>
-            <div class="cv-content">
-              <h3>Stage de Recherche - Laboratoire GREYC</h3>
-              <p><strong>Université de Caen Normandie</strong></p>
-              <p>Amélioration d'algorithmes de fouille de motifs dans les graphes</p>
-              <ul>
-                <li>Optimisation de l'algorithme cgSpan</li>
-                <li>Analyse de complexité algorithmique</li>
-                <li>Développement en Python avec NetworkX</li>
-                <li>Benchmarking et évaluation de performance</li>
-                <li>Pipeline pour passer d'un dataset à une prédiction de sa précision</li>
-              </ul>
-            </div>
-        </div>
-
-          <div class="cv-item">
-            <div class="cv-year">2024</div>
-            <div class="cv-content">
-              <h3>Projet de Recherche - Laboratoire COMETE</h3>
-              <p><strong>Université de Caen Normandie</strong></p>
-              <p>Détection d'hypovigilance par analyse de données temporelles</p>
-              <ul>
-                <li>Développement d'algorithmes de ML pour données physiologiques</li>
-                <li>Prétraitement et analyse de signaux biomédicaux</li>
-                <li>Mise en place de pipelines de données avec Python/PyTorch</li>
-                <li>Validation clinique et évaluation de performance</li>
-              </ul>
-            </div>
+        <h2>Axes de recherche et compétences pour la thèse</h2>
+        <div class="cards-grid">
+          <div class="info-card">
+            <h3>Apprentissage fédéré personnalisé</h3>
+            <p>Robustesse inter-centres et gestion de l'hétérogénéité dans les données de santé.</p>
           </div>
-          
-          <div class="cv-item">
-            <div class="cv-year">2024</div>
-            <div class="cv-content">
-              <h3>Projet de Recherche - Laboratoire Centre François Baclesse</h3>
-              <p><strong>Université de Caen Normandie</strong></p>
-              <p>Prédiction de codes CCAM par analyse de comptes rendus médicaux</p>
-              <ul>
-                <li>Traitement automatique du langage naturel (NLP)</li>
-                <li>Développement de modèles de classification avec TensorFlow</li>
-                <li>Interface utilisateur avec Tkinter</li>
-                <li>Validation sur données réelles anonymisées</li>
-              </ul>
-            </div>
+          <div class="info-card">
+            <h3>Imagerie longitudinale</h3>
+            <p>Modélisation spatio-temporelle d'IRM et trajectoires de réponse au traitement.</p>
           </div>
-
-          <div class="cv-item">
-            <div class="cv-year">2024</div>
-            <div class="cv-content">
-              <h3>Stage de Recherche - Laboratoire CERMN</h3>
-              <p><strong>Université de Caen Normandie</strong></p>
-              <p>Modélisation 3D moléculaire et pharmacophorique</p>
-              <ul>
-                <li>Traitement de données chimiques</li>
-                <li>Développement d'outils de visualisation moléculaire</li>
-                <li>Intégration de données expérimentales et de simulations</li>
-                <li>Collaboration avec des équipes interdisciplinaires</li>
-              </ul>
-            </div>
+          <div class="info-card">
+            <h3>Explicabilité clinique</h3>
+            <p>Interprétation des modèles, calibration et analyse de l'incertitude pour soutenir une IA de confiance.</p>
+          </div>
+          <div class="info-card">
+            <h3>Déploiement terrain</h3>
+            <p>Qualité des données, confidentialité, documentation, adoption et dialogue interdisciplinaire.</p>
+          </div>
+          <div class="info-card">
+            <h3>Recherche appliquée</h3>
+            <p>Formulation de problématiques, protocoles expérimentaux, analyse de résultats et rédaction scientifique.</p>
+          </div>
+          <div class="info-card">
+            <h3>Dialogue</h3>
+            <p>Échanges avec personnels non informaticiens, chercheurs, ingénieurs et acteurs institutionnels.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section-muted">
       <div class="container">
-        <h2>🛠 Compétences Techniques</h2>
+        <h2>Compétences</h2>
         <div class="skills-grid">
           <div class="skill-category">
-            <h3>Intelligence Artificielle</h3>
+            <h3>IA / data</h3>
             <ul>
-              <li>PyTorch, TensorFlow, scikit-learn</li>
-              <li>Apprentissage supervisé/non supervisé</li>
-              <li>Deep Learning (CNN, RNN, Transformers, ...)</li>
-              <li>Computer Vision, NLP</li>
-            </ul>
-          </div>
-          
-          <div class="skill-category">
-            <h3>Data Science</h3>
-            <ul>
+              <li>Python</li>
+              <li>PyTorch</li>
+              <li>TensorFlow</li>
+              <li>scikit-learn</li>
               <li>Pandas, NumPy, SciPy</li>
-              <li>Matplotlib, Seaborn, Plotly</li>
-              <li>Jupyter Notebooks</li>
-              <li>Statistiques avancées</li>
             </ul>
           </div>
-          
+          <div class="skill-category">
+            <h3>Données</h3>
+            <ul>
+              <li>SQL</li>
+              <li>PostgreSQL</li>
+              <li>Structuration et fiabilisation</li>
+              <li>Exploitation métier</li>
+            </ul>
+          </div>
           <div class="skill-category">
             <h3>Développement</h3>
             <ul>
-              <li>Python, C++, Java, JavaScript</li>
-              <li>HTML/CSS, PHP, React</li>
-              <li>Git, Docker, Linux</li>
-              <li>MySQL, MongoDB, PostgreSQL, SQLite</li>
+              <li>FastAPI</li>
+              <li>Flask</li>
+              <li>React</li>
+              <li>Node.js / Express</li>
+              <li>HTML / CSS</li>
+              <li>C, C++, Java</li>
             </ul>
           </div>
-          
           <div class="skill-category">
-            <h3>Santé Numérique</h3>
+            <h3>Outils</h3>
             <ul>
-              <li>Données biomédicales</li>
-              <li>RGPD et confidentialité</li>
-              <li>Standards DICOM/HL7</li>
-              <li>Validation clinique</li>
-              <li>Ethique dans la santé</li>
-              <li>Droit dans l'informatique en santé</li>
+              <li>Git</li>
+              <li>Linux</li>
+              <li>Docker</li>
+              <li>PyTorch Geometric</li>
+              <li>RDKit</li>
+              <li>Plotly</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Langues</h3>
+            <ul>
+              <li>Français : natif</li>
+              <li>Anglais : professionnel</li>
+              <li>Espagnol : intermédiaire</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Atouts</h3>
+            <ul>
+              <li>Données sensibles de santé</li>
+              <li>Vulgarisation technique</li>
+              <li>Autonomie projet</li>
+              <li>Support utilisateurs</li>
+              <li>Rédaction scientifique</li>
             </ul>
           </div>
         </div>
@@ -192,78 +227,20 @@
 
     <section class="section">
       <div class="container">
-        <h2>🌐 Langues</h2>
-        <div class="languages">
-          <div class="language-item">
-            <h3>Français</h3>
-            <p>Langue maternelle</p>
+        <h2>Responsabilités et engagement</h2>
+        <div class="cards-grid">
+          <div class="info-card">
+            <h3>AFNEUS</h3>
+            <p>Vice-président Partenariats et Affaires académiques, 2023-2025 : coordination nationale, négociation avec des institutions et interventions devant des instances.</p>
           </div>
-          <div class="language-item">
-            <h3>Anglais</h3>
-            <p>Niveau B2+ (technique et scientifique)</p>
+          <div class="info-card">
+            <h3>Corpo Sciences Caen</h3>
+            <p>Trésorier réseau national et membre actif, 2021-2023 : gestion budgétaire, organisation d'événements et transmission de positions.</p>
           </div>
-          <div class="language-item">
-            <h3>Espagnol</h3>
-            <p>Niveau B2 (Lycée)</p>
+          <div class="info-card">
+            <h3>Élu étudiant</h3>
+            <p>Depuis 2021 : représentation, médiation, travail en instance et défense d'intérêts collectifs.</p>
           </div>
-          <div class="language-item">
-            <h3>Russe</h3>
-            <p>Niveau A1 (Débutant - Bases)</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>🏆 Projets Marquants</h2>
-        <div class="projects-highlight">
-          <p>Découvrez mes réalisations techniques dans la section <a href="projets.html">Projets</a> :</p>
-          
-          <div class="project-categories">
-            <div class="project-category">
-              <h4>🧠 Intelligence Artificielle & Data Science</h4>
-              <ul>
-                <li><strong>Analyse Scanner Cérébral</strong> - Traitement d'images médicales avec Computer Vision</li>
-                <li><strong>Détection d'Hypovigilance</strong> - ML prédictif sur signaux physiologiques</li>
-                <li><strong>Prédiction Boursière</strong> - RNN + LLM avec analyse de sentiment</li>
-                <li><strong>Profil Client & Prédiction Achats</strong> - Machine Learning pour analytics client</li>
-                <li><strong>Classification CCAM</strong> - NLP pour codes médicaux automatiques</li>
-              </ul>
-            </div>
-
-            <div class="project-category">
-              <h4>💻 Développement Logiciel</h4>
-              <ul>
-                <li><strong>Moteur 3D Ray Tracing</strong> - Engine de rendu 3D from scratch en C++</li>
-                <li><strong>Moteur 2D</strong> - Game engine 2D complet avec OpenGL</li>
-                <li><strong>ScanGUI</strong> - Interface GTK+ pour traitement d'images</li>
-                <li><strong>Clone Zelda</strong> - Recréation complète du jeu avec SFML</li>
-              </ul>
-            </div>
-
-            <div class="project-category">
-              <h4>🌐 Applications Web & Cloud</h4>
-              <ul>
-                <li><strong>Cloud Personnel Sécurisé</strong> - Infrastructure complète Node.js/Docker</li>
-                <li><strong>Interface Domotique</strong> - Système IoT avec GUI native</li>
-                <li><strong>Générateur de Recettes</strong> - Application web intelligente</li>
-              </ul>
-            </div>
-
-            <div class="project-category">
-              <h4>🔬 Recherche & Spécialisé</h4>
-              <ul>
-                <li><strong>Méta-descripteurs de Graphes</strong> - Analyse de datasets avec NetworkX</li>
-                <li><strong>cgSpan Optimisé</strong> - Amélioration d'algorithme de fouille de motifs</li>
-                <li><strong>Norns - Modélisation Moléculaire</strong> - Visualisation 3D WebGL</li>
-              </ul>
-            </div>
-          </div>
-
-          <p style="margin-top: 25px; text-align: center;">
-            <strong>40+ projets sur GitHub</strong> couvrant l'IA, le développement logiciel, les applications web et la recherche.
-          </p>
         </div>
       </div>
     </section>
@@ -271,285 +248,29 @@
     <section class="section">
       <div class="container">
         <div class="cv-download">
-          <p>📄 <strong>Télécharger mon CV</strong></p>
-          <p>
-            <a href="../../assets/pdf/cv.pdf" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Télécharger CV PDF">
-              Télécharger le CV (PDF)
-            </a>
+          <p><strong>Télécharger le CV</strong></p>
+          <p style="margin-top: 12px;">Version PDF mise à jour du profil orienté IA santé, recherche appliquée et déploiement.</p>
+          <p style="margin-top: 20px;">
+            <a href="../../assets/pdf/cv.pdf" target="_blank" rel="noopener noreferrer" class="btn">Télécharger le CV (PDF)</a>
           </p>
-          <p style="margin-top: 15px;" class="mailto">
-            Ou contactez-moi à <a href="mailto:lemonnier.guillaume.pro@gmail.com">lemonnier.guillaume.pro@gmail.com</a>
-          </p>
+          <p style="margin-top: 14px;">Ou écrire à <a href="mailto:lemonnier.guillaume.pro@gmail.com">lemonnier.guillaume.pro@gmail.com</a></p>
         </div>
       </div>
     </section>
   </main>
 
+
   <footer>
     <div class="container">
-      <p>&copy; 2025 Guillaume Lemonnier - Tous droits réservés</p>
-      <p style="font-size: 0.9rem; margin-top: 10px;">
-        Ce code est protégé par licence. Toute utilisation nécessite l'attribution à l'auteur. 
-        <a href="../../LICENSE" style="color: var(--secondary-color);">Voir la licence</a>
+      <p>&copy; 2026 Guillaume Lemonnier - Tous droits réservés</p>
+      <p style="font-size: 0.94rem;">
+        Ce code est protégé par licence. Toute utilisation nécessite l'attribution à l'auteur.
+        <a href="../../LICENSE">Voir la licence</a>
       </p>
     </div>
   </footer>
 
+
   <script src="../js/script.js"></script>
-
-  <style>
-    .cv-timeline {
-      position: relative;
-      margin: 40px 0;
-    }
-
-    .cv-timeline::before {
-      content: '';
-      position: absolute;
-      left: 100px;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: var(--secondary-color);
-    }
-
-    .cv-item {
-      display: flex;
-      margin-bottom: 40px;
-      position: relative;
-    }
-
-    .cv-year {
-      width: 100px;
-      flex-shrink: 0;
-      font-weight: 700;
-      color: var(--secondary-color);
-      font-size: 1.1rem;
-      position: relative;
-      text-align: right;
-      padding-right: 20px;
-    }
-
-    .cv-content {
-      flex: 1;
-      margin-left: 30px;
-      background: var(--bg-light);
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: var(--shadow-light);
-      border-left: 4px solid var(--secondary-color);
-    }
-
-    .cv-content h3 {
-      color: var(--primary-color);
-      margin-bottom: 10px;
-      font-size: 1.3rem;
-    }
-
-    .cv-content p {
-      margin-bottom: 10px;
-    }
-
-    .cv-content ul {
-      margin-top: 15px;
-      padding-left: 20px;
-    }
-
-    .cv-content li {
-      margin-bottom: 8px;
-      color: var(--text-light);
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .skill-category {
-      background: var(--bg-light);
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-light);
-      border-top: 4px solid var(--secondary-color);
-    }
-
-    .skill-category h3 {
-      color: var(--primary-color);
-      margin-bottom: 15px;
-      font-size: 1.2rem;
-    }
-
-    .skill-category ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .skill-category li {
-      padding: 8px 0;
-      border-bottom: 1px solid var(--border-color);
-      color: var(--text-light);
-    }
-
-    .skill-category li:last-child {
-      border-bottom: none;
-    }
-
-    .languages {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
-    }
-
-    .language-item {
-      text-align: center;
-      background: var(--bg-light);
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-light);
-    }
-
-    .language-item h3 {
-      color: var(--primary-color);
-      margin-bottom: 10px;
-    }
-
-    .projects-highlight {
-      background: var(--bg-section);
-      padding: 30px;
-      border-radius: 15px;
-      margin-top: 30px;
-    }
-
-    .project-categories {
-      margin-top: 25px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-    }
-
-    .project-category {
-      background: var(--bg-light);
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: var(--shadow-light);
-      border-left: 4px solid var(--secondary-color);
-    }
-
-    .project-category h4 {
-      color: var(--primary-color);
-      margin-bottom: 15px;
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
-
-    .project-category ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .project-category li {
-      margin-bottom: 10px;
-      color: var(--text-light);
-      padding: 5px 0;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .project-category li:last-child {
-      border-bottom: none;
-    }
-
-    .project-category strong {
-      color: var(--primary-color);
-    }
-
-    .projects-highlight ul {
-      margin-top: 15px;
-      padding-left: 20px;
-    }
-
-    .projects-highlight li {
-      margin-bottom: 10px;
-      color: var(--text-light);
-    }
-
-    .cv-download {
-      text-align: center;
-      background: var(--primary-color);
-      color: white;
-      padding: 30px;
-      border-radius: 15px;
-      margin-top: 30px;
-    }
-
-    .cv-download strong {
-      color: white;
-    }
-
-    .cv-download .btn {
-      background: white;
-      color: var(--primary-color);
-      margin-top: 10px;
-      font-weight: 600;
-      border: 2px solid white;
-    }
-
-    .cv-download .btn:hover {
-      background: var(--secondary-color);
-      color: white;
-      border-color: var(--secondary-color);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
-
-    .mailto a {
-        color: var(--secondary-color);
-        text-decoration: none;
-    }
-
-    @media (max-width: 768px) {
-      .cv-timeline::before {
-        left: 20px;
-      }
-
-      .cv-item {
-        flex-direction: column;
-      }
-
-      .cv-year {
-        width: auto;
-        margin-bottom: 10px;
-        padding-left: 35px;
-        padding-right: 0;
-        text-align: left;
-        position: relative;
-      }
-
-      .cv-content {
-        margin-left: 0;
-      }
-
-      .achievements {
-        grid-template-columns: 1fr;
-      }
-
-      .skills-associative {
-        grid-template-columns: 1fr;
-      }
-
-      .project-categories {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .project-category {
-        padding: 15px;
-      }
-    }
-
-  </style>
 </body>
 </html>

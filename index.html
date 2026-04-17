@@ -3,291 +3,257 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Guillaume Lemonnier - Informaticien spécialisé en IA & Data Science appliquée à la santé. Expert en modélisation d'algorithmes d'apprentissage automatique et développement de solutions biomédicales." />
-  <meta name="keywords" content="Guillaume Lemonnier, IA, Intelligence Artificielle, Data Science, Santé, Biomédical, Python, PyTorch, Machine Learning" />
+  <meta name="description" content="Guillaume Lemonnier - IA santé, data et déploiement. Profil en poste à l'interface entre recherche en IA, données de santé sensibles et ingénierie logicielle." />
+  <meta name="keywords" content="Guillaume Lemonnier, IA santé, données de santé, ARS Normandie, GREYC, PyTorch, FastAPI, PostgreSQL, apprentissage fédéré" />
   <meta name="author" content="Guillaume Lemonnier" />
-  
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Guillaume Lemonnier - IA & Data Science Santé" />
-  <meta property="og:description" content="Informaticien spécialisé en IA & Data Science appliquée à la santé" />
+  <meta property="og:title" content="Guillaume Lemonnier - IA santé, data et déploiement" />
+  <meta property="og:description" content="Profil en poste, orienté entreprise, R&D et doctorat en IA pour la santé." />
   <meta property="og:url" content="https://p-pix.github.io" />
-  
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Guillaume Lemonnier - IA & Data Science Santé" />
-  <meta name="twitter:description" content="Informaticien spécialisé en IA & Data Science appliquée à la santé" />
-  
-  <title>Guillaume Lemonnier - IA & Data Science Santé</title>
+  <meta name="twitter:title" content="Guillaume Lemonnier - IA santé, data et déploiement" />
+  <meta name="twitter:description" content="Entreprise, recherche appliquée et perspectives doctorales en IA santé." />
+  <title>Guillaume Lemonnier - IA santé, data et déploiement</title>
   <link rel="stylesheet" href="./src/css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <div class="container">
+
       <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </button>
       <nav id="primary-nav" role="navigation" aria-label="Navigation principale">
-        <a href="#about" aria-label="Aller à la section Profil">Profil</a>
-        <a href="#skills" aria-label="Aller à la section Compétences">Compétences</a>
-        <a href="src/html/projets.html" aria-label="Voir mes projets">Projets</a>
-        <a href="src/html/cv.html" aria-label="Voir mon CV">CV</a>
-        <a href="src/html/recherche-emploi.html" aria-label="Ma recherche d'emploi" class="nav-highlight">🚀 Recherche d'emploi</a>
-        <a href="src/html/associatif.html" aria-label="Voir mon engagement associatif">Associatif</a>
-        <a href="#contact" aria-label="Me contacter">Contact</a>
+        <a href="#profil">Profil</a>
+        <a href="#experiences">Expériences</a>
+        <a href="#axes">Axes</a>
+        <a href="src/html/projets.html">Projets</a>
+        <a href="src/html/cv.html">CV</a>
+        <a href="src/html/recherche-emploi.html" class="nav-highlight">Positionnement</a>
+        <a href="src/html/associatif.html">Associatif</a>
+        <a href="#contact">Contact</a>
       </nav>
+
     </div>
   </header>
 
   <main>
-    <section class="hero" role="banner">
+    <section class="hero">
       <div class="container">
-        <h1>Guillaume LEMONNIER</h1>
-        <p>Développeur IA & Data Science<br>🚀 Prêt pour l'industrie - Disponible immédiatement</p>
-        <div class="hero-cta">
-          <a href="#contact" class="btn-primary">📧 Me contacter</a>
-          <a href="assets/pdf/cv.pdf" class="btn-secondary">📄 Télécharger CV</a>
+        <span class="hero-kicker">IA santé - data - déploiement</span>
+        <h1>Guillaume Lemonnier</h1>
+        <p>
+          Chargé d'appui à la performance numérique à l'ARS Normandie, avec un parcours à l'interface entre
+          recherche en apprentissage automatique, données de santé sensibles et développement de solutions robustes.
+        </p>
+        <div class="hero-status">
+          <span class="status-pill">En poste à l'ARS Normandie</span>
+          <span class="status-pill">Stage recherche au GREYC</span>
+          <span class="status-pill">Ouvert à échanges ciblés et doctorat</span>
+        </div>
+        <div class="hero-actions">
+          <a href="src/html/recherche-emploi.html" class="btn-primary">Voir mon positionnement</a>
+          <a href="src/html/projets.html" class="btn-secondary">Explorer les projets</a>
+          <a href="assets/pdf/cv.pdf" class="btn-secondary" target="_blank" rel="noopener noreferrer">Télécharger le CV</a>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section">
+    <section id="profil" class="section">
       <div class="container">
-        <div class="value-proposition">
-          <h2>🎯 Ce que j'apporte à votre entreprise</h2>
-          <div class="value-grid">
-            <div class="value-item">
-              <h3>🚀 Prêt pour la production</h3>
-              <p>40+ projets GitHub • Python/C++/Java • Applications déployées</p>
-            </div>
-            <div class="value-item">
-              <h3>📊 ROI Immédiat</h3>
-              <p>IA appliquée • Automatisation • Réduction des coûts</p>
-            </div>
-            <div class="value-item">
-              <h3>🔧 Polyvalence technique</h3>
-              <p>Full-stack • DevOps • Adaptabilité rapide</p>
-            </div>
-            <div class="value-item">
-              <h3>💼 Leadership</h3>
-              <p>VP National • Gestion d'équipes • Management de projets</p>
-            </div>
+        <div class="metric-grid">
+          <div class="metric-card">
+            <strong class="metric-value">ARS</strong>
+            <p class="metric-label">Poste actuel en environnement institutionnel santé, données sensibles, RGPD et déploiement métier.</p>
+          </div>
+          <div class="metric-card">
+            <strong class="metric-value">GREYC</strong>
+            <p class="metric-label">Expérience de recherche sur l'explicabilité des GNN, les pipelines expérimentaux et l'analyse de datasets.</p>
+          </div>
+          <div class="metric-card">
+            <strong class="metric-value">IDA 2026</strong>
+            <p class="metric-label">Article co-signé issu du mémoire de M2 sur l'explicabilité des GNN appliquée aux graphes moléculaires.</p>
+          </div>
+          <div class="metric-card">
+            <strong class="metric-value">60+</strong>
+            <p class="metric-label">Dépôts GitHub et prototypes couvrant IA, visualisation, développement logiciel et outils web.</p>
           </div>
         </div>
 
-        <h2>Profil Professionnel</h2>
-        <p>
-          <strong>Développeur IA & Data Science passionné</strong> avec un Master spécialisé et plus de 40 projets concrets. 
-          Je transforme les données en solutions business pour optimiser les performances et automatiser les processus.
-        </p>
-        <p>
-          <strong>Expertise technique complète</strong> : Python (PyTorch, TensorFlow), C++ (performances), Java (enterprise), 
-          avec une capacité démontrée à livrer des applications de production robustes et scalables.
-        </p>
-        <p>
-          <strong>Track record prouvé</strong> : Projets réels incluant analyse financière (RNN/LLM), détection automatique en médical, 
-          applications haute performance, et dashboards interactifs avec données de 19M€. Capable de passer de la conception au déploiement.
-        </p>
-        <p>
-          <strong>Leadership et impact</strong> : Vice-Président d'organisation nationale, gestion d'équipes multiples, 
-          négociation de partenariats stratégiques. Je combine excellence technique et vision business pour maximiser le ROI.
-        </p>
+        <div class="split-layout" style="margin-top: 30px;">
+          <div class="surface-card">
+            <span class="label">Profil</span>
+            <h2>Un profil technique, scientifique et opérationnel</h2>
+            <p>
+              Mon positionnement n'est pas celui d'un profil en recherche urgente d'emploi, mais celui d'un ingénieur déjà
+              en poste qui construit une trajectoire cohérente entre <strong>entreprise</strong>, <strong>recherche appliquée</strong>
+              et <strong>IA pour la santé</strong>.
+            </p>
+            <p style="margin-top: 14px;">
+              Je travaille aujourd'hui sur la fiabilisation et l'exploitation de données, le développement d'outils internes,
+              la documentation et l'accompagnement d'usages dans un cadre institutionnel exigeant. En parallèle, je garde
+              un ancrage fort dans les sujets de recherche : explicabilité, robustesse, données hétérogènes et apprentissage
+              fédéré en santé.
+            </p>
+          </div>
+          <div class="surface-card">
+            <span class="label">Points forts</span>
+            <ul class="list-clean">
+              <li>Développement autonome d'outils web et data avec exigences d'accès, d'historisation et d'intégrité.</li>
+              <li>Expérience de recherche sur GNN, caractérisation de datasets et protocoles expérimentaux.</li>
+              <li>Capacité à articuler contraintes métier, confidentialité, robustesse logicielle et adoption terrain.</li>
+              <li>Intérêt affirmé pour les sujets doctoraux à forte valeur clinique et méthodologique.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="skills" class="section">
+    <section id="experiences" class="section section-muted">
       <div class="container">
-        <h2>Expertises Techniques</h2>
+        <h2>Expériences récentes</h2>
+        <p class="section-intro">
+          Une trajectoire qui combine environnement institutionnel de santé, recherche académique et ingénierie logicielle.
+        </p>
+
+        <div class="timeline">
+          <article class="timeline-card">
+            <div class="timeline-date">Depuis déc. 2025</div>
+            <div>
+              <h3>Chargé d'appui à la performance numérique - ARS Normandie</h3>
+              <p class="timeline-meta">Caen - données sensibles, outils métiers, accompagnement des usages</p>
+              <ul>
+                <li>Fiabilisation et exploitation de données via PostgreSQL, paramétrage d'outils et support fonctionnel.</li>
+                <li>Développement autonome d'un outil web interne avec authentification, contrôle d'accès, exports XLSX et historisation.</li>
+                <li>Documentation, vulgarisation technique, accompagnement des agents et suivi des besoins métier.</li>
+                <li>Référent IA sur les usages responsables dans un périmètre de plus de 400 utilisateurs et 85 services.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-card">
+            <div class="timeline-date">Mars - août 2025</div>
+            <div>
+              <h3>Stage recherche M2 - Explicabilité des GNN - GREYC</h3>
+              <p class="timeline-meta">Caen - graphes moléculaires, PyTorch Geometric, méta-modélisation interprétable</p>
+              <ul>
+                <li>Conception d'un pipeline de caractérisation de datasets de graphes moléculaires sur 57 jeux de données.</li>
+                <li>Extraction de motifs fréquents avec gSpan / cgSpan et entraînement d'un GCN sous PyTorch Geometric.</li>
+                <li>Construction d'un méta-modèle interprétable reliant structure des données et performance des modèles.</li>
+                <li>Livrables : mémoire de M2 et article co-signé à IDA 2026.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-card">
+            <div class="timeline-date">Juin - juil. 2024</div>
+            <div>
+              <h3>Stage - Visualisation 3D moléculaire - CERMN</h3>
+              <p class="timeline-meta">Caen - performance, ergonomie, validation fonctionnelle</p>
+              <ul>
+                <li>Développement d'une visualisation 3D et d'un module d'alignement moléculaire pour un logiciel existant.</li>
+                <li>Travail centré sur la performance, l'ergonomie et la documentation des évolutions.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="axes" class="section">
+      <div class="container">
+        <h2>Axes de travail et d'intérêt</h2>
+        <p class="section-intro">
+          Les thèmes qui structurent aujourd'hui mon site, mes projets et mon positionnement : utile pour des entreprises,
+          crédible pour des équipes de recherche, lisible pour des encadrants de thèse.
+        </p>
+
+        <div class="axes-grid">
+          <div class="info-card">
+            <h3>Apprentissage fédéré en santé</h3>
+            <p>Personnalisation, robustesse inter-centres, confidentialité et hétérogénéité des données dans des contextes multicentriques.</p>
+          </div>
+          <div class="info-card">
+            <h3>Imagerie et temporalité</h3>
+            <p>Modélisation spatio-temporelle d'IRM longitudinales et exploitation de séquences d'examens pour des usages cliniques crédibles.</p>
+          </div>
+          <div class="info-card">
+            <h3>Explicabilité et incertitude</h3>
+            <p>Interprétation des modèles, calibration, analyse de l'incertitude et confiance dans les systèmes d'IA appliqués à la santé.</p>
+          </div>
+          <div class="info-card">
+            <h3>Déploiement terrain</h3>
+            <p>Qualité des données, contrôle des accès, documentation, maintenance et adoption par des utilisateurs non spécialistes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-muted">
+      <div class="container">
+        <h2>Expertises</h2>
+        <p class="section-intro">
+          Un socle technique orienté IA, données, ingénierie logicielle et communication technique.
+        </p>
         <ul class="services">
-          <a href="src/html/modelisation_ia.html" aria-label="Modélisation IA"><li>🧠 <strong>Modélisation IA</strong><br>PyTorch, scikit-learn, TensorFlow</li></a>
-          <a href="src/html/analyse_donnees_biomedicales.html" aria-label="Analyse de données"><li>📊 <strong>Analyse de Données</strong><br>Pandas, NumPy, données pluridisciplinaire</li></a>
-          <a href="src/html/visualisation_donnees.html" aria-label="Visualisation de données"><li>📈 <strong>Visualisation de Données</strong><br>Matplotlib, Seaborn, Plotly</li></a>
-          <a href="src/html/recherche_prototypage.html" aria-label="Recherche et prototypage"><li>🔬 <strong>Recherche & Prototypage</strong><br>Innovation, veille technologique</li></a>
-          <a href="src/html/redaction_documentation.html" aria-label="Documentation scientifique"><li>📚 <strong>Documentation Scientifique</strong><br>Rédaction, communication technique</li></a>
-          <a href="src/html/bases_donnees_sql.html" aria-label="Bases de données"><li>💾 <strong>Bases de Données</strong><br>MySQL, MongoDB, PostgreSQL</li></a>
-          <a href="src/html/developpement_web.html" aria-label="Développement web"><li>🌐 <strong>Développement Web</strong><br>HTML, JavaScript, PHP, React</li></a>
-          <a href="src/html/developpement_logiciel.html" aria-label="Développement logiciel"><li>🔧 <strong>Développement Logiciel</strong><br>C++, Java, Python, interfaces UI</li></a>
-          <a href="src/html/outils_scientifiques.html" aria-label="Outils scientifiques"><li>🧪 <strong>Outils Scientifiques</strong><br>Jupyter, Git, Docker, Linux</li></a>
+          <a href="src/html/modelisation_ia.html" aria-label="Modélisation IA"><li><strong>Modélisation IA</strong><br>PyTorch, scikit-learn, TensorFlow, pipelines expérimentaux</li></a>
+          <a href="src/html/analyse_donnees_biomedicales.html" aria-label="Analyse de données"><li><strong>Analyse de données biomédicales</strong><br>Pandas, NumPy, statistiques et données de santé</li></a>
+          <a href="src/html/visualisation_donnees.html" aria-label="Visualisation de données"><li><strong>Visualisation</strong><br>Plotly, Matplotlib, représentations utiles à la décision</li></a>
+          <a href="src/html/recherche_prototypage.html" aria-label="Recherche et prototypage"><li><strong>Recherche et prototypage</strong><br>Conception d'expériences, exploration et outillage</li></a>
+          <a href="src/html/redaction_documentation.html" aria-label="Documentation scientifique"><li><strong>Rédaction et documentation</strong><br>Vulgarisation, communication technique, synthèse</li></a>
+          <a href="src/html/bases_donnees_sql.html" aria-label="Bases de données"><li><strong>Bases de données</strong><br>SQL, PostgreSQL, structuration et fiabilisation</li></a>
+          <a href="src/html/developpement_web.html" aria-label="Développement web"><li><strong>Développement web</strong><br>FastAPI, Flask, React, interfaces et outils métiers</li></a>
+          <a href="src/html/developpement_logiciel.html" aria-label="Développement logiciel"><li><strong>Développement logiciel</strong><br>Python, C++, Java, performance et robustesse</li></a>
+          <a href="src/html/outils_scientifiques.html" aria-label="Outils scientifiques"><li><strong>Outils scientifiques</strong><br>Git, Docker, Linux, PyTorch Geometric, RDKit</li></a>
         </ul>
       </div>
     </section>
 
     <section id="contact" class="section">
       <div class="container">
-        <h2>Me Contacter</h2>
-        <p>Email : <small><a href="mailto:lemonnier.guillaume.pro@gmail.com" aria-label="Envoyer un email">lemonnier.guillaume.pro@gmail.com</a></small></p>
-        <p>GitHub : <small><a href="https://github.com/P-Pix" target="_blank" rel="noopener noreferrer" aria-label="Visiter mon profil GitHub">https://github.com/P-Pix</a></small></p>
-        <p>LinkedIn : <small><a href="https://linkedin.com/in/lemonnier-guillaume" target="_blank" rel="noopener noreferrer" aria-label="Visiter mon profil LinkedIn">linkedin.com/in/lemonnier-guillaume</a></small></p>
-
-        <div class="cv-download-section">
-          <p>📄 <strong>Télécharger mon CV</strong></p>
-          <p>
-            <a href="assets/pdf/cv.pdf" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Télécharger CV PDF">
-              Télécharger le CV (PDF)
-            </a>
-          </p>
+        <h2>Contact</h2>
+        <p class="section-intro">
+          J'échange volontiers sur des opportunités ciblées, collaborations R&amp;D, discussions doctorales ou projets mêlant IA,
+          santé, données et déploiement réel.
+        </p>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Email</h3>
+            <p><a href="mailto:lemonnier.guillaume.pro@gmail.com">lemonnier.guillaume.pro@gmail.com</a></p>
+            <p class="focus-note">Premier contact simple, direct et professionnel.</p>
+          </div>
+          <div class="contact-card">
+            <h3>GitHub</h3>
+            <p><a href="https://github.com/P-Pix" target="_blank" rel="noopener noreferrer">github.com/P-Pix</a></p>
+            <p class="focus-note">Sélection de dépôts, prototypes, démonstrateurs et expérimentations techniques.</p>
+          </div>
+          <div class="contact-card">
+            <h3>LinkedIn</h3>
+            <p><a href="https://linkedin.com/in/lemonnier-guillaume" target="_blank" rel="noopener noreferrer">linkedin.com/in/lemonnier-guillaume</a></p>
+            <p class="focus-note">Pour les échanges professionnels, académiques et de réseau.</p>
+          </div>
         </div>
-      </div>
-    </section>
       </div>
     </section>
   </main>
 
+
   <footer>
     <div class="container">
-      <p>&copy; 2025 Guillaume Lemonnier - Tous droits réservés</p>
-      <p style="font-size: 0.9rem; margin-top: 10px;">
-        Ce code est protégé par licence. Toute utilisation nécessite l'attribution à l'auteur. 
-        <a href="LICENSE" style="color: var(--secondary-color);">Voir la licence</a>
+      <p>&copy; 2026 Guillaume Lemonnier - Tous droits réservés</p>
+      <p style="font-size: 0.94rem;">
+        Ce code est protégé par licence. Toute utilisation nécessite l'attribution à l'auteur.
+        <a href="LICENSE">Voir la licence</a>
       </p>
     </div>
   </footer>
 
+
   <script src="src/js/script.js"></script>
-
-  <style>
-    .nav-highlight {
-      background: linear-gradient(135deg, #ef4444, #dc2626) !important;
-      color: white !important;
-      padding: 8px 16px !important;
-      border-radius: 20px !important;
-      font-weight: 600 !important;
-      animation: pulse 2s infinite !important;
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
-      70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
-    }
-
-    .hero-cta {
-      margin-top: 30px;
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary, .btn-secondary {
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .btn-primary {
-      background: var(--primary-color);
-      color: white;
-      border: 2px solid var(--primary-color);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--primary-color);
-      border: 2px solid var(--primary-color);
-    }
-
-    .btn-primary:hover, .btn-secondary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
-
-    .value-proposition {
-      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-      color: white;
-      padding: 40px;
-      border-radius: 20px;
-      margin-bottom: 40px;
-    }
-
-    .value-proposition h2 {
-      color: white;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .value-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .value-item {
-      background: rgba(255,255,255,0.1);
-      padding: 20px;
-      border-radius: 12px;
-      backdrop-filter: blur(10px);
-    }
-
-    .value-item h3 {
-      color: white;
-      margin-bottom: 10px;
-      font-size: 1.1rem;
-    }
-
-    .value-item p {
-      color: rgba(255,255,255,0.9);
-      margin: 0;
-      font-size: 0.95rem;
-    }
-
-    .cv-download-section {
-      text-align: center;
-      background: var(--primary-color);
-      color: white;
-      padding: 25px;
-      border-radius: 15px;
-      margin-top: 30px;
-    }
-
-    .cv-download-section strong {
-      color: white;
-    }
-
-    .cv-download-section .btn {
-      background: white;
-      color: var(--primary-color);
-      margin-top: 10px;
-      font-weight: 600;
-      border: 2px solid white;
-    }
-
-    .cv-download-section .btn:hover {
-      background: var(--secondary-color);
-      color: white;
-      border-color: var(--secondary-color);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
-
-    /* Styles ajoutés pour le menu responsive */
-    .menu-toggle { display:none; position:relative; background:transparent; border:none; cursor:pointer; width:48px; height:42px; border-radius:8px; justify-content:center; align-items:center; flex-direction:column; gap:6px; padding:6px; transition:var(--transition); }
-    .menu-toggle:focus { outline:2px solid var(--secondary-color); outline-offset:4px; }
-    .menu-toggle .bar { width:28px; height:3px; background:var(--primary-color); border-radius:2px; transition:var(--transition); }
-    .menu-toggle[aria-expanded="true"] .bar:nth-child(1){ transform:translateY(9px) rotate(45deg); }
-    .menu-toggle[aria-expanded="true"] .bar:nth-child(2){ opacity:0; }
-    .menu-toggle[aria-expanded="true"] .bar:nth-child(3){ transform:translateY(-9px) rotate(-45deg); }
-
-    @media (max-width: 1000px) {
-      header .container { justify-content:space-between; }
-      .menu-toggle { display:flex; }
-      #primary-nav { position:absolute; top:100%; left:0; right:0; background:var(--bg-light); display:flex; flex-direction:column; gap:0; padding:10px 0 20px; box-shadow:var(--shadow-medium); max-height:0; overflow:hidden; opacity:0; pointer-events:none; transform:translateY(-10px); transition:max-height .4s ease, opacity .3s ease, transform .3s ease; }
-      #primary-nav.open { max-height:500px; opacity:1; pointer-events:auto; transform:translateY(0); }
-      #primary-nav a { padding:14px 25px; border-radius:0; width:100%; }
-      #primary-nav a:hover { background:var(--bg-section); transform:none; }
-      #primary-nav a.nav-highlight { margin:8px 12px 0; border-radius:12px; }
-    }
-  </style>
 </body>
 </html>

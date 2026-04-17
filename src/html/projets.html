@@ -3,712 +3,350 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Découvrez les projets de Guillaume Lemonnier en IA, Data Science et développement logiciel" />
-  <title>Mes Projets - Guillaume Lemonnier</title>
+  <meta name="description" content="Projets et dépôts GitHub de Guillaume Lemonnier : IA, données, visualisation, logiciels et démonstrateurs web." />
+  <title>Projets et dépôts - Guillaume Lemonnier</title>
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <div class="container">
-      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+
+      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
       <nav id="primary-nav" role="navigation" aria-label="Navigation principale">
         <a href="../../index.html">Accueil</a>
         <a href="projets.html" class="active">Projets</a>
         <a href="cv.html">CV</a>
-        <a href="recherche-emploi.html" class="nav-highlight">🚀 Recherche d'emploi</a>
+        <a href="recherche-emploi.html" class="nav-highlight">Positionnement</a>
         <a href="associatif.html">Associatif</a>
         <a href="contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
   <main>
     <section class="hero">
       <div class="container">
-        <h1>Portfolio de Projets</h1>
-        <p>Découvrez mes réalisations<br>en IA, Data Science et développement</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>👨‍💻 Projets de Développement</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <h3>Moteur 2D</h3>
-            <p>Développement d'un moteur de jeu 2D from scratch en C++</p>
-            <div class="tech-tags">
-              <span class="tag">C++</span>
-              <span class="tag">SDL 2</span>
-              <span class="tag">Game Engine</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="https://github.com/P-Pix/2DMotor" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <h3>Moteur 3D Ray Tracing</h3>
-            <p>Moteur de rendu 3D avec implémentation de ray tracing</p>
-            <div class="tech-tags">
-              <span class="tag">C++</span>
-              <span class="tag">Ray Tracing</span>
-              <span class="tag">OpenGL</span>
-              <span class="tag">3D Graphics</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="https://github.com/P-Pix/3DMotorRayTracing" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <h3>DrawingApp</h3>
-            <p>Application de dessin native avec interface graphique avancée</p>
-            <div class="tech-tags">
-              <span class="tag">C++</span>
-              <span class="tag">GUI</span>
-              <span class="tag">Graphics</span>
-            </div>
-            <div class="project-status en-cours">En cours</div>
-            <a href="https://github.com/P-Pix/DrawingApp" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <h3>ScanGUI</h3>
-            <p>Interface graphique pour scan de manga (Version alpha)</p>
-            <div class="tech-tags">
-              <span class="tag">C++</span>
-              <span class="tag">Image Processing</span>
-              <span class="tag">GUI</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="https://github.com/P-Pix/ScanGUI" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <h3>Clone Zelda</h3>
-            <p>Recréation du jeu Zelda original en C++</p>
-            <div class="tech-tags">
-              <span class="tag">C++</span>
-              <span class="tag">Game Dev</span>
-              <span class="tag">SDL</span>
-            </div>
-            <div class="project-status en-cours">En cours</div>
-            <a href="https://github.com/P-Pix/clone_zelda" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <h3>ASCII Image</h3>
-            <p>Transformation d'images en art ASCII</p>
-            <div class="tech-tags">
-              <span class="tag">C++</span>
-              <span class="tag">Image Processing</span>
-              <span class="tag">ASCII Art</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="https://github.com/P-Pix/ascii_image" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <h3>ASCII Video</h3>
-            <p>Capture webcam et conversion en vidéo ASCII temps réel avec SDL2</p>
-            <div class="tech-tags">
-              <span class="tag">C++</span>
-              <span class="tag">SDL2</span>
-              <span class="tag">Real-time Processing</span>
-            </div>
-            <div class="project-status en-cours">En cours</div>
-            <a href="https://github.com/P-Pix/AsciiVideo" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <h3>Problème N-Corps</h3>
-            <p>Visualisation et simulation du problème de N corps en physique</p>
-            <div class="tech-tags">
-              <span class="tag">C++</span>
-              <span class="tag">Physics Simulation</span>
-              <span class="tag">Visualization</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="https://github.com/P-Pix/Probleme-N-Corps" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <h3>Perlin Noise</h3>
-            <p>Génération d'images avec l'algorithme de bruit de Perlin</p>
-            <div class="tech-tags">
-              <span class="tag">C++</span>
-              <span class="tag">Procedural Generation</span>
-              <span class="tag">Computer Graphics</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="https://github.com/P-Pix/Perlin_Noise" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
+        <span class="hero-kicker">Portfolio technique</span>
+        <h1>Projets, dépôts et démonstrateurs</h1>
+        <p>
+          Une sélection structurée de travaux en IA, santé, visualisation, développement logiciel et outils web.
+          L'objectif n'est pas de montrer une recherche d'emploi, mais une capacité à concevoir, tester, documenter et déployer.
+        </p>
+        <div class="hero-status">
+          <span class="status-pill">60+ dépôts et prototypes</span>
+          <span class="status-pill">3 démonstrateurs web intégrés</span>
+          <span class="status-pill">Santé, data, logiciel, visualisation</span>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <h2>🧠 Projets IA & Data Science</h2>
+        <div class="metric-grid">
+          <div class="metric-card">
+            <strong class="metric-value">3</strong>
+            <p class="metric-label">Démonstrateurs web consultables directement sur le site.</p>
+          </div>
+          <div class="metric-card">
+            <strong class="metric-value">IA</strong>
+            <p class="metric-label">Sujets en imagerie, graphes, NLP, séries temporelles et prédiction.</p>
+          </div>
+          <div class="metric-card">
+            <strong class="metric-value">Data</strong>
+            <p class="metric-label">Visualisation, dashboards, structuration et exploitation de données réelles.</p>
+          </div>
+          <div class="metric-card">
+            <strong class="metric-value">Soft</strong>
+            <p class="metric-label">Moteurs 2D/3D, outils système, interfaces et applications full stack.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container">
+        <h2>Démonstrateurs interactifs</h2>
+        <p class="section-intro">
+          Trois projets directement navigables depuis le site, utiles pour montrer un travail complet allant de la donnée à l'interface.
+        </p>
+        <div class="demo-grid">
+          <article class="demo-card">
+            <h3>Carte interactive TWISTO</h3>
+            <p>Visualisation cartographique d'arrêts de transport avec logique interactive côté front.</p>
+            <div class="tech-tags">
+              <span class="tag">Leaflet.js</span>
+              <span class="tag">Données GTFS</span>
+              <span class="tag">Cartographie</span>
+            </div>
+            <div class="project-links">
+              <a href="carte-twisto.html" class="project-link">Ouvrir la démo</a>
+            </div>
+          </article>
+
+          <article class="demo-card">
+            <h3>Marchés de Caen</h3>
+            <p>Carte d'exploration de données locales avec géolocalisation, filtres et restitution visuelle.</p>
+            <div class="tech-tags">
+              <span class="tag">Leaflet.js</span>
+              <span class="tag">Open data</span>
+              <span class="tag">UX</span>
+            </div>
+            <div class="project-links">
+              <a href="marches-caen.html" class="project-link">Ouvrir la démo</a>
+            </div>
+          </article>
+
+          <article class="demo-card">
+            <h3>Dashboard budget CUCLM</h3>
+            <p>Exploration d'un budget multi-communes avec cartes, indicateurs et représentations interactives.</p>
+            <div class="tech-tags">
+              <span class="tag">Plotly.js</span>
+              <span class="tag">Dataviz</span>
+              <span class="tag">Décision</span>
+            </div>
+            <div class="project-links">
+              <a href="budget-cuclm.html" class="project-link">Ouvrir la démo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Sélection de dépôts GitHub</h2>
+        <p class="section-intro">
+          Une page de dépôts plus professionnelle ne cherche pas à tout montrer : elle met en avant des travaux qui illustrent
+          clairement les compétences mobilisées, le niveau d'autonomie et la variété des contextes.
+        </p>
+
         <div class="projects-grid">
-          <div class="project-card">
-            <h3>Analyse et Prédiction Bourse</h3>
-            <p>Projet d'analyse et de prédiction de la bourse via RNN et LLM utilisant les canaux journalistiques</p>
+          <article class="project-card">
+            <h3>Méta-descripteurs de graphes</h3>
+            <p>Travail de recherche autour de la caractérisation de datasets de graphes et de leur lien avec la performance des modèles.</p>
+            <div class="tech-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Graphes</span>
+              <span class="tag">Recherche</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/P-Pix/meta-descripteur-dataset-graphs" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>cgSpan</h3>
+            <p>Exploration et optimisation autour de l'extraction de motifs fréquents sur graphes dans un contexte de recherche.</p>
+            <div class="tech-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Pattern mining</span>
+              <span class="tag">Graphes</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/P-Pix/cgSpan" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>Analyse de radiographies thoraciques via IA</h3>
+            <p>Projet orienté santé mêlant traitement de données médicales, IA explicable et restitution du travail.</p>
+            <div class="tech-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Santé</span>
+              <span class="tag">IA</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/P-Pix/IA-explicable-pour-l-analyse-de-comptes-rendus-m-dicaux-et-d-imageries" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>Analyse et prédiction bourse</h3>
+            <p>Combinaison de séries temporelles, RNN et analyse de contenu textuel pour un cas d'usage prédictif.</p>
             <div class="tech-tags">
               <span class="tag">Python</span>
               <span class="tag">RNN</span>
-              <span class="tag">LLM</span>
-              <span class="tag">Signal Processing</span>
-            </div>
-            <div class="project-status en-cours">En cours</div>
-            <a href="https://github.com/P-Pix/bourse-analyse-predict" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <h3>Analyse Scanner Cérébral</h3>
-            <p>Logiciel d'analyse sur des scans cérébraux avec traitement d'images médicales</p>
-            <div class="tech-tags">
-              <span class="tag">C++</span>
-              <span class="tag">Medical Imaging</span>
-              <span class="tag">Computer Vision</span>
-            </div>
-            <div class="project-status en-cours">En cours</div>
-            <a href="https://github.com/P-Pix/Analyse-Scanner-Cerebral" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <h3>Analyse de Radiographies Thoraciques via IA</h3>
-            <p>Logiciel d'analyse sur des radiographies thoraciques avec traitement d'images médicales</p>
-            <div class="tech-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Medical Imaging</span>
-              <span class="tag">Data</span>
-              <span class="tag">IA</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="https://github.com/P-Pix/IA-explicable-pour-l-analyse-de-comptes-rendus-m-dicaux-et-d-imageries" target="_blank" class="project-link">Voir sur GitHub</a>
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7361708791614119936/" target="_blank" class="project-link">Voir le post LinkedIn</a>
-          </div>
-
-          <div class="project-card">
-            <h3>Profil Client & Prédiction Achats</h3>
-            <p>Système de profilage client et prédiction d'achats par machine learning</p>
-            <div class="tech-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Machine Learning</span>
-              <span class="tag">Customer Analytics</span>
-            </div>
-            <div class="project-status en-cours">En cours</div>
-            <a href="https://github.com/P-Pix/Profil-client-et-prediction-achats" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <h3>Video to 3D World</h3>
-            <p>Application du modèle NN chinois pour transformer vidéo en environnement 3D</p>
-            <div class="tech-tags">
-              <span class="tag">Python</span>
-              <span class="tag">3D Reconstruction</span>
-              <span class="tag">Neural Networks</span>
-            </div>
-            <div class="project-status en-cours">En cours</div>
-            <a href="https://github.com/P-Pix/App_video_to_3D_world" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <h3>Détection d'Hypovigilance</h3>
-            <p>Analyse prédictive de signaux physiologiques pour détecter l'hypovigilance</p>
-            <div class="tech-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Machine Learning</span>
-              <span class="tag">Signal Processing</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="https://redmine-etu.unicaen.fr/projects/projet_comete" target="_blank" class="project-link">RedMine Unicaen</a>
-          </div>
-
-          <div class="project-card">
-            <h3>Classification CCAM</h3>
-            <p>Définition automatique de labels en fonction de comptes rendus médicaux</p>
-            <div class="tech-tags">
-              <span class="tag">Python</span>
               <span class="tag">NLP</span>
-              <span class="tag">Classification</span>
             </div>
-            <div class="project-status termine">Terminé</div>
-            <span class="project-private">Projet privé</span>
-          </div>
-
-          <div class="project-card">
-            <h3>Méta-descripteurs de Graphes</h3>
-            <p>Définition de méta-descripteurs de datasets de graphes</p>
-            <div class="tech-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Graph Mining</span>
-              <span class="tag">NetworkX</span>
+            <div class="project-links">
+              <a href="https://github.com/P-Pix/bourse-analyse-predict" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
             </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="https://github.com/P-Pix/meta-descripteur-dataset-graphs" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
+          </article>
 
-          <div class="project-card">
-            <h3>cgSpan</h3>
-            <p>Correction de l'algorithme cgSpan de SPMF pour la fouille de motifs</p>
+          <article class="project-card">
+            <h3>Cloud personnel sécurisé</h3>
+            <p>Travail autour d'une architecture web et système avec une logique de sécurité, d'hébergement et de services.</p>
             <div class="tech-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Graph Mining</span>
-              <span class="tag">Algorithms</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="https://github.com/P-Pix/cgSpan" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>🌐 Projets Web & Applications</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <h3>Cloud Personnel Sécurisé</h3>
-            <p>Développement d'un cloud personnel avec sécurité renforcée, back-end et front-end</p>
-            <div class="tech-tags">
-              <span class="tag">JavaScript</span>
               <span class="tag">Node.js</span>
-              <span class="tag">Security</span>
-              <span class="tag">Cloud</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Infrastructure</span>
             </div>
-            <div class="project-status en-cours">En cours</div>
-            <a href="https://github.com/P-Pix/mon-cloud-personnel-securis-" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <h3>Générateur de Recettes</h3>
-            <p>Interface GUI qui choisit des recettes faisables selon le contenu de votre frigo</p>
-            <div class="tech-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">GUI</span>
-              <span class="tag">Utility App</span>
+            <div class="project-links">
+              <a href="https://github.com/P-Pix/mon-cloud-personnel-securis-" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
             </div>
-            <div class="project-status en-cours">En cours</div>
-            <a href="https://github.com/P-Pix/RecettesGenerator" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
+          </article>
 
-          <div class="project-card">
-            <h3>Site Fleuriste</h3>
-            <p>Squelette de site e-commerce pour magasin en ligne</p>
-            <div class="tech-tags">
-              <span class="tag">PHP</span>
-              <span class="tag">HTML</span>
-              <span class="tag">E-commerce</span>
-            </div>
-            <div class="project-status en-cours">En cours</div>
-            <a href="https://github.com/P-Pix/Site-Fleuriste" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <h3>Interface Domotique</h3>
-            <p>Interface graphique pour système domotique personnel</p>
+          <article class="project-card">
+            <h3>Moteur 3D Ray Tracing</h3>
+            <p>Projet from scratch utile pour montrer la compréhension des performances, du rendu et des architectures logicielles.</p>
             <div class="tech-tags">
               <span class="tag">C++</span>
-              <span class="tag">GUI</span>
-              <span class="tag">IoT</span>
-              <span class="tag">Home Automation</span>
+              <span class="tag">OpenGL</span>
+              <span class="tag">3D</span>
             </div>
-            <div class="project-status en-cours">En cours</div>
-            <a href="https://github.com/P-Pix/Domotique" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
+            <div class="project-links">
+              <a href="https://github.com/P-Pix/3DMotorRayTracing" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
+            </div>
+          </article>
 
-          <div class="project-card">
-            <h3>Générateur de News Automatique</h3>
-            <p>Génère automatiquement les nouvelles de la journée dans un fichier CSV</p>
-            <div class="tech-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Web Scraping</span>
-              <span class="tag">Automation</span>
-            </div>
-            <div class="project-status en-cours">En cours</div>
-            <a href="https://github.com/P-Pix/Autotmatique-News" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <h3>Carte Interactive TWISTO</h3>
-            <p>Visualisation interactive du réseau de transport en commun de Caen avec données GTFS et analyse géospatiale</p>
-            <div class="tech-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Leaflet.js</span>
-              <span class="tag">Data Visualization</span>
-              <span class="tag">GIS</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="carte-twisto.html" class="project-link">Voir la Carte</a>
-          </div>
-
-          <div class="project-card">
-            <h3>Carte Interactive - Marchés de Caen</h3>
-            <p>Exploration interactive des marchés municipaux de Caen avec localisation, horaires et fonctionnalité "marché actuel"</p>
-            <div class="tech-tags">
-              <span class="tag">JavaScript</span>
-              <span class="tag">Leaflet.js</span>
-              <span class="tag">Open Data</span>
-              <span class="tag">Géolocalisation</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="marches-caen.html" class="project-link">Voir la Carte</a>
-          </div>
-
-          <div class="project-card">
-            <h3>Dashboard Budget CUCLM 2020</h3>
-            <p>Analyse interactive du budget par ville de Caen la Mer avec cartographie, sélection de ville et graphiques dynamiques par fonction</p>
-            <div class="tech-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Plotly</span>
-              <span class="tag">Leaflet.js</span>
-              <span class="tag">Data Visualization</span>
-              <span class="tag">Open Data</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="budget-cuclm.html" class="project-link">Voir le Dashboard</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>📊 Portfolios Spécialisés</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <h3>Data Science Portfolio</h3>
-            <p>Collection de projets et analyses en science des données</p>
-            <div class="tech-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Jupyter</span>
-              <span class="tag">Data Science</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="https://github.com/P-Pix/data-science-portfolio" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <h3>Finance Portfolio</h3>
-            <p>Projets d'analyse financière et modélisation économique</p>
-            <div class="tech-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Finance</span>
-              <span class="tag">Analysis</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="https://github.com/P-Pix/finance-portfolio" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>🔬 Projets Spécialisés</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <h3>Norns - Modélisation Moléculaire</h3>
-            <p>Modélisation de molécules en 3D pour détection de pharmacophores</p>
-            <div class="tech-tags">
-              <span class="tag">C++</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">3D Modeling</span>
-              <span class="tag">WebGL</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <span class="project-private">Projet privé</span>
-          </div>
-
-          <div class="project-card">
-            <h3>Contexte Formel Aléatoire</h3>
-            <p>Génération de contextes formels aléatoires pour l'analyse de concepts</p>
-            <div class="tech-tags">
-              <span class="tag">C</span>
-              <span class="tag">Formal Concept Analysis</span>
-              <span class="tag">Random Generation</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <span class="project-private">Projet privé</span>
-          </div>
-
-          <div class="project-card">
-            <h3>Capteur de Température</h3>
-            <p>Système de mesure et régulation de température avec Arduino</p>
-            <div class="tech-tags">
-              <span class="tag">Arduino</span>
-              <span class="tag">IoT</span>
-              <span class="tag">Sensors</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="https://github.com/P-Pix/capteur_temperature" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>🎓 Projets Académiques</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <h3>PHP MVCR</h3>
-            <p>Projet de Licence 3 - Implémentation du pattern MVC en PHP</p>
-            <div class="tech-tags">
-              <span class="tag">PHP</span>
-              <span class="tag">MVC</span>
-              <span class="tag">Web Development</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="https://github.com/P-Pix/PHP-MVCR" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <h3>Sorting Algorithms</h3>
-            <p>Comparaison d'algorithmes de tri - Projet de Licence 3</p>
-            <div class="tech-tags">
-              <span class="tag">C++</span>
-              <span class="tag">Algorithms</span>
-              <span class="tag">Performance Analysis</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="https://github.com/P-Pix/Sorting-Algoithm-Listing" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <h3>Ray Tracing Java</h3>
-            <p>Implémentation de ray tracing en Java - Projet de Licence 2</p>
-            <div class="tech-tags">
-              <span class="tag">Java</span>
-              <span class="tag">Ray Tracing</span>
-              <span class="tag">3D Graphics</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="https://github.com/P-Pix/RayTracing" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <h3>Conway's Game of Life</h3>
-            <p>Implémentation du célèbre automate cellulaire</p>
-            <div class="tech-tags">
-              <span class="tag">C++</span>
-              <span class="tag">Cellular Automata</span>
-              <span class="tag">Simulation</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="https://github.com/P-Pix/ConwayLife" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-        </div>
-      </div>
-    </section>
-        
-    <section class="section">
-      <div class="container">
-        <h2>📊 Autres Projets Spécialisés</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <h3>Portfolio Data Science</h3>
-            <p>Collection complète d'outils analytiques avancés pour la science des données</p>
-            <div class="tech-tags">
-              <span class="tag">Python</span>
-              <span class="tag">PyTorch</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">Matplotlib</span>
-              <span class="tag">NumPy</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="https://github.com/P-Pix/data-science-portfolio" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <h3>Portfolio Finance</h3>
-            <p>Projets de modélisation économique et analyse quantitative des marchés financiers</p>
-            <div class="tech-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">NumPy</span>
-              <span class="tag">Matplotlib</span>
-              <span class="tag">Finance</span>
-            </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="https://github.com/P-Pix/finance-portfolio" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <h3>Conway's Game of Life</h3>
-            <p>Implémentation de l'automate cellulaire avec simulation mathématique en temps réel</p>
+          <article class="project-card">
+            <h3>Moteur 2D</h3>
+            <p>Base logicielle en C++ montrant le travail sur structures, rendu, architecture et autonomie de développement.</p>
             <div class="tech-tags">
               <span class="tag">C++</span>
               <span class="tag">SDL2</span>
-              <span class="tag">Cellular Automata</span>
-              <span class="tag">Simulation</span>
+              <span class="tag">Engine</span>
             </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="https://github.com/P-Pix/ConwayLife" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
+            <div class="project-links">
+              <a href="https://github.com/P-Pix/2DMotor" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
+            </div>
+          </article>
 
-          <div class="project-card">
-            <h3>ASCII Art Converter</h3>
-            <p>Outil de conversion d'images en art ASCII avec traitement d'image avancé</p>
+          <article class="project-card">
+            <h3>Analyse scanner cérébral</h3>
+            <p>Projet de computer vision appliqué à l'imagerie médicale, intéressant par son croisement entre logiciel et santé.</p>
             <div class="tech-tags">
               <span class="tag">C++</span>
-              <span class="tag">SFML</span>
-              <span class="tag">Image Processing</span>
-              <span class="tag">ASCII Art</span>
+              <span class="tag">Imagerie</span>
+              <span class="tag">Santé</span>
             </div>
-            <div class="project-status termine">Terminé</div>
-            <a href="https://github.com/P-Pix/ascii_image" target="_blank" class="project-link">Voir sur GitHub</a>
-          </div>
+            <div class="project-links">
+              <a href="https://github.com/P-Pix/Analyse-Scanner-Cerebral" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>Profil client et prédiction achats</h3>
+            <p>Cas d'usage data et machine learning pour la segmentation et la prédiction dans un contexte applicatif.</p>
+            <div class="tech-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Machine learning</span>
+              <span class="tag">Analytics</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/P-Pix/Profil-client-et-prediction-achats" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>RecettesGenerator</h3>
+            <p>Exemple d'application web orientée produit avec logique métier, interface et restitution d'un besoin utilisateur.</p>
+            <div class="tech-tags">
+              <span class="tag">Web</span>
+              <span class="tag">Full stack</span>
+              <span class="tag">Produit</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/P-Pix/RecettesGenerator" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>PHP MVCR</h3>
+            <p>Dépôt intéressant pour montrer la structuration d'une application web, l'organisation du code et les bases d'architecture.</p>
+            <div class="tech-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">Architecture</span>
+              <span class="tag">MVC</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/P-Pix/PHP-MVCR" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>ASCII Video / ASCII Image</h3>
+            <p>Projets plus expérimentaux, utiles pour montrer l'intérêt pour le rendu, le temps réel et l'exploration algorithmique.</p>
+            <div class="tech-tags">
+              <span class="tag">C++</span>
+              <span class="tag">Temps réel</span>
+              <span class="tag">Traitement</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/P-Pix/AsciiVideo" target="_blank" rel="noopener noreferrer" class="project-link">ASCII Video</a>
+              <a href="https://github.com/P-Pix/ascii_image" target="_blank" rel="noopener noreferrer" class="project-link">ASCII Image</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="callout" style="margin-top: 28px;">
+          <p>
+            Pour une page de dépôts crédible, l'enjeu n'est pas d'afficher une quantité brute de repositories, mais de montrer
+            des <strong>preuves de travail</strong> : rigueur expérimentale, variété des contextes, autonomie technique et capacité à
+            passer d'une idée à une réalisation exploitable.
+          </p>
         </div>
       </div>
     </section>
-          
+
+    <section class="section section-muted">
+      <div class="container">
+        <h2>Ce que montre l'ensemble du portfolio</h2>
+        <div class="cards-grid">
+          <div class="info-card">
+            <h3>Recherche appliquée</h3>
+            <p>Capacité à explorer un sujet, concevoir un protocole, instrumenter un pipeline et restituer des résultats.</p>
+          </div>
+          <div class="info-card">
+            <h3>Développement autonome</h3>
+            <p>Passage du prototype à un démonstrateur ou un outil complet, avec interface, logique métier et structure logicielle.</p>
+          </div>
+          <div class="info-card">
+            <h3>Culture de la donnée</h3>
+            <p>Manipulation de données hétérogènes, visualisation, structuration, extraction de sens et documentation.</p>
+          </div>
+          <div class="info-card">
+            <h3>Variété technique</h3>
+            <p>Python, C++, web, bases de données, visualisation, outils scientifiques et projets exploratoires.</p>
+          </div>
+          <div class="info-card">
+            <h3>Santé et données sensibles</h3>
+            <p>Présence régulière de sujets biomédicaux ou proches des contraintes réelles de confidentialité et d'usage.</p>
+          </div>
+          <div class="info-card">
+            <h3>Potentiel doctoral</h3>
+            <p>Des dépôts qui complètent un profil déjà orienté recherche, en montrant curiosité, méthode et profondeur technique.</p>
+          </div>
+        </div>
+
+        <div class="hero-actions" style="margin-top: 28px;">
+          <a href="https://github.com/P-Pix" target="_blank" rel="noopener noreferrer" class="btn-primary">Voir le profil GitHub</a>
+          <a href="contact.html" class="btn-secondary">Discuter d'un projet</a>
+        </div>
+      </div>
+    </section>
   </main>
+
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 Guillaume Lemonnier - Tous droits réservés</p>
-      <p style="font-size: 0.9rem; margin-top: 10px;">
-        Ce code est protégé par licence. Toute utilisation nécessite l'attribution à l'auteur. 
-        <a href="../../LICENSE" style="color: var(--secondary-color);">Voir la licence</a>
+      <p>&copy; 2026 Guillaume Lemonnier - Tous droits réservés</p>
+      <p style="font-size: 0.94rem;">
+        Ce code est protégé par licence. Toute utilisation nécessite l'attribution à l'auteur.
+        <a href="../../LICENSE">Voir la licence</a>
       </p>
     </div>
   </footer>
 
+
   <script src="../js/script.js"></script>
-
-  <style>
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .project-card {
-      background: var(--bg-light);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-light);
-      border-top: 4px solid var(--secondary-color);
-      transition: var(--transition);
-      position: relative;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-medium);
-      border-color: var(--primary-color);
-    }
-
-    .project-card h3 {
-      color: var(--primary-color);
-      margin-bottom: 15px;
-      font-size: 1.3rem;
-    }
-
-    .project-card p {
-      color: var(--text-light);
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
-
-    .tech-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 20px;
-    }
-
-    .tag {
-      background: var(--accent-color);
-      color: white;
-      padding: 4px 10px;
-      border-radius: 12px;
-      font-size: 0.8rem;
-      font-weight: 500;
-    }
-
-    .project-status {
-      display: inline-block;
-      padding: 6px 12px;
-      border-radius: 15px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-bottom: 15px;
-    }
-
-    .project-status.termine {
-      background: #27ae60;
-      color: white;
-    }
-
-    .project-status.en-cours {
-      background: #3498db;
-      color: white;
-    }
-
-    .project-status.alpha {
-      background: #f39c12;
-      color: white;
-    }
-
-    .project-status.recent {
-      background: #9b59b6;
-      color: white;
-    }
-
-    .project-link {
-      display: inline-block;
-      background: var(--primary-color);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: var(--transition);
-    }
-
-    .project-link:hover {
-      background: var(--secondary-color);
-      transform: translateY(-2px);
-    }
-
-    .project-private {
-      display: inline-block;
-      color: var(--text-light);
-      font-style: italic;
-      padding: 10px 20px;
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      background: var(--bg-section);
-    }
-
-    @media (max-width: 768px) {
-      .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-      
-      .project-card {
-        padding: 20px;
-      }
-      
-      .tech-tags {
-        gap: 6px;
-      }
-      
-      .tag {
-        font-size: 0.75rem;
-        padding: 3px 8px;
-      }
-    }
-
-  </style>
 </body>
 </html>
