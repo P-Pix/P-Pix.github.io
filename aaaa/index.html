@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site vitrine de l'AAAA, association des anciens du réseau de l'AFNEUS.">
+  <title>AAAA - Association des Anciens et Amis de l'AFNEUS</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body data-page="accueil" data-goal-preview="limited">
+  <header class="site-header">
+    <nav class="container nav" aria-label="Navigation principale">
+      <a class="brand" href="index.html" aria-label="Retour à l'accueil">
+        <span class="brand-logo"><img src="assets/img/pterodactyl-logo.svg" alt="Logo ptérodactyle AAAA"></span>
+        <span data-site-short>AAAA</span>
+        <span class="brand-full" data-site-full>Association des Anciens et Amis de l'AFNEUS</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-menu" data-nav-menu>
+        <a class="nav-link" href="index.html" data-nav-link="accueil">Accueil</a>
+        <a class="nav-link" href="bureau.html" data-nav-link="bureau">Bureau</a>
+        <a class="nav-link" href="buts.html" data-nav-link="buts">Nos buts</a>
+        <a class="nav-link" href="contact.html" data-nav-link="contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow" data-home-eyebrow>Association des Anciens et Amis de l'AFNEUS</p>
+          <h1>
+            <span data-home-title-start>Les anciens du</span>
+            <span class="accent" data-home-title-highlight>réseau AFNEUS</span>
+            <span data-home-title-end>réunis pour transmettre.</span>
+          </h1>
+          <p class="lead" data-home-lead>L'AAAA rassemble les anciens associatifs et les personnes attachées au réseau de l'AFNEUS.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="buts.html" data-home-primary-link><span data-home-primary-button>Découvrir nos buts</span></a>
+            <a class="button secondary" href="contact.html" data-home-secondary-link><span data-home-secondary-button>Nous contacter</span></a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Présentation rapide de l'association">
+          <p class="eyebrow" data-site-tagline>Réseau · Transmission · Entraide</p>
+          <h2 class="hero-card-title" data-home-presentation-title>Une mémoire associative active et utile.</h2>
+          <p class="lead hero-card-text" data-home-presentation-text>Nous aidons le réseau AFNEUS à retrouver des anciens associatifs et à valoriser les parcours d'engagement.</p>
+          <div class="stat-grid" data-stats-grid></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Nos buts</h2>
+          <p>Des actions concrètes pour renforcer le lien entre les anciens associatifs et le réseau AFNEUS.</p>
+        </div>
+        <div class="cards" data-goals-grid></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-band">
+        <div>
+          <h2>Envie de contribuer ou de reprendre contact ?</h2>
+          <p>Écrivez-nous pour rejoindre l'AAAA, retrouver un ancien du réseau ou proposer une action utile aux membres de l'AFNEUS.</p>
+        </div>
+        <a class="button secondary" href="mailto:contact@aaaa-afneus.fr" data-site-email-link><span data-site-email>contact@aaaa-afneus.fr</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">© <span data-site-year>2026</span> <span data-site-short>AAAA</span> — <span data-site-full>Association des Anciens et Amis de l'AFNEUS</span></div>
+  </footer>
+</body>
+</html>
