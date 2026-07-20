@@ -1,349 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Projets et dépôts GitHub de Guillaume Lemonnier : IA, données, visualisation, logiciel, santé et démonstrateurs web." />
-  <title>Projets et dépôts - Guillaume Lemonnier</title>
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Six études de cas C++20 de Guillaume Lemonnier : télémétrie spatiale, mission control, drivers Linux, journalisation haute performance et application GTK.">
+  <title>Projets C++ - Guillaume Lemonnier</title>
+  <link rel="stylesheet" href="../css/style.css"><script src="../js/script.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-      <nav id="primary-nav" role="navigation" aria-label="Navigation principale">
-        <a href="../../index.html">Accueil</a>
-        <a href="projets.html" class="active">Projets</a>
-        <a href="cv.html">CV</a>
-        <a href="recherche-emploi.html" class="nav-highlight">Positionnement</a>
-        <a href="associatif.html">Associatif</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header"><div class="shell header-inner">
+    <a class="brand" href="../../index.html"><span class="brand-mark">GL</span><span><strong>Guillaume Lemonnier</strong><small>Software engineering</small></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Navigation principale"><a href="../../index.html">Accueil</a><a class="active" href="projets.html">Projets C++</a><a href="../../index.html#experience">Expérience</a><a href="cv.html">Parcours</a><a class="nav-cta" href="contact.html">Me contacter</a></nav>
+  </div></header>
+  <main id="contenu">
+    <section class="hero page-hero"><div class="shell hero-grid">
+      <div class="reveal"><div class="breadcrumbs"><a href="../../index.html">Accueil</a><span>/</span><span>Projets C++</span></div><p class="eyebrow">Portfolio technique vérifiable</p><h1>Six projets.<br><span>Six problèmes d’ingénierie.</span></h1><p class="hero-summary">Je ne cherche pas à accumuler les technologies. Chaque projet isole une difficulté concrète - réseau, protocole, concurrence, stockage, abstraction matérielle ou interface native - et la traite avec une architecture, des tests et une documentation dédiés.</p></div>
+      <div class="project-hero-art reveal"><span class="visual-label">PORTFOLIO / C++20 / LINUX</span><div class="code-window"><div class="window-bar"><i></i><i></i><i></i></div><pre><span class="token-cyan">$</span> ./portfolio --evidence
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <span class="hero-kicker">Portfolio technique</span>
-        <h1>Projets, dépôts et démonstrateurs</h1>
-        <p>
-          Mon GitHub rassemble des travaux très variés : recherche sur les graphes, IA appliquée, data visualisation,
-          prototypes web, développement logiciel en C++ et expérimentations plus exploratoires. Cette page n'a pas vocation
-          à tout montrer ; elle sert surtout à mettre en avant les dépôts qui décrivent le mieux mon niveau d'autonomie,
-          mes centres d'intérêt et ma manière de travailler.
-        </p>
-        <div class="hero-status">
-          <span class="status-pill">64 dépôts recensés</span>
-          <span class="status-pill">3 démonstrateurs web sur le site</span>
-          <span class="status-pill">IA, santé, logiciel, visualisation</span>
-        </div>
+<span class="token-blue">[01]</span> telemetry pipeline      <span class="token-cyan">PASS</span>
+<span class="token-blue">[02]</span> mission control server <span class="token-cyan">PASS</span>
+<span class="token-blue">[03]</span> hardware bus driver    <span class="token-cyan">PASS</span>
+<span class="token-blue">[04]</span> binary log recorder    <span class="token-cyan">PASS</span>
+<span class="token-blue">[05]</span> embedded device layer  <span class="token-cyan">PASS</span>
+<span class="token-blue">[06]</span> native GTK application <span class="token-cyan">PASS</span>
+
+<span class="token-orange">status:</span> documented · tested · reproducible</pre></div></div>
+    </div></section>
+    <section class="signal-strip"><div class="shell signal-list"><span>C++20</span><span>Linux</span><span>Protocoles</span><span>Réseau</span><span>Concurrence</span><span>Drivers</span><span>Tests</span><span>Performance</span></div></section>
+    <section class="section"><div class="shell">
+      <div class="section-heading reveal"><div><p class="eyebrow">Études de cas</p><h2>Choisir un projet par compétence</h2></div><p>Chaque page peut être parcourue en quelques minutes : contexte, architecture, décisions, preuves d’exécution, limites assumées et lien vers le code source.</p></div>
+      <div class="all-projects">
+        <a class="project-list-card reveal" href="projet-telemetrie.html"><span class="project-number">01 / SYSTÈMES</span><h2>Station sol de télémétrie spatiale</h2><p>Pipeline UDP/TCP et replay, protocole binaire strict, CRC-32, workers de décodage, exports et surveillance du mode dégradé.</p><ul class="tag-list"><li>UDP/TCP</li><li>Threads</li><li>CRC</li></ul><span>Voir le projet →</span></a>
+        <a class="project-list-card reveal" href="projet-mission-control.html"><span class="project-number">02 / RÉSEAU</span><h2>Mission Control Protocol Server</h2><p>Serveur TCP multi-client avec authentification, machine d’état, flux de télémétrie, CLI et supervision HTTP JSON.</p><ul class="tag-list"><li>TCP</li><li>jthread</li><li>HTTP</li></ul><span>Voir le projet →</span></a>
+        <a class="project-list-card reveal" href="projet-driver-bus.html"><span class="project-number">03 / HARDWARE</span><h2>Linux Hardware Bus Driver</h2><p>Couche de driver testable reliée à un périphérique Python par protocole binaire, avec timeouts, retries et fault injection.</p><ul class="tag-list"><li>Driver</li><li>Mocks</li><li>Python</li></ul><span>Voir le projet →</span></a>
+        <a class="project-list-card reveal" href="projet-binary-log.html"><span class="project-number">04 / PERFORMANCE</span><h2>Binary Log Recorder</h2><p>Boîte noire logicielle multi-producteurs, queue bornée, writer asynchrone, format intègre, outils d’inspection et benchmark.</p><ul class="tag-list"><li>Queues</li><li>Binary I/O</li><li>Bench</li></ul><span>Voir le projet →</span></a>
+        <a class="project-list-card reveal" href="projet-embedded-driver.html"><span class="project-number">05 / EMBEDDED</span><h2>Embedded Device Driver</h2><p>API C++ typée pour température, batterie, IMU, GPS et radio, au-dessus d’un transport Linux et d’un simulateur de firmware.</p><ul class="tag-list"><li>RAII</li><li>variant</li><li>Retry</li></ul><span>Voir le projet →</span></a>
+        <a class="project-list-card reveal" href="projet-scangui.html"><span class="project-number">06 / DESKTOP</span><h2>ScanGUI</h2><p>Application GTKmm, modes local/API/offline, serveur HTTP C++ sans framework, PostgreSQL et architecture de sources de données.</p><ul class="tag-list"><li>GTKmm</li><li>REST</li><li>PostgreSQL</li></ul><span>Voir le projet →</span></a>
       </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="metric-grid">
-          <div class="metric-card">
-            <strong class="metric-value">Recherche</strong>
-            <p class="metric-label">Graphes, explicabilité, méta-descripteurs, pattern mining et analyse de performance des modèles.</p>
-          </div>
-          <div class="metric-card">
-            <strong class="metric-value">Santé</strong>
-            <p class="metric-label">Projets autour de comptes rendus médicaux, imagerie, signaux physiologiques et usages d'IA appliquée.</p>
-          </div>
-          <div class="metric-card">
-            <strong class="metric-value">Web</strong>
-            <p class="metric-label">Interfaces, dashboards, visualisations, outils de restitution et prototypes orientés usage.</p>
-          </div>
-          <div class="metric-card">
-            <strong class="metric-value">C++</strong>
-            <p class="metric-label">Moteurs 2D/3D, rendu, algorithmique, IA codée bas niveau et logique logicielle from scratch.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-muted">
-      <div class="container">
-        <h2>Démonstrateurs interactifs</h2>
-        <p class="section-intro">
-          Trois projets directement navigables depuis le site, utiles pour montrer un travail complet allant de la donnée à l'interface.
-        </p>
-        <div class="demo-grid">
-          <article class="demo-card">
-            <h3>Carte interactive TWISTO</h3>
-            <p>Visualisation cartographique d'arrêts de transport avec recherche, interaction et logique de restitution côté front.</p>
-            <div class="tech-tags">
-              <span class="tag">Leaflet.js</span>
-              <span class="tag">Données GTFS</span>
-              <span class="tag">Cartographie</span>
-            </div>
-            <div class="project-links">
-              <a href="carte-twisto.html" class="project-link">Ouvrir la démo</a>
-            </div>
-          </article>
-
-          <article class="demo-card">
-            <h3>Marchés de Caen</h3>
-            <p>Carte d'exploration de données locales avec filtres, géolocalisation et restitution visuelle de points d'intérêt.</p>
-            <div class="tech-tags">
-              <span class="tag">Leaflet.js</span>
-              <span class="tag">Open data</span>
-              <span class="tag">UX</span>
-            </div>
-            <div class="project-links">
-              <a href="marches-caen.html" class="project-link">Ouvrir la démo</a>
-            </div>
-          </article>
-
-          <article class="demo-card">
-            <h3>Dashboard budget CUCLM</h3>
-            <p>Exploration budgétaire multi-communes avec indicateurs, graphiques et visualisations interactives.</p>
-            <div class="tech-tags">
-              <span class="tag">Plotly.js</span>
-              <span class="tag">Dataviz</span>
-              <span class="tag">Analyse</span>
-            </div>
-            <div class="project-links">
-              <a href="budget-cuclm.html" class="project-link">Ouvrir la démo</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>Sélection de dépôts GitHub</h2>
-        <p class="section-intro">
-          J'ai retenu ici les dépôts qui me semblent les plus parlants pour un recruteur technique, une équipe R&amp;D ou un encadrant de thèse.
-          L'idée n'est pas d'aligner des noms de repositories, mais de montrer des preuves de travail sur des sujets réellement différents.
-        </p>
-
-        <div class="projects-grid">
-          <article class="project-card">
-            <h3>meta-descripteur-dataset-graphs</h3>
-            <p>Dépôt directement lié à mon travail de recherche sur la caractérisation de jeux de données de graphes et l'analyse du lien entre structure des datasets et performance des modèles.</p>
-            <div class="tech-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Graphes</span>
-              <span class="tag">Recherche</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/P-Pix/meta-descripteur-dataset-graphs" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <h3>cgSpan</h3>
-            <p>Travail autour d'une version corrigée de l'algorithme cgSpan, intéressant pour montrer une approche concrète du pattern mining sur graphes dans un contexte de recherche.</p>
-            <div class="tech-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Pattern mining</span>
-              <span class="tag">Graphes</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/P-Pix/cgSpan" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <h3>IA explicable pour l'analyse de comptes rendus médicaux et d'imageries</h3>
-            <p>Projet orienté santé qui reflète bien mon intérêt pour l'IA appliquée à des données médicales, avec une attention portée à l'interprétation et à la restitution du résultat.</p>
-            <div class="tech-tags">
-              <span class="tag">Jupyter</span>
-              <span class="tag">Santé</span>
-              <span class="tag">IA</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/P-Pix/IA-explicable-pour-l-analyse-de-comptes-rendus-m-dicaux-et-d-imageries" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <h3>ChatLegalGPT</h3>
-            <p>Un exemple de projet en IA générative avec interface web, centré ici sur le questionnement du droit français. Ce dépôt montre une capacité à aller jusqu'à un usage concret et présenté.</p>
-            <div class="tech-tags">
-              <span class="tag">Python</span>
-              <span class="tag">LLM</span>
-              <span class="tag">Interface web</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/P-Pix/ChatLegalGPT" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <h3>bourse-analyse-predict</h3>
-            <p>Projet d'analyse et de prédiction mêlant traitement du signal, RNN et contenu journalistique. Il témoigne d'un intérêt pour les pipelines multi-sources et les cas d'usage temporels.</p>
-            <div class="tech-tags">
-              <span class="tag">RNN</span>
-              <span class="tag">Séries temporelles</span>
-              <span class="tag">NLP</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/P-Pix/bourse-analyse-predict" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <h3>Profil-client-et-prediction-achats</h3>
-            <p>Cas d'usage data et machine learning autour de la segmentation et de la prédiction comportementale, utile pour montrer une pratique des problématiques analytiques appliquées.</p>
-            <div class="tech-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Machine learning</span>
-              <span class="tag">Analytics</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/P-Pix/Profil-client-et-prediction-achats" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <h3>mon-cloud-personnel-securis-</h3>
-            <p>Projet personnel pour approfondir le réseau, le back-end et le front-end à travers une logique de cloud personnel sécurisé. Il reflète un intérêt pour l'infrastructure et l'architecture de services.</p>
-            <div class="tech-tags">
-              <span class="tag">TypeScript</span>
-              <span class="tag">Web</span>
-              <span class="tag">Infrastructure</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/P-Pix/mon-cloud-personnel-securis-" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <h3>machine_learning_cpp</h3>
-            <p>Recréation d'algorithmes de machine learning en C++. Ce type de dépôt est intéressant car il montre une volonté de comprendre les mécanismes sous-jacents au-delà de l'usage de bibliothèques haut niveau.</p>
-            <div class="tech-tags">
-              <span class="tag">C++</span>
-              <span class="tag">ML bas niveau</span>
-              <span class="tag">Algorithmique</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/P-Pix/machine_learning_cpp" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <h3>3DMotorRayTracing</h3>
-            <p>Projet de moteur 3D et de rendu qui rend visible un goût ancien pour les questions de performance, d'architecture et de représentation graphique.</p>
-            <div class="tech-tags">
-              <span class="tag">C++</span>
-              <span class="tag">3D</span>
-              <span class="tag">Rendu</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/P-Pix/3DMotorRayTracing" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <h3>2DMotor</h3>
-            <p>Base logicielle en SDL2 pour construire un moteur 2D. C'est un bon exemple de travail structuré sur les fondations d'une application graphique.</p>
-            <div class="tech-tags">
-              <span class="tag">C++</span>
-              <span class="tag">SDL2</span>
-              <span class="tag">Moteur</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/P-Pix/2DMotor" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <h3>Analyse-Scanner-Cerebral</h3>
-            <p>Projet d'analyse de scanner cérébral qui, même ancien, reste révélateur d'un intérêt durable pour les sujets croisant logiciel, image et santé.</p>
-            <div class="tech-tags">
-              <span class="tag">C++</span>
-              <span class="tag">Imagerie</span>
-              <span class="tag">Santé</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/P-Pix/Analyse-Scanner-Cerebral" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <h3>Site-AFNEUS</h3>
-            <p>Un dépôt plus institutionnel, intéressant pour montrer que mes projets ne sont pas uniquement académiques ou exploratoires, mais peuvent aussi servir un cadre associatif structuré.</p>
-            <div class="tech-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">Web</span>
-              <span class="tag">Institutionnel</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/P-Pix/Site-AFNEUS" target="_blank" rel="noopener noreferrer" class="project-link">Voir le dépôt</a>
-            </div>
-          </article>
-        </div>
-
-        <div class="callout" style="margin-top: 28px;">
-          <p>
-            Ce portfolio est volontairement <strong>sélectif</strong>. L'enjeu n'est pas d'afficher la totalité des dépôts,
-            mais de rendre visibles des <strong>preuves de travail</strong> : rigueur expérimentale, autonomie technique,
-            variété des contextes et capacité à aller d'une idée à une réalisation exploitable.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-muted">
-      <div class="container">
-        <h2>Ce que montre l'ensemble du portfolio</h2>
-        <div class="cards-grid">
-          <div class="info-card">
-            <h3>Recherche appliquée</h3>
-            <p>Une capacité à explorer un sujet, concevoir un protocole, instrumenter un pipeline et restituer des résultats de manière lisible.</p>
-          </div>
-          <div class="info-card">
-            <h3>Développement autonome</h3>
-            <p>Le passage du prototype à un démonstrateur ou à un outil complet, avec interface, logique métier et structure logicielle.</p>
-          </div>
-          <div class="info-card">
-            <h3>Culture de la donnée</h3>
-            <p>Manipulation de données hétérogènes, visualisation, structuration, extraction de sens et restitution compréhensible.</p>
-          </div>
-          <div class="info-card">
-            <h3>Variété technique</h3>
-            <p>Python, C++, web, bases de données, visualisation, outils scientifiques et projets exploratoires ou institutionnels.</p>
-          </div>
-          <div class="info-card">
-            <h3>Santé et contextes sensibles</h3>
-            <p>Une présence régulière de sujets biomédicaux ou proches des contraintes réelles de confidentialité, de qualité des données et d'usage.</p>
-          </div>
-          <div class="info-card">
-            <h3>Trajectoire doctorale crédible</h3>
-            <p>Un ensemble de dépôts qui complète une expérience de recherche réelle en montrant curiosité, méthode et profondeur technique.</p>
-          </div>
-        </div>
-
-        <div class="hero-actions" style="margin-top: 28px;">
-          <a href="https://github.com/P-Pix" target="_blank" rel="noopener noreferrer" class="btn-primary">Voir le profil GitHub</a>
-          <a href="contact.html" class="btn-secondary">Discuter d'un projet</a>
-        </div>
-      </div>
-    </section>
+    </div></section>
+    <section class="cta-section"><div class="shell cta-inner reveal"><div><p class="eyebrow">Code source</p><h2>Les dépôts complets sont disponibles publiquement.</h2></div><div class="cta-actions"><a class="button button-light" href="https://github.com/P-Pix?tab=repositories" target="_blank" rel="noreferrer">Voir tous les dépôts</a></div></div></section>
   </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Guillaume Lemonnier - Tous droits réservés</p>
-      <p style="font-size: 0.94rem;">
-        Ce code est protégé par licence. Toute utilisation nécessite l'attribution à l'auteur.
-        <a href="../../LICENSE">Voir la licence</a>
-      </p>
-    </div>
-  </footer>
-
-  <script src="../js/script.js"></script>
-</body>
-</html>
+  <footer class="site-footer"><div class="shell footer-inner"><div><strong>Guillaume Lemonnier</strong><p>C++ · Linux · full-stack · IA appliquée</p></div><div class="footer-links"><a href="https://github.com/P-Pix" target="_blank" rel="noreferrer">GitHub</a><a href="https://linkedin.com/in/lemonnier-guillaume" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:lemonnier.guillaume.pro@gmail.com">Email</a></div><p>© 2026 · Caen, France</p></div></footer>
+</body></html>

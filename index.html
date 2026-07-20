@@ -1,265 +1,187 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Guillaume Lemonnier - IA santé, données et déploiement. Profil en poste à l'interface entre recherche en apprentissage automatique, données sensibles et ingénierie logicielle." />
-  <meta name="keywords" content="Guillaume Lemonnier, IA santé, données de santé, ARS Normandie, GREYC, PyTorch, FastAPI, PostgreSQL, apprentissage fédéré" />
-  <meta name="author" content="Guillaume Lemonnier" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Guillaume Lemonnier - IA santé, données et déploiement" />
-  <meta property="og:description" content="Profil en poste, orienté entreprise, recherche appliquée et perspectives doctorales en IA pour la santé." />
-  <meta property="og:url" content="https://p-pix.github.io" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Guillaume Lemonnier - IA santé, données et déploiement" />
-  <meta name="twitter:description" content="Entreprise, recherche appliquée et perspectives doctorales en IA santé." />
-  <title>Guillaume Lemonnier - IA santé, données et déploiement</title>
-  <link rel="stylesheet" href="./src/css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio de Guillaume Lemonnier, ingénieur logiciel C++20/Linux et développeur full-stack. Protocoles binaires, télémétrie, concurrence, drivers, logiciels métiers et IA.">
+  <meta name="keywords" content="Guillaume Lemonnier, C++20, Linux, systèmes, télémétrie, protocoles binaires, full-stack, PostgreSQL, CMake, CTest">
+  <meta name="author" content="Guillaume Lemonnier">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Guillaume Lemonnier - Ingénierie logicielle C++ & full-stack">
+  <meta property="og:description" content="Des systèmes C++ testés, des produits métier conçus de bout en bout et une culture IA/data.">
+  <meta property="og:image" content="https://p-pix.github.io/assets/images/guillaume-lemonnier-2026.webp">
+  <meta property="og:url" content="https://p-pix.github.io/">
+  <title>Guillaume Lemonnier - Ingénieur logiciel C++ & full-stack</title>
+  <link rel="stylesheet" href="src/css/style.css">
+  <script src="src/js/script.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Accueil de Guillaume Lemonnier">
+        <span class="brand-mark">GL</span>
+        <span><strong>Guillaume Lemonnier</strong><small>Software engineering</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
       </button>
-      <nav id="primary-nav" role="navigation" aria-label="Navigation principale">
-        <a href="#profil">Profil</a>
-        <a href="#experiences">Expériences</a>
-        <a href="#axes">Axes</a>
-        <a href="src/html/projets.html">Projets</a>
-        <a href="src/html/cv.html">CV</a>
-        <a href="src/html/recherche-emploi.html" class="nav-highlight">Positionnement</a>
-        <a href="src/html/associatif.html">Associatif</a>
-        <a href="#contact">Contact</a>
+      <nav id="primary-nav" class="primary-nav" aria-label="Navigation principale">
+        <a class="active" href="index.html">Accueil</a>
+        <a href="src/html/projets.html">Projets C++</a>
+        <a href="#experience">Expérience</a>
+        <a href="src/html/cv.html">Parcours</a>
+        <a class="nav-cta" href="src/html/contact.html">Me contacter</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <span class="hero-kicker">IA santé - données - déploiement</span>
-        <h1>Guillaume Lemonnier</h1>
-        <p>
-          J'occupe actuellement un poste de <strong>chargé d'appui à la performance numérique à l'ARS Normandie</strong>.
-          Mon parcours s'est construit à l'interface entre <strong>données de santé sensibles</strong>,
-          <strong>développement d'outils robustes</strong> et <strong>recherche en apprentissage automatique</strong>,
-          avec une attention constante portée à la qualité des données, à la traçabilité, à l'explicabilité et aux usages réels.
-        </p>
-        <div class="hero-status">
-          <span class="status-pill">En poste à l'ARS Normandie</span>
-          <span class="status-pill">Stage recherche au GREYC</span>
-          <span class="status-pill">Ouvert à échanges ciblés et doctorat</span>
+  <main id="contenu">
+    <section class="hero hero-home">
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="status-dot"></span> C++20 · Linux · systèmes · full-stack</p>
+          <h1>Je transforme un besoin complexe en <span>logiciel robuste et démontrable.</span></h1>
+          <p class="hero-lead">Développeur logiciel à l’ARS Normandie, je conçois des outils métier de bout en bout. En parallèle, je construis en C++ des systèmes autour de la télémétrie, des protocoles binaires, du réseau Linux, de la concurrence et des interfaces natives.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="src/html/projets.html">Explorer mes projets C++ <span aria-hidden="true">→</span></a>
+            <a class="button button-ghost" href="https://github.com/P-Pix" target="_blank" rel="noreferrer">Voir GitHub</a>
+          </div>
+          <dl class="hero-proof" aria-label="Repères professionnels">
+            <div><dt>6</dt><dd>projets C++ détaillés</dd></div>
+            <div><dt>C++20</dt><dd>standard de référence</dd></div>
+            <div><dt>360°</dt><dd>besoin → production</dd></div>
+          </dl>
         </div>
-        <div class="hero-actions">
-          <a href="src/html/recherche-emploi.html" class="btn-primary">Voir mon positionnement</a>
-          <a href="src/html/projets.html" class="btn-secondary">Explorer les projets</a>
-          <a href="assets/pdf/cv.pdf" class="btn-secondary" target="_blank" rel="noopener noreferrer">Télécharger le CV</a>
-        </div>
+        <aside class="portrait-panel reveal" aria-label="Portrait et profil">
+          <div class="portrait-frame">
+            <img src="assets/images/guillaume-lemonnier-2026.webp" alt="Portrait professionnel de Guillaume Lemonnier" width="1066" height="1600">
+            <div class="portrait-caption">
+              <strong>Guillaume Lemonnier</strong>
+              <span>Ingénieur logiciel · Caen</span>
+            </div>
+          </div>
+          <div class="availability"><span></span> En poste · ouvert aux échanges techniques ciblés</div>
+        </aside>
       </div>
     </section>
 
-    <section id="profil" class="section">
-      <div class="container">
-        <div class="metric-grid">
-          <div class="metric-card">
-            <strong class="metric-value">ARS</strong>
-            <p class="metric-label">Environnement institutionnel de santé, données sensibles, exigences RGPD, outils métiers et accompagnement des usages.</p>
-          </div>
-          <div class="metric-card">
-            <strong class="metric-value">GREYC</strong>
-            <p class="metric-label">Recherche sur l'explicabilité des GNN, la caractérisation de datasets de graphes et la mise en place de protocoles expérimentaux.</p>
-          </div>
-          <div class="metric-card">
-            <strong class="metric-value">IDA 2026</strong>
-            <p class="metric-label">Article co-signé issu du mémoire de M2 sur l'explicabilité des modèles appliqués à des graphes moléculaires.</p>
-          </div>
-          <div class="metric-card">
-            <strong class="metric-value">64</strong>
-            <p class="metric-label">Dépôts GitHub recensés, couvrant IA, visualisation, développement logiciel, web, systèmes et démonstrateurs expérimentaux.</p>
-          </div>
-        </div>
-
-        <div class="split-layout" style="margin-top: 30px;">
-          <div class="surface-card">
-            <span class="label">Profil</span>
-            <h2>Un profil construit entre terrain, recherche et ingénierie</h2>
-            <p>
-              Je ne me présente pas comme un profil en recherche d'emploi au sens classique, mais comme quelqu'un qui a déjà
-              un <strong>socle professionnel solide</strong> et qui cherche à faire converger trois dimensions :
-              la <strong>production d'outils utiles</strong>, la <strong>rigueur méthodologique</strong> et une
-              <strong>trajectoire crédible en IA pour la santé</strong>.
-            </p>
-            <p style="margin-top: 14px;">
-              À l'ARS Normandie, je travaille sur la fiabilisation et l'exploitation de données, le paramétrage d'outils,
-              la documentation, le support et le développement d'un outil web interne avec authentification, contrôle d'accès,
-              exports XLSX, historisation et mécanismes d'intégrité. Ce cadre m'a appris à produire des solutions techniquement
-              justes, mais surtout maintenables, lisibles et compatibles avec des contraintes réelles de confidentialité.
-            </p>
-            <p style="margin-top: 14px;">
-              En parallèle, mon stage de recherche au GREYC m'a permis de développer une vraie culture de l'expérimentation :
-              formuler une problématique, construire un pipeline, comparer des approches, interpréter des résultats et transformer
-              ce travail en mémoire puis en publication.
-            </p>
-          </div>
-          <div class="surface-card">
-            <span class="label">Ce qui me caractérise</span>
-            <ul class="list-clean">
-              <li>Une capacité à relier qualité des données, contraintes métier, développement logiciel et adoption terrain.</li>
-              <li>Une vraie expérience de recherche sur les graphes, l'explicabilité et l'analyse de performance des modèles.</li>
-              <li>Un intérêt fort pour les sujets où confidentialité, robustesse et généralisation comptent autant que le score final.</li>
-              <li>Une pratique autonome du développement, du prototypage et de la documentation, avec une attention au déploiement réel.</li>
-              <li>Un positionnement cohérent pour des échanges avec des entreprises, des équipes R&amp;D et des encadrants de thèse.</li>
-            </ul>
-          </div>
-        </div>
+    <section class="signal-strip" aria-label="Compétences principales">
+      <div class="shell signal-list">
+        <span>Modern C++</span><span>Linux / POSIX</span><span>TCP & UDP</span><span>Multithreading</span><span>Protocoles binaires</span><span>CMake / CTest</span><span>PostgreSQL</span><span>API & Web</span>
       </div>
     </section>
 
-    <section id="experiences" class="section section-muted">
-      <div class="container">
-        <h2>Expériences récentes</h2>
-        <p class="section-intro">
-          Une trajectoire qui combine environnement institutionnel de santé, recherche académique et ingénierie logicielle.
-        </p>
-
-        <div class="timeline">
-          <article class="timeline-card">
-            <div class="timeline-date">Depuis déc. 2025</div>
-            <div>
-              <h3>Chargé d'appui à la performance numérique - ARS Normandie</h3>
-              <p class="timeline-meta">Caen - données sensibles, outils métiers, qualité des usages</p>
-              <ul>
-                <li>Fiabilisation et exploitation de données via PostgreSQL, paramétrage d'outils et amélioration continue.</li>
-                <li>Développement autonome d'un outil web interne avec authentification, contrôle d'accès, exports XLSX, historisation et mécanismes d'intégrité.</li>
-                <li>Production de documentation, vulgarisation technique et accompagnement des agents sur les usages quotidiens.</li>
-                <li>Référent IA sur le cadrage responsable des usages dans un périmètre de plus de 400 utilisateurs et 85 services.</li>
-              </ul>
+    <section class="section" id="projets">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">Sélection technique</p><h2>Des projets qui montrent le code en situation</h2></div>
+          <p>Chaque étude de cas expose le problème, l’architecture, les décisions techniques, les tests et une preuve d’exécution. L’objectif : rendre mon niveau vérifiable rapidement.</p>
+        </div>
+        <div class="featured-projects">
+          <article class="featured-card featured-card-wide reveal">
+            <div class="project-visual visual-telemetry">
+              <span class="visual-label">01 / TELEMETRY</span>
+              <div class="telemetry-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="visual-status"><span></span>NOMINAL</div>
+            </div>
+            <div class="featured-content">
+              <p class="project-type">Projet phare · C++20 / Linux</p>
+              <h3>Station sol de télémétrie spatiale</h3>
+              <p>Réception UDP/TCP, décodage binaire strict, CRC-32, pipeline multithread, replay déterministe, export CSV/JSON et mode dégradé piloté par l’état des trames.</p>
+              <ul class="tag-list"><li>C++20</li><li>UDP/TCP</li><li>CRC-32</li><li>Threads</li><li>Benchmark</li></ul>
+              <a class="text-link" href="src/html/projet-telemetrie.html">Voir l’étude de cas <span>→</span></a>
             </div>
           </article>
 
-          <article class="timeline-card">
-            <div class="timeline-date">Mars - août 2025</div>
-            <div>
-              <h3>Stage recherche M2 - Explicabilité des GNN - GREYC</h3>
-              <p class="timeline-meta">Caen - graphes moléculaires, PyTorch Geometric, méta-modélisation</p>
-              <ul>
-                <li>Construction d'un pipeline de caractérisation de jeux de données de graphes, avec 583 descripteurs sur 57 jeux de données.</li>
-                <li>Extraction de motifs fréquents avec gSpan / cgSpan et entraînement de modèles GCN sous PyTorch Geometric.</li>
-                <li>Conception d'un méta-modèle interprétable reliant la structure des données aux performances observées.</li>
-                <li>Valorisation scientifique sous la forme d'un mémoire de M2 et d'un article co-signé à IDA 2026.</li>
-              </ul>
+          <article class="featured-card reveal">
+            <div class="project-visual visual-mission">
+              <span class="visual-label">02 / MISSION CONTROL</span>
+              <div class="console-mini"><b>AUTH</b><em>OK</em><b>SET_MODE ACTIVE</b><em>200 READY</em><b>GET_STATUS</b><em>ACTIVE · 3 clients</em></div>
+            </div>
+            <div class="featured-content">
+              <p class="project-type">Serveur concurrent</p>
+              <h3>Mission Control Protocol Server</h3>
+              <p>Serveur TCP multi-client, authentification, commandes métier, télémétrie en flux et endpoint HTTP de supervision.</p>
+              <a class="text-link" href="src/html/projet-mission-control.html">Étude de cas <span>→</span></a>
             </div>
           </article>
 
-          <article class="timeline-card">
-            <div class="timeline-date">Juin - juil. 2024</div>
-            <div>
-              <h3>Stage - Visualisation 3D moléculaire - CERMN</h3>
-              <p class="timeline-meta">Caen - performance, ergonomie, validation fonctionnelle</p>
-              <ul>
-                <li>Développement d'une visualisation 3D et d'un module d'alignement moléculaire pour un logiciel existant.</li>
-                <li>Travail orienté performance, ergonomie, validation fonctionnelle et documentation des évolutions.</li>
-              </ul>
+          <article class="featured-card reveal">
+            <div class="project-visual visual-driver">
+              <span class="visual-label">03 / DRIVER LAYER</span>
+              <div class="bus-flow" aria-hidden="true"><b>DeviceDriver</b><i></i><b>Binary frame</b><i></i><b>Simulator</b></div>
+            </div>
+            <div class="featured-content">
+              <p class="project-type">Linux / hardware abstraction</p>
+              <h3>Hardware Bus Driver Simulator</h3>
+              <p>Abstraction de driver, protocole commande/réponse, timeouts, retries, mocks et simulateur de périphérique Python.</p>
+              <a class="text-link" href="src/html/projet-driver-bus.html">Étude de cas <span>→</span></a>
             </div>
           </article>
+        </div>
+        <div class="section-action reveal"><a class="button button-dark" href="src/html/projets.html">Voir les 6 projets C++</a></div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="competences">
+      <div class="shell">
+        <div class="section-heading light reveal">
+          <div><p class="eyebrow">Socle d’ingénierie</p><h2>Du bas niveau au produit métier</h2></div>
+          <p>Mon profil combine profondeur technique C++ et responsabilité produit full-stack. Cette double lecture me permet de raisonner à la fois sur le comportement d’un octet et sur le parcours d’un utilisateur.</p>
+        </div>
+        <div class="capability-grid">
+          <article class="capability-card reveal"><span class="cap-index">01</span><h3>C++ moderne & Linux</h3><p>RAII, smart pointers, `std::variant`, `std::optional`, sockets POSIX, I/O binaires, CLI et gestion déterministe des ressources.</p><div class="meter"><i style="--value: 92%"></i></div></article>
+          <article class="capability-card reveal"><span class="cap-index">02</span><h3>Fiabilité & performance</h3><p>CRC, validation stricte, queues bornées, multithreading, timeouts, retries, injection d’erreurs, replay et benchmarks reproductibles.</p><div class="meter"><i style="--value: 88%"></i></div></article>
+          <article class="capability-card reveal"><span class="cap-index">03</span><h3>Architecture testable</h3><p>Interfaces substituables, séparation domaine/transport, mocks, tests unitaires et d’intégration, CMake, CTest et automatisation CI.</p><div class="meter"><i style="--value: 90%"></i></div></article>
+          <article class="capability-card reveal"><span class="cap-index">04</span><h3>Full-stack métier</h3><p>Recueil des besoins, prototypes, HTML/CSS/TypeScript, Node.js/Python, API, PostgreSQL, LDAP, sécurité, documentation et formation.</p><div class="meter"><i style="--value: 91%"></i></div></article>
         </div>
       </div>
     </section>
 
-    <section id="axes" class="section">
-      <div class="container">
-        <h2>Axes de travail et d'intérêt</h2>
-        <p class="section-intro">
-          Les thèmes qui structurent aujourd'hui mon site, mes projets et mon positionnement : utiles pour une entreprise,
-          lisibles pour une équipe de recherche, cohérents pour une trajectoire doctorale.
-        </p>
-
-        <div class="axes-grid">
-          <div class="info-card">
-            <h3>Apprentissage fédéré en santé</h3>
-            <p>Personnalisation, robustesse inter-centres, confidentialité et hétérogénéité des données dans des contextes multicentriques.</p>
-          </div>
-          <div class="info-card">
-            <h3>Imagerie et temporalité</h3>
-            <p>Modélisation spatio-temporelle d'IRM longitudinales et exploitation de séries d'examens pour des usages cliniques crédibles.</p>
-          </div>
-          <div class="info-card">
-            <h3>Explicabilité et incertitude</h3>
-            <p>Compréhension des signaux appris, calibration des prédictions et analyse de l'incertitude pour une IA de confiance.</p>
-          </div>
-          <div class="info-card">
-            <h3>Données sensibles et déploiement</h3>
-            <p>Conception d'outils et de pipelines compatibles avec la traçabilité, les contrôles d'accès, la documentation et l'usage réel.</p>
-          </div>
+    <section class="section" id="experience">
+      <div class="shell experience-grid">
+        <div class="experience-intro reveal">
+          <p class="eyebrow">Expérience professionnelle</p>
+          <h2>Je ne livre pas seulement du code.</h2>
+          <p>À l’ARS Normandie, je prends en charge des logiciels internes depuis l’observation du travail réel jusqu’à l’accompagnement des agents. Je travaille dans un environnement fermé, avec des données sensibles, des contraintes de sécurité et des utilisateurs métier qui attendent un résultat immédiatement compréhensible.</p>
+          <a class="text-link" href="src/html/cv.html">Voir mon parcours complet <span>→</span></a>
         </div>
-
-        <div class="split-layout" style="margin-top: 30px;">
-          <div class="surface-card">
-            <span class="label">Approche</span>
-            <h2>Une IA utile ne se résume pas à entraîner un modèle</h2>
-            <p>
-              Ce qui m'intéresse, ce sont les sujets où la valeur d'un projet vient autant de la qualité du protocole,
-              de la structuration des données et de l'appropriation par les utilisateurs que des performances du modèle.
-              C'est particulièrement vrai en santé, mais aussi dans tous les environnements où la décision, la confidentialité
-              et la robustesse logicielle sont centrales.
-            </p>
-          </div>
-          <div class="surface-card">
-            <span class="label">Ouverture</span>
-            <p>
-              Je reste ouvert à des échanges ciblés avec des structures qui cherchent un profil capable d'articuler
-              <strong>développement</strong>, <strong>données</strong>, <strong>recherche appliquée</strong> et <strong>contraintes de terrain</strong>.
-              Cela peut concerner un poste, une collaboration R&amp;D, un sujet de thèse ou un projet mêlant entreprise et laboratoire.
-            </p>
-          </div>
+        <div class="delivery-chain reveal" aria-label="Chaîne de réalisation d’un logiciel métier">
+          <article><span>01</span><div><h3>Cadrer</h3><p>Entretiens, observation, arbitrage des besoins et cahier des charges vérifiable.</p></div></article>
+          <article><span>02</span><div><h3>Concevoir</h3><p>Parcours en peu de clics, prototypes, modèle de données et architecture adaptée aux contraintes.</p></div></article>
+          <article><span>03</span><div><h3>Développer</h3><p>Front-end, API, PostgreSQL, contrôles d’accès, exports, audit et automatisation.</p></div></article>
+          <article><span>04</span><div><h3>Faire adopter</h3><p>Tests avec les utilisateurs, documentation, formations, support et évolutions.</p></div></article>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section section-muted">
-      <div class="container">
-        <h2>Contact</h2>
-        <p class="section-intro">
-          Je réponds volontiers aux prises de contact qui ont un objet clair : opportunité ciblée, discussion doctorale,
-          collaboration R&amp;D ou échange autour d'un projet technique.
-        </p>
-        <div class="contact-grid">
-          <div class="contact-card">
-            <h3>Email</h3>
-            <p><a href="mailto:lemonnier.guillaume.pro@gmail.com">lemonnier.guillaume.pro@gmail.com</a></p>
-            <p class="focus-note">Premier contact simple, direct et professionnel.</p>
-          </div>
-          <div class="contact-card">
-            <h3>GitHub</h3>
-            <p><a href="https://github.com/P-Pix" target="_blank" rel="noopener noreferrer">github.com/P-Pix</a></p>
-            <p class="focus-note">Dépôts, prototypes, démonstrateurs et expérimentations techniques.</p>
-          </div>
-          <div class="contact-card">
-            <h3>LinkedIn</h3>
-            <p><a href="https://linkedin.com/in/lemonnier-guillaume" target="_blank" rel="noopener noreferrer">linkedin.com/in/lemonnier-guillaume</a></p>
-            <p class="focus-note">Pour les échanges professionnels, académiques et de réseau.</p>
-          </div>
-        </div>
+    <section class="section section-soft">
+      <div class="shell split-proof">
+        <article class="proof-panel reveal">
+          <p class="eyebrow">Recherche & IA</p>
+          <h2>Une culture scientifique utile à l’ingénierie</h2>
+          <p>Mon Master 2 IA, Sciences des données et Santé et mon travail au GREYC m’ont appris à construire un protocole expérimental, mesurer avant de conclure et documenter les limites. Mon mémoire sur l’explicabilité des GCN a servi de base à une publication co-signée à IDA 2026.</p>
+          <ul class="check-list"><li>Python, NumPy, pandas, SciPy, PyTorch</li><li>Graph Neural Networks & explicabilité</li><li>Analyse de données et protocoles reproductibles</li></ul>
+        </article>
+        <article class="proof-panel accent-panel reveal">
+          <p class="eyebrow">Ce que j’apporte</p>
+          <blockquote>« Comprendre vite le métier, choisir le bon niveau de technologie et laisser derrière moi un logiciel lisible, testé et utilisable. »</blockquote>
+          <p class="signature">Guillaume Lemonnier</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="shell cta-inner reveal">
+        <div><p class="eyebrow">Échange technique</p><h2>Vous cherchez un développeur capable de relier système, produit et terrain&nbsp;?</h2></div>
+        <div class="cta-actions"><a class="button button-light" href="src/html/contact.html">Me contacter</a><a class="button button-outline-light" href="assets/pdf/cv.pdf" target="_blank">Télécharger mon CV</a></div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Guillaume Lemonnier - Tous droits réservés</p>
-      <p style="font-size: 0.94rem;">
-        Ce code est protégé par licence. Toute utilisation nécessite l'attribution à l'auteur.
-        <a href="LICENSE">Voir la licence</a>
-      </p>
-    </div>
+  <footer class="site-footer">
+    <div class="shell footer-inner"><div><strong>Guillaume Lemonnier</strong><p>C++ · Linux · full-stack · IA appliquée</p></div><div class="footer-links"><a href="https://github.com/P-Pix" target="_blank" rel="noreferrer">GitHub</a><a href="https://linkedin.com/in/lemonnier-guillaume" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:lemonnier.guillaume.pro@gmail.com">Email</a></div><p>© 2026 · Caen, France</p></div>
   </footer>
-
-  <script src="src/js/script.js"></script>
 </body>
 </html>
