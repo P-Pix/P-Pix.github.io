@@ -31,7 +31,11 @@ Chaque page contient directement son contenu, son en-tête et son pied de page. 
 
 Cette feuille porte les variables de présentation, les règles de base et les composants du portfolio : en-tête, boutons, cartes, tableau de compétences, études de cas, formulaires, pied de page et dispositions adaptatives.
 
-Les choix visuels sont cohérents sur le parcours principal : fond blanc, bleu principal, texte bleu sombre, filets gris, angles peu arrondis et survol gris clair. Les animations d’apparition qui masquaient le contenu par défaut ont été retirées.
+Les choix visuels sont cohérents sur le parcours principal : dominante blanc et bleu, texte bleu sombre, filets gris, angles peu arrondis et survol gris clair. Des accents discrets d’ivoire et de cuivre apportent de la chaleur aux repères, aux cartes de profil et à la section de contact.
+
+Le portrait et la salutation sont visibles dès l’accueil. Les textes de présentation et de méthode utilisent une voix plus personnelle, centrée sur les projets et les échanges avec les utilisateurs. Les boutons et les encadrés conservent leur présentation sobre.
+
+Le contenu est visible par défaut. La seconde passe ajoute une animation illustrative finie du schéma de télémétrie et une apparition ponctuelle de certains blocs, déclenchée à leur entrée dans la fenêtre. Ces effets sont décrits dans la section suivante.
 
 Les règles incluent un focus clavier visible, le lien d’évitement, les adaptations mobile/tablette, la préférence de réduction des animations et une présentation pour l’impression.
 
@@ -54,8 +58,12 @@ Le fichier `src/js/script.js` apporte des améliorations progressives et active 
 | URL du catalogue | Le paramètre `filtre` conserve le domaine sélectionné pour partager un lien. Une valeur inconnue revient à tous les projets. |
 | Copie | Copie des commandes et de l’adresse e-mail avec retour de statut ; solution de repli lorsque l’API du presse-papiers est indisponible. |
 | Vidéos | Démarrer une vidéo met les autres en pause. La lecture reste contrôlée par le visiteur. |
+| Schéma de télémétrie | Deux points animés illustrent le trajet du signal. Chaque animation dure 2,6 secondes et la seconde commence après 0,45 seconde : l’ensemble se termine après environ 3,05 secondes, sans répétition. |
+| Apparition au défilement | `IntersectionObserver` observe les blocs `data-reveal`. À leur première entrée dans la fenêtre, la classe `has-entered` déclenche une transition visuelle de 420 ms, puis le bloc cesse d’être observé. Le contenu reste visible avant ce déclenchement. |
 
 Sans JavaScript, les boutons de filtre restent masqués et les six projets sont visibles. La navigation demeure accessible. Les adresses et commandes restent du texte sélectionnable si la copie automatique n’est pas autorisée.
+
+Les animations sont désactivées avec `prefers-reduced-motion: reduce`. Si cette préférence est activée pendant la consultation, l’observation du défilement est arrêtée. À l’impression, les blocs sont entièrement visibles et les points animés du schéma sont masqués. L’absence d’`IntersectionObserver` laisse les blocs dans leur présentation normale. Cette seconde passe n’ajoute aucune dépendance.
 
 ## 5. Structure des études de cas
 

@@ -2,7 +2,9 @@
 
 Portfolio statique destiné à présenter un profil de développeur logiciel orienté **C++ et Linux**, avec un intérêt pour les logiciels du spatial, la télémétrie et les télécommunications.
 
-La refonte du 21 octobre 2026 privilégie une lecture professionnelle : fond blanc, bleu, encadrés aux angles peu arrondis, bordures fines et survols gris clair. L’accueil relie chaque domaine technique à une réalisation et distingue les **projets personnels C++** de l’**expérience professionnelle en développement métier à l’ARS Normandie**.
+La refonte du 21 octobre 2026 privilégie une lecture professionnelle : dominante blanc et bleu, encadrés aux angles peu arrondis, bordures fines et survols gris clair. La seconde passe apporte une présence plus personnelle avec le portrait dès l’accueil, la salutation « Bonjour, moi c’est Guillaume », des textes plus naturels et des touches discrètes d’ivoire et de cuivre. L’accueil relie chaque domaine technique à une réalisation et distingue les **projets personnels C++** de l’**expérience professionnelle en développement métier à l’ARS Normandie**.
+
+Le schéma de télémétrie reçoit une animation illustrative courte, terminée après environ **3,05 secondes**. Certains blocs bénéficient d’une apparition ponctuelle au défilement avec `IntersectionObserver`. Le contenu reste visible par défaut, y compris sans JavaScript ; la préférence de réduction des animations et l’impression sont respectées. Ces ajustements n’ajoutent aucune dépendance.
 
 ## Parcours de lecture
 
