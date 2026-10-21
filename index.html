@@ -3,15 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio de Guillaume Lemonnier, ingénieur logiciel C++20/Linux et développeur full-stack. Protocoles binaires, télémétrie, concurrence, drivers, logiciels métiers et IA.">
-  <meta name="keywords" content="Guillaume Lemonnier, C++20, Linux, systèmes, télémétrie, protocoles binaires, full-stack, PostgreSQL, CMake, CTest">
+  <meta name="description" content="Guillaume Lemonnier, développeur logiciel à Caen. Projets C++ et Linux : télémétrie spatiale simulée, protocoles binaires, communications TCP/UDP et multithreading.">
   <meta name="author" content="Guillaume Lemonnier">
+  <meta name="theme-color" content="#ffffff">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Guillaume Lemonnier - Ingénierie logicielle C++ & full-stack">
-  <meta property="og:description" content="Des systèmes C++ testés, des produits métier conçus de bout en bout et une culture IA/data.">
+  <meta property="og:title" content="Guillaume Lemonnier — C++, Linux & communications">
+  <meta property="og:description" content="Des compétences reliées au code : télémétrie, protocoles binaires, réseau et concurrence. Découvrez mes projets et mon parcours.">
   <meta property="og:image" content="https://p-pix.github.io/assets/images/guillaume-lemonnier-2026.webp">
   <meta property="og:url" content="https://p-pix.github.io/">
-  <title>Guillaume Lemonnier - Ingénieur logiciel C++ & full-stack</title>
+  <title>Guillaume Lemonnier — Développeur C++ & Linux</title>
+  <link rel="canonical" href="https://p-pix.github.io/">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="src/css/style.css">
   <script src="src/js/script.js" defer></script>
 </head>
@@ -19,169 +21,136 @@
   <a class="skip-link" href="#contenu">Aller au contenu</a>
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="index.html" aria-label="Accueil de Guillaume Lemonnier">
-        <span class="brand-mark">GL</span>
-        <span><strong>Guillaume Lemonnier</strong><small>Software engineering</small></span>
-      </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Ouvrir le menu">
-        <span></span><span></span><span></span>
-      </button>
+      <a class="brand" href="index.html" aria-label="Guillaume Lemonnier — accueil"><span class="brand-mark" aria-hidden="true">GL<span>.</span></span><span><strong>Guillaume Lemonnier</strong><small>Développeur logiciel</small></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
       <nav id="primary-nav" class="primary-nav" aria-label="Navigation principale">
-        <a class="active" href="index.html">Accueil</a>
-        <a href="src/html/projets.html">Projets C++</a>
-        <a href="#experience">Expérience</a>
-        <a href="src/html/cv.html">Parcours</a>
-        <a class="nav-cta" href="src/html/contact.html">Me contacter</a>
+        <a href="index.html" aria-current="page">Accueil</a><a href="src/html/projets.html">Projets C++</a><a href="#competences">Compétences</a><a href="src/html/cv.html">Parcours</a><a class="nav-cta" href="src/html/contact.html">Me contacter <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
-
   <main id="contenu">
     <section class="hero hero-home">
-      <div class="shell hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="status-dot"></span> C++20 · Linux · systèmes · full-stack</p>
-          <h1>Je transforme un besoin complexe en <span>logiciel robuste et démontrable.</span></h1>
-          <p class="hero-lead">Développeur logiciel à l’ARS Normandie, je conçois des outils métier de bout en bout. En parallèle, je construis en C++ des systèmes autour de la télémétrie, des protocoles binaires, du réseau Linux, de la concurrence et des interfaces natives.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="src/html/projets.html">Explorer mes projets C++ <span aria-hidden="true">→</span></a>
-            <a class="button button-ghost" href="https://github.com/P-Pix" target="_blank" rel="noreferrer">Voir GitHub</a>
-          </div>
-          <dl class="hero-proof" aria-label="Repères professionnels">
-            <div><dt>6</dt><dd>projets C++ détaillés</dd></div>
-            <div><dt>C++20</dt><dd>standard de référence</dd></div>
-            <div><dt>360°</dt><dd>besoin → production</dd></div>
-          </dl>
+      <div class="shell home-hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span> Développement logiciel · Caen, Normandie</p>
+          <h1>C++ &amp; Linux.<br>Systèmes et<br><span>communications.</span></h1>
+          <p class="hero-speciality">Spatial · Télémétrie · Communications bas niveau</p>
+          <p class="hero-lead">Je développe des projets C++ autour des flux réseau, du décodage binaire et de la concurrence. Mon objectif : contribuer à des logiciels industriels pour le spatial et les télécommunications.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#projets">Découvrir mes projets <span aria-hidden="true">↓</span></a><a class="button button-ghost" href="assets/pdf/cv-cpp-linux.pdf" target="_blank" rel="noopener noreferrer">Consulter mon CV <span class="button-meta">PDF</span></a></div>
+          <div class="hero-context"><span>En poste à l’ARS Normandie</span><a href="https://github.com/P-Pix" target="_blank" rel="noopener noreferrer">Code source sur GitHub <span aria-hidden="true">↗</span></a></div>
         </div>
-        <aside class="portrait-panel reveal" aria-label="Portrait et profil">
-          <div class="portrait-frame">
-            <img src="assets/images/guillaume-lemonnier-2026.webp" alt="Portrait professionnel de Guillaume Lemonnier" width="1066" height="1600">
-            <div class="portrait-caption">
-              <strong>Guillaume Lemonnier</strong>
-              <span>Ingénieur logiciel · Caen</span>
-            </div>
+        <figure class="system-figure" aria-labelledby="system-caption">
+          <div class="figure-heading"><span>01 / PROJET PERSONNEL</span><span class="figure-code">STGS</span></div>
+          <div class="system-drawing">
+            <svg viewBox="0 0 480 260" role="img" aria-labelledby="drawing-title drawing-desc">
+              <title id="drawing-title">De la télémétrie simulée à la station sol</title>
+              <desc id="drawing-desc">Schéma illustratif : un simulateur émet des trames transportées par UDP ou TCP vers une application C++ sous Linux. Le satellite représente le domaine d’application, pas une liaison radio réelle.</desc>
+              <defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M 24 0 L 0 0 0 24" fill="none" stroke="#e3eaf3" stroke-width="0.6"/></pattern></defs>
+              <rect width="480" height="260" fill="url(#grid)"/>
+              <path d="M25 216 Q236 149 454 213" fill="none" stroke="#c5d5e9" stroke-width="1.3"/><path d="M25 228 Q236 161 454 225" fill="none" stroke="#e2eaf4" stroke-width="1"/>
+              <g transform="translate(147 78) rotate(-25)" stroke="#2465b6" stroke-width="1.7" fill="#f7faff">
+                <rect x="-68" y="-16" width="44" height="34"/><path d="M-53 -16V18 M-39 -16V18 M-68 1H-24"/>
+                <rect x="24" y="-16" width="44" height="34"/><path d="M39 -16V18 M53 -16V18 M24 1H68"/>
+                <path d="M-24 1H-15 M15 1H24"/><rect x="-15" y="-23" width="30" height="49" fill="#e0ecfa"/><path d="M-8 -23 L0 -33 L8 -23 M0 26V35 M-8 33Q0 44 8 33" fill="none"/>
+              </g>
+              <path d="M188 114L290 163" stroke="#8caed5" stroke-width="1.4" stroke-dasharray="5 5" fill="none"/>
+              <rect x="201" y="116" width="106" height="25" rx="2" fill="#ffffff" stroke="#d8e3f0"/><text x="254" y="132" text-anchor="middle" font-family="ui-monospace, monospace" font-size="10" fill="#2b568a">UDP / TCP</text>
+              <g transform="translate(332 170)" stroke="#2465b6" stroke-width="1.8" fill="none"><path d="M-26 -18Q-15 16 17 8Z" fill="#e0ecfa"/><path d="M-11 -6L9 -26 M9 -26L17 -26 M-5 11L-11 28 M-17 28H16 M-5 11L8 28"/><path d="M19 -34Q30 -26 29 -13 M25 -42Q41 -31 38 -10" stroke="#9cb8d8"/></g>
+              <g fill="#536b89" font-family="system-ui, sans-serif" font-size="10"><text x="49" y="146">ÉMISSION SIMULÉE</text><text x="305" y="221">RÉCEPTION C++</text></g>
+              <g stroke="#c0cfe2" stroke-width="1"><path d="M25 20h10 M30 15v10 M445 20h10 M450 15v10"/></g>
+            </svg>
           </div>
-          <div class="availability"><span></span> En poste · ouvert aux échanges techniques ciblés</div>
-        </aside>
+          <figcaption id="system-caption"><h2>Station sol de télémétrie</h2><p>Du flux reçu à une donnée exploitable.</p></figcaption>
+          <ol class="system-stages" aria-label="Étapes du traitement"><li><span>01</span>Recevoir</li><li><span>02</span>Valider</li><li><span>03</span>Exploiter</li></ol>
+          <div class="figure-bottom"><span>Simulation logicielle · C++20 / Linux</span><a href="src/html/projet-telemetrie.html" aria-label="Découvrir la station sol de télémétrie"><span aria-hidden="true">↗</span></a></div>
+        </figure>
       </div>
     </section>
-
-    <section class="signal-strip" aria-label="Compétences principales">
-      <div class="shell signal-list">
-        <span>Modern C++</span><span>Linux / POSIX</span><span>TCP & UDP</span><span>Multithreading</span><span>Protocoles binaires</span><span>CMake / CTest</span><span>PostgreSQL</span><span>API & Web</span>
+    <section class="expertise-strip" aria-label="Domaines techniques">
+      <div class="shell expertise-grid">
+        <div><span class="expertise-number">01</span><div><strong>Protocoles binaires</strong><span>Trames, sérialisation, CRC</span></div></div>
+        <div><span class="expertise-number">02</span><div><strong>Communications réseau</strong><span>Sockets POSIX, TCP / UDP</span></div></div>
+        <div><span class="expertise-number">03</span><div><strong>C++ &amp; concurrence</strong><span>RAII, threads, files de travail</span></div></div>
+        <div><span class="expertise-number">04</span><div><strong>Qualité logicielle</strong><span>Tests, CMake, documentation</span></div></div>
       </div>
     </section>
-
     <section class="section" id="projets">
       <div class="shell">
-        <div class="section-heading reveal">
-          <div><p class="eyebrow">Sélection technique</p><h2>Des projets qui montrent le code en situation</h2></div>
-          <p>Chaque étude de cas expose le problème, l’architecture, les décisions techniques, les tests et une preuve d’exécution. L’objectif : rendre mon niveau vérifiable rapidement.</p>
-        </div>
-        <div class="featured-projects">
-          <article class="featured-card featured-card-wide reveal">
-            <div class="project-visual visual-telemetry">
-              <span class="visual-label">01 / TELEMETRY</span>
-              <div class="telemetry-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-              <div class="visual-status"><span></span>NOMINAL</div>
-            </div>
-            <div class="featured-content">
-              <p class="project-type">Projet phare · C++20 / Linux</p>
-              <h3>Station sol de télémétrie spatiale</h3>
-              <p>Réception UDP/TCP, décodage binaire strict, CRC-32, pipeline multithread, replay déterministe, export CSV/JSON et mode dégradé piloté par l’état des trames.</p>
-              <ul class="tag-list"><li>C++20</li><li>UDP/TCP</li><li>CRC-32</li><li>Threads</li><li>Benchmark</li></ul>
-              <a class="text-link" href="src/html/projet-telemetrie.html">Voir l’étude de cas <span>→</span></a>
-            </div>
+        <div class="section-heading"><div><p class="eyebrow">Projets sélectionnés</p><h2>Le C++ en pratique.</h2></div><p>Des projets personnels pour travailler des problèmes concrets de systèmes et de communications. Chaque étude de cas détaille l’architecture, les choix techniques et les démonstrations associées.</p></div>
+        <article class="lead-project">
+          <div class="lead-project-copy">
+            <div class="project-kicker"><span class="project-number">01 / SPATIAL &amp; RÉSEAU</span><span class="label">Projet principal</span></div>
+            <h3><a href="src/html/projet-telemetrie.html">Station sol de télémétrie</a></h3>
+            <p>Recevoir un flux ne suffit pas : il faut retrouver les trames, contrôler leur intégrité et rendre les données exploitables. Ce projet simule cette chaîne de traitement sous Linux.</p>
+            <ul class="project-highlights"><li>Réception UDP/TCP et reconstitution des trames fragmentées.</li><li>Validation du format, de la longueur et du CRC-32.</li><li>Décodage concurrent, relecture et export CSV / JSON.</li></ul>
+            <ul class="tag-list"><li>C++20</li><li>Linux / POSIX</li><li>Protocoles binaires</li><li>Multithreading</li></ul>
+            <div class="project-actions"><a class="text-link" href="src/html/projet-telemetrie.html">Explorer l’étude de cas <span aria-hidden="true">→</span></a><a class="source-link" href="https://github.com/P-Pix/cpp-space-telemetry-ground-station" target="_blank" rel="noopener noreferrer">Code source <span aria-hidden="true">↗</span></a></div>
+          </div>
+          <div class="project-inset">
+            <p class="inset-heading">ARCHITECTURE DU PROJET</p>
+            <ol class="pipeline-list">
+              <li><span>01</span><div><strong>Acquisition</strong><small>Transport réseau ou fichier de replay</small></div><span class="pipeline-tag">UDP / TCP</span></li>
+              <li><span>02</span><div><strong>Validation</strong><small>Reconstitution, format et intégrité</small></div><span class="pipeline-tag">CRC-32</span></li>
+              <li><span>03</span><div><strong>Traitement</strong><small>Files de travail et workers de décodage</small></div><span class="pipeline-tag">C++</span></li>
+              <li><span>04</span><div><strong>Exploitation</strong><small>État de la station et données exportées</small></div><span class="pipeline-tag">CSV / JSON</span></li>
+            </ol>
+            <a class="inset-footer" href="src/html/projet-telemetrie.html#demo">Voir la démonstration de relecture <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <div class="project-pair">
+          <article class="compact-project">
+            <div class="project-kicker"><span class="project-number">02 / RÉSEAU &amp; SUPERVISION</span><span class="project-symbol" aria-hidden="true">↔</span></div>
+            <h3><a href="src/html/projet-mission-control.html">Serveur de commande<br>et de supervision</a></h3>
+            <p>Un serveur TCP multi-client avec commandes, état partagé et flux de télémétrie. Une mise en pratique de la gestion des sessions, des ressources et de la concurrence.</p>
+            <ul class="tag-list"><li>TCP</li><li>RAII</li><li>std::jthread</li><li>HTTP</li></ul>
+            <a class="text-link" href="src/html/projet-mission-control.html">Explorer l’étude de cas <span aria-hidden="true">→</span></a>
           </article>
-
-          <article class="featured-card reveal">
-            <div class="project-visual visual-mission">
-              <span class="visual-label">02 / MISSION CONTROL</span>
-              <div class="console-mini"><b>AUTH</b><em>OK</em><b>SET_MODE ACTIVE</b><em>200 READY</em><b>GET_STATUS</b><em>ACTIVE · 3 clients</em></div>
-            </div>
-            <div class="featured-content">
-              <p class="project-type">Serveur concurrent</p>
-              <h3>Mission Control Protocol Server</h3>
-              <p>Serveur TCP multi-client, authentification, commandes métier, télémétrie en flux et endpoint HTTP de supervision.</p>
-              <a class="text-link" href="src/html/projet-mission-control.html">Étude de cas <span>→</span></a>
-            </div>
-          </article>
-
-          <article class="featured-card reveal">
-            <div class="project-visual visual-driver">
-              <span class="visual-label">03 / DRIVER LAYER</span>
-              <div class="bus-flow" aria-hidden="true"><b>DeviceDriver</b><i></i><b>Binary frame</b><i></i><b>Simulator</b></div>
-            </div>
-            <div class="featured-content">
-              <p class="project-type">Linux / hardware abstraction</p>
-              <h3>Hardware Bus Driver Simulator</h3>
-              <p>Abstraction de driver, protocole commande/réponse, timeouts, retries, mocks et simulateur de périphérique Python.</p>
-              <a class="text-link" href="src/html/projet-driver-bus.html">Étude de cas <span>→</span></a>
-            </div>
+          <article class="compact-project">
+            <div class="project-kicker"><span class="project-number">03 / CONCURRENCE &amp; DONNÉES</span><span class="project-symbol" aria-hidden="true">≡</span></div>
+            <h3><a href="src/html/projet-binary-log.html">Enregistreur binaire<br>multithread</a></h3>
+            <p>Découpler les producteurs des écritures disque avec une file bornée et un writer dédié. Le projet aborde la sérialisation, l’intégrité des enregistrements et la mesure du débit.</p>
+            <ul class="tag-list"><li>Producteurs / consommateur</li><li>I/O binaires</li><li>Benchmark</li></ul>
+            <a class="text-link" href="src/html/projet-binary-log.html">Explorer l’étude de cas <span aria-hidden="true">→</span></a>
           </article>
         </div>
-        <div class="section-action reveal"><a class="button button-dark" href="src/html/projets.html">Voir les 6 projets C++</a></div>
+        <div class="section-action"><a class="button button-ghost" href="src/html/projets.html">Voir les 6 projets C++ <span aria-hidden="true">→</span></a><span>Également : périphériques simulés, interfaces natives et PostgreSQL.</span></div>
       </div>
     </section>
-
-    <section class="section section-dark" id="competences">
+    <section class="section section-soft" id="competences">
       <div class="shell">
-        <div class="section-heading light reveal">
-          <div><p class="eyebrow">Socle d’ingénierie</p><h2>Du bas niveau au produit métier</h2></div>
-          <p>Mon profil combine profondeur technique C++ et responsabilité produit full-stack. Cette double lecture me permet de raisonner à la fois sur le comportement d’un octet et sur le parcours d’un utilisateur.</p>
-        </div>
-        <div class="capability-grid">
-          <article class="capability-card reveal"><span class="cap-index">01</span><h3>C++ moderne & Linux</h3><p>RAII, smart pointers, `std::variant`, `std::optional`, sockets POSIX, I/O binaires, CLI et gestion déterministe des ressources.</p><div class="meter"><i style="--value: 92%"></i></div></article>
-          <article class="capability-card reveal"><span class="cap-index">02</span><h3>Fiabilité & performance</h3><p>CRC, validation stricte, queues bornées, multithreading, timeouts, retries, injection d’erreurs, replay et benchmarks reproductibles.</p><div class="meter"><i style="--value: 88%"></i></div></article>
-          <article class="capability-card reveal"><span class="cap-index">03</span><h3>Architecture testable</h3><p>Interfaces substituables, séparation domaine/transport, mocks, tests unitaires et d’intégration, CMake, CTest et automatisation CI.</p><div class="meter"><i style="--value: 90%"></i></div></article>
-          <article class="capability-card reveal"><span class="cap-index">04</span><h3>Full-stack métier</h3><p>Recueil des besoins, prototypes, HTML/CSS/TypeScript, Node.js/Python, API, PostgreSQL, LDAP, sécurité, documentation et formation.</p><div class="meter"><i style="--value: 91%"></i></div></article>
-        </div>
+        <div class="section-heading"><div><p class="eyebrow">Compétences techniques</p><h2>Des compétences<br>reliées au code.</h2></div><p>Un point d’entrée concret pour chaque sujet : les mécanismes travaillés, les décisions expliquées et le projet dans lequel les retrouver.</p></div>
+        <table class="skills-table">
+          <caption class="sr-only">Compétences techniques, mise en pratique et projets associés</caption>
+          <thead><tr><th scope="col">Domaine</th><th scope="col">Mise en pratique</th><th scope="col">Projet associé</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><span>01</span> Réseau &amp; protocoles</th><td>TCP/UDP, sockets POSIX, fragmentation d’un flux, sérialisation binaire, contrôle de longueur et CRC.</td><td><a href="src/html/projet-telemetrie.html#decisions">Station de télémétrie <span aria-hidden="true">↗</span></a></td></tr>
+            <tr><th scope="row"><span>02</span> C++ &amp; concurrence</th><td>RAII, durée de vie des ressources, threads, mutex, état partagé et coordination de l’arrêt.</td><td><a href="src/html/projet-mission-control.html#architecture">Serveur de commande <span aria-hidden="true">↗</span></a></td></tr>
+            <tr><th scope="row"><span>03</span> Données &amp; performance</th><td>Files bornées, producteur/consommateur, écriture asynchrone, format binaire et benchmarks.</td><td><a href="src/html/projet-binary-log.html#decisions">Enregistreur binaire <span aria-hidden="true">↗</span></a></td></tr>
+            <tr><th scope="row"><span>04</span> Abstraction de périphériques</th><td>Interfaces C++ typées, séparation transport/protocole, délais, reprises et simulation de pannes.</td><td><a href="src/html/projet-driver-bus.html#decisions">Pilote simulé sous Linux <span aria-hidden="true">↗</span></a></td></tr>
+            <tr><th scope="row"><span>05</span> Tests &amp; conception</th><td>Tests unitaires et d’intégration, mocks, cas d’erreur, CMake/CTest et documentation technique.</td><td><a href="src/html/projet-embedded-driver.html#preuves">Interface de capteurs <span aria-hidden="true">↗</span></a></td></tr>
+            <tr><th scope="row"><span>06</span> Interfaces &amp; bases de données</th><td>Interface native GTKmm, API HTTP, séparation des sources de données et PostgreSQL.</td><td><a href="src/html/projet-scangui.html#architecture">Application ScanGUI <span aria-hidden="true">↗</span></a></td></tr>
+          </tbody>
+        </table>
+        <p class="section-note">Ces réalisations sont des projets personnels. Elles complètent mon expérience professionnelle en développement de logiciels métier.</p>
       </div>
     </section>
-
     <section class="section" id="experience">
       <div class="shell experience-grid">
-        <div class="experience-intro reveal">
-          <p class="eyebrow">Expérience professionnelle</p>
-          <h2>Je ne livre pas seulement du code.</h2>
-          <p>À l’ARS Normandie, je prends en charge des logiciels internes depuis l’observation du travail réel jusqu’à l’accompagnement des agents. Je travaille dans un environnement fermé, avec des données sensibles, des contraintes de sécurité et des utilisateurs métier qui attendent un résultat immédiatement compréhensible.</p>
-          <a class="text-link" href="src/html/cv.html">Voir mon parcours complet <span>→</span></a>
+        <div class="experience-intro">
+          <p class="eyebrow">Expérience &amp; méthode</p><h2>Comprendre le besoin.<br>Construire la solution.</h2>
+          <p>À l’ARS Normandie, je conçois et développe des applications internes, au contact des utilisateurs. Ce travail m’amène à relier besoins métier, architecture, données, sécurité et documentation.</p>
+          <div class="profile-inline"><img src="assets/images/guillaume-lemonnier-2026.webp" alt="Guillaume Lemonnier" width="72" height="86" loading="lazy"><div><strong>Développeur logiciel · ARS Normandie</strong><span>Depuis décembre 2025 · Caen</span><a href="src/html/cv.html">Découvrir mon parcours <span aria-hidden="true">→</span></a></div></div>
         </div>
-        <div class="delivery-chain reveal" aria-label="Chaîne de réalisation d’un logiciel métier">
-          <article><span>01</span><div><h3>Cadrer</h3><p>Entretiens, observation, arbitrage des besoins et cahier des charges vérifiable.</p></div></article>
-          <article><span>02</span><div><h3>Concevoir</h3><p>Parcours en peu de clics, prototypes, modèle de données et architecture adaptée aux contraintes.</p></div></article>
-          <article><span>03</span><div><h3>Développer</h3><p>Front-end, API, PostgreSQL, contrôles d’accès, exports, audit et automatisation.</p></div></article>
-          <article><span>04</span><div><h3>Faire adopter</h3><p>Tests avec les utilisateurs, documentation, formations, support et évolutions.</p></div></article>
+        <div class="delivery-chain" aria-label="Démarche de développement">
+          <article><span>01</span><div><h3>Concevoir à partir du terrain</h3><p>Recueil des besoins, parcours utilisateurs, modèle de données et choix d’architecture adaptés aux contraintes.</p></div></article>
+          <article><span>02</span><div><h3>Développer et intégrer</h3><p>Applications web, API, PostgreSQL, contrôles d’accès, exports et automatisation des tâches.</p></div></article>
+          <article><span>03</span><div><h3>Vérifier, expliquer, accompagner</h3><p>Échanges avec les utilisateurs, validation des comportements, documentation, formation et évolutions.</p></div></article>
         </div>
       </div>
+      <div class="shell background-row"><div><span class="eyebrow">Formation</span><h3>Master 2 Informatique</h3><p>IA, sciences des données et santé<br>Université de Caen Normandie</p></div><div><span class="eyebrow">Recherche appliquée</span><h3>GREYC · Analyse &amp; expérimentation</h3><p>Python, graphes et explicabilité.<br>Une démarche de mesure et de documentation.</p></div><a class="text-link" href="src/html/cv.html">Parcours complet <span aria-hidden="true">→</span></a></div>
     </section>
-
-    <section class="section section-soft">
-      <div class="shell split-proof">
-        <article class="proof-panel reveal">
-          <p class="eyebrow">Recherche & IA</p>
-          <h2>Une culture scientifique utile à l’ingénierie</h2>
-          <p>Mon Master 2 IA, Sciences des données et Santé et mon travail au GREYC m’ont appris à construire un protocole expérimental, mesurer avant de conclure et documenter les limites. Mon mémoire sur l’explicabilité des GCN a servi de base à une publication co-signée à IDA 2026.</p>
-          <ul class="check-list"><li>Python, NumPy, pandas, SciPy, PyTorch</li><li>Graph Neural Networks & explicabilité</li><li>Analyse de données et protocoles reproductibles</li></ul>
-        </article>
-        <article class="proof-panel accent-panel reveal">
-          <p class="eyebrow">Ce que j’apporte</p>
-          <blockquote>« Comprendre vite le métier, choisir le bon niveau de technologie et laisser derrière moi un logiciel lisible, testé et utilisable. »</blockquote>
-          <p class="signature">Guillaume Lemonnier</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="cta-section">
-      <div class="shell cta-inner reveal">
-        <div><p class="eyebrow">Échange technique</p><h2>Vous cherchez un développeur capable de relier système, produit et terrain&nbsp;?</h2></div>
-        <div class="cta-actions"><a class="button button-light" href="src/html/contact.html">Me contacter</a><a class="button button-outline-light" href="assets/pdf/cv.pdf" target="_blank">Télécharger mon CV</a></div>
-      </div>
-    </section>
+    <section class="cta-section"><div class="shell cta-inner"><div><p class="eyebrow">Échange technique</p><h2>Parlons C++, systèmes<br>et communications.</h2><p>Projets, choix d’architecture ou opportunité professionnelle : échangeons.</p></div><div class="cta-actions"><a class="button button-primary" href="src/html/contact.html">Me contacter <span aria-hidden="true">↗</span></a><a class="source-link" href="assets/pdf/cv-cpp-linux.pdf" target="_blank" rel="noopener noreferrer">Consulter mon CV · PDF</a></div></div></section>
   </main>
-
-  <footer class="site-footer">
-    <div class="shell footer-inner"><div><strong>Guillaume Lemonnier</strong><p>C++ · Linux · full-stack · IA appliquée</p></div><div class="footer-links"><a href="https://github.com/P-Pix" target="_blank" rel="noreferrer">GitHub</a><a href="https://linkedin.com/in/lemonnier-guillaume" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:lemonnier.guillaume.pro@gmail.com">Email</a></div><p>© 2026 · Caen, France</p></div>
-  </footer>
+  <footer class="site-footer"><div class="shell footer-inner"><div><strong>Guillaume Lemonnier</strong><p>Développement logiciel · C++ / Linux</p></div><div class="footer-links"><a href="src/html/projets.html">Projets</a><a href="https://github.com/P-Pix" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://linkedin.com/in/lemonnier-guillaume" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="src/html/contact.html">Contact</a></div><p>© 2026 · Caen, France</p></div></footer>
 </body>
 </html>

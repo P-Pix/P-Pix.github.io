@@ -13,191 +13,9 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Navigation -->
-    <header>
-        <div class="container">
-            <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-            <nav id="primary-nav" role="navigation" aria-label="Navigation principale">
-                <a href="../../index.html">Accueil</a>
-                <a href="projets.html">Projets</a>
-                <a href="cv.html">CV</a>
-                <a href="recherche-emploi.html" class="nav-highlight">Positionnement</a>
-                <a href="associatif.html">Associatif</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
 
-    <!-- Page principale -->
-    <main>
-        <div class="container">
-            <!-- Header de la page -->
-            <div class="page-header">
-                <h1>💰 Budget Interactif CUCLM 2020</h1>
-                <p>Exploration interactive des données budgétaires de la Communauté Urbaine Caen la Mer</p>
-                <span class="real-data-badge">🏛️ Données CUCLM Réelles</span>
-            </div>
-
-            <!-- Navigation de retour -->
-            <div class="nav-controls">
-                <a href="projets.html" class="btn-back">← Retour aux projets</a>
-                <a href="#info-section" class="btn-info">ℹ️ Informations</a>
-            </div>
-
-            <!-- Statistiques de synthèse -->
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-value" id="total-budget">19,1 M€</div>
-                    <div class="stat-label">💰 Budget Total</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value" id="total-communes">10</div>
-                    <div class="stat-label">🏛️ Communes</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value" id="total-fonctions">7</div>
-                    <div class="stat-label">⚙️ Fonctions</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value">2020</div>
-                    <div class="stat-label">📅 Exercice</div>
-                </div>
-            </div>
-
-            <!-- Contrôles -->
-            <div class="controls">
-                <h3>🎛️ Contrôles de visualisation</h3>
-                <div class="control-group">
-                    <label for="fonction-filter">Fonction:</label>
-                    <select id="fonction-filter">
-                        <option value="all">Toutes les fonctions</option>
-                    </select>
-                    
-                    <label for="type-filter">Type:</label>
-                    <select id="type-filter">
-                        <option value="all">Tous</option>
-                        <option value="recettes">Recettes</option>
-                        <option value="depenses">Dépenses</option>
-                    </select>
-                    
-                    <button id="reset-filters" class="btn-secondary">🔄 Réinitialiser</button>
-                </div>
-            </div>
-
-            <!-- Layout principal -->
-            <div class="main-layout">
-                <!-- Carte Interactive -->
-                <div class="map-container">
-                    <div class="map-header">
-                        🗺️ Carte Interactive des Communes CUCLM
-                    </div>
-                    <div id="map" class="map-content"></div>
-                </div>
-
-                <!-- Informations commune sélectionnée -->
-                <div class="commune-info">
-                    <h3 id="commune-nom">Sélectionnez une commune</h3>
-                    <div class="commune-details" id="commune-details">
-                        <div class="loading">Cliquez sur une commune de la carte pour voir les détails budgétaires</div>
-                    </div>
-                    
-                    <!-- Top communes -->
-                    <div class="top-communes-section">
-                        <h4>🏆 Top 5 Communes (Budget)</h4>
-                        <div id="top-communes">
-                            <div class="loading">Chargement...</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Graphiques analytiques -->
-            <div class="charts-section">
-                <h3>📊 Analyses Budgétaires</h3>
-                <div class="charts-grid">
-                    <div class="chart-container">
-                        <div class="chart-header">💰 Répartition Budget par Commune</div>
-                        <div id="chart-budget-communes" class="chart-content"></div>
-                    </div>
-                    
-                    <div class="chart-container">
-                        <div class="chart-header">⚙️ Budget par Fonction</div>
-                        <div id="chart-budget-fonctions" class="chart-content"></div>
-                    </div>
-                    
-                    <div class="chart-container">
-                        <div class="chart-header">💰 Vue Hiérarchique</div>
-                        <div id="chart-sunburst" class="chart-content"></div>
-                    </div>
-                    
-                    <div class="chart-container">
-                        <div class="chart-header">💰 Recettes vs Dépenses</div>
-                        <div id="chart-recettes-depenses" class="chart-content"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Section informations -->
-            <div class="info-section" id="info-section">
-                <div class="info-box">
-                    <h3>🎯 À propos de ce dashboard</h3>
-                    <p>Cette visualisation interactive présente les données budgétaires réelles 2020 de la 
-                    <strong>Communauté Urbaine Caen la Mer (CUCLM)</strong>. Développée avec des technologies 
-                    modernes, elle permet d'explorer facilement <code>10 communes</code> avec leurs budgets 
-                    détaillés représentant plus de <code>19 millions d'euros</code>.</p>
-                    
-                    <div class="tech-info">
-                        <div class="tech-column">
-                            <h4>🛠️ Technologies</h4>
-                            <ul>
-                                <li><strong>Python:</strong> Analyse de données (Pandas)</li>
-                                <li><strong>Leaflet:</strong> Cartographie interactive</li>
-                                <li><strong>Plotly:</strong> Graphiques dynamiques</li>
-                                <li><strong>JavaScript ES6+:</strong> Interactivité</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="tech-column">
-                            <h4>🎯 Fonctionnalités</h4>
-                            <ul>
-                                <li>🗺️ Carte interactive avec sélection</li>
-                                <li>📊 Graphiques dynamiques temps réel</li>
-                                <li>🔍 Filtrage par fonction et type</li>
-                                <li>📱 Interface entièrement responsive</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <p class="data-source">
-                    <em>Données budgétaires 2020 - CUCLM - 
-                    <a href="https://data.caenlamer.fr" target="_blank" rel="noopener">Open Data Caen la Mer</a></em>
-                </p>
-            </div>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Guillaume Lemonnier - Tous droits réservés</p>
-            <p class="footer-note">
-                Code sous licence. Toute utilisation nécessite l'attribution à l'auteur. 
-                <a href="../../LICENSE">Voir la licence</a>
-            </p>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="../js/budget-cuclm-updated.js"></script>
-
-    <style>
         /* Variables CSS cohérentes avec le site principal */
         :root {
             --primary-color: #2c3e50;
@@ -214,62 +32,6 @@
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
-            background: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.7;
-            font-size: 16px;
-        }
-
-        /* Navigation cohérente */
-        header {
-            background: var(--bg-light);
-            padding: 20px 0;
-            border-bottom: 1px solid var(--border-color);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-            box-shadow: var(--shadow-light);
-        }
-
-        header .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        nav {
-            display: flex;
-            gap: 30px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            font-size: 16px;
-            padding: 10px 20px;
-            border-radius: 25px;
-            transition: var(--transition);
-        }
-
-        nav a:hover {
-            color: var(--secondary-color);
-            background: var(--bg-section);
-            transform: translateY(-2px);
-        }
-
         /* Container principal */
         .container {
             max-width: 1400px;
@@ -284,14 +46,14 @@
             text-align: center;
             padding: 80px 20px 60px;
             margin: -2rem -2rem 2rem -2rem;
-            border-radius: 0 0 25px 25px;
+            border-radius: 3px;
         }
 
         .page-header h1 {
             font-size: clamp(2rem, 4vw, 2.8rem);
             margin-bottom: 20px;
             font-weight: 700;
-            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+            text-shadow: none;
         }
 
         .page-header p {
@@ -306,11 +68,11 @@
             background: linear-gradient(135deg, var(--success-color), #2ecc71);
             color: white;
             padding: 8px 16px;
-            border-radius: 25px;
+            border-radius: 3px;
             font-size: 0.8rem;
             font-weight: 600;
             display: inline-block;
-            box-shadow: 0 2px 8px rgba(39, 174, 96, 0.3);
+            box-shadow: none;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
@@ -329,7 +91,7 @@
             color: white;
             text-decoration: none;
             padding: 0.8rem 1.5rem;
-            border-radius: 25px;
+            border-radius: 3px;
             font-weight: 500;
             transition: var(--transition);
             border: none;
@@ -340,7 +102,7 @@
 
         .btn-back:hover, .btn-info:hover, .btn-secondary:hover {
             background: var(--secondary-color);
-            transform: translateY(-2px);
+            transform: none;
             color: white;
         }
 
@@ -372,9 +134,9 @@
             background: var(--bg-light);
             padding: 1.5rem;
             border: 2px solid var(--border-color);
-            border-radius: 15px;
+            border-radius: 3px;
             text-align: center;
-            box-shadow: var(--shadow-light);
+            box-shadow: none;
             transition: var(--transition);
             position: relative;
             overflow: hidden;
@@ -391,9 +153,9 @@
         }
 
         .stat-card:hover {
-            transform: translateY(-5px);
+            transform: none;
             border-color: var(--secondary-color);
-            box-shadow: var(--shadow-medium);
+            box-shadow: none;
         }
 
         .stat-value {
@@ -416,9 +178,9 @@
             background: var(--bg-light);
             padding: 1.5rem;
             border: 2px solid var(--border-color);
-            border-radius: 15px;
+            border-radius: 3px;
             margin-bottom: 2rem;
-            box-shadow: var(--shadow-light);
+            box-shadow: none;
         }
 
         .controls h3 {
@@ -443,7 +205,7 @@
         .control-group select {
             padding: 0.5rem 1rem;
             border: 2px solid var(--border-color);
-            border-radius: 8px;
+            border-radius: 3px;
             background: var(--bg-light);
             font-size: 14px;
             color: var(--text-dark);
@@ -454,7 +216,7 @@
         .control-group select:focus {
             border-color: var(--secondary-color);
             outline: none;
-            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+            box-shadow: none;
         }
 
         /* Layout principal */
@@ -469,9 +231,9 @@
         .map-container {
             background: var(--bg-light);
             border: 2px solid var(--border-color);
-            border-radius: 15px;
+            border-radius: 3px;
             overflow: hidden;
-            box-shadow: var(--shadow-light);
+            box-shadow: none;
         }
 
         .map-header {
@@ -491,9 +253,9 @@
         .commune-info {
             background: var(--bg-light);
             border: 2px solid var(--border-color);
-            border-radius: 15px;
+            border-radius: 3px;
             padding: 1.5rem;
-            box-shadow: var(--shadow-light);
+            box-shadow: none;
             height: fit-content;
         }
 
@@ -550,7 +312,7 @@
             padding: 0.5rem;
             margin: 0.3rem 0;
             background: var(--bg-section);
-            border-radius: 8px;
+            border-radius: 3px;
             font-size: 0.9rem;
         }
 
@@ -580,15 +342,15 @@
         .chart-container {
             background: var(--bg-light);
             border: 2px solid var(--border-color);
-            border-radius: 15px;
+            border-radius: 3px;
             overflow: hidden;
-            box-shadow: var(--shadow-light);
+            box-shadow: none;
             transition: var(--transition);
         }
 
         .chart-container:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-medium);
+            transform: none;
+            box-shadow: none;
         }
 
         .chart-header {
@@ -612,7 +374,7 @@
         .info-box {
             background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
             border: 1px solid #bbdefb;
-            border-radius: 15px;
+            border-radius: 3px;
             padding: 2rem;
             margin-bottom: 2rem;
             position: relative;
@@ -638,7 +400,7 @@
         .info-box code {
             background: rgba(52, 152, 219, 0.1);
             padding: 2px 6px;
-            border-radius: 4px;
+            border-radius: 3px;
             font-weight: 600;
             color: var(--primary-color);
         }
@@ -687,15 +449,6 @@
             text-decoration: underline;
         }
 
-        /* Footer */
-        footer {
-            background: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
-        }
-
         .footer-note {
             font-size: 0.9rem;
             margin-top: 10px;
@@ -740,8 +493,8 @@
             background: var(--accent-color);
             color: white;
             padding: 15px 20px;
-            border-radius: 8px;
-            box-shadow: var(--shadow-light);
+            border-radius: 3px;
+            box-shadow: none;
             z-index: 1000;
             display: flex;
             align-items: center;
@@ -795,17 +548,6 @@
                 min-width: 100%;
             }
 
-            nav {
-                flex-wrap: wrap;
-                gap: 15px;
-                justify-content: center;
-            }
-            
-            nav a {
-                padding: 8px 16px;
-                font-size: 14px;
-            }
-
             .map-content {
                 height: 400px;
             }
@@ -819,68 +561,200 @@
             }
         }
 
-        /* Menu hamburger */
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 40px;
-            height: 40px;
-            background: var(--primary-color);
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .menu-toggle:hover {
-            background: var(--secondary-color);
-        }
-
-        .menu-toggle .bar {
-            width: 20px;
-            height: 2px;
-            background: white;
-            margin: 3px 0;
-            transition: var(--transition);
-        }
-
         @media (max-width: 768px) {
-            .menu-toggle {
-                display: flex;
-            }
-
-            nav {
-                position: absolute;
-                top: 70px;
-                right: 20px;
-                background: white;
-                border-radius: 8px;
-                padding: 1rem;
-                box-shadow: var(--shadow-medium);
-                display: none;
-                flex-direction: column;
-                gap: 10px;
-                width: 200px;
-                z-index: 1000;
-            }
-
-            nav a {
-                padding: 10px 15px;
-                font-size: 14px;
-                border-radius: 5px;
-                transition: var(--transition);
-            }
-
-            nav a:hover {
-                background: var(--bg-section);
-            }
-
-            .menu-toggle[aria-expanded="true"] + nav {
-                display: flex;
-            }
         }
-    </style>
+    
+  </style>
+  <link rel="stylesheet" href="../css/legacy.css">
+  <script src="../js/script.js" defer></script>
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+</head>
+<body class="legacy-page">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <!-- Navigation -->
+    <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../index.html" aria-label="Accueil de Guillaume Lemonnier">
+        <span class="brand-mark">GL</span>
+        <span><strong>Guillaume Lemonnier</strong><small>Développeur logiciel</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Navigation principale">
+        <a href="../../index.html">Accueil</a>
+        <a href="projets.html">Projets C++</a>
+        <a href="../../index.html#competences">Compétences</a>
+        <a href="cv.html">Parcours</a>
+        <a class="nav-cta" href="contact.html">Me contacter</a>
+      </nav>
+    </div>
+  </header>
+
+    <!-- Page principale -->
+    <main id="contenu">
+        <div class="container">
+            <!-- Header de la page -->
+            <div class="page-header">
+                <h1>Budget Interactif CUCLM 2020</h1>
+                <p>Exploration interactive des données budgétaires de la Communauté Urbaine Caen la Mer</p>
+                <span class="real-data-badge">🏛️ Données CUCLM Réelles</span>
+            </div>
+
+            <!-- Navigation de retour -->
+            <div class="nav-controls">
+                <a href="projets.html" class="btn-back">← Retour aux projets</a>
+                <a href="#info-section" class="btn-info">ℹ️ Informations</a>
+            </div>
+
+            <!-- Statistiques de synthèse -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="total-budget">19,1 M€</div>
+                    <div class="stat-label">💰 Budget Total</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="total-communes">10</div>
+                    <div class="stat-label">🏛️ Communes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="total-fonctions">7</div>
+                    <div class="stat-label">⚙️ Fonctions</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">2020</div>
+                    <div class="stat-label">📅 Exercice</div>
+                </div>
+            </div>
+
+            <!-- Contrôles -->
+            <div class="controls">
+                <h3>Contrôles de visualisation</h3>
+                <div class="control-group">
+                    <label for="fonction-filter">Fonction:</label>
+                    <select id="fonction-filter">
+                        <option value="all">Toutes les fonctions</option>
+                    </select>
+                    
+                    <label for="type-filter">Type:</label>
+                    <select id="type-filter">
+                        <option value="all">Tous</option>
+                        <option value="recettes">Recettes</option>
+                        <option value="depenses">Dépenses</option>
+                    </select>
+                    
+                    <button id="reset-filters" class="btn-secondary">🔄 Réinitialiser</button>
+                </div>
+            </div>
+
+            <!-- Layout principal -->
+            <div class="main-layout">
+                <!-- Carte Interactive -->
+                <div class="map-container">
+                    <div class="map-header">
+                        🗺️ Carte Interactive des Communes CUCLM
+                    </div>
+                    <div id="map" class="map-content"></div>
+                </div>
+
+                <!-- Informations commune sélectionnée -->
+                <div class="commune-info">
+                    <h3 id="commune-nom">Sélectionnez une commune</h3>
+                    <div class="commune-details" id="commune-details">
+                        <div class="loading">Cliquez sur une commune de la carte pour voir les détails budgétaires</div>
+                    </div>
+                    
+                    <!-- Top communes -->
+                    <div class="top-communes-section">
+                        <h4>Top 5 Communes (Budget)</h4>
+                        <div id="top-communes">
+                            <div class="loading">Chargement...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Graphiques analytiques -->
+            <div class="charts-section">
+                <h3>Analyses Budgétaires</h3>
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <div class="chart-header">💰 Répartition Budget par Commune</div>
+                        <div id="chart-budget-communes" class="chart-content"></div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">⚙️ Budget par Fonction</div>
+                        <div id="chart-budget-fonctions" class="chart-content"></div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">💰 Vue Hiérarchique</div>
+                        <div id="chart-sunburst" class="chart-content"></div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">💰 Recettes vs Dépenses</div>
+                        <div id="chart-recettes-depenses" class="chart-content"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section informations -->
+            <div class="info-section" id="info-section">
+                <div class="info-box">
+                    <h3>À propos de ce dashboard</h3>
+                    <p>Cette visualisation interactive présente les données budgétaires réelles 2020 de la 
+                    <strong>Communauté Urbaine Caen la Mer (CUCLM)</strong>. Développée avec des technologies 
+                    modernes, elle permet d'explorer facilement <code>10 communes</code> avec leurs budgets 
+                    détaillés représentant plus de <code>19 millions d'euros</code>.</p>
+                    
+                    <div class="tech-info">
+                        <div class="tech-column">
+                            <h4>Technologies</h4>
+                            <ul>
+                                <li><strong>Python:</strong> Analyse de données (Pandas)</li>
+                                <li><strong>Leaflet:</strong> Cartographie interactive</li>
+                                <li><strong>Plotly:</strong> Graphiques dynamiques</li>
+                                <li><strong>JavaScript ES6+:</strong> Interactivité</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tech-column">
+                            <h4>Fonctionnalités</h4>
+                            <ul>
+                                <li>🗺️ Carte interactive avec sélection</li>
+                                <li>📊 Graphiques dynamiques temps réel</li>
+                                <li>🔍 Filtrage par fonction et type</li>
+                                <li>📱 Interface entièrement responsive</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="data-source">
+                    <em>Données budgétaires 2020 - CUCLM - 
+                    <a href="https://data.caenlamer.fr" target="_blank" rel="noopener">Open Data Caen la Mer</a></em>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div><strong>Guillaume Lemonnier</strong><p>C++ · Linux · systèmes &amp; communications</p></div>
+      <div class="footer-links">
+        <a href="https://github.com/P-Pix" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="contact.html">Contact</a>
+        <a href="../../LICENSE">Licence</a>
+      </div>
+      <p>© 2026 · Caen, France · Tous droits réservés</p>
+    </div>
+  </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/budget-cuclm-updated.js"></script>
 </body>
 </html>

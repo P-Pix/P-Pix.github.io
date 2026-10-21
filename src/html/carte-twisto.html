@@ -7,150 +7,8 @@
   <title>Carte Interactive TWISTO - Guillaume Lemonnier</title>
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header>
-    <div class="container">
-      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-      <nav id="primary-nav" role="navigation" aria-label="Navigation principale">
-        <a href="../../index.html">Accueil</a>
-        <a href="projets.html">Projets</a>
-        <a href="cv.html">CV</a>
-        <a href="recherche-emploi.html" class="nav-highlight">Positionnement</a>
-        <a href="associatif.html">Associatif</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>🚌 Carte Interactive TWISTO</h1>
-        <p>Explorez le réseau de transport en commun<br>de Caen et ses environs</p>
-      </div>
-    </section>
-
-    <!-- Bouton de navigation -->
-    <section class="section">
-      <div class="container">
-        <div class="nav-controls">
-          <a href="projets.html" class="btn-back">← Retour aux projets</a>
-          <a href="#info-section" class="btn-info"> Infos</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Panneau de contrôles et recherche -->
-    <section class="section">
-      <div class="container">
-        <div class="carte-controls">
-          <div class="search-panel">
-            <div class="search-section">
-              <h3>🔍 Rechercher un arrêt</h3>
-              <div class="search-container">
-                <input type="text" id="search-input" placeholder="Tapez le nom d'un arrêt..." />
-                <button id="search-btn" class="btn-primary">Rechercher</button>
-                <button id="clear-search" class="btn-secondary">Effacer</button>
-              </div>
-              <div id="search-results" class="search-results"></div>
-            </div>
-
-            <div class="filter-section">
-              <h3>🎛️ Contrôles de la carte</h3>
-              <div class="controls-grid">
-                <button id="toggle-style" class="control-btn">☀️ Style: Clair</button>
-                <button id="fit-bounds" class="control-btn">📍 Voir Tout</button>
-                <button id="center-map" class="control-btn">🎯 Centrer</button>
-                <button id="fullscreen" class="control-btn">⛶ Plein écran</button>
-              </div>
-            </div>
-
-            <div class="stats-section">
-              <h3>📊 Statistiques</h3>
-              <div class="stats-grid">
-                <div class="stat-item">
-                  <span class="stat-number" id="total-stops">2093</span>
-                  <span class="stat-label">Arrêts total</span>
-                </div>
-                <div class="stat-item">
-                  <span class="stat-number" id="visible-stops">500</span>
-                  <span class="stat-label">Affichés</span>
-                </div>
-                <div class="stat-item">
-                  <span class="stat-number">Caen</span>
-                  <span class="stat-label">Zone</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="map-section">
-            <div class="map-header">
-              <h2>🗺️ Réseau de Transport TWISTO</h2>
-              <p>Cliquez sur les marqueurs pour plus d'informations</p>
-            </div>
-            <div id="twisto-map" class="interactive-map"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section informations -->
-    <section class="section bg-light" id="info-section">
-      <div class="container">
-        <div class="info-grid">
-          <div class="info-card">
-            <h3>🎯 À propos du projet</h3>
-            <p>Cette carte interactive présente l'ensemble du réseau de transport en commun TWISTO de Caen. 
-            Développée avec Python pour l'analyse des données GTFS et Leaflet.js pour la visualisation web, 
-            elle permet d'explorer facilement les 2093 arrêts du réseau.</p>
-          </div>
-
-          <div class="info-card">
-            <h3>🛠️ Technologies utilisées</h3>
-            <ul>
-              <li><strong>Python:</strong> Analyse des données GTFS avec Pandas</li>
-              <li><strong>Folium:</strong> Génération des cartes interactives</li>
-              <li><strong>Leaflet.js:</strong> Affichage web optimisé</li>
-              <li><strong>JavaScript ES6+:</strong> Interactivité avancée</li>
-            </ul>
-          </div>
-
-          <div class="info-card">
-            <h3>📈 Fonctionnalités</h3>
-            <ul>
-              <li>🔍 Recherche d'arrêts en temps réel</li>
-              <li>🗺️ 2 styles de carte différents</li>
-              <li> Popups informatifs détaillés</li>
-              <li>📱 Interface responsive</li>
-              <li>⛶ Mode plein écran</li>
-            </ul>
-          </div>
-        </div>
-    </div>
-    <p><em>Données mises à jour en juillet 2025 - Twisto - <a href="https://www.data.gouv.fr/datasets/caen-la-mer-reseau-twisto-gtfs-siri-1/" target="_blank">data.gouv.fr</a></em></p>
-</section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Guillaume Lemonnier - Tous droits réservés</p>
-      <p style="font-size: 0.9rem; margin-top: 10px;">
-        Ce code est protégé par licence. Toute utilisation nécessite l'attribution à l'auteur. 
-        <a href="../../LICENSE" style="color: var(--secondary-color);">Voir la licence</a>
-      </p>
-    </div>
-  </footer>
-
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="../js/script.js"></script>
-  <script src="../js/carte-twisto.js"></script>
-
   <style>
+
     /* Styles spécifiques à la page carte */
     .nav-controls {
       display: flex;
@@ -165,7 +23,7 @@
       color: white;
       text-decoration: none;
       padding: 0.8rem 1.5rem;
-      border-radius: 8px;
+      border-radius: 3px;
       font-weight: 500;
       transition: var(--transition);
       border: none;
@@ -175,7 +33,7 @@
 
     .btn-back:hover, .btn-info:hover {
       background: var(--secondary-color);
-      transform: translateY(-2px);
+      transform: none;
       color: white;
     }
 
@@ -197,8 +55,8 @@
     .search-panel {
       background: var(--bg-light);
       padding: 25px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-light);
+      border-radius: 3px;
+      box-shadow: none;
       height: fit-content;
       position: sticky;
       top: 20px;
@@ -223,7 +81,7 @@
     #search-input {
       padding: 12px 15px;
       border: 2px solid var(--border-color);
-      border-radius: 8px;
+      border-radius: 3px;
       font-size: 14px;
       transition: var(--transition);
     }
@@ -236,7 +94,7 @@
     .btn-primary, .btn-secondary {
       padding: 10px 15px;
       border: none;
-      border-radius: 6px;
+      border-radius: 3px;
       font-weight: 500;
       cursor: pointer;
       transition: var(--transition);
@@ -270,7 +128,7 @@
       padding: 8px 12px;
       background: white;
       border: 1px solid var(--border-color);
-      border-radius: 6px;
+      border-radius: 3px;
       margin-bottom: 5px;
       cursor: pointer;
       transition: var(--transition);
@@ -291,7 +149,7 @@
       padding: 10px 12px;
       background: white;
       border: 2px solid var(--border-color);
-      border-radius: 8px;
+      border-radius: 3px;
       font-size: 13px;
       cursor: pointer;
       transition: var(--transition);
@@ -301,7 +159,7 @@
     .control-btn:hover {
       border-color: var(--primary-color);
       background: var(--bg-section);
-      transform: translateY(-2px);
+      transform: none;
     }
 
     .control-btn.active {
@@ -311,7 +169,7 @@
     }
 
     .control-btn:active {
-      transform: translateY(0);
+      transform: none;
     }
 
     .stats-grid {
@@ -324,7 +182,7 @@
       text-align: center;
       padding: 15px;
       background: white;
-      border-radius: 10px;
+      border-radius: 3px;
       border: 1px solid var(--border-color);
     }
 
@@ -342,9 +200,9 @@
 
     .map-section {
       background: var(--bg-light);
-      border-radius: 15px;
+      border-radius: 3px;
       overflow: hidden;
-      box-shadow: var(--shadow-light);
+      box-shadow: none;
     }
 
     .map-header {
@@ -381,8 +239,8 @@
     .info-card {
       background: white;
       padding: 25px;
-      border-radius: 12px;
-      box-shadow: var(--shadow-light);
+      border-radius: 3px;
+      box-shadow: none;
     }
 
     .info-card h3 {
@@ -437,6 +295,156 @@
         grid-template-columns: 1fr;
       }
     }
+  
   </style>
+  <link rel="stylesheet" href="../css/legacy.css">
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+</head>
+<body class="legacy-page">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../index.html" aria-label="Accueil de Guillaume Lemonnier">
+        <span class="brand-mark">GL</span>
+        <span><strong>Guillaume Lemonnier</strong><small>Développeur logiciel</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Navigation principale">
+        <a href="../../index.html">Accueil</a>
+        <a href="projets.html">Projets C++</a>
+        <a href="../../index.html#competences">Compétences</a>
+        <a href="cv.html">Parcours</a>
+        <a class="nav-cta" href="contact.html">Me contacter</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="hero">
+      <div class="container">
+        <h1>Carte Interactive TWISTO</h1>
+        <p>Explorez le réseau de transport en commun<br>de Caen et ses environs</p>
+      </div>
+    </section>
+
+    <!-- Bouton de navigation -->
+    <section class="section">
+      <div class="container">
+        <div class="nav-controls">
+          <a href="projets.html" class="btn-back">← Retour aux projets</a>
+          <a href="#info-section" class="btn-info"> Infos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Panneau de contrôles et recherche -->
+    <section class="section">
+      <div class="container">
+        <div class="carte-controls">
+          <div class="search-panel">
+            <div class="search-section">
+              <h3>Rechercher un arrêt</h3>
+              <div class="search-container">
+                <input type="text" id="search-input" aria-label="Rechercher un arrêt Twisto par son nom" placeholder="Tapez le nom d'un arrêt..." />
+                <button id="search-btn" class="btn-primary">Rechercher</button>
+                <button id="clear-search" class="btn-secondary">Effacer</button>
+              </div>
+              <div id="search-results" class="search-results"></div>
+            </div>
+
+            <div class="filter-section">
+              <h3>Contrôles de la carte</h3>
+              <div class="controls-grid">
+                <button id="toggle-style" class="control-btn">☀️ Style: Clair</button>
+                <button id="fit-bounds" class="control-btn">📍 Voir Tout</button>
+                <button id="center-map" class="control-btn">🎯 Centrer</button>
+                <button id="fullscreen" class="control-btn">⛶ Plein écran</button>
+              </div>
+            </div>
+
+            <div class="stats-section">
+              <h3>Statistiques</h3>
+              <div class="stats-grid">
+                <div class="stat-item">
+                  <span class="stat-number" id="total-stops">2093</span>
+                  <span class="stat-label">Arrêts total</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number" id="visible-stops">500</span>
+                  <span class="stat-label">Affichés</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">Caen</span>
+                  <span class="stat-label">Zone</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-section">
+            <div class="map-header">
+              <h2>Réseau de Transport TWISTO</h2>
+              <p>Cliquez sur les marqueurs pour plus d'informations</p>
+            </div>
+            <div id="twisto-map" class="interactive-map"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section informations -->
+    <section class="section bg-light" id="info-section">
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>À propos du projet</h3>
+            <p>Cette carte interactive présente l'ensemble du réseau de transport en commun TWISTO de Caen. 
+            Développée avec Python pour l'analyse des données GTFS et Leaflet.js pour la visualisation web, 
+            elle permet d'explorer facilement les 2093 arrêts du réseau.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Technologies utilisées</h3>
+            <ul>
+              <li><strong>Python:</strong> Analyse des données GTFS avec Pandas</li>
+              <li><strong>Folium:</strong> Génération des cartes interactives</li>
+              <li><strong>Leaflet.js:</strong> Affichage web optimisé</li>
+              <li><strong>JavaScript ES6+:</strong> Interactivité avancée</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>Fonctionnalités</h3>
+            <ul>
+              <li>🔍 Recherche d'arrêts en temps réel</li>
+              <li>🗺️ 2 styles de carte différents</li>
+              <li> Popups informatifs détaillés</li>
+              <li>📱 Interface responsive</li>
+              <li>⛶ Mode plein écran</li>
+            </ul>
+          </div>
+        </div>
+    </div>
+    <p><em>Données mises à jour en juillet 2025 - Twisto - <a href="https://www.data.gouv.fr/datasets/caen-la-mer-reseau-twisto-gtfs-siri-1/" target="_blank" rel="noopener noreferrer">data.gouv.fr</a></em></p>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div><strong>Guillaume Lemonnier</strong><p>C++ · Linux · systèmes &amp; communications</p></div>
+      <div class="footer-links">
+        <a href="https://github.com/P-Pix" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="contact.html">Contact</a>
+        <a href="../../LICENSE">Licence</a>
+      </div>
+      <p>© 2026 · Caen, France · Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/carte-twisto.js"></script>
 </body>
 </html>

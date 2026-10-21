@@ -1,22 +1,74 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Étude de cas C++20 : driver pour périphérique embarqué simulé, capteurs, protocole binaire, RAII, optional, variant et tests avec mocks."><title>Embedded Device Driver - Guillaume Lemonnier</title><link rel="stylesheet" href="../css/style.css"><script src="../js/script.js" defer></script></head><body>
-<a class="skip-link" href="#contenu">Aller au contenu</a><header class="site-header"><div class="shell header-inner"><a class="brand" href="../../index.html"><span class="brand-mark">GL</span><span><strong>Guillaume Lemonnier</strong><small>Software engineering</small></span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button><nav id="primary-nav" class="primary-nav"><a href="../../index.html">Accueil</a><a class="active" href="projets.html">Projets C++</a><a href="../../index.html#experience">Expérience</a><a href="cv.html">Parcours</a><a class="nav-cta" href="contact.html">Me contacter</a></nav></div></header>
-<main id="contenu"><section class="hero page-hero"><div class="shell hero-grid"><div class="reveal"><div class="breadcrumbs"><a href="../../index.html">Accueil</a><span>/</span><a href="projets.html">Projets</a><span>/</span><span>Embedded driver</span></div><p class="eyebrow">05 · Périphérique embarqué</p><h1>Embedded Device <span>Driver Simulator</span></h1><p class="hero-summary">Une API C++ typée pour piloter une unité embarquée simulée : température, batterie, IMU, GPS et radio. Le projet relie le protocole bas niveau à des types métier sans cacher les erreurs de transport ou de device.</p><div class="hero-stack"><span>C++20</span><span>RAII</span><span>std::optional</span><span>std::variant</span><span>Unix socket</span><span>Fault injection</span></div><div class="hero-actions"><a class="button button-primary" href="https://github.com/P-Pix/cpp-embedded-device-driver-simulator" target="_blank" rel="noreferrer">Voir le code source →</a></div></div><div class="project-hero-art reveal"><span class="visual-label">EDDS / SENSOR BUS</span><div class="code-window"><div class="window-bar"><i></i><i></i><i></i></div><pre><span class="token-cyan">device</span>  EDDS-SIM
-temperature     21.8 C
-battery         87 %
-imu             x=0.01 y=-0.03 z=1.00
-gps             <span class="token-blue">fix acquired</span>
-radio           RSSI=-68 dBm
-
-timeout         <span class="token-orange">retry 1/2</span>
-response        <span class="token-cyan">OK</span></pre></div></div></div></section>
-<nav class="project-nav"><div class="shell"><a href="#probleme">Problème</a><a href="#architecture">Architecture</a><a href="#decisions">Décisions</a><a href="#demo">Démonstration</a><a href="#preuves">Preuves</a></div></nav>
-<section class="section"><div class="shell project-layout"><article class="project-main">
-<section id="probleme"><p class="eyebrow">Le problème</p><h2>Passer d’octets bruts à une API sûre</h2><p>Le protocole transporte des payloads hétérogènes : nombre flottant, structure IMU, position GPS optionnelle, état radio. Le driver doit valider le type de réponse, son numéro de séquence et sa longueur avant de construire un objet métier utilisable.</p><p>Les erreurs sont séparées en transport, protocole et périphérique. L’appelant sait ainsi si une opération peut être retentée, si les octets sont invalides ou si le device a explicitement refusé la commande.</p></section>
-<section id="architecture"><p class="eyebrow">Architecture</p><h2>Une API publique découplée du simulateur</h2><div class="architecture architecture-4"><div class="arch-node">API typée<br>DeviceDriver</div><div class="arch-node">Codec + helpers<br>binary payload</div><div class="arch-node">Transport RAII<br>ou mock</div><div class="arch-node">Firmware Python<br>simulé</div></div><p>Le simulateur supporte délai artificiel, réponse perdue, statut `BUSY` et corruption. Cela permet d’exercer les politiques de récupération sans modifier la couche C++ ni rendre les tests probabilistes.</p></section>
-<section id="decisions"><p class="eyebrow">Décisions d’ingénierie</p><h2>Utiliser le type system comme garde-fou</h2><div class="decision-grid"><article class="decision"><span>01 / MODEL</span><h3>Types dédiés par capteur</h3><p>`ImuReading`, `GpsFix`, `RadioStatus` et `BatteryReading` rendent l’API explicite.</p></article><article class="decision"><span>02 / NULLABILITY</span><h3>GPS avec `std::optional`</h3><p>L’absence de fix est un état métier normal, distinct d’une erreur de transport.</p></article><article class="decision"><span>03 / GENERIC DATA</span><h3>`std::variant` pour les lectures</h3><p>Une collection hétérogène reste type-safe sans cast ni union manuelle.</p></article><article class="decision"><span>04 / ERRORS</span><h3>Hiérarchie d’exceptions contrôlée</h3><p>Transport, protocole et statut device sont distingués pour une réaction appropriée.</p></article></div></section>
-<section id="demo"><p class="eyebrow">Démonstration réelle</p><h2>Onze scénarios du codec au driver</h2><p>La suite exécutée couvre le vecteur CRC standard, les round-trips, les payloads, le décodage capteur, les retries après timeout ou `BUSY`, les statuts d’erreur et le rejet d’une séquence inattendue.</p><div class="demo-frame"><video controls preload="metadata" poster="../../assets/demos/embedded-poster.png"><source src="../../assets/demos/embedded-demo.mp4" type="video/mp4"></video><div class="demo-caption"><strong>Protocol + driver mock tests</strong><span>11/11 tests réussis</span></div></div><div class="command-block"><pre><code>./simulator/device_simulator.py --socket /tmp/edds_device.sock --verbose
-./edds_cli --socket /tmp/edds_device.sock --command all</code></pre><button class="copy-button" type="button">Copier</button></div></section>
-<section id="preuves"><p class="eyebrow">Preuves techniques</p><h2>Ce que le dépôt permet de vérifier</h2><ul class="evidence-list"><li>Round-trip du codec et détection des magic/CRC invalides.</li><li>Décodage de température, batterie, IMU, GPS et radio en types C++ dédiés.</li><li>Retries après timeout et statut `BUSY`, puis propagation d’un vrai statut d’erreur.</li><li>Documentation séparée du protocole, du simulateur, des tests et de l’architecture.</li></ul></section>
-<a class="next-project" href="projet-scangui.html"><div><small>Projet suivant</small><strong>ScanGUI - application C++/GTK</strong></div><span>→</span></a></article>
-<aside class="project-aside"><div class="fact-card"><h3>Fiche technique</h3><dl class="facts"><div><dt>Langages</dt><dd>C++20 + Python</dd></div><div><dt>Capteurs</dt><dd>Temp, IMU, GPS…</dd></div><div><dt>Gestion erreurs</dt><dd>3 catégories</dd></div><div><dt>Tests exécutés</dt><dd>11 / 11</dd></div><div><dt>Licence</dt><dd>MIT</dd></div></dl></div><div class="fact-card"><h3>Compétences démontrées</h3><ul class="tag-list"><li>Type safety</li><li>RAII</li><li>optional/variant</li><li>Error model</li><li>Device API</li><li>Mocks</li></ul></div></aside></div></section></main>
-<footer class="site-footer"><div class="shell footer-inner"><div><strong>Guillaume Lemonnier</strong><p>C++ · Linux · full-stack · IA appliquée</p></div><div class="footer-links"><a href="projets.html">Tous les projets</a><a href="https://github.com/P-Pix" target="_blank" rel="noreferrer">GitHub</a><a href="contact.html">Contact</a></div><p>© 2026 · Caen, France</p></div></footer></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projet personnel C++20 : API typée pour périphérique simulé, optional et variant, validation binaire, gestion des erreurs et tests par mock.">
+  <meta name="author" content="Guillaume Lemonnier">
+  <title>API C++ de périphérique simulé — Guillaume Lemonnier</title>
+  <link rel="canonical" href="https://p-pix.github.io/src/html/projet-embedded-driver.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../index.html" aria-label="Guillaume Lemonnier — accueil">
+        <span class="brand-mark" aria-hidden="true">GL<span>.</span></span>
+        <span><strong>Guillaume Lemonnier</strong><small>Développeur logiciel</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Navigation principale">
+        <a href="../../index.html">Accueil</a>
+        <a class="active" href="projets.html" aria-current="location">Projets C++</a>
+        <a href="../../index.html#competences">Compétences</a>
+        <a href="cv.html">Parcours</a>
+        <a class="nav-cta" href="contact.html">Me contacter</a>
+      </nav>
+    </div>
+  </header>
+  <main id="contenu">
+    <section class="hero page-hero">
+      <div class="shell hero-grid">
+        <div class="reveal">
+          <nav class="breadcrumbs" aria-label="Fil d’Ariane"><a href="../../index.html">Accueil</a><span aria-hidden="true">/</span><a href="projets.html">Projets C++</a><span aria-hidden="true">/</span><span aria-current="page">API de périphérique</span></nav>
+          <p class="eyebrow">05 · Projet personnel · API typée et simulation</p>
+          <h1>Interface C++ pour<br><span>capteurs simulés</span></h1>
+          <p class="hero-summary">Embedded Device Driver Simulator transforme des réponses binaires en types métier C++ : température, batterie, IMU, position GPS et état radio simulés. Le driver distingue les erreurs de transport, de protocole et de périphérique.</p>
+          <div class="hero-stack"><span>C++20</span><span>RAII</span><span>std::optional</span><span>std::variant</span><span>Socket Unix</span><span>Injection d’erreurs</span></div>
+          <div class="hero-actions"><a class="button button-primary" href="https://github.com/P-Pix/cpp-embedded-device-driver-simulator" target="_blank" rel="noopener noreferrer">Voir le code source <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="#architecture">Comprendre l’architecture</a></div>
+        </div>
+        <aside class="project-hero-art reveal" aria-label="Des octets aux types C++"><span class="visual-label">Des octets aux types C++</span><dl class="facts"><div><dt>Recevoir</dt><dd>Réponse du simulateur par socket Unix</dd></div><div><dt>Vérifier</dt><dd>Type, séquence, longueur et CRC</dd></div><div><dt>Décoder</dt><dd>Structures dédiées à chaque mesure</dd></div><div><dt>Exposer</dt><dd>Valeur, absence de donnée ou erreur explicite</dd></div></dl></aside>
+      </div>
+    </section>
+    <nav class="project-nav" aria-label="Sommaire du projet">
+      <div class="shell"><a href="#probleme">Enjeu</a><a href="#architecture">Architecture</a><a href="#decisions">Choix techniques</a><a href="#demo">Démonstration</a><a href="#preuves">Code et tests</a><a href="#perimetre">Périmètre</a></div>
+    </nav>
+    <section class="section">
+      <div class="shell project-layout">
+        <article class="project-main">
+<section id="probleme"><p class="eyebrow">Enjeu</p><h2>Éviter les ambiguïtés dans les données d’un périphérique</h2><p>Le protocole transporte plusieurs formes de données : une température, un ensemble de mesures IMU, une position GPS optionnelle ou un état radio. Le driver vérifie la réponse avant de construire un objet métier utilisable.</p><p>Une absence de position GPS n’est pas une panne de transport. Le modèle distingue les états métier normaux des erreurs, puis sépare transport, protocole et statut du périphérique pour permettre une réaction adaptée.</p></section>
+<section id="architecture"><p class="eyebrow">Architecture</p><h2>Une API indépendante de l’implémentation du simulateur</h2><div class="architecture architecture-4"><div class="arch-node">API typée<br>DeviceDriver</div><div class="arch-node">Codec<br>des charges utiles</div><div class="arch-node">Transport RAII<br>ou mock</div><div class="arch-node">Périphérique<br>Python simulé</div></div><p>Le simulateur permet d’introduire un délai, une réponse perdue, un statut <code>BUSY</code> ou une corruption. Les mocks fournissent des scénarios contrôlés pour tester les réactions du driver.</p></section>
+<section id="decisions"><p class="eyebrow">Choix techniques</p><h2>Faire porter l’intention par les types</h2><div class="decision-grid"><article class="decision"><span>01 / MODÈLE</span><h3>Nommer les données</h3><p><code>ImuReading</code>, <code>GpsFix</code>, <code>RadioStatus</code> et <code>BatteryReading</code> rendent les valeurs exposées explicites.</p></article><article class="decision"><span>02 / ABSENCE</span><h3>Utiliser std::optional</h3><p>Une position indisponible se représente comme un état métier, distinct d’une exception de transport.</p></article><article class="decision"><span>03 / HÉTÉROGÉNÉITÉ</span><h3>Utiliser std::variant</h3><p>Les lectures de natures différentes peuvent être réunies dans une collection en conservant leur type.</p></article><article class="decision"><span>04 / ERREURS</span><h3>Distinguer les causes</h3><p>Les catégories transport, protocole et périphérique permettent de décider s’il faut réessayer ou propager une erreur.</p></article></div></section>
+<section id="demo"><p class="eyebrow">Démonstration</p><h2>Du codec aux scénarios de reprise</h2><p>La démonstration incluse présente onze scénarios : CRC de référence, encodage/décodage, données des capteurs, reprise après timeout ou <code>BUSY</code>, statut d’erreur et rejet d’une séquence inattendue.</p><div class="demo-frame"><video controls preload="metadata" aria-label="Démonstration : API C++ de périphérique simulé" poster="../../assets/demos/embedded-poster.png"><source src="../../assets/demos/embedded-demo.mp4" type="video/mp4">Votre navigateur ne prend pas en charge cette vidéo. <a href="../../assets/demos/embedded-demo.mp4">Ouvrir le fichier vidéo</a>.</video><div class="demo-caption"><strong>Tests du protocole et du driver avec mocks</strong><span>Résultat affiché dans cet extrait : 11 / 11 tests</span></div></div><p>Après compilation de la CLI selon le README, conserver le simulateur actif dans un premier terminal. Lancer ensuite le client C++ dans un second terminal en utilisant le même chemin de socket.</p><h3>Terminal 1 · simulateur</h3><div class="command-block"><pre><code>./simulator/device_simulator.py --socket /tmp/edds_device.sock --verbose</code></pre><button class="copy-button" type="button">Copier</button></div><h3>Terminal 2 · client C++</h3><div class="command-block"><pre><code>./edds_cli --socket /tmp/edds_device.sock --command all</code></pre><button class="copy-button" type="button">Copier</button></div></section>
+<section id="preuves"><p class="eyebrow">Pour approfondir</p><h2>Code, tests et documentation</h2><ul class="evidence-list"><li>Tests d’encodage/décodage et détection des marqueurs ou CRC invalides.</li><li>Conversion des données simulées de température, batterie, IMU, GPS et radio en types dédiés.</li><li>Reprise après timeout ou statut <code>BUSY</code>, et propagation des autres erreurs du périphérique.</li><li>Documentation du protocole, du simulateur, des tests et de l’architecture.</li></ul><a class="text-link" href="https://github.com/P-Pix/cpp-embedded-device-driver-simulator" target="_blank" rel="noopener noreferrer">Explorer le dépôt et son README <span aria-hidden="true">↗</span></a></section>
+<section id="perimetre"><p class="eyebrow">Périmètre</p><h2>Cadre du projet</h2><p>Le driver s’exécute en espace utilisateur et communique avec un simulateur Python. Les capteurs, le GPS et la radio sont simulés : le projet présente une API et un protocole, sans acquisition sur cible embarquée ni traitement de signal radio.</p></section>
+<a class="next-project" href="projet-scangui.html"><div><small>Projet suivant</small><strong>ScanGUI · application native C++</strong></div><span aria-hidden="true">→</span></a>
+</article>
+<aside class="project-aside" aria-label="Repères du projet"><div class="fact-card"><h2>Fiche technique</h2><dl class="facts"><div><dt>Nature</dt><dd>Simulation en espace utilisateur</dd></div><div><dt>Langages</dt><dd>C++20 + Python</dd></div><div><dt>Transport</dt><dd>Socket Unix</dd></div><div><dt>Données</dt><dd>Température, IMU, GPS…</dd></div><div><dt>Erreurs</dt><dd>Transport, protocole, périphérique</dd></div></dl></div><div class="fact-card"><h2>Compétences mobilisées</h2><ul class="tag-list"><li>Conception d’API</li><li>Sûreté des types</li><li>optional / variant</li><li>RAII</li><li>Modèle d’erreurs</li><li>Tests avec mocks</li></ul><a class="text-link" href="../../index.html#competences">Voir le socle technique <span aria-hidden="true">→</span></a></div></aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div><strong>Guillaume Lemonnier</strong><p>C++ · Linux · protocoles · ingénierie logicielle</p></div>
+      <div class="footer-links"><a href="projets.html">Tous les projets</a><a href="https://github.com/P-Pix" target="_blank" rel="noopener noreferrer">GitHub</a><a href="contact.html">Contact</a></div>
+      <p>© 2026 · Caen, France</p>
+    </div>
+  </footer>
+</body>
+</html>

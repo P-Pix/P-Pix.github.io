@@ -6,29 +6,202 @@
   <meta name="description" content="Expertise en Recherche & Prototypage - Guillaume Lemonnier" />
   <title>Recherche & Prototypage - Guillaume Lemonnier</title>
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+
+    .research-areas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .research-card {
+      background: var(--bg-light);
+      padding: 25px;
+      border-radius: 3px;
+      box-shadow: none;
+      border-top: 4px solid var(--secondary-color);
+      transition: var(--transition);
+    }
+
+    .research-card:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    .research-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+
+    .research-card p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+
+    .research-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .research-card li {
+      padding: 5px 0;
+      color: var(--text-light);
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.9rem;
+    }
+
+    .research-card li:last-child {
+      border-bottom: none;
+    }
+
+    .methodology-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .step-card {
+      background: var(--bg-light);
+      padding: 20px;
+      border-radius: 3px;
+      box-shadow: none;
+      border-left: 4px solid var(--accent-color);
+      text-align: center;
+    }
+
+    .step-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .step-card p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    .step-card ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+
+    .step-card li {
+      padding: 4px 0;
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+
+    .prototypes-showcase {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .prototype-item {
+      background: var(--bg-light);
+      padding: 25px;
+      border-radius: 3px;
+      box-shadow: none;
+      border-left: 4px solid var(--secondary-color);
+    }
+
+    .prototype-item h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+
+    .prototype-item p {
+      margin-bottom: 10px;
+      color: var(--text-light);
+    }
+
+    .veille-sources {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .source-category {
+      background: var(--primary-color);
+      color: white;
+      padding: 25px;
+      border-radius: 3px;
+      box-shadow: none;
+    }
+
+    .source-category h3 {
+      color: white;
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+
+    .source-category ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .source-category li {
+      padding: 6px 0;
+      color: rgba(255, 255, 255, 0.9);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 0.9rem;
+    }
+
+    .source-category li:last-child {
+      border-bottom: none;
+    }
+
+    @media (max-width: 768px) {
+      .research-areas {
+        grid-template-columns: 1fr;
+      }
+      
+      .methodology-steps {
+        grid-template-columns: 1fr;
+      }
+      
+      .veille-sources {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+  </style>
+  <link rel="stylesheet" href="../css/legacy.css">
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
 </head>
-<body>
-  <header>
-    <div class="container">
-      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-      <nav id="primary-nav" role="navigation" aria-label="Navigation principale">
+<body class="legacy-page">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../index.html" aria-label="Accueil de Guillaume Lemonnier">
+        <span class="brand-mark">GL</span>
+        <span><strong>Guillaume Lemonnier</strong><small>Développeur logiciel</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Navigation principale">
         <a href="../../index.html">Accueil</a>
-        <a href="projets.html">Projets</a>
-        <a href="cv.html">CV</a>
-        <a href="recherche-emploi.html" class="nav-highlight">Positionnement</a>
-        <a href="associatif.html">Associatif</a>
-        <a href="contact.html">Contact</a>
+        <a href="projets.html">Projets C++</a>
+        <a href="../../index.html#competences">Compétences</a>
+        <a href="cv.html">Parcours</a>
+        <a class="nav-cta" href="contact.html">Me contacter</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="contenu">
     <section class="hero">
       <div class="container">
-        <h1>🔬 Recherche & Prototypage</h1>
+        <h1>Recherche & Prototypage</h1>
         <p>Innovation et veille technologique<br>appliquées à l'IA et aux sciences des données</p>
       </div>
     </section>
@@ -49,10 +222,10 @@
 
     <section class="section">
       <div class="container">
-        <h2>🎯 Domaines de Recherche</h2>
+        <h2>Domaines de Recherche</h2>
         <div class="research-areas">
           <div class="research-card">
-            <h3>🧠 IA Explicable</h3>
+            <h3>IA Explicable</h3>
             <p>Développement de modèles interprétables et compréhensibles.</p>
             <ul>
               <li>LIME pour l'explication de modèles</li>
@@ -62,7 +235,7 @@
           </div>
 
           <div class="research-card">
-            <h3>📊 Analyse de Données</h3>
+            <h3>Analyse de Données</h3>
             <p>Exploration de techniques avancées d'analyse et de visualisation.</p>
             <ul>
               <li>Preprocessing et feature engineering</li>
@@ -72,7 +245,7 @@
           </div>
 
           <div class="research-card">
-            <h3>🤖 Apprentissage Automatique</h3>
+            <h3>Apprentissage Automatique</h3>
             <p>Recherche sur les algorithmes d'apprentissage et leurs optimisations.</p>
             <ul>
               <li>Hyperparameter tuning automatisé</li>
@@ -82,7 +255,7 @@
           </div>
 
           <div class="research-card">
-            <h3>🔄 Transfert d'Apprentissage</h3>
+            <h3>Transfert d'Apprentissage</h3>
             <p>Adaptation de modèles entre domaines et datasets.</p>
             <ul>
               <li>Domain adaptation techniques</li>
@@ -96,7 +269,7 @@
 
     <section class="section">
       <div class="container">
-        <h2>🛠 Méthodologie de Prototypage</h2>
+        <h2>Méthodologie de Prototypage</h2>
         <div class="methodology-steps">
           <div class="step-card">
             <h3>1. Veille & Identification</h3>
@@ -143,7 +316,7 @@
 
     <section class="section">
       <div class="container">
-        <h2>🏆 Projets de Recherche et Prototypes</h2>
+        <h2>Projets de Recherche et Prototypes</h2>
         <div class="prototypes-showcase">
           <div class="prototype-item">
             <h3>Analyse de Données EEG</h3>
@@ -174,7 +347,7 @@
 
     <section class="section">
       <div class="container">
-        <h2>📚 Veille Technologique</h2>
+        <h2>Veille Technologique</h2>
         <div class="veille-sources">
           <div class="source-category">
             <h3>Publications Scientifiques</h3>
@@ -223,180 +396,18 @@
 
   </main>
 
-  <footer>
-    <div class="container">
-      &copy; 2026 Guillaume Lemonnier - Tous droits réservés | 
-      <a href="../../LICENSE" style="color: #6366f1; text-decoration: none;">Licence</a>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div><strong>Guillaume Lemonnier</strong><p>C++ · Linux · systèmes &amp; communications</p></div>
+      <div class="footer-links">
+        <a href="https://github.com/P-Pix" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="contact.html">Contact</a>
+        <a href="../../LICENSE">Licence</a>
+      </div>
+      <p>© 2026 · Caen, France · Tous droits réservés</p>
     </div>
   </footer>
 
   <script src="../js/script.js"></script>
-
-  <style>
-    .research-areas {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-
-    .research-card {
-      background: var(--bg-light);
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-light);
-      border-top: 4px solid var(--secondary-color);
-      transition: var(--transition);
-    }
-
-    .research-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-medium);
-    }
-
-    .research-card h3 {
-      color: var(--primary-color);
-      margin-bottom: 15px;
-      font-size: 1.2rem;
-    }
-
-    .research-card p {
-      color: var(--text-light);
-      margin-bottom: 15px;
-    }
-
-    .research-card ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .research-card li {
-      padding: 5px 0;
-      color: var(--text-light);
-      border-bottom: 1px solid var(--border-color);
-      font-size: 0.9rem;
-    }
-
-    .research-card li:last-child {
-      border-bottom: none;
-    }
-
-    .methodology-steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 40px;
-    }
-
-    .step-card {
-      background: var(--bg-light);
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-light);
-      border-left: 4px solid var(--accent-color);
-      text-align: center;
-    }
-
-    .step-card h3 {
-      color: var(--primary-color);
-      margin-bottom: 15px;
-      font-size: 1.1rem;
-    }
-
-    .step-card p {
-      color: var(--text-light);
-      margin-bottom: 15px;
-      font-weight: 500;
-    }
-
-    .step-card ul {
-      list-style: none;
-      padding: 0;
-      text-align: left;
-    }
-
-    .step-card li {
-      padding: 4px 0;
-      color: var(--text-light);
-      font-size: 0.9rem;
-    }
-
-    .prototypes-showcase {
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-      margin-top: 40px;
-    }
-
-    .prototype-item {
-      background: var(--bg-light);
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-light);
-      border-left: 4px solid var(--secondary-color);
-    }
-
-    .prototype-item h3 {
-      color: var(--primary-color);
-      margin-bottom: 15px;
-      font-size: 1.3rem;
-    }
-
-    .prototype-item p {
-      margin-bottom: 10px;
-      color: var(--text-light);
-    }
-
-    .veille-sources {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-
-    .source-category {
-      background: var(--primary-color);
-      color: white;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-light);
-    }
-
-    .source-category h3 {
-      color: white;
-      margin-bottom: 15px;
-      font-size: 1.2rem;
-    }
-
-    .source-category ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .source-category li {
-      padding: 6px 0;
-      color: rgba(255, 255, 255, 0.9);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      font-size: 0.9rem;
-    }
-
-    .source-category li:last-child {
-      border-bottom: none;
-    }
-
-    @media (max-width: 768px) {
-      .research-areas {
-        grid-template-columns: 1fr;
-      }
-      
-      .methodology-steps {
-        grid-template-columns: 1fr;
-      }
-      
-      .veille-sources {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </body>
 </html>

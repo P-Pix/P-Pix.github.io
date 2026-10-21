@@ -1,47 +1,113 @@
 # Architecture du portfolio
 
-## Objectif éditorial
+## 1. Objectif et périmètre
 
-Le site est organisé pour permettre à un recruteur technique de vérifier rapidement :
+Le portfolio présente Guillaume Lemonnier avec une orientation **C++ / Linux, systèmes et communications**. Il permet de passer d’une compétence à un projet, puis à une explication d’architecture et au dépôt source correspondant.
 
-1. le positionnement C++/Linux ;
-2. la capacité à expliquer une architecture ;
-3. les preuves de compilation, de tests et d’exécution ;
-4. l’expérience full-stack et produit issue du poste actuel.
+L’accueil privilégie trois réalisations : station sol de télémétrie, serveur de commande et de supervision, enregistreur binaire. Les deux simulateurs de périphériques et ScanGUI complètent ce parcours. L’expérience de développement métier à l’ARS Normandie, la recherche et la formation sont présentées séparément des projets personnels C++.
 
-## Structure
+Le périmètre de ce dépôt est celui du **site de présentation**. Les programmes C++, leurs dépendances, leur compilation et leurs suites de tests appartiennent aux dépôts GitHub associés. Leurs sources ne sont pas incluses ici. Les vidéos fournies ont été conservées ; les textes ne doivent pas les présenter comme une nouvelle qualification des programmes effectuée pendant la refonte du site.
 
-```text
-P-Pix.github.io/
-├── index.html
-├── assets/
-│   ├── demos/                  # MP4 H.264 et posters PNG
-│   ├── images/                 # portrait optimisé
-│   └── pdf/cv.pdf
-└── src/
-    ├── css/style.css           # design system et responsive
-    ├── js/script.js            # menu, reveal, copie et vidéos
-    └── html/
-        ├── projets.html
-        ├── projet-*.html       # six études de cas
-        ├── cv.html
-        └── contact.html
-```
+## 2. Architecture statique
 
-## Pages projet
+Le portfolio principal repose sur des fichiers HTML, CSS et JavaScript natifs. Il n’utilise pas de framework, de bundle généré, de serveur applicatif ou de base de données. Aucune commande de build n’est nécessaire.
 
-Toutes les études de cas suivent le même parcours de lecture :
+Chaque page contient directement son contenu, son en-tête et son pied de page. Le navigateur peut donc afficher le portfolio principal en ouvrant `index.html`, y compris sans JavaScript. Les chemins relatifs relient les pages, les styles, les scripts et les médias.
 
-- résumé et stack ;
-- problème d’ingénierie ;
-- architecture ;
-- décisions techniques ;
-- démonstration réelle ;
-- preuves vérifiables dans le dépôt ;
-- projet suivant.
+| Élément | Responsabilité |
+| --- | --- |
+| `index.html` | Accueil, positionnement, sélection de projets, tableau de compétences et expérience. |
+| `src/html/projets.html` | Catalogue des six projets et accès aux rubriques complémentaires. |
+| `src/html/projet-*.html` | Six études de cas techniques. |
+| `src/html/cv.html` | Parcours et formation ; lien vers le nouveau CV PDF C++ / Linux. |
+| `src/html/recherche-emploi.html` | Projet professionnel C++ / Linux. |
+| `src/html/contact.html` | Moyens de contact et accès aux profils externes. |
+| Autres pages de `src/html/` | Rubriques historiques, engagement associatif et démonstrations de données. |
+| `aaaa/` | Site distinct conservé avec ses propres styles et scripts. |
 
-Cette répétition est intentionnelle : elle permet de comparer les projets sans réapprendre la page.
+## 3. Présentation commune et compatibilité
 
-## Déploiement
+### `src/css/style.css`
 
-Le dépôt reste un site statique directement compatible avec GitHub Pages. Aucun secret, backend ou appel API n’est requis en production.
+Cette feuille porte les variables de présentation, les règles de base et les composants du portfolio : en-tête, boutons, cartes, tableau de compétences, études de cas, formulaires, pied de page et dispositions adaptatives.
+
+Les choix visuels sont cohérents sur le parcours principal : fond blanc, bleu principal, texte bleu sombre, filets gris, angles peu arrondis et survol gris clair. Les animations d’apparition qui masquaient le contenu par défaut ont été retirées.
+
+Les règles incluent un focus clavier visible, le lien d’évitement, les adaptations mobile/tablette, la préférence de réduction des animations et une présentation pour l’impression.
+
+### `src/css/legacy.css`
+
+Les anciennes rubriques conservent leurs composants et, lorsque nécessaire, leurs styles particuliers. La feuille `legacy.css`, chargée après ces styles, adapte les pages portant la classe `legacy-page` : conteneurs, titres, cartes, boutons, champs et couleurs.
+
+Ce périmètre CSS évite d’imposer les anciens composants aux nouvelles pages. Toutes les pages du portfolio utilisent néanmoins le même en-tête, la même navigation et le même script commun.
+
+Le dossier `aaaa/` reste indépendant de ces deux feuilles.
+
+## 4. Interactions communes
+
+Le fichier `src/js/script.js` apporte des améliorations progressives et active la classe `js` sur le document. Le contenu principal reste visible si ce script n’est pas exécuté.
+
+| Fonctionnement | Comportement |
+| --- | --- |
+| Menu mobile | Bouton associé à `primary-nav`, état `aria-expanded`, libellé ouvrir/fermer, fermeture avec Échap, au changement de taille et lorsque le visiteur quitte le menu. |
+| Filtres du catalogue | Boutons par domaine, attributs `data-categories` sur les cartes, visibilité par `hidden` et nombre de résultats annoncé dans une zone de statut. |
+| URL du catalogue | Le paramètre `filtre` conserve le domaine sélectionné pour partager un lien. Une valeur inconnue revient à tous les projets. |
+| Copie | Copie des commandes et de l’adresse e-mail avec retour de statut ; solution de repli lorsque l’API du presse-papiers est indisponible. |
+| Vidéos | Démarrer une vidéo met les autres en pause. La lecture reste contrôlée par le visiteur. |
+
+Sans JavaScript, les boutons de filtre restent masqués et les six projets sont visibles. La navigation demeure accessible. Les adresses et commandes restent du texte sélectionnable si la copie automatique n’est pas autorisée.
+
+## 5. Structure des études de cas
+
+Les six pages suivent un parcours commun pour faciliter la comparaison :
+
+1. Présentation du projet et de son environnement technique.
+2. Enjeu traité.
+3. Architecture et circulation des données.
+4. Décisions techniques et raisons des choix.
+5. Démonstration fournie et commandes ou indications associées.
+6. Accès au code, aux tests et à la documentation dans le dépôt du projet.
+7. Périmètre et limites.
+8. Projet suivant.
+
+Les fiches distinguent une simulation logicielle, un transport par socket et une intégration à du matériel réel. La station de télémétrie illustre le traitement applicatif de trames simulées ; elle ne décrit pas une réception radio effectuée par ce site. Les résultats et débits affichés dans les vidéos sont présentés comme ceux de ces extraits.
+
+## 6. Démonstrations historiques et données
+
+Les pages `budget-cuclm.html`, `carte-twisto.html` et `marches-caen.html` chargent des données JSON avec `fetch`. Une consultation par HTTP est nécessaire pour leur fonctionnement normal ; ouvrir directement leurs fichiers avec une URL `file:` peut être bloqué par le navigateur.
+
+| Démonstration | Script | Données locales |
+| --- | --- | --- |
+| Budget de Caen la Mer | `src/js/budget-cuclm-updated.js` | `budget-cuclm-optimized-final.json` |
+| Réseau Twisto | `src/js/carte-twisto.js` | `src/js/twisto-stops-data.json` |
+| Marchés de Caen | `src/js/marches-caen.js` | `src/js/marches-caen-data.json` |
+
+Leaflet, Plotly et les fonds de carte sont chargés depuis des ressources distantes selon la démonstration. La présence des JSON dans le dépôt ne rend donc pas ces pages entièrement autonomes hors ligne.
+
+### Sélection budgétaire
+
+Le script budgétaire conserve le JSON chargé comme source. Le filtre par fonction dérive une vue des communes concernées et agrège leurs lignes de fonction, sans modifier les valeurs sources. Le choix Tous / Recettes / Dépenses détermine le montant présenté.
+
+La carte, les graphiques, le classement, la synthèse et les détails de la commune utilisent cette sélection. La liste des fonctions vient de l’ensemble des données et demeure disponible après un clic sur une commune. Les communes concernées par une fonction peuvent avoir un montant nul pour le type choisi ; les marqueurs de montant nul sont omis, et les graphiques de répartition signalent une sélection sans montant.
+
+Le bouton Réinitialiser restaure les deux listes de sélection et la vue complète. Le panneau de détail est actualisé lors d’un changement de filtre ou réinitialisé lorsque la commune sélectionnée sort du périmètre.
+
+## 7. Médias et fichiers conservés
+
+Les médias sont servis comme fichiers statiques. Les vidéos de `assets/demos/` conservent leurs posters et utilisent les commandes de lecture natives du navigateur. Le portrait et les images existantes sont dans `assets/images/`.
+
+`assets/pdf/cv-cpp-linux.pdf` est le **CV C++ / Linux proposé aux visiteurs** depuis les boutons du portfolio. Ce document statique reprend les faits professionnels, la formation et les langues fournis et distingue la pratique personnelle du C++ de l’expérience professionnelle. Il peut être actualisé en remplaçant le PDF à ce chemin.
+
+L’ancien CV `assets/pdf/cv.pdf`, orienté vers une candidature doctorale, reste conservé à titre d’archive. Il n’est plus mis en avant dans les liens de consultation ou de téléchargement du site.
+
+Les anciens noms de pages, les fichiers de données et le site indépendant `aaaa/` ont été conservés pour maintenir les accès existants.
+
+## 8. Consultation locale et publication
+
+Pour le portfolio principal, ouvrir `index.html` suffit. Pour tester les démonstrations qui chargent du JSON, servir la racine du projet, par exemple avec `python3 -m http.server 8000`, puis consulter `http://localhost:8000`. Python intervient uniquement comme serveur de fichiers local.
+
+Pour GitHub Pages, publier **le contenu du dossier du projet à la racine du dépôt**, avec `index.html`, `src/`, `assets/`, les données et **`.nojekyll`** au même niveau. Ne pas imbriquer le dossier d’extraction à l’intérieur de la racine publiée. Le fichier `.nojekyll` accompagne la publication statique sans traitement Jekyll.
+
+Les métadonnées canoniques ciblent `https://p-pix.github.io/`. Un changement de domaine nécessite de mettre à jour les métadonnées correspondantes ; les liens internes relatifs continuent de suivre l’arborescence du site.
+
+Le site ne contient pas de mécanisme d’envoi de candidature ou de formulaire vers un serveur : les liens de contact ouvrent le client e-mail ou les profils externes. La mise à jour de ces fichiers ne publie pas, à elle seule, une nouvelle version du dépôt GitHub.

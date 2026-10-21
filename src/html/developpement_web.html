@@ -2,33 +2,371 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scal        <h2>🚀 Projets Web Réalisés</h2>=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scal        <h2>Projets Web Réalisés</h2>=1.0" />
   <meta name="description" content="Expertise en Développement Web - Guillaume Lemonnier" />
   <title>Développement Web - Guillaume Lemonnier</title>
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .stack-section {
+      background: var(--bg-light);
+      padding: 30px;
+      border-radius: 3px;
+      box-shadow: none;
+    }
+
+    .stack-section h3 {
+      color: var(--primary-color);
+      margin-bottom: 25px;
+      font-size: 1.4rem;
+      text-align: center;
+    }
+
+    .tech-items {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .tech-item {
+      border-left: 4px solid var(--secondary-color);
+      padding-left: 20px;
+    }
+
+    .tech-item h4 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .tech-item p {
+      color: var(--text-light);
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+    }
+
+    .tech-item ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .tech-item li {
+      padding: 4px 0;
+      color: var(--text-light);
+      font-size: 0.85rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .tech-item li:last-child {
+      border-bottom: none;
+    }
+
+    .security-aspects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .security-card {
+      background: var(--primary-color);
+      color: white;
+      padding: 25px;
+      border-radius: 3px;
+      box-shadow: none;
+    }
+
+    .security-card h3 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+    }
+
+    .security-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .security-card li {
+      padding: 6px 0;
+      color: rgba(255, 255, 255, 0.9);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 0.9rem;
+    }
+
+    .security-card li:last-child {
+      border-bottom: none;
+    }
+
+    .performance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .perf-category {
+      background: var(--bg-light);
+      padding: 25px;
+      border-radius: 3px;
+      box-shadow: none;
+      border-top: 4px solid var(--accent-color);
+    }
+
+    .perf-category h3 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+    }
+
+    .perf-category ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .perf-category li {
+      padding: 6px 0;
+      color: var(--text-light);
+      font-size: 0.9rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .perf-category li:last-child {
+      border-bottom: none;
+    }
+
+    .perf-category strong {
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    .ux-principles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .ux-card {
+      background: var(--accent-color);
+      color: white;
+      padding: 25px;
+      border-radius: 3px;
+      box-shadow: none;
+    }
+
+    .ux-card h3 {
+      color: white;
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+
+    .ux-card p {
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    .ux-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .ux-card li {
+      padding: 5px 0;
+      color: rgba(255, 255, 255, 0.9);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 0.9rem;
+    }
+
+    .ux-card li:last-child {
+      border-bottom: none;
+    }
+
+    .web-projects {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .project-showcase {
+      background: var(--bg-light);
+      padding: 30px;
+      border-radius: 3px;
+      box-shadow: none;
+      border-left: 4px solid var(--secondary-color);
+    }
+
+    .project-showcase h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+    }
+
+    .project-showcase p {
+      margin-bottom: 15px;
+      color: var(--text-light);
+    }
+
+    .project-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 15px 0;
+    }
+
+    .feature-tag {
+      background: var(--secondary-color);
+      color: white;
+      padding: 5px 12px;
+      border-radius: 3px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .devops-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .devops-item {
+      background: var(--bg-light);
+      padding: 25px;
+      border-radius: 3px;
+      box-shadow: none;
+      border-top: 4px solid var(--secondary-color);
+    }
+
+    .devops-item h3 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+    }
+
+    .devops-item ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .devops-item li {
+      padding: 6px 0;
+      color: var(--text-light);
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.9rem;
+    }
+
+    .devops-item li:last-child {
+      border-bottom: none;
+    }
+
+    @media (max-width: 768px) {
+      .stack-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .security-aspects {
+        grid-template-columns: 1fr;
+      }
+      
+      .performance-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .ux-principles {
+        grid-template-columns: 1fr;
+      }
+      
+      .devops-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-features {
+        justify-content: center;
+      }
+      
+      .web-projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .web-projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .web-project-card {
+      background: var(--bg-light);
+      padding: 30px;
+      border-radius: 3px;
+      box-shadow: none;
+      border-left: 5px solid var(--accent-color);
+      transition: var(--transition);
+    }
+
+    .web-project-card:hover {
+      transform: none;
+      box-shadow: none;
+      border-color: var(--primary-color);
+    }
+
+    .web-project-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+
+    .web-project-card p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .web-project-card .tech-tags {
+      margin: 15px 0;
+    }
+
+  
+  </style>
+  <link rel="stylesheet" href="../css/legacy.css">
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
 </head>
-<body>
-  <header>
-    <div class="container">
-      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-      <nav id="primary-nav" role="navigation" aria-label="Navigation principale">
+<body class="legacy-page">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../index.html" aria-label="Accueil de Guillaume Lemonnier">
+        <span class="brand-mark">GL</span>
+        <span><strong>Guillaume Lemonnier</strong><small>Développeur logiciel</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Navigation principale">
         <a href="../../index.html">Accueil</a>
-        <a href="projets.html">Projets</a>
-        <a href="cv.html">CV</a>
-        <a href="recherche-emploi.html" class="nav-highlight">Positionnement</a>
-        <a href="associatif.html">Associatif</a>
-        <a href="contact.html">Contact</a>
+        <a href="projets.html">Projets C++</a>
+        <a href="../../index.html#competences">Compétences</a>
+        <a href="cv.html">Parcours</a>
+        <a class="nav-cta" href="contact.html">Me contacter</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="contenu">
     <section class="hero">
       <div class="container">
-        <h1>🌐 Développement Web</h1>
+        <h1>Développement Web</h1>
         <p>Applications web modernes<br>et interfaces utilisateur</p>
       </div>
     </section>
@@ -49,10 +387,10 @@
 
     <section class="section">
       <div class="container">
-        <h2>🎯 Stack Technique</h2>
+        <h2>Stack Technique</h2>
         <div class="stack-grid">
           <div class="stack-section">
-            <h3>⚛️ Frontend</h3>
+            <h3>Frontend</h3>
             <div class="tech-items">
               <div class="tech-item">
                 <h4>React.js / Next.js</h4>
@@ -90,7 +428,7 @@
           </div>
 
           <div class="stack-section">
-            <h3>🔧 Backend</h3>
+            <h3>Backend</h3>
             <div class="tech-items">
               <div class="tech-item">
                 <h4>Node.js / Express</h4>
@@ -132,7 +470,7 @@
 
     <section class="section">
       <div class="container">
-        <h2>💻 Projets Web Réalisés</h2>
+        <h2>Projets Web Réalisés</h2>
         <div class="web-projects-grid">
           <div class="web-project-card">
             <h3>Cloud Personnel Sécurisé</h3>
@@ -211,10 +549,10 @@
 
     <section class="section">
       <div class="container">
-        <h2>🔒 Sécurité & Conformité</h2>
+        <h2>Sécurité & Conformité</h2>
         <div class="security-aspects">
           <div class="security-card">
-            <h3>⚖️ Conformité RGPD</h3>
+            <h3>Conformité RGPD</h3>
             <ul>
               <li>Consentement granulaire</li>
               <li>Droit à l'oubli automatisé</li>
@@ -225,7 +563,7 @@
           </div>
 
           <div class="security-card">
-            <h3>🏥 Standards Médicaux</h3>
+            <h3>Standards Médicaux</h3>
             <ul>
               <li>HL7 FHIR R4 compliance</li>
               <li>DICOM web standards</li>
@@ -240,10 +578,10 @@
 
     <section class="section">
       <div class="container">
-        <h2>⚡ Performance & Optimisation</h2>
+        <h2>Performance & Optimisation</h2>
         <div class="performance-grid">
           <div class="perf-category">
-            <h3>⚡ Backend Performance</h3>
+            <h3>Backend Performance</h3>
             <ul>
               <li><strong>Database Optimization</strong> - Query optimization, indexing</li>
               <li><strong>Caching Layers</strong> - Redis, memcached strategies</li>
@@ -254,7 +592,7 @@
           </div>
 
           <div class="perf-category">
-            <h3>🏗️ Architecture Scalable</h3>
+            <h3>Architecture Scalable</h3>
             <ul>
               <li><strong>Microservices</strong> - Découplage et scalabilité</li>
               <li><strong>Load Balancing</strong> - Distribution du trafic</li>
@@ -269,10 +607,10 @@
 
     <section class="section">
       <div class="container">
-        <h2>🎨 UX/UI pour la Santé</h2>
+        <h2>UX/UI pour la Santé</h2>
         <div class="ux-principles">
           <div class="ux-card">
-            <h3>👩‍⚕️ Centré Utilisateur Médical</h3>
+            <h3>‍ Centré Utilisateur Médical</h3>
             <p>Design adapté aux contraintes du personnel soignant</p>
             <ul>
               <li>Interface épurée pour réduire la charge cognitive</li>
@@ -283,7 +621,7 @@
           </div>
 
           <div class="ux-card">
-            <h3>⚡ Performance Perçue</h3>
+            <h3>Performance Perçue</h3>
             <p>Optimisation de l'expérience subjective</p>
             <ul>
               <li>Skeleton screens pour chargements</li>
@@ -294,7 +632,7 @@
           </div>
 
           <div class="ux-card">
-            <h3>📱 Responsive & Mobile-First</h3>
+            <h3>Responsive & Mobile-First</h3>
             <p>Adaptation tous appareils médicaux</p>
             <ul>
               <li>Touch-friendly interfaces tablet</li>
@@ -305,7 +643,7 @@
           </div>
 
           <div class="ux-card">
-            <h3>♿ Accessibilité WCAG 2.1</h3>
+            <h3>Accessibilité WCAG 2.1</h3>
             <p>Conformité standards d'accessibilité</p>
             <ul>
               <li>Navigation clavier complète</li>
@@ -320,10 +658,10 @@
 
     <section class="section">
       <div class="container">
-        <h2>🔧 Déploiement</h2>
+        <h2>Déploiement</h2>
         <div class="devops-grid">
           <div class="devops-item">
-            <h3>🐳 Containerisation</h3>
+            <h3>Containerisation</h3>
             <ul>
               <li>Docker multi-stage builds optimisés</li>
               <li>Kubernetes manifests et Helm charts</li>
@@ -335,7 +673,7 @@
 
     <section class="section">
       <div class="container">
-        <h2>🎯 Méthodologies</h2>
+        <h2>Méthodologies</h2>
         <p>
           <strong>Agile/Scrum</strong> avec adaptations spécifiques au contexte médical : 
           sprints courts, validation continue avec experts métier, documentation réglementaire intégrée.
@@ -348,345 +686,18 @@
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      &copy; 2026 Guillaume Lemonnier - Tous droits réservés | 
-      <a href="../../LICENSE" style="color: #6366f1; text-decoration: none;">Licence</a>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div><strong>Guillaume Lemonnier</strong><p>C++ · Linux · systèmes &amp; communications</p></div>
+      <div class="footer-links">
+        <a href="https://github.com/P-Pix" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="contact.html">Contact</a>
+        <a href="../../LICENSE">Licence</a>
+      </div>
+      <p>© 2026 · Caen, France · Tous droits réservés</p>
     </div>
   </footer>
 
   <script src="../js/script.js"></script>
-
-  <style>
-    .stack-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .stack-section {
-      background: var(--bg-light);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-light);
-    }
-
-    .stack-section h3 {
-      color: var(--primary-color);
-      margin-bottom: 25px;
-      font-size: 1.4rem;
-      text-align: center;
-    }
-
-    .tech-items {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .tech-item {
-      border-left: 4px solid var(--secondary-color);
-      padding-left: 20px;
-    }
-
-    .tech-item h4 {
-      color: var(--primary-color);
-      margin-bottom: 10px;
-      font-size: 1.1rem;
-    }
-
-    .tech-item p {
-      color: var(--text-light);
-      margin-bottom: 12px;
-      font-size: 0.9rem;
-    }
-
-    .tech-item ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .tech-item li {
-      padding: 4px 0;
-      color: var(--text-light);
-      font-size: 0.85rem;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .tech-item li:last-child {
-      border-bottom: none;
-    }
-
-    .security-aspects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-
-    .security-card {
-      background: var(--primary-color);
-      color: white;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-light);
-    }
-
-    .security-card h3 {
-      color: white;
-      margin-bottom: 20px;
-      font-size: 1.2rem;
-    }
-
-    .security-card ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .security-card li {
-      padding: 6px 0;
-      color: rgba(255, 255, 255, 0.9);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      font-size: 0.9rem;
-    }
-
-    .security-card li:last-child {
-      border-bottom: none;
-    }
-
-    .performance-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-
-    .perf-category {
-      background: var(--bg-light);
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-light);
-      border-top: 4px solid var(--accent-color);
-    }
-
-    .perf-category h3 {
-      color: var(--primary-color);
-      margin-bottom: 20px;
-      font-size: 1.2rem;
-    }
-
-    .perf-category ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .perf-category li {
-      padding: 6px 0;
-      color: var(--text-light);
-      font-size: 0.9rem;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .perf-category li:last-child {
-      border-bottom: none;
-    }
-
-    .perf-category strong {
-      color: var(--primary-color);
-      font-weight: 600;
-    }
-
-    .ux-principles {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-
-    .ux-card {
-      background: var(--accent-color);
-      color: white;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-light);
-    }
-
-    .ux-card h3 {
-      color: white;
-      margin-bottom: 15px;
-      font-size: 1.2rem;
-    }
-
-    .ux-card p {
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 15px;
-      font-weight: 500;
-    }
-
-    .ux-card ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .ux-card li {
-      padding: 5px 0;
-      color: rgba(255, 255, 255, 0.9);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      font-size: 0.9rem;
-    }
-
-    .ux-card li:last-child {
-      border-bottom: none;
-    }
-
-    .web-projects {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .project-showcase {
-      background: var(--bg-light);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-light);
-      border-left: 4px solid var(--secondary-color);
-    }
-
-    .project-showcase h3 {
-      color: var(--primary-color);
-      margin-bottom: 15px;
-      font-size: 1.4rem;
-    }
-
-    .project-showcase p {
-      margin-bottom: 15px;
-      color: var(--text-light);
-    }
-
-    .project-features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 15px 0;
-    }
-
-    .feature-tag {
-      background: var(--secondary-color);
-      color: white;
-      padding: 5px 12px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 500;
-    }
-
-    .devops-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-
-    .devops-item {
-      background: var(--bg-light);
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-light);
-      border-top: 4px solid var(--secondary-color);
-    }
-
-    .devops-item h3 {
-      color: var(--primary-color);
-      margin-bottom: 20px;
-      font-size: 1.2rem;
-    }
-
-    .devops-item ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .devops-item li {
-      padding: 6px 0;
-      color: var(--text-light);
-      border-bottom: 1px solid var(--border-color);
-      font-size: 0.9rem;
-    }
-
-    .devops-item li:last-child {
-      border-bottom: none;
-    }
-
-    @media (max-width: 768px) {
-      .stack-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .security-aspects {
-        grid-template-columns: 1fr;
-      }
-      
-      .performance-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .ux-principles {
-        grid-template-columns: 1fr;
-      }
-      
-      .devops-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .project-features {
-        justify-content: center;
-      }
-      
-      .web-projects-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .web-projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .web-project-card {
-      background: var(--bg-light);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-light);
-      border-left: 5px solid var(--accent-color);
-      transition: var(--transition);
-    }
-
-    .web-project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-medium);
-      border-color: var(--primary-color);
-    }
-
-    .web-project-card h3 {
-      color: var(--primary-color);
-      margin-bottom: 15px;
-      font-size: 1.3rem;
-    }
-
-    .web-project-card p {
-      color: var(--text-light);
-      margin-bottom: 15px;
-      line-height: 1.6;
-    }
-
-    .web-project-card .tech-tags {
-      margin: 15px 0;
-    }
-
-  </style>
 </body>
 </html>

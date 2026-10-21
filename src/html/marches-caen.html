@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carte Interactive - Marchés de Caen</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <style>
+  <style>
+
         .marches-container {
             display: flex;
             flex-direction: column;
@@ -20,7 +20,7 @@
             color: white;
             padding: 2rem 1rem;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: none;
         }
 
         .header h1 {
@@ -39,7 +39,7 @@
         .nav-controls {
             background: white;
             padding: 1rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: none;
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
@@ -52,7 +52,7 @@
             color: white;
             text-decoration: none;
             padding: 0.6rem 1.2rem;
-            border-radius: 8px;
+            border-radius: 3px;
             font-weight: 500;
             transition: all 0.3s ease;
             border: none;
@@ -61,7 +61,7 @@
 
         .nav-controls a:hover {
             background: #5a6268;
-            transform: translateY(-2px);
+            transform: none;
         }
 
         .nav-controls .current-market-btn {
@@ -97,7 +97,7 @@
             width: 100%;
             padding: 0.8rem;
             border: 2px solid #e0e0e0;
-            border-radius: 8px;
+            border-radius: 3px;
             font-size: 1rem;
             margin-bottom: 1rem;
             transition: border-color 0.3s ease;
@@ -128,7 +128,7 @@
             padding: 0.5rem 0.8rem;
             border: 2px solid #e0e0e0;
             background: white;
-            border-radius: 6px;
+            border-radius: 3px;
             cursor: pointer;
             font-size: 0.9rem;
             transition: all 0.3s ease;
@@ -153,7 +153,7 @@
         .market-item {
             background: #f8f9fa;
             border: 1px solid #e0e0e0;
-            border-radius: 8px;
+            border-radius: 3px;
             padding: 1rem;
             margin-bottom: 0.8rem;
             cursor: pointer;
@@ -163,7 +163,7 @@
         .market-item:hover {
             background: #e9ecef;
             border-color: #667eea;
-            transform: translateY(-1px);
+            transform: none;
         }
 
         .market-item.active {
@@ -216,9 +216,9 @@
         .stat-card {
             background: white;
             padding: 1rem;
-            border-radius: 8px;
+            border-radius: 3px;
             border-left: 4px solid #667eea;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: none;
         }
 
         .stat-number {
@@ -257,98 +257,50 @@
             background: #28a745;
             color: white;
             padding: 0.3rem 0.6rem;
-            border-radius: 4px;
+            border-radius: 3px;
             font-size: 0.8rem;
             font-weight: 600;
             margin-left: 0.5rem;
         }
 
-        footer {
-            background: var(--bg-dark, #2c3e50);
-            color: var(--text-light, #ecf0f1);
-            padding: 2rem 0;
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        footer a {
-            color: var(--secondary-color, #3498db);
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-            margin-left: auto;
-        }
-
-        .menu-toggle .bar {
-            width: 25px;
-            height: 3px;
-            background: white;
-            margin: 3px 0;
-            transition: all 0.3s ease;
-        }
-
         @media (max-width: 768px) {
-            .menu-toggle {
-                display: flex;
-            }
-
-            #primary-nav {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                right: 0;
-                background: white;
-                width: 250px;
-                padding: 1rem;
-                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            }
-
-            #primary-nav.show {
-                display: flex;
-            }
 
             .nav-controls {
                 display: none;
             }
         }
-    </style>
+    
+
+    
+  </style>
+  <link rel="stylesheet" href="../css/legacy.css">
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
 </head>
-<body>
-    <header>
-        <div class="container">
-            <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-            <nav id="primary-nav" role="navigation" aria-label="Navigation principale">
-                <a href="../../index.html">Accueil</a>
-                <a href="projets.html">Projets</a>
-                <a href="cv.html">CV</a>
-                <a href="recherche-emploi.html" class="nav-highlight">Positionnement</a>
-                <a href="associatif.html">Associatif</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
+<body class="legacy-page">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../index.html" aria-label="Accueil de Guillaume Lemonnier">
+        <span class="brand-mark">GL</span>
+        <span><strong>Guillaume Lemonnier</strong><small>Développeur logiciel</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Navigation principale">
+        <a href="../../index.html">Accueil</a>
+        <a href="projets.html">Projets C++</a>
+        <a href="../../index.html#competences">Compétences</a>
+        <a href="cv.html">Parcours</a>
+        <a class="nav-cta" href="contact.html">Me contacter</a>
+      </nav>
+    </div>
+  </header>
+  <main id="contenu">
 
     <div class="marches-container">
         <div class="header">
-            <h1>🛒 Marchés de Caen</h1>
+            <h1>Marchés de Caen</h1>
             <p>Découvrez tous les marchés de la ville avec leurs horaires et spécialités</p>
         </div>
 
@@ -362,7 +314,7 @@
 
         <div class="map-section">
             <div class="search-panel">
-                <input type="text" id="search-box" class="search-box" placeholder="Rechercher un marché...">
+                <input type="text" id="search-box" class="search-box" aria-label="Rechercher un marché de Caen" placeholder="Rechercher un marché...">
                 
                 <div class="day-filter">
                     <h3>Filtrer par jour</h3>
@@ -419,22 +371,22 @@
                 <li><strong>Navigation intuitive</strong> : Cliquez sur un marché pour le centrer sur la carte</li>
             </ul>
 
-            <p><em>Données mises à jour en avril 2021 - Ville de Caen - <a href="https://www.data.gouv.fr/datasets/ville-de-caen-marches/" target="_blank">data.gouv.fr</a></em></p>
+            <p><em>Données mises à jour en avril 2021 - Ville de Caen - <a href="https://www.data.gouv.fr/datasets/ville-de-caen-marches/" target="_blank" rel="noopener noreferrer">data.gouv.fr</a></em></p>
         </div>
     </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Guillaume Lemonnier - Tous droits réservés</p>
-            <p style="font-size: 0.9rem; margin-top: 10px;">
-                Ce code est protégé par licence. Toute utilisation nécessite l'attribution à l'auteur. 
-                <a href="../../LICENSE" style="color: var(--secondary-color);">Voir la licence</a>
-            </p>
-        </div>
-    </footer>
-
-    <style>
-    </style>
+    </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div><strong>Guillaume Lemonnier</strong><p>C++ · Linux · systèmes &amp; communications</p></div>
+      <div class="footer-links">
+        <a href="https://github.com/P-Pix" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="contact.html">Contact</a>
+        <a href="../../LICENSE">Licence</a>
+      </div>
+      <p>© 2026 · Caen, France · Tous droits réservés</p>
+    </div>
+  </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="../js/script.js"></script>

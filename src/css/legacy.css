@@ -1,0 +1,276 @@
+/* Compatibility for the existing supporting pages and interactive demos.
+   Loaded after their component styles; the main portfolio owns navigation. */
+.legacy-page {
+  --primary-color: #17324f;
+  --secondary-color: #1b5fae;
+  --accent-color: #1b5fae;
+  --success-color: #1f6d50;
+  --text-dark: #23354a;
+  --text-light: #56657a;
+  --bg-light: #ffffff;
+  --bg-section: #f3f6f9;
+  --border-color: #dce3eb;
+  --shadow-light: none;
+  --shadow-medium: none;
+  --transition: background-color 160ms ease, border-color 160ms ease;
+  background: #fff;
+  color: var(--text-dark);
+}
+
+.legacy-page .container {
+  width: min(calc(100% - 48px), var(--shell, 1180px));
+  max-width: none;
+  margin-inline: auto;
+  padding: 0;
+}
+
+.legacy-page main {
+  min-width: 0;
+}
+
+.legacy-page main > .container {
+  padding-block: 48px 64px;
+}
+
+.legacy-page main .hero,
+.legacy-page main .header,
+.legacy-page .page-header {
+  margin: 0;
+  padding: 58px 0;
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 0;
+  background: var(--bg-section);
+  color: var(--primary-color);
+  text-align: left;
+  box-shadow: none;
+}
+
+.legacy-page main .header {
+  padding-inline: max(24px, calc((100% - var(--shell, 1180px)) / 2));
+}
+
+.legacy-page .page-header {
+  padding: 32px;
+  margin-bottom: 32px;
+  border: 1px solid var(--border-color);
+}
+
+.legacy-page main .hero::after {
+  content: none;
+}
+
+.legacy-page main h1 {
+  margin: 0 0 18px;
+  max-width: 980px;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 1.16;
+  letter-spacing: -.025em;
+  text-shadow: none;
+}
+
+.legacy-page main .hero p,
+.legacy-page main .header p,
+.legacy-page .page-header p {
+  margin: 0;
+  max-width: 820px;
+  color: var(--text-light);
+  opacity: 1;
+  font-size: 1.1rem;
+}
+
+.legacy-page main h2 {
+  margin: 0 0 22px;
+  color: var(--primary-color);
+  font-size: clamp(1.65rem, 2.6vw, 2.2rem);
+  line-height: 1.22;
+  letter-spacing: -.02em;
+}
+
+.legacy-page main h3,
+.legacy-page main h4 {
+  color: var(--primary-color);
+  line-height: 1.35;
+}
+
+.legacy-page .section {
+  padding-block: 56px;
+}
+
+.legacy-page main > .section + .section {
+  border-top: 1px solid var(--border-color);
+}
+
+.legacy-page main p {
+  overflow-wrap: break-word;
+}
+
+.legacy-page main a:not([class]) {
+  color: var(--secondary-color);
+  text-underline-offset: .2em;
+}
+
+.legacy-page main :is(.tech-group, .tech-category, .tool-category,
+.tools-category, .method-card, .compliance-card, .pattern-card,
+.security-card, .ux-card, .bioinfo-section, .imaging-category,
+.ml-framework, .source-category, .principle-card, .project-card,
+.project-item, .achievement-item, .learning-card, .stack-category,
+.data-category, .stat-card, .controls, .info-box, .chart-container,
+.project-highlight, .project-showcase, .association-info) {
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  box-shadow: none;
+}
+
+.legacy-page main :is(.compliance-card, .pattern-card, .tools-category,
+.security-card, .ux-card, .bioinfo-section, .imaging-category,
+.ml-framework, .source-category, .principle-card, .tool-category)
+:is(h3, h4, p, li, strong) {
+  color: var(--text-dark);
+  border-color: var(--border-color);
+}
+
+.legacy-page main :is(.method-card, .pattern-card, .project-card,
+.project-item, .achievement-item, .stat-card, .chart-container,
+.viz-category):hover {
+  transform: none;
+  background: #f2f4f6;
+  border-color: #c6d0dc;
+  box-shadow: none;
+}
+
+.legacy-page main :is(.experience-level, .proficiency, .real-data-badge,
+.detail-tag, .feature-tag, .tag) {
+  display: inline-block;
+  border: 1px solid #ceddec;
+  border-radius: 3px;
+  background: #edf3fa;
+  color: #204e7e;
+  box-shadow: none;
+  font-size: .78rem;
+}
+
+.legacy-page main .real-data-badge {
+  margin-top: 18px;
+}
+
+.legacy-page main .stat-card::before {
+  background: var(--secondary-color);
+  height: 2px;
+}
+
+.legacy-page main :is(.map-header, .chart-header) {
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-section);
+  color: var(--primary-color);
+}
+
+.legacy-page main :is(.map-header, .chart-header) :is(h2, h3, p) {
+  color: var(--primary-color);
+}
+
+.legacy-page main .nav-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-block: 24px;
+}
+
+.legacy-page main :is(.btn, .btn-back, .btn-info, .btn-primary,
+.btn-secondary, .control-btn, .nav-controls a, .nav-controls button, .day-btn) {
+  min-height: 42px;
+  padding: 10px 16px;
+  border: 1px solid #b9c7d8;
+  border-radius: 3px;
+  background: #fff;
+  color: var(--primary-color);
+  font: inherit;
+  font-size: .9rem;
+  font-weight: 650;
+  line-height: 1.4;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.legacy-page main :is(.btn, .btn-back, .btn-info, .btn-primary,
+.btn-secondary, .control-btn, .nav-controls a, .nav-controls button, .day-btn):hover {
+  transform: none;
+  background: #edf0f3;
+  color: var(--primary-color);
+  border-color: #98acc3;
+}
+
+.legacy-page main :is(.day-btn.active, .control-btn.active,
+.market-item.active) {
+  background: #e9f1fb;
+  color: var(--primary-color);
+  border-color: var(--secondary-color);
+}
+
+.legacy-page main .market-item.active :is(h3, p, span, strong, .market-time) {
+  color: var(--primary-color);
+}
+
+.legacy-page main :is(input, select, textarea) {
+  max-width: 100%;
+  border-radius: 3px;
+  color: var(--text-dark);
+  background: #fff;
+}
+
+.legacy-page main :is(pre, code) {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.legacy-page main pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.legacy-page main :focus-visible {
+  outline: 3px solid #1b5fae;
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  .legacy-page .container {
+    width: calc(100% - 32px);
+  }
+
+  .legacy-page main .hero,
+  .legacy-page main .header {
+    padding-block: 36px;
+  }
+
+  .legacy-page .page-header {
+    padding: 24px 18px;
+  }
+
+  .legacy-page .section {
+    padding-block: 40px;
+  }
+
+  .legacy-page .control-group {
+    align-items: stretch;
+  }
+
+  .legacy-page .control-group select {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .legacy-page main :is(.stats-grid, .data-management, .skills-associative,
+  .tools-grid, .tech-grid, .tech-ecosystem, .data-types, .analysis-methods,
+  .compliance-info, .viz-types, .achievements, .dev-projects-grid, .web-projects-grid) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .legacy-page {
+    --transition: none;
+  }
+}

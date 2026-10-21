@@ -6,29 +6,204 @@
   <meta name="description" content="Expertise en Modélisation IA - Guillaume Lemonnier" />
   <title>Modélisation IA - Guillaume Lemonnier</title>
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .tech-category {
+      background: var(--bg-light);
+      padding: 30px;
+      border-radius: 3px;
+      box-shadow: none;
+      border-top: 4px solid var(--secondary-color);
+    }
+
+    .tech-category h3 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+    }
+
+    .tech-items {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .tech-item {
+      background: var(--bg-section);
+      padding: 20px;
+      border-radius: 3px;
+      border-left: 3px solid var(--accent-color);
+    }
+
+    .tech-item h4 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .tech-item p {
+      color: var(--text-light);
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .experience-level {
+      display: inline-block;
+      padding: 4px 12px;
+      background: var(--secondary-color);
+      color: white;
+      border-radius: 3px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .application-areas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .area-card {
+      background: var(--bg-light);
+      padding: 25px;
+      border-radius: 3px;
+      box-shadow: none;
+      border: 2px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .area-card:hover {
+      transform: none;
+      box-shadow: none;
+      border-color: var(--secondary-color);
+    }
+
+    .area-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+
+    .area-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .area-card li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-light);
+    }
+
+    .area-card li:last-child {
+      border-bottom: none;
+    }
+
+    .projects-showcase {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .project-item {
+      background: var(--bg-light);
+      padding: 25px;
+      border-radius: 3px;
+      box-shadow: none;
+      border-left: 4px solid var(--accent-color);
+    }
+
+    .project-item h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+
+    .project-item p {
+      margin-bottom: 10px;
+      color: var(--text-light);
+    }
+
+    .methodology {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .method-step {
+      background: var(--bg-light);
+      padding: 20px;
+      border-radius: 3px;
+      box-shadow: none;
+      text-align: center;
+      border-top: 3px solid var(--secondary-color);
+    }
+
+    .method-step h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .method-step p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .tech-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .application-areas {
+        grid-template-columns: 1fr;
+      }
+      
+      .methodology {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  
+  </style>
+  <link rel="stylesheet" href="../css/legacy.css">
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
 </head>
-<body>
-  <header>
-    <div class="container">
-      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-      <nav id="primary-nav" role="navigation" aria-label="Navigation principale">
+<body class="legacy-page">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../index.html" aria-label="Accueil de Guillaume Lemonnier">
+        <span class="brand-mark">GL</span>
+        <span><strong>Guillaume Lemonnier</strong><small>Développeur logiciel</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Navigation principale">
         <a href="../../index.html">Accueil</a>
-        <a href="projets.html">Projets</a>
-        <a href="cv.html">CV</a>
-        <a href="recherche-emploi.html" class="nav-highlight">Positionnement</a>
-        <a href="associatif.html">Associatif</a>
-        <a href="contact.html">Contact</a>
+        <a href="projets.html">Projets C++</a>
+        <a href="../../index.html#competences">Compétences</a>
+        <a href="cv.html">Parcours</a>
+        <a class="nav-cta" href="contact.html">Me contacter</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="contenu">
     <section class="hero">
       <div class="container">
-        <h1>🧠 Modélisation IA</h1>
+        <h1>Modélisation IA</h1>
         <p>Compétences en Intelligence Artificielle<br>et apprentissage automatique</p>
       </div>
     </section>
@@ -50,7 +225,7 @@
 
     <section class="section">
       <div class="container">
-        <h2>🛠 Technologies Maîtrisées</h2>
+        <h2>Technologies Maîtrisées</h2>
         <div class="tech-grid">
           <div class="tech-category">
             <h3>Frameworks Deep Learning</h3>
@@ -94,10 +269,10 @@
 
     <section class="section">
       <div class="container">
-        <h2>🎯 Domaines d'Application</h2>
+        <h2>Domaines d'Application</h2>
         <div class="application-areas">
           <div class="area-card">
-            <h3>🏥 Applications Santé</h3>
+            <h3>Applications Santé</h3>
             <ul>
               <li><strong>Analyse de signaux</strong> : Traitement de données EEG, signaux physiologiques</li>
               <li><strong>Classification médicale</strong> : Projets académiques sur données publiques</li>
@@ -107,7 +282,7 @@
           </div>
 
           <div class="area-card">
-            <h3>🔬 Projets Académiques</h3>
+            <h3>Projets Académiques</h3>
             <ul>
               <li><strong>Analyse de données</strong> : Feature engineering, sélection de caractéristiques</li>
               <li><strong>Classification automatique</strong> : Reconnaissance d'images, NLP</li>
@@ -117,7 +292,7 @@
           </div>
 
           <div class="area-card">
-            <h3>📊 Autres Applications</h3>
+            <h3>Autres Applications</h3>
             <ul>
               <li><strong>Analyse de données web</strong> : Scraping, analyse de sentiments</li>
               <li><strong>NLP médical</strong> : Traitement de comptes rendus cliniques</li>
@@ -131,7 +306,7 @@
 
     <section class="section">
       <div class="container">
-        <h2>🚀 Projets Représentatifs</h2>
+        <h2>Projets Représentatifs</h2>
         <div class="projects-showcase">
           <div class="project-item">
             <h3>Analyse et Prédiction Bourse</h3>
@@ -180,7 +355,7 @@
 
     <section class="section">
       <div class="container">
-        <h2>📈 Méthodologie</h2>
+        <h2>Méthodologie</h2>
         <div class="methodology">
           <div class="method-step">
             <h3>1. Analyse Exploratoire</h3>
@@ -208,7 +383,7 @@
 
     <section class="section">
       <div class="container">
-        <h2>🎓 Formation Continue</h2>
+        <h2>Formation Continue</h2>
         <p>
           Veille technologique active sur les dernières avancées en IA : 
           <strong>Transformers</strong>, <strong>Vision Transformers</strong>, <strong>Graph Neural Networks</strong>, 
@@ -218,182 +393,18 @@
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      &copy; 2026 Guillaume Lemonnier - Tous droits réservés | 
-      <a href="../../LICENSE" style="color: #6366f1; text-decoration: none;">Licence</a>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div><strong>Guillaume Lemonnier</strong><p>C++ · Linux · systèmes &amp; communications</p></div>
+      <div class="footer-links">
+        <a href="https://github.com/P-Pix" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="contact.html">Contact</a>
+        <a href="../../LICENSE">Licence</a>
+      </div>
+      <p>© 2026 · Caen, France · Tous droits réservés</p>
     </div>
   </footer>
 
   <script src="../js/script.js"></script>
-
-  <style>
-    .tech-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .tech-category {
-      background: var(--bg-light);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-light);
-      border-top: 4px solid var(--secondary-color);
-    }
-
-    .tech-category h3 {
-      color: var(--primary-color);
-      margin-bottom: 20px;
-      font-size: 1.3rem;
-    }
-
-    .tech-items {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .tech-item {
-      background: var(--bg-section);
-      padding: 20px;
-      border-radius: 10px;
-      border-left: 3px solid var(--accent-color);
-    }
-
-    .tech-item h4 {
-      color: var(--primary-color);
-      margin-bottom: 10px;
-      font-size: 1.1rem;
-    }
-
-    .tech-item p {
-      color: var(--text-light);
-      margin-bottom: 10px;
-      font-size: 0.95rem;
-    }
-
-    .experience-level {
-      display: inline-block;
-      padding: 4px 12px;
-      background: var(--secondary-color);
-      color: white;
-      border-radius: 15px;
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
-
-    .application-areas {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-
-    .area-card {
-      background: var(--bg-light);
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-light);
-      border: 2px solid var(--border-color);
-      transition: var(--transition);
-    }
-
-    .area-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-medium);
-      border-color: var(--secondary-color);
-    }
-
-    .area-card h3 {
-      color: var(--primary-color);
-      margin-bottom: 15px;
-      font-size: 1.2rem;
-    }
-
-    .area-card ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .area-card li {
-      padding: 8px 0;
-      border-bottom: 1px solid var(--border-color);
-      color: var(--text-light);
-    }
-
-    .area-card li:last-child {
-      border-bottom: none;
-    }
-
-    .projects-showcase {
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-      margin-top: 40px;
-    }
-
-    .project-item {
-      background: var(--bg-light);
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-light);
-      border-left: 4px solid var(--accent-color);
-    }
-
-    .project-item h3 {
-      color: var(--primary-color);
-      margin-bottom: 15px;
-      font-size: 1.3rem;
-    }
-
-    .project-item p {
-      margin-bottom: 10px;
-      color: var(--text-light);
-    }
-
-    .methodology {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 40px;
-    }
-
-    .method-step {
-      background: var(--bg-light);
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-light);
-      text-align: center;
-      border-top: 3px solid var(--secondary-color);
-    }
-
-    .method-step h3 {
-      color: var(--primary-color);
-      margin-bottom: 15px;
-      font-size: 1.1rem;
-    }
-
-    .method-step p {
-      color: var(--text-light);
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 768px) {
-      .tech-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .application-areas {
-        grid-template-columns: 1fr;
-      }
-      
-      .methodology {
-        grid-template-columns: 1fr;
-      }
-    }
-
-  </style>
 </body>
 </html>

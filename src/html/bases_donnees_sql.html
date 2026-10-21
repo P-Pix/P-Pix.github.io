@@ -6,29 +6,34 @@
   <meta name="description" content="Expertise en Bases de Données & SQL - Guillaume Lemonnier" />
   <title>Bases de Données & SQL - Guillaume Lemonnier</title>
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/legacy.css">
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
 </head>
-<body>
-  <header>
-    <div class="container">
-      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-      <nav id="primary-nav" role="navigation" aria-label="Navigation principale">
+<body class="legacy-page">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../index.html" aria-label="Accueil de Guillaume Lemonnier">
+        <span class="brand-mark">GL</span>
+        <span><strong>Guillaume Lemonnier</strong><small>Développeur logiciel</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Navigation principale">
         <a href="../../index.html">Accueil</a>
-        <a href="projets.html">Projets</a>
-        <a href="cv.html">CV</a>
-        <a href="recherche-emploi.html" class="nav-highlight">Positionnement</a>
-        <a href="associatif.html">Associatif</a>
-        <a href="contact.html">Contact</a>
+        <a href="projets.html">Projets C++</a>
+        <a href="../../index.html#competences">Compétences</a>
+        <a href="cv.html">Parcours</a>
+        <a class="nav-cta" href="contact.html">Me contacter</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="contenu">
     <section class="hero">
       <div class="container">
-        <h1>🗄️ Bases de Données & SQL</h1>
+        <h1>Bases de Données & SQL</h1>
         <p>Gestion des données<br>et requêtes SQL</p>
       </div>
     </section>
@@ -49,10 +54,10 @@
 
     <section class="section">
       <div class="container">
-        <h2>🛠 Technologies Maîtrisées</h2>
+        <h2>Technologies Maîtrisées</h2>
         <div class="tech-grid">
           <div class="tech-category">
-            <h3>🐘 PostgreSQL</h3>
+            <h3>PostgreSQL</h3>
             <p>SGBD relationnel robuste pour données structurées</p>
             <ul>
               <li>Requêtes SQL avancées et jointures</li>
@@ -63,7 +68,7 @@
           </div>
 
           <div class="tech-category">
-            <h3>🔥 MongoDB</h3>
+            <h3>MongoDB</h3>
             <p>Base NoSQL pour données flexibles</p>
             <ul>
               <li>Documents JSON et collections</li>
@@ -74,7 +79,7 @@
           </div>
 
           <div class="tech-category">
-            <h3>🗃️ MySQL</h3>
+            <h3>MySQL</h3>
             <p>SGBD populaire et performant</p>
             <ul>
               <li>Administration et configuration</li>
@@ -85,7 +90,7 @@
           </div>
 
           <div class="tech-category">
-            <h3>📊 SQLite</h3>
+            <h3>SQLite</h3>
             <p>Base de données légère pour projets</p>
             <ul>
               <li>Déploiement sans serveur</li>
@@ -100,10 +105,10 @@
 
     <section class="section">
       <div class="container">
-        <h2>🏗️ Conception & Modélisation</h2>
+        <h2>Conception & Modélisation</h2>
         <div class="design-aspects">
           <div class="design-card">
-            <h3>📋 Analyse des Besoins</h3>
+            <h3>Analyse des Besoins</h3>
             <p>Identification des patterns d'accès aux données</p>
             <ul>
               <li>Cartographie des flux de données métier</li>
@@ -114,7 +119,7 @@
           </div>
 
           <div class="design-card">
-            <h3>🎯 Modélisation Conceptuelle</h3>
+            <h3>Modélisation Conceptuelle</h3>
             <p>Schémas optimisés pour cas d'usage spécifiques</p>
             <ul>
               <li>Modèles Entité-Relation normalisés</li>
@@ -125,7 +130,7 @@
           </div>
 
           <div class="design-card">
-            <h3>⚖️ Contraintes Médicales</h3>
+            <h3>Contraintes Médicales</h3>
             <p>Respect des standards et réglementations</p>
             <ul>
               <li>Anonymisation et pseudonymisation</li>
@@ -136,7 +141,7 @@
           </div>
 
           <div class="design-card">
-            <h3>🔄 Évolutivité</h3>
+            <h3>Évolutivité</h3>
             <p>Architecture adaptable aux besoins futurs</p>
             <ul>
               <li>Versioning de schémas avec migrations</li>
@@ -151,10 +156,10 @@
 
     <section class="section">
       <div class="container">
-        <h2>⚡ Optimisation & Performance</h2>
+        <h2>Optimisation & Performance</h2>
         <div class="optimization-techniques">
           <div class="technique-item">
-            <h3>🔍 Indexation Stratégique</h3>
+            <h3>Indexation Stratégique</h3>
             <p>Conception d'index adaptés aux patterns de requête</p>
             <div class="technique-details">
               <span class="detail-badge">B-Tree composites</span>
@@ -165,7 +170,7 @@
           </div>
 
           <div class="technique-item">
-            <h3>📊 Analyse de Performance</h3>
+            <h3>Analyse de Performance</h3>
             <p>Monitoring et diagnostic des goulots d'étranglement</p>
             <div class="technique-details">
               <span class="detail-badge">EXPLAIN ANALYZE</span>
@@ -176,7 +181,7 @@
           </div>
 
           <div class="technique-item">
-            <h3>🔧 Tuning Système</h3>
+            <h3>Tuning Système</h3>
             <p>Configuration optimale des paramètres SGBD</p>
             <div class="technique-details">
               <span class="detail-badge">Memory allocation</span>
@@ -187,7 +192,7 @@
           </div>
 
           <div class="technique-item">
-            <h3>📈 Scaling Strategies</h3>
+            <h3>Scaling Strategies</h3>
             <p>Architectures pour montée en charge</p>
             <div class="technique-details">
               <span class="detail-badge">Read replicas</span>
@@ -202,10 +207,10 @@
 
     <section class="section">
       <div class="container">
-        <h2>🧠 Requêtes SQL Avancées</h2>
+        <h2>Requêtes SQL Avancées</h2>
         <div class="sql-expertise">
           <div class="sql-category">
-            <h3>📊 Analytics & Reporting</h3>
+            <h3>Analytics & Reporting</h3>
             <ul>
               <li>Window functions pour analyses temporelles</li>
               <li>CTEs récursives pour données hiérarchiques</li>
@@ -215,7 +220,7 @@
           </div>
 
           <div class="sql-category">
-            <h3>🔄 ETL & Transformations</h3>
+            <h3>ETL & Transformations</h3>
             <ul>
               <li>Procédures stockées pour batch processing</li>
               <li>Triggers pour maintien de cohérence</li>
@@ -225,7 +230,7 @@
           </div>
 
           <div class="sql-category">
-            <h3>🎯 Optimisation Requêtes</h3>
+            <h3>Optimisation Requêtes</h3>
             <ul>
               <li>Réécriture de sous-requêtes en JOINs</li>
               <li>Dénormalisation sélective</li>
@@ -235,7 +240,7 @@
           </div>
 
           <div class="sql-category">
-            <h3>🔐 Sécurité & Audit</h3>
+            <h3>Sécurité & Audit</h3>
             <ul>
               <li>Row Level Security (RLS)</li>
               <li>Audit trails automatisés</li>
@@ -249,10 +254,10 @@
 
     <section class="section">
       <div class="container">
-        <h2>🔧 Outils & DevOps</h2>
+        <h2>Outils & DevOps</h2>
         <div class="devops-tools">
           <div class="tools-category">
-            <h3>📦 Containerisation</h3>
+            <h3>Containerisation</h3>
             <ul>
               <li><strong>Docker Compose</strong> - Environnements de développement</li>
               <li><strong>Kubernetes</strong> - Orchestration production</li>
@@ -260,7 +265,7 @@
           </div>
 
           <div class="tools-category">
-            <h3>📊 Monitoring</h3>
+            <h3>Monitoring</h3>
             <ul>
               <li><strong>pgAdmin, MongoDB Compass</strong> - Administration</li>
               <li><strong>PHPMyAdmin</strong> - Interface web pour MySQL</li>
@@ -273,7 +278,7 @@
 
     <section class="section">
       <div class="container">
-        <h2>🎯 Bonnes Pratiques</h2>
+        <h2>Bonnes Pratiques</h2>
         <p>
           <strong>Sécurité by design</strong> : Chiffrement, contrôles d'accès granulaires 
           et audit complet des accès aux données sensibles.
@@ -290,10 +295,15 @@
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      &copy; 2026 Guillaume Lemonnier - Tous droits réservés | 
-      <a href="../../LICENSE" style="color: #6366f1; text-decoration: none;">Licence</a>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div><strong>Guillaume Lemonnier</strong><p>C++ · Linux · systèmes &amp; communications</p></div>
+      <div class="footer-links">
+        <a href="https://github.com/P-Pix" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="contact.html">Contact</a>
+        <a href="../../LICENSE">Licence</a>
+      </div>
+      <p>© 2026 · Caen, France · Tous droits réservés</p>
     </div>
   </footer>
 

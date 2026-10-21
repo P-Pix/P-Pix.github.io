@@ -1,193 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Positionnement de Guillaume Lemonnier : en poste, ouvert à des échanges ciblés avec des entreprises et à des perspectives doctorales en IA santé." />
-  <title>Positionnement - Guillaume Lemonnier</title>
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projet professionnel de Guillaume Lemonnier : contribuer au développement C++ sous Linux pour les logiciels du spatial, de la télémétrie et des télécommunications.">
+  <title>Projet professionnel C++ — Guillaume Lemonnier</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../index.html" aria-label="Guillaume Lemonnier — accueil">
+        <span class="brand-mark" aria-hidden="true">GL<span>.</span></span>
+        <span><strong>Guillaume Lemonnier</strong><small>Développeur logiciel</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
       </button>
-      <nav id="primary-nav" role="navigation" aria-label="Navigation principale">
+      <nav id="primary-nav" class="primary-nav" aria-label="Navigation principale">
         <a href="../../index.html">Accueil</a>
-        <a href="projets.html">Projets</a>
-        <a href="cv.html">CV</a>
-        <a href="recherche-emploi.html" class="active nav-highlight">Positionnement</a>
-        <a href="associatif.html">Associatif</a>
-        <a href="contact.html">Contact</a>
+        <a href="projets.html">Projets C++</a>
+        <a href="../../index.html#competences">Compétences</a>
+        <a href="cv.html">Parcours</a>
+        <a class="nav-cta" href="contact.html">Me contacter</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <span class="hero-kicker">Entreprise - recherche appliquée - doctorat</span>
-        <h1>Un profil déjà en poste, mais ouvert aux bons cadres</h1>
-        <p>
-          Je souhaite que ce site rende visible un positionnement clair :
-          <strong>un profil déjà en activité</strong>, avec une expérience concrète en <strong>données, 
-          développement et IA pour la santé</strong>, et une capacité à évoluer dans des
-          environnements exigeants. Ce site a vocation à présenter mon parcours, mes projets et
-          mes axes d'intérêt, tout en restant ouvert à des <strong>échanges avec des recruteurs</strong>,
-          des <strong>équipes R&amp;D</strong> et des <strong>porteurs de projets doctoraux</strong>
-          autour d'opportunités cohérentes avec mon profil.
-        </p>
-        <div class="hero-status">
-          <span class="status-pill">En poste actuellement</span>
-          <span class="status-pill">Ouvert à opportunités ciblées</span>
-          <span class="status-pill">Intérêt affirmé pour des sujets doctoraux</span>
+  <main id="contenu">
+    <section class="hero page-hero">
+      <div class="shell hero-grid">
+        <div>
+          <nav class="breadcrumbs" aria-label="Fil d’Ariane">
+            <a href="../../index.html">Accueil</a><span aria-hidden="true">/</span><a href="cv.html">Parcours</a><span aria-hidden="true">/</span><span aria-current="page">Projet professionnel</span>
+          </nav>
+          <p class="eyebrow">Projet professionnel</p>
+          <h1>C++ / Linux.<br><span>Spatial & télécommunications.</span></h1>
+          <p class="hero-summary">Je souhaite rejoindre une équipe qui développe des logiciels industriels en C++ sous Linux. La réception de données, les protocoles et la supervision des systèmes sont les sujets que je travaille à travers mes projets personnels.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="projets.html">Voir mes projets C++ <span aria-hidden="true">→</span></a>
+            <a class="button button-ghost" href="../../assets/pdf/cv-cpp-linux.pdf" download="CV_Guillaume_Lemonnier_CPP_Linux.pdf">Télécharger mon CV <span aria-hidden="true">↓</span></a>
+          </div>
         </div>
-        <div class="hero-actions">
-          <a href="contact.html" class="btn-primary">Me contacter</a>
-          <a href="../../assets/pdf/cv.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary">Télécharger le CV</a>
+        <aside class="fact-card" aria-label="Axes du projet professionnel">
+          <h2>Mes axes de travail</h2>
+          <dl class="facts">
+            <div><dt>Développement</dt><dd>C++ moderne sous Linux</dd></div>
+            <div><dt>Communications</dt><dd>TCP/UDP · trames · protocoles</dd></div>
+            <div><dt>Fiabilité</dt><dd>Erreurs · concurrence · tests</dd></div>
+            <div><dt>Domaines d’intérêt</dt><dd>Spatial · télémétrie · télécommunications</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="projets-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div><p class="eyebrow">Une orientation mise en pratique</p><h2 id="projets-title">Des projets pour travailler les problèmes du système.</h2></div>
+          <p>Mes réalisations personnelles me permettent d’explorer la circulation des données, les ressources partagées et les erreurs. Leurs études de cas détaillent l’architecture et donnent accès au code.</p>
+        </div>
+        <div class="all-projects">
+          <a class="project-list-card" href="projet-telemetrie.html">
+            <span class="project-number">01 / TÉLÉMÉTRIE</span>
+            <h3>Recevoir et valider des trames</h3>
+            <p>Une station sol simulée pour travailler la réception TCP/UDP, le protocole binaire, le CRC et le décodage multithread.</p>
+            <ul class="tag-list"><li>C++</li><li>TCP/UDP</li><li>Décodage</li></ul>
+            <span>Station sol de télémétrie <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="project-list-card" href="projet-mission-control.html">
+            <span class="project-number">02 / COMMANDE</span>
+            <h3>Organiser les sessions d’un serveur</h3>
+            <p>Un serveur TCP pour séparer les sessions clientes, les commandes, l’état partagé et la supervision.</p>
+            <ul class="tag-list"><li>TCP</li><li>RAII</li><li>Concurrence</li></ul>
+            <span>Serveur Mission Control <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="project-list-card" href="projet-binary-log.html">
+            <span class="project-number">03 / ENREGISTREMENT</span>
+            <h3>Découpler les traitements et l’écriture</h3>
+            <p>Un enregistreur binaire pour étudier les producteurs multiples, la file bornée, la sérialisation et le contrôle d’intégrité.</p>
+            <ul class="tag-list"><li>Threads</li><li>Fichier binaire</li><li>CRC</li></ul>
+            <span>Enregistreur binaire <span aria-hidden="true">→</span></span>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <h2>Trois portes d'entrée cohérentes</h2>
-        <div class="cards-grid">
-          <div class="info-card">
-            <h3>Entreprise</h3>
-            <p>Je peux intéresser des structures qui ont besoin d'un profil capable de relier données, développement, contraintes métier, documentation et mise en production.</p>
-          </div>
-          <div class="info-card">
-            <h3>Recherche appliquée</h3>
-            <p>Je garde un ancrage fort sur l'expérimentation, l'explicabilité, la robustesse des modèles et la qualité des protocoles d'évaluation.</p>
-          </div>
-          <div class="info-card">
-            <h3>Doctorat</h3>
-            <p>Je souhaite rester lisible pour des encadrants de thèse, notamment sur les sujets d'IA santé multicentrique, confidentialité, incertitude et usage clinique.</p>
-          </div>
+    <section class="section section-soft" aria-labelledby="apport-title">
+      <div class="shell experience-grid">
+        <div class="experience-intro">
+          <p class="eyebrow">Ce que j’apporte</p>
+          <h2 id="apport-title">Une pratique du code et une attention à son usage.</h2>
+          <p>Mon expérience à l’ARS Normandie m’a appris à relier une demande métier, des contraintes techniques et un logiciel compréhensible par ses utilisateurs. Mon passage par la recherche m’a donné une méthode pour expérimenter et analyser les résultats.</p>
+          <a class="text-link" href="cv.html">Consulter mon parcours <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="delivery-chain">
+          <article>
+            <span aria-hidden="true">01</span>
+            <div><h3>Comprendre et formaliser</h3><p>Clarifier le fonctionnement attendu, expliciter les contraintes et documenter les choix de conception.</p></div>
+          </article>
+          <article>
+            <span aria-hidden="true">02</span>
+            <div><h3>Développer et vérifier</h3><p>Structurer les responsabilités, prendre en compte les erreurs et préparer des scénarios de test reproductibles.</p></div>
+          </article>
+          <article>
+            <span aria-hidden="true">03</span>
+            <div><h3>Expliquer et transmettre</h3><p>Échanger avec les utilisateurs et les profils techniques, rédiger une documentation et accompagner la prise en main.</p></div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-muted">
-      <div class="container">
-        <h2>Ce que j'apporte concrètement</h2>
-        <p class="section-intro">
-          Mon intérêt est de travailler là où l'IA ne peut pas être séparée de la qualité des données, de la compréhension métier et des contraintes de déploiement.
-        </p>
-
-        <div class="cards-grid">
-          <div class="info-card">
-            <h3>Données sensibles et cadre institutionnel</h3>
-            <p>Je travaille dans un environnement de santé où traçabilité, contrôle des accès, documentation, conformité et confidentialité sont des contraintes quotidiennes.</p>
-          </div>
-          <div class="info-card">
-            <h3>Développement de solutions réelles</h3>
-            <p>Je ne me limite pas à prototyper : je conçois aussi des outils utilisables, documentés, maintenables et compatibles avec des usages métiers concrets.</p>
-          </div>
-          <div class="info-card">
-            <h3>Culture scientifique</h3>
-            <p>Mon passage par le GREYC m'a donné une pratique réelle de la recherche : problématique, protocole, analyse de résultats, mémoire et publication.</p>
-          </div>
-          <div class="info-card">
-            <h3>Dialogue interdisciplinaire</h3>
-            <p>J'ai l'habitude d'échanger avec des agents, des profils techniques, des chercheurs, des partenaires institutionnels et des non-spécialistes.</p>
-          </div>
-          <div class="info-card">
-            <h3>Vision long terme</h3>
-            <p>Je m'intéresse aux sujets où la robustesse, la qualité du cadre méthodologique et l'appropriation par les utilisateurs comptent autant que l'innovation technique.</p>
-          </div>
-          <div class="info-card">
-            <h3>Crédibilité pour une thèse</h3>
-            <p>Je viens avec un profil qui connaît déjà le terrain, les données sensibles et les contraintes de déploiement, ce qui donne un ancrage utile à un travail doctoral appliqué.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>Axes doctoraux que je souhaite rendre visibles</h2>
-        <p class="section-intro">
-          En cohérence avec ma candidature FLAME, je veux que ce site montre une ambition scientifique structurée et pas seulement une appétence générale pour l'IA.
-        </p>
-
-        <div class="cards-grid">
-          <div class="info-card">
-            <h3>Cadre expérimental multicentrique robuste</h3>
-            <p>Comparer proprement performances locales, performances fédérées et généralisation sur centre non vu, dans des contextes d'IRM hétérogènes.</p>
-          </div>
-          <div class="info-card">
-            <h3>Apprentissage fédéré personnalisé</h3>
-            <p>Explorer des stratégies conciliant représentation globale et adaptation locale, notamment lorsque les centres diffèrent fortement en volume de données et en protocoles.</p>
-          </div>
-          <div class="info-card">
-            <h3>Modélisation spatio-temporelle</h3>
-            <p>Dépasser une lecture statique pour exploiter les suivis longitudinaux et modéliser plus finement les trajectoires de réponse au traitement.</p>
-          </div>
-          <div class="info-card">
-            <h3>Explicabilité, calibration et incertitude</h3>
-            <p>Ne pas viser uniquement de bonnes performances, mais des modèles compréhensibles, mieux calibrés et capables d'indiquer quand leur prédiction doit être interprétée avec prudence.</p>
-          </div>
-          <div class="info-card">
-            <h3>IA cliniquement utile</h3>
-            <p>Concevoir des approches qui soient méthodologiquement solides, compatibles avec la réalité des données et réellement défendables dans un cadre clinique.</p>
-          </div>
-          <div class="info-card">
-            <h3>Perspective de déploiement</h3>
-            <p>Garder en vue les contraintes de confidentialité, d'hétérogénéité, de qualité des données, de documentation et d'appropriation par les équipes utilisatrices.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-muted">
-      <div class="container">
-        <h2>Types d'échanges qui ont du sens</h2>
-        <div class="split-layout">
-          <div class="surface-card">
-            <ul class="list-clean">
-              <li>Postes ciblés mêlant data, IA, santé numérique, ingénierie logicielle ou R&amp;D.</li>
-              <li>Discussions autour d'une thèse, d'un doctorat appliqué ou d'un montage entreprise-laboratoire.</li>
-              <li>Collaborations sur des sujets où robustesse, confidentialité, qualité des données et déploiement sont centraux.</li>
-              <li>Échanges avec des équipes qui cherchent quelqu'un capable de passer du concept au terrain.</li>
-            </ul>
-          </div>
-          <div class="surface-card">
-            <p>
-              Je privilégie les discussions où il existe un enjeu réel de méthode, de données, d'usage et de responsabilité,
-              plutôt que des prises de contact très générales.
-            </p>
-            <p style="margin-top: 14px;">
-              Concrètement, je peux être intéressé par une entreprise, une structure publique, une équipe académique ou un projet de thèse,
-              à condition que le cadre soit sérieux, lisible, stimulant techniquement et cohérent avec ce que je construis aujourd'hui.
-            </p>
-            <div class="hero-actions" style="margin-top: 22px;">
-              <a href="contact.html" class="btn-primary">Écrire</a>
-              <a href="projets.html" class="btn-secondary">Voir les projets</a>
-            </div>
-          </div>
+    <section class="cta-section">
+      <div class="shell cta-inner">
+        <div><p class="eyebrow">Échange professionnel</p><h2>Parlons de votre équipe et de ses enjeux techniques.</h2></div>
+        <div class="cta-actions">
+          <a class="button button-light" href="contact.html">Me contacter</a>
+          <a class="button button-outline-light" href="https://github.com/P-Pix" target="_blank" rel="noopener noreferrer">Voir GitHub <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Guillaume Lemonnier - Tous droits réservés</p>
-      <p style="font-size: 0.94rem;">
-        Ce code est protégé par licence. Toute utilisation nécessite l'attribution à l'auteur.
-        <a href="../../LICENSE">Voir la licence</a>
-      </p>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div><strong>Guillaume Lemonnier</strong><p>Développement logiciel · C++ & Linux</p></div>
+      <div class="footer-links">
+        <a href="https://github.com/P-Pix" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/lemonnier-guillaume" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:lemonnier.guillaume.pro@gmail.com">Email</a>
+      </div>
+      <p>© 2026 · Caen, France</p>
     </div>
   </footer>
-
-  <script src="../js/script.js"></script>
 </body>
 </html>

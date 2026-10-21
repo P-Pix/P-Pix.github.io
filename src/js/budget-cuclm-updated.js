@@ -9,11 +9,11 @@ class BudgetInteractiveCUCLM {
         this.markersGroup = null;
         this.budgetData = null;
         this.carteData = null;
+        this.selectedCommune = null;
         this.currentView = 'map';
         this.filters = {
-            section: 'all',
-            type: 'all',
-            montant: 0
+            fonction: 'all',
+            type: 'all'
         };
         
         this.init();
@@ -24,9 +24,7 @@ class BudgetInteractiveCUCLM {
             await this.loadData();
             this.initMap();
             this.initControls();
-            this.initCharts();
-            this.updateSummary();
-            this.addMapMarkers();
+            this.updateVisualizations();
         } catch (error) {
             console.error('Erreur lors de l\'initialisation:', error);
             this.showError('Erreur lors du chargement du dashboard budgétaire');
@@ -89,7 +87,8 @@ class BudgetInteractiveCUCLM {
         this.markersGroup.clearLayers();
 
         this.carteData.forEach(ville => {
-            const montant = Math.abs(ville.budget.total);
+            const montant = Math.abs(this.selectedAmount(ville.budget));
+            if (montant === 0) return;
             const isDeficitaire = ville.budget.delta < 0;
             
             // Taille du marqueur basée sur le montant
@@ -112,7 +111,7 @@ class BudgetInteractiveCUCLM {
                     <h3>🏛️ ${ville.nom}</h3>
                     <div class="popup-details">
                         <p><strong>👥 Population:</strong> ${ville.population.toLocaleString('fr-FR')}</p>
-                        <p><strong>💰 Budget Total:</strong> ${this.formatMontant(ville.budget.total)}</p>
+                        <p><strong>💰 ${this.selectedAmountLabel()}:</strong> ${this.formatMontant(this.selectedAmount(ville.budget))}</p>
                         <p><strong>📈 Recettes:</strong> ${this.formatMontant(ville.budget.recettes)}</p>
                         <p><strong>📉 Dépenses:</strong> ${this.formatMontant(ville.budget.depenses)}</p>
                         <p><strong>⚖️ Solde:</strong> ${this.formatMontant(ville.budget.delta)}</p>
@@ -133,6 +132,7 @@ class BudgetInteractiveCUCLM {
     }
 
     updateVilleInfo(ville) {
+        this.selectedCommune = ville.nom;
         const nomElement = document.getElementById('commune-nom');
         const detailsElement = document.getElementById('commune-details');
         
@@ -147,8 +147,8 @@ class BudgetInteractiveCUCLM {
                     <span class="detail-value">${ville.population.toLocaleString('fr-FR')}</span>
                 </div>
                 <div class="commune-detail">
-                    <span class="detail-label">💰 Budget Total:</span>
-                    <span class="detail-value">${this.formatMontant(ville.budget.total)}</span>
+                    <span class="detail-label">💰 ${this.selectedAmountLabel()}:</span>
+                    <span class="detail-value">${this.formatMontant(this.selectedAmount(ville.budget))}</span>
                 </div>
                 <div class="commune-detail">
                     <span class="detail-label">📈 Recettes:</span>
@@ -169,9 +169,6 @@ class BudgetInteractiveCUCLM {
             `;
         }
 
-        // Mettre à jour les fonctions
-        this.updateFonctionsList(ville.fonctions);
-        
         // Mettre à jour le top communes
         this.updateTopCommunes();
     }
@@ -184,7 +181,7 @@ class BudgetInteractiveCUCLM {
             const currentValue = fonctionSelect.value;
             fonctionSelect.innerHTML = '<option value="all">Toutes les fonctions</option>';
             
-            // Ajouter les fonctions de la commune sélectionnée
+            // Conserver la liste globale, même après sélection d'une commune.
             fonctions.forEach(fonction => {
                 const option = document.createElement('option');
                 option.value = fonction.code;
@@ -203,21 +200,28 @@ class BudgetInteractiveCUCLM {
         const topElement = document.getElementById('top-communes');
         if (!topElement || !this.carteData) return;
 
-        // Trier les communes par budget total
+        // Trier selon le montant actuellement sélectionné.
         const sortedCommunes = [...this.carteData]
-            .sort((a, b) => b.budget.total - a.budget.total)
+            .filter(ville => this.selectedAmount(ville.budget) !== 0)
+            .sort((a, b) => this.selectedAmount(b.budget) - this.selectedAmount(a.budget))
             .slice(0, 5);
+
+        if (!sortedCommunes.length) {
+            topElement.textContent = 'Aucun montant pour cette sélection.';
+            return;
+        }
 
         topElement.innerHTML = sortedCommunes.map((commune, index) => `
             <div class="commune-rank">
                 <span class="rank">#${index + 1}</span>
                 <span>${commune.nom}</span>
-                <span class="detail-value">${this.formatMontant(commune.budget.total)}</span>
+                <span class="detail-value">${this.formatMontant(this.selectedAmount(commune.budget))}</span>
             </div>
         `).join('');
     }
 
     initControls() {
+        this.updateFonctionsList(this.budgetData.fonctions);
         // Reset
         document.getElementById('reset-filters').addEventListener('click', () => {
             this.resetFilters();
@@ -283,7 +287,7 @@ class BudgetInteractiveCUCLM {
 
     createVillesChart() {
         const villes = this.carteData.map(v => v.nom);
-        const budgets = this.carteData.map(v => v.budget.total);
+        const budgets = this.carteData.map(v => this.selectedAmount(v.budget));
         
         const data = [{
             x: villes,
@@ -296,7 +300,7 @@ class BudgetInteractiveCUCLM {
         }];
 
         const layout = {
-            title: 'Budget par Commune',
+            title: `${this.selectedAmountLabel()} par commune`,
             xaxis: { title: 'Communes' },
             yaxis: { title: 'Budget (€)' },
             margin: { l: 60, r: 30, t: 50, b: 100 }
@@ -315,7 +319,7 @@ class BudgetInteractiveCUCLM {
                 if (!fonctionsMap.has(key)) {
                     fonctionsMap.set(key, 0);
                 }
-                fonctionsMap.set(key, fonctionsMap.get(key) + fonction.total);
+                fonctionsMap.set(key, fonctionsMap.get(key) + this.selectedAmount(fonction));
             });
         });
 
@@ -332,11 +336,11 @@ class BudgetInteractiveCUCLM {
         }];
 
         const layout = {
-            title: 'Répartition par Fonction',
+            title: `${this.selectedAmountLabel()} par fonction`,
             margin: { l: 30, r: 30, t: 50, b: 30 }
         };
 
-        Plotly.newPlot('chart-budget-fonctions', data, layout, {responsive: true});
+        this.renderAmountChart('chart-budget-fonctions', data, layout, values);
     }
 
     createBudgetTypesChart() {
@@ -348,17 +352,18 @@ class BudgetInteractiveCUCLM {
             totalDepenses += ville.budget.depenses;
         });
 
+        const selectedTypes = this.filters.type === 'all' ? [0, 1] : [this.filters.type === 'recettes' ? 0 : 1];
         const data = [{
-            x: ['Recettes', 'Dépenses'],
-            y: [totalRecettes, totalDepenses],
+            x: selectedTypes.map(index => ['Recettes', 'Dépenses'][index]),
+            y: selectedTypes.map(index => [totalRecettes, totalDepenses][index]),
             type: 'bar',
             marker: {
-                color: ['#27ae60', '#e74c3c']
+                color: selectedTypes.map(index => ['#27ae60', '#e74c3c'][index])
             }
         }];
 
         const layout = {
-            title: 'Recettes vs Dépenses',
+            title: this.filters.type === 'all' ? 'Recettes vs Dépenses' : this.selectedAmountLabel(),
             yaxis: { title: 'Montant (€)' },
             margin: { l: 60, r: 30, t: 50, b: 50 }
         };
@@ -375,20 +380,20 @@ class BudgetInteractiveCUCLM {
         // Ajouter le niveau racine
         labels.push('CUCLM');
         parents.push('');
-        values.push(this.budgetData.metadata.budget_total);
+        values.push(this.selectedTotal());
         
         // Ajouter les villes
         this.carteData.forEach(ville => {
             labels.push(ville.nom);
             parents.push('CUCLM');
-            values.push(ville.budget.total);
+            values.push(this.selectedAmount(ville.budget));
             
             // Ajouter les fonctions de chaque ville
             ville.fonctions.forEach(fonction => {
                 const fonctionLabel = `${fonction.nom} (${ville.nom})`;
                 labels.push(fonctionLabel);
                 parents.push(ville.nom);
-                values.push(Math.abs(fonction.total));
+                values.push(Math.abs(this.selectedAmount(fonction)));
             });
         });
 
@@ -407,15 +412,14 @@ class BudgetInteractiveCUCLM {
             margin: { l: 0, r: 0, t: 50, b: 0 }
         };
 
-        Plotly.newPlot('chart-sunburst', data, layout, {responsive: true});
+        this.renderAmountChart('chart-sunburst', data, layout, values);
     }
 
     updateSummary() {
         if (!this.budgetData) return;
 
-        // Calculer les totaux depuis les métadonnées
-        const totalBudget = this.budgetData.metadata.budget_total;
-        const nbCommunes = this.budgetData.metadata.nb_communes;
+        const totalBudget = this.selectedTotal();
+        const nbCommunes = this.carteData.length;
         
         // Calculer le total des fonctions
         const fonctionsSet = new Set();
@@ -431,24 +435,78 @@ class BudgetInteractiveCUCLM {
             nbCommunes;
         document.getElementById('total-fonctions').textContent = 
             fonctionsSet.size;
+
+        const label = document.getElementById('total-budget').parentElement.querySelector('.stat-label');
+        if (label) label.textContent = `💰 ${this.selectedAmountLabel()}`;
     }
 
     updateVisualizations() {
+        this.carteData = this.filteredCities();
         this.addMapMarkers();
-        // Ici on pourrait aussi mettre à jour les graphiques selon les filtres
+        this.initCharts();
+        this.updateSummary();
+        this.updateTopCommunes();
+        this.refreshSelectedCommune();
+    }
+
+    filteredCities() {
+        return this.budgetData.villes.flatMap(ville => {
+            if (this.filters.fonction === 'all') return [ville];
+            const fonctions = ville.fonctions.filter(fonction => String(fonction.code) === this.filters.fonction);
+            if (!fonctions.length) return [];
+            const budget = { total: 0, recettes: 0, depenses: 0 };
+            fonctions.forEach(fonction => {
+                Object.keys(budget).forEach(key => { budget[key] += fonction[key]; });
+            });
+            budget.delta = budget.recettes - budget.depenses;
+            return [{ ...ville, fonctions, budget }];
+        });
+    }
+
+    selectedAmount(budget) {
+        return this.filters.type === 'all' ? budget.total : budget[this.filters.type];
+    }
+
+    selectedAmountLabel() {
+        if (this.filters.type === 'recettes') return 'Recettes sélectionnées';
+        if (this.filters.type === 'depenses') return 'Dépenses sélectionnées';
+        return this.filters.fonction === 'all' ? 'Budget total' : 'Montant de la fonction';
+    }
+
+    selectedTotal() {
+        return this.carteData.reduce((total, ville) => total + this.selectedAmount(ville.budget), 0);
+    }
+
+    renderAmountChart(id, data, layout, values) {
+        if (values.some(value => value !== 0)) {
+            Plotly.newPlot(id, data, layout, { responsive: true });
+            return;
+        }
+        const annotations = [{ text: 'Aucun montant pour cette sélection.', showarrow: false,
+            x: 0.5, y: 0.5, xref: 'paper', yref: 'paper' }];
+        Plotly.newPlot(id, [], { ...layout, annotations }, { responsive: true });
+    }
+
+    refreshSelectedCommune() {
+        if (!this.selectedCommune) return;
+        const ville = this.carteData.find(item => item.nom === this.selectedCommune);
+        if (ville) {
+            this.updateVilleInfo(ville);
+            return;
+        }
+        this.selectedCommune = null;
+        document.getElementById('commune-nom').textContent = 'Sélectionnez une commune';
+        document.getElementById('commune-details').textContent = 'Cliquez sur une commune pour consulter les montants de la sélection.';
     }
 
     resetFilters() {
         this.filters = {
-            section: 'all',
-            type: 'all',
-            montant: 0
+            fonction: 'all',
+            type: 'all'
         };
 
-        document.getElementById('section-filter').value = 'all';
+        document.getElementById('fonction-filter').value = 'all';
         document.getElementById('type-filter').value = 'all';
-        document.getElementById('montant-filter').value = '0';
-        document.getElementById('montant-value').textContent = '0 €';
     }
 
     formatMontant(montant) {

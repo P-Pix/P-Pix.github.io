@@ -6,26 +6,193 @@
   <meta name="description" content="Engagement associatif et représentation étudiante de Guillaume Lemonnier" />
   <title>Engagement Associatif - Guillaume Lemonnier</title>
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+
+    .association-info {
+      background: var(--bg-section);
+      padding: 25px;
+      border-radius: 3px;
+      margin: 30px 0;
+      border-left: 4px solid var(--secondary-color);
+    }
+
+    .association-description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 0;
+      color: var(--text-light);
+    }
+
+    .skills-associative {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .skills-associative .skill-category {
+      background: var(--bg-light);
+      padding: 25px;
+      border-radius: 3px;
+      box-shadow: none;
+      border-top: 4px solid var(--accent-color);
+    }
+
+    .achievements {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .achievement-item {
+      background: var(--bg-light);
+      padding: 25px;
+      border-radius: 3px;
+      box-shadow: none;
+      border: 2px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .achievement-item:hover {
+      transform: none;
+      box-shadow: none;
+      border-color: var(--secondary-color);
+    }
+
+    .achievement-item h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+
+    .achievement-item p {
+      color: var(--text-light);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Réutilisation des styles CV pour la timeline */
+    .cv-timeline {
+      position: relative;
+      margin: 40px 0;
+    }
+
+    .cv-timeline::before {
+      content: '';
+      position: absolute;
+      left: 100px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--accent-color);
+    }
+
+    .cv-item {
+      display: flex;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .cv-year {
+      width: 100px;
+      flex-shrink: 0;
+      font-weight: 700;
+      color: var(--accent-color);
+      font-size: 1.1rem;
+      position: relative;
+      text-align: right;
+      padding-right: 20px;
+    }
+
+    .cv-content {
+      flex: 1;
+      margin-left: 30px;
+      background: var(--bg-light);
+      padding: 25px;
+      border-radius: 3px;
+      box-shadow: none;
+      border-left: 4px solid var(--accent-color);
+    }
+
+    .cv-content h3 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .cv-content p {
+      margin-bottom: 10px;
+    }
+
+    .cv-content ul {
+      margin-top: 15px;
+      padding-left: 20px;
+    }
+
+    .cv-content li {
+      margin-bottom: 8px;
+      color: var(--text-light);
+    }
+
+    @media (max-width: 768px) {
+      .cv-timeline::before {
+        left: 20px;
+      }
+
+      .cv-item {
+        flex-direction: column;
+      }
+
+      .cv-year {
+        width: auto;
+        margin-bottom: 10px;
+        padding-left: 35px;
+        padding-right: 0;
+        text-align: left;
+        position: relative;
+      }
+
+      .cv-content {
+        margin-left: 0;
+      }
+
+      .achievements {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-associative {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  
+  </style>
+  <link rel="stylesheet" href="../css/legacy.css">
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
 </head>
-<body>
-  <header>
-    <div class="container">
-      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-      <nav id="primary-nav" role="navigation" aria-label="Navigation principale">
+<body class="legacy-page">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../index.html" aria-label="Accueil de Guillaume Lemonnier">
+        <span class="brand-mark">GL</span>
+        <span><strong>Guillaume Lemonnier</strong><small>Développeur logiciel</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Navigation principale">
         <a href="../../index.html">Accueil</a>
-        <a href="projets.html">Projets</a>
-        <a href="cv.html">CV</a>
-        <a href="recherche-emploi.html" class="nav-highlight">Positionnement</a>
-        <a href="associatif.html" class="active">Associatif</a>
-        <a href="contact.html">Contact</a>
+        <a href="projets.html">Projets C++</a>
+        <a href="../../index.html#competences">Compétences</a>
+        <a href="cv.html">Parcours</a>
+        <a class="nav-cta" href="contact.html">Me contacter</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="contenu">
     <section class="hero">
       <div class="container">
         <h1>Engagement Associatif</h1>
@@ -35,7 +202,7 @@
 
     <section class="section">
       <div class="container">
-        <h2>🏛️ Représentation Étudiante Institutionnelle</h2>
+        <h2>Représentation Étudiante Institutionnelle</h2>
         <div class="cv-timeline">
           <div class="cv-item">
             <div class="cv-year">2022 - 2024</div>
@@ -117,7 +284,7 @@
 
     <section class="section">
       <div class="container">
-        <h2>🤝 Leadership Associatif - AFNEUS</h2>
+        <h2>Leadership Associatif - AFNEUS</h2>
         <div class="association-info">
           <p class="association-description">
             <strong>AFNEUS (Association Fédérative Nationale des Étudiants Universitaires Scientifiques)</strong> - 
@@ -205,7 +372,7 @@
 
     <section class="section">
       <div class="container">
-        <h2>🎓 Engagement Local - Corpo Sciences Caen</h2>
+        <h2>Engagement Local - Corpo Sciences Caen</h2>
         <div class="cv-timeline">
           <div class="cv-item">
             <div class="cv-year">2022-2023</div>
@@ -243,7 +410,7 @@
 
     <section class="section">
       <div class="container">
-        <h2>🌟 Compétences Développées</h2>
+        <h2>Compétences Développées</h2>
         <div class="skills-associative">
           <div class="skill-category">
             <h3>Leadership & Management</h3>
@@ -293,25 +460,25 @@
 
     <section class="section">
       <div class="container">
-        <h2>🎯 Impact et Réalisations</h2>
+        <h2>Impact et Réalisations</h2>
         <div class="achievements">
           <div class="achievement-item">
-            <h3>🏛️ Représentation Institutionnelle</h3>
+            <h3>Représentation Institutionnelle</h3>
             <p>Participation active à <strong>4 conseils élus différents</strong> de l'université, contribuant aux décisions stratégiques affectant plus de 30 000 étudiants. Sur plus de <strong>3 ans</strong>, implication dans des projets ayant un impact direct sur la vie étudiante.</p>
           </div>
           
           <div class="achievement-item">
-            <h3>🤝 Leadership National</h3>
+            <h3>Leadership National</h3>
             <p>Progression d'<strong>administrateur à Vice-Président</strong> de l'AFNEUS, fédération représentant de nombreuses associations étudiantes scientifiques en France. Capacité à fédérer et mobiliser les acteurs autour de projets communs mais également à mener des formations et actions concrètes en faveur de la représentation étudiante.</p>
           </div>
           
           <div class="achievement-item">
-            <h3>💰 Gestion Financière</h3>
+            <h3>Gestion Financière</h3>
             <p>Responsabilité de la <strong>gestion budgétaire</strong> d'associations avec optimisation des ressources et recherche de financements.</p>
           </div>
           
           <div class="achievement-item">
-            <h3>🚀 Innovation Pédagogique</h3>
+            <h3>Innovation Pédagogique</h3>
             <p>Contribution aux <strong>réformes pédagogiques</strong> et amélioration des conditions d'études en sciences et informatique.</p>
           </div>
         </div>
@@ -319,174 +486,18 @@
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      &copy; 2026 Guillaume Lemonnier - Tous droits réservés | 
-      <a href="../../LICENSE" style="color: #6366f1; text-decoration: none;">Licence</a>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div><strong>Guillaume Lemonnier</strong><p>C++ · Linux · systèmes &amp; communications</p></div>
+      <div class="footer-links">
+        <a href="https://github.com/P-Pix" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="contact.html">Contact</a>
+        <a href="../../LICENSE">Licence</a>
+      </div>
+      <p>© 2026 · Caen, France · Tous droits réservés</p>
     </div>
   </footer>
 
   <script src="../js/script.js"></script>
-
-  <style>
-    .association-info {
-      background: var(--bg-section);
-      padding: 25px;
-      border-radius: 15px;
-      margin: 30px 0;
-      border-left: 4px solid var(--secondary-color);
-    }
-
-    .association-description {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin: 0;
-      color: var(--text-light);
-    }
-
-    .skills-associative {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .skills-associative .skill-category {
-      background: var(--bg-light);
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-light);
-      border-top: 4px solid var(--accent-color);
-    }
-
-    .achievements {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-
-    .achievement-item {
-      background: var(--bg-light);
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-light);
-      border: 2px solid var(--border-color);
-      transition: var(--transition);
-    }
-
-    .achievement-item:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-medium);
-      border-color: var(--secondary-color);
-    }
-
-    .achievement-item h3 {
-      color: var(--primary-color);
-      margin-bottom: 15px;
-      font-size: 1.2rem;
-    }
-
-    .achievement-item p {
-      color: var(--text-light);
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    /* Réutilisation des styles CV pour la timeline */
-    .cv-timeline {
-      position: relative;
-      margin: 40px 0;
-    }
-
-    .cv-timeline::before {
-      content: '';
-      position: absolute;
-      left: 100px;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: var(--accent-color);
-    }
-
-    .cv-item {
-      display: flex;
-      margin-bottom: 40px;
-      position: relative;
-    }
-
-    .cv-year {
-      width: 100px;
-      flex-shrink: 0;
-      font-weight: 700;
-      color: var(--accent-color);
-      font-size: 1.1rem;
-      position: relative;
-      text-align: right;
-      padding-right: 20px;
-    }
-
-    .cv-content {
-      flex: 1;
-      margin-left: 30px;
-      background: var(--bg-light);
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: var(--shadow-light);
-      border-left: 4px solid var(--accent-color);
-    }
-
-    .cv-content h3 {
-      color: var(--primary-color);
-      margin-bottom: 10px;
-      font-size: 1.3rem;
-    }
-
-    .cv-content p {
-      margin-bottom: 10px;
-    }
-
-    .cv-content ul {
-      margin-top: 15px;
-      padding-left: 20px;
-    }
-
-    .cv-content li {
-      margin-bottom: 8px;
-      color: var(--text-light);
-    }
-
-    @media (max-width: 768px) {
-      .cv-timeline::before {
-        left: 20px;
-      }
-
-      .cv-item {
-        flex-direction: column;
-      }
-
-      .cv-year {
-        width: auto;
-        margin-bottom: 10px;
-        padding-left: 35px;
-        padding-right: 0;
-        text-align: left;
-        position: relative;
-      }
-
-      .cv-content {
-        margin-left: 0;
-      }
-
-      .achievements {
-        grid-template-columns: 1fr;
-      }
-
-      .skills-associative {
-        grid-template-columns: 1fr;
-      }
-    }
-
-  </style>
 </body>
 </html>

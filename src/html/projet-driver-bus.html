@@ -1,22 +1,95 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Étude de cas C++20 : driver utilisateur Linux, protocole binaire, simulateur Python, timeouts, retries, CRC et mocks."><title>Linux Hardware Bus Driver - Guillaume Lemonnier</title><link rel="stylesheet" href="../css/style.css"><script src="../js/script.js" defer></script></head><body>
-<a class="skip-link" href="#contenu">Aller au contenu</a><header class="site-header"><div class="shell header-inner"><a class="brand" href="../../index.html"><span class="brand-mark">GL</span><span><strong>Guillaume Lemonnier</strong><small>Software engineering</small></span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button><nav id="primary-nav" class="primary-nav"><a href="../../index.html">Accueil</a><a class="active" href="projets.html">Projets C++</a><a href="../../index.html#experience">Expérience</a><a href="cv.html">Parcours</a><a class="nav-cta" href="contact.html">Me contacter</a></nav></div></header>
-<main id="contenu"><section class="hero page-hero"><div class="shell hero-grid"><div class="reveal"><div class="breadcrumbs"><a href="../../index.html">Accueil</a><span>/</span><a href="projets.html">Projets</a><span>/</span><span>Driver bus</span></div><p class="eyebrow">03 · Linux / abstraction matérielle</p><h1>Hardware Bus <span>Driver Simulator</span></h1><p class="hero-summary">Une couche C++ de driver utilisateur communiquant avec un périphérique Python simulé. Le protocole imite une liaison UART/I²C/SPI et permet de tester timeouts, CRC invalides et retries sans matériel physique.</p><div class="hero-stack"><span>C++20</span><span>Unix socket</span><span>Binary protocol</span><span>CRC-32</span><span>Mocks</span><span>Python</span></div><div class="hero-actions"><a class="button button-primary" href="https://github.com/P-Pix/cpp-linux-hardware-bus-driver-simulator" target="_blank" rel="noreferrer">Voir le code source →</a></div></div><div class="project-hero-art reveal"><span class="visual-label">LHBD / DEVICE TRANSACTION</span><div class="code-window"><div class="window-bar"><i></i><i></i><i></i></div><pre><span class="token-cyan">$</span> lhbd_cli --demo
-
-PING                    <span class="token-cyan">OK</span>
-WRITE REG 0x0010        <span class="token-cyan">OK</span>
-READ REG 0x0010         305419896
-TEMPERATURE             22.04 C
-STATUS                  mode=1 flags=0
-
-<span class="token-orange">fault injection:</span> timeout → retry → OK</pre></div></div></div></section>
-<nav class="project-nav"><div class="shell"><a href="#probleme">Problème</a><a href="#architecture">Architecture</a><a href="#decisions">Décisions</a><a href="#demo">Démonstration</a><a href="#preuves">Preuves</a></div></nav>
-<section class="section"><div class="shell project-layout"><article class="project-main">
-<section id="probleme"><p class="eyebrow">Le problème</p><h2>Développer un driver testable avant d’avoir le matériel</h2><p>Les couches d’intégration matérielle sont souvent difficiles à tester : le périphérique n’est pas toujours disponible et les erreurs sont irrégulières. Le projet isole le transport derrière `ITransport` et fournit deux implémentations : une socket UNIX pour le chemin complet et un mock déterministe pour les tests.</p><p>L’API métier reste identique : ping, lecture/écriture de registres, lecture de capteurs, statut et reset.</p></section>
-<section id="architecture"><p class="eyebrow">Architecture</p><h2>Une dépendance inversée autour du driver</h2><div class="architecture architecture-4"><div class="arch-node">CLI / API<br>métier</div><div class="arch-node">DeviceDriver<br>retry policy</div><div class="arch-node">ITransport<br>socket ou mock</div><div class="arch-node">Périphérique<br>Python simulé</div></div><p>`DeviceDriver` construit une requête avec numéro de séquence, délègue l’échange au transport puis contrôle la réponse. Les détails de socket, de poll et de délai ne contaminent pas le protocole ni l’API publique.</p></section>
-<section id="decisions"><p class="eyebrow">Décisions d’ingénierie</p><h2>Reproduire les pannes, pas seulement le chemin heureux</h2><div class="decision-grid"><article class="decision"><span>01 / ABSTRACTION</span><h3>Transport substituable</h3><p>Une future liaison série ou SPI peut implémenter `ITransport` sans modifier le driver et ses tests.</p></article><article class="decision"><span>02 / CORRELATION</span><h3>Numéro de séquence</h3><p>Chaque réponse est associée à sa requête ; une réponse retardée ou étrangère est rejetée.</p></article><article class="decision"><span>03 / RECOVERY</span><h3>Retry borné et observable</h3><p>Timeouts et CRC invalides déclenchent une tentative contrôlée et alimentent les compteurs de diagnostic.</p></article><article class="decision"><span>04 / PROTOCOL</span><h3>Encodage big-endian explicite</h3><p>Le format ne dépend ni de l’alignement des structures C++ ni de l’endianness de l’hôte.</p></article></div></section>
-<section id="demo"><p class="eyebrow">Démonstration réelle</p><h2>Timeout et corruption injectés dans les tests</h2><p>La vidéo est issue de la suite C++ exécutée avec `MockTransport`. Elle montre le round-trip du protocole, les accès registres et les récupérations après timeout ou CRC incorrect.</p><div class="demo-frame"><video controls preload="metadata" poster="../../assets/demos/driver-poster.png"><source src="../../assets/demos/driver-demo.mp4" type="video/mp4"></video><div class="demo-caption"><strong>Driver + protocole + fault injection</strong><span>Tous les tests passent, y compris les retries</span></div></div><div class="command-block"><pre><code>python3 simulator/device_simulator.py --socket /tmp/lhbd_device.sock
-./lhbd_cli --socket /tmp/lhbd_device.sock --demo</code></pre><button class="copy-button" type="button">Copier</button></div></section>
-<section id="preuves"><p class="eyebrow">Preuves techniques</p><h2>Ce que le dépôt permet de vérifier</h2><ul class="evidence-list"><li>Codec de trames, CRC standard, longueur bornée et validation structurelle.</li><li>Mock injectant réponse correcte, timeout et corruption sans dépendre du simulateur.</li><li>Intégration Linux par socket UNIX avec cycle de vie géré en RAII.</li><li>Test d’intégration Python lançant le simulateur puis la CLI C++.</li></ul></section>
-<a class="next-project" href="projet-binary-log.html"><div><small>Projet suivant</small><strong>High-Performance Binary Log Recorder</strong></div><span>→</span></a></article>
-<aside class="project-aside"><div class="fact-card"><h3>Fiche technique</h3><dl class="facts"><div><dt>Langages</dt><dd>C++20 + Python</dd></div><div><dt>Transport</dt><dd>Unix domain socket</dd></div><div><dt>Protocole</dt><dd>Commande/réponse</dd></div><div><dt>Tests</dt><dd>Unitaires + intégration</dd></div><div><dt>Licence</dt><dd>MIT</dd></div></dl></div><div class="fact-card"><h3>Compétences démontrées</h3><ul class="tag-list"><li>Hardware abstraction</li><li>Dependency inversion</li><li>Fault injection</li><li>Timeout/retry</li><li>Binary codec</li><li>Linux I/O</li></ul></div></aside></div></section></main>
-<footer class="site-footer"><div class="shell footer-inner"><div><strong>Guillaume Lemonnier</strong><p>C++ · Linux · full-stack · IA appliquée</p></div><div class="footer-links"><a href="projets.html">Tous les projets</a><a href="https://github.com/P-Pix" target="_blank" rel="noreferrer">GitHub</a><a href="contact.html">Contact</a></div><p>© 2026 · Caen, France</p></div></footer></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projet personnel C++20 et Python : pilote en espace utilisateur, socket Unix, protocole binaire, contrôle CRC, délais et injection d’erreurs.">
+  <meta name="author" content="Guillaume Lemonnier">
+  <title>Pilote utilisateur et périphérique simulé — Guillaume Lemonnier</title>
+  <link rel="canonical" href="https://p-pix.github.io/src/html/projet-driver-bus.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../../index.html" aria-label="Guillaume Lemonnier — accueil">
+        <span class="brand-mark" aria-hidden="true">GL<span>.</span></span>
+        <span><strong>Guillaume Lemonnier</strong><small>Développeur logiciel</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Navigation principale">
+        <a href="../../index.html">Accueil</a>
+        <a class="active" href="projets.html" aria-current="location">Projets C++</a>
+        <a href="../../index.html#competences">Compétences</a>
+        <a href="cv.html">Parcours</a>
+        <a class="nav-cta" href="contact.html">Me contacter</a>
+      </nav>
+    </div>
+  </header>
+  <main id="contenu">
+    <section class="hero page-hero">
+      <div class="shell hero-grid">
+        <div class="reveal">
+          <nav class="breadcrumbs" aria-label="Fil d’Ariane"><a href="../../index.html">Accueil</a><span aria-hidden="true">/</span><a href="projets.html">Projets C++</a><span aria-hidden="true">/</span><span aria-current="page">Pilote utilisateur</span></nav>
+          <p class="eyebrow">04 · Projet personnel · Couche utilisateur Linux</p>
+          <h1>Pilote utilisateur<br><span>sous Linux</span></h1>
+          <p class="hero-summary">Hardware Bus Driver Simulator relie une API C++ à un périphérique simulé en Python par socket Unix. Le projet travaille le protocole commande/réponse, la validation binaire, les délais d’attente et les nouvelles tentatives.</p>
+          <div class="hero-stack"><span>C++20</span><span>Linux</span><span>Socket Unix</span><span>CRC-32</span><span>Mocks</span><span>Python</span></div>
+          <div class="hero-actions"><a class="button button-primary" href="https://github.com/P-Pix/cpp-linux-hardware-bus-driver-simulator" target="_blank" rel="noopener noreferrer">Voir le code source <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="#architecture">Comprendre l’architecture</a></div>
+        </div>
+        <aside class="project-hero-art reveal" aria-label="Transaction avec le périphérique">
+          <span class="visual-label">Transaction avec le périphérique</span>
+          <dl class="facts">
+<div><dt>Demander</dt><dd>API de registres, capteurs et statut</dd></div>
+<div><dt>Encoder</dt><dd>Requête binaire et numéro de séquence</dd></div>
+<div><dt>Transporter</dt><dd>Socket Unix ou transport de test</dd></div>
+<div><dt>Contrôler</dt><dd>Réponse, intégrité et délai</dd></div>
+</dl>
+        </aside>
+      </div>
+    </section>
+    <nav class="project-nav" aria-label="Sommaire du projet">
+      <div class="shell"><a href="#probleme">Enjeu</a><a href="#architecture">Architecture</a><a href="#decisions">Choix techniques</a><a href="#demo">Démonstration</a><a href="#preuves">Code et tests</a><a href="#perimetre">Périmètre</a></div>
+    </nav>
+    <section class="section">
+      <div class="shell project-layout">
+        <article class="project-main">
+          <section id="probleme"><p class="eyebrow">Enjeu</p><h2>Tester une couche d’intégration sans dépendre du matériel</h2><p>Un périphérique peut répondre tard, produire une trame invalide ou ne pas répondre. Ces situations doivent pouvoir être reproduites pour tester le comportement du logiciel. Le transport est donc isolé derrière <code>ITransport</code>.</p><p>Une implémentation utilise une socket Unix pour le dialogue complet avec le simulateur ; une autre fournit des réponses contrôlées pour les tests. Les appels métier restent les mêmes : ping, lecture ou écriture de registres, capteurs, statut et reset.</p></section>
+          <section id="architecture"><p class="eyebrow">Architecture</p><h2>Découpler l’API du mécanisme d’échange</h2><div class="architecture architecture-4"><div class="arch-node">CLI / API<br>métier</div><div class="arch-node">DeviceDriver<br>+ tentatives</div><div class="arch-node">ITransport<br>socket ou mock</div><div class="arch-node">Périphérique<br>Python simulé</div></div><p><code>DeviceDriver</code> construit la requête, lui associe un numéro de séquence et délègue l’échange au transport. Il contrôle ensuite la réponse. Les détails de socket et de délai restent dans la couche de transport.</p></section>
+          <section id="decisions"><p class="eyebrow">Choix techniques</p><h2>Décrire les erreurs et leur traitement</h2><div class="decision-grid"><article class="decision"><span>01 / ABSTRACTION</span><h3>Rendre le transport substituable</h3><p>Le contrat <code>ITransport</code> permet d’exercer le driver avec une socket Unix ou un mock sans changer son API.</p></article><article class="decision"><span>02 / CORRÉLATION</span><h3>Identifier chaque échange</h3><p>Le numéro de séquence permet d’associer une réponse à sa requête et de rejeter une réponse étrangère.</p></article><article class="decision"><span>03 / REPRISE</span><h3>Borner les tentatives</h3><p>Les timeouts et CRC incorrects alimentent une politique de nouvelle tentative et des compteurs de diagnostic.</p></article><article class="decision"><span>04 / SÉRIALISATION</span><h3>Encoder les champs explicitement</h3><p>L’encodage big-endian ne repose ni sur l’alignement des structures C++ ni sur l’ordre des octets de la machine.</p></article></div></section>
+          <section id="demo"><p class="eyebrow">Démonstration</p><h2>Injecter un timeout ou une trame corrompue</h2><p>La démonstration incluse présente la suite C++ utilisant <code>MockTransport</code>. Elle couvre l’encodage/décodage, les accès aux registres et la reprise après une absence de réponse ou un CRC invalide.</p>
+<div class="demo-frame"><video controls preload="metadata" aria-label="Démonstration : Pilote utilisateur et périphérique simulé" poster="../../assets/demos/driver-poster.png"><source src="../../assets/demos/driver-demo.mp4" type="video/mp4">Votre navigateur ne prend pas en charge cette vidéo. <a href="../../assets/demos/driver-demo.mp4">Ouvrir le fichier vidéo</a>.</video><div class="demo-caption"><strong>Protocole, driver et injection d’erreurs</strong><span>Extrait de la suite de tests fournie</span></div></div>
+<p>Après compilation de la CLI selon le README, lancer le simulateur dans un terminal et garder ce processus actif. Dans un second terminal, lancer la CLI avec le même chemin de socket.</p><h3>Terminal 1 · simulateur</h3>
+<div class="command-block"><pre><code>python3 simulator/device_simulator.py --socket /tmp/lhbd_device.sock</code></pre><button class="copy-button" type="button">Copier</button></div><h3>Terminal 2 · client C++</h3>
+<div class="command-block"><pre><code>./lhbd_cli --socket /tmp/lhbd_device.sock --demo</code></pre><button class="copy-button" type="button">Copier</button></div></section>
+          <section id="preuves"><p class="eyebrow">Pour approfondir</p><h2>Code, tests et documentation</h2><ul class="evidence-list"><li>Codec des trames : CRC, longueur bornée et validation de structure.</li><li>Transport de test injectant une réponse correcte, un timeout ou une corruption.</li><li>Accès Linux par socket Unix et gestion des ressources en RAII.</li><li>Test d’intégration Python lançant le simulateur et la CLI C++.</li></ul><a class="text-link" href="https://github.com/P-Pix/cpp-linux-hardware-bus-driver-simulator" target="_blank" rel="noopener noreferrer">Explorer le dépôt et son README <span aria-hidden="true">↗</span></a></section>
+          <section id="perimetre"><p class="eyebrow">Périmètre</p><h2>Cadre du projet</h2><p>Il s’agit d’un pilote en espace utilisateur pour un périphérique simulé. Le transport réalisé est une socket Unix. L’intégration à un bus physique UART, I²C ou SPI demanderait un transport et une validation sur matériel ; le projet n’est pas un module du noyau Linux.</p></section>
+          <a class="next-project" href="projet-embedded-driver.html"><div><small>Projet suivant</small><strong>Interface pour capteurs simulés</strong></div><span aria-hidden="true">→</span></a>
+        </article>
+        <aside class="project-aside" aria-label="Repères du projet">
+          <div class="fact-card"><h2>Fiche technique</h2><dl class="facts">
+<div><dt>Nature</dt><dd>Simulation en espace utilisateur</dd></div>
+<div><dt>Langages</dt><dd>C++20 + Python</dd></div>
+<div><dt>Transport</dt><dd>Socket Unix</dd></div>
+<div><dt>Protocole</dt><dd>Commande / réponse</dd></div>
+<div><dt>Tests</dt><dd>Mocks + intégration</dd></div>
+</dl></div>
+          <div class="fact-card"><h2>Compétences mobilisées</h2><ul class="tag-list"><li>Abstraction de transport</li><li>Décodage binaire</li><li>Injection de pannes</li><li>Timeout / retry</li><li>RAII</li><li>Entrées-sorties Linux</li></ul><a class="text-link" href="../../index.html#competences">Voir le socle technique <span aria-hidden="true">→</span></a></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div><strong>Guillaume Lemonnier</strong><p>C++ · Linux · protocoles · ingénierie logicielle</p></div>
+      <div class="footer-links"><a href="projets.html">Tous les projets</a><a href="https://github.com/P-Pix" target="_blank" rel="noopener noreferrer">GitHub</a><a href="contact.html">Contact</a></div>
+      <p>© 2026 · Caen, France</p>
+    </div>
+  </footer>
+</body>
+</html>
