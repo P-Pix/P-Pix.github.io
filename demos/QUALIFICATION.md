@@ -1,51 +1,42 @@
-# Qualification - Laboratoire C++ / WebAssembly
+# Qualification — Laboratoire C++ / WebAssembly
 
-Date du travail : 2026-10-22
+Date : **22 octobre 2026**. Statut : **site statique qualifié localement dans la limite des tests décrits, publication GitHub non effectuée**.
 
-## Sources examinees
+## Baseline et entrées
 
-- `cpp-space-telemetry-ground-station-main.zip`
-- `cpp-mission-control-protocol-server-main.zip`
-- `cpp-high-performance-binary-log-recorder-main.zip`
-- `cpp-linux-hardware-bus-driver-simulator-main.zip`
-- `cpp-embedded-device-driver-simulator-main.zip`
-- `ScanGUI-main.zip`
-- `TetrisAutoLAN_SDL2_PRO(1).zip` (aucun fichier source, seulement des dossiers)
-- `P-Pix.github.io-main(1).zip` (site conserve et enrichi)
+Portfolio initial enrichi (six projets, cinq moteurs WASM + ScanGUI) depuis `P-Pix_Portfolio_CPP_WebAssembly_20261022.zip`.
+Nouvelles archives analysées : `TetrisAutoCPP(1).zip` et `Neural_Boundary_Lab_CPP17_GitHub(1).zip`, contenant le code et les tests. L'ancienne archive `TetrisAutoLAN_SDL2_PRO(1).zip`, signalée sans source, **n'est plus un blocage**, les sources ayant été fournies dans `TetrisAutoCPP(1).zip`.
 
-## Verification du module WebAssembly
+## Compilation native des deux nouveaux projets
 
-- Clang avec backend wasm32, cible C++20 freestanding : compilation reussie.
-- Le module `demos/engine/labs.wasm` est fourni et teste sous Node.js.
-- `node demos/tests/verify.mjs` : **10/10 PASS**.
-- Test de la constante CRC32 avec `123456789` -> `0xCBF43926`.
-- Validation de trames STGS (float32 BE, timestamp u64, CRC), LHBD (BE), EDDS (LE).
-- Injection d'un bit modifie -> erreur CRC dans les 3 codecs.
-- Machine d'etat MCPS (CONNECT, AUTH, mode, flux) et ring buffer FIFO.
+| Projet | Configuration | Résultat |
+| --- | --- | --- |
+| Tetris AutoCPP C++17 | CMake, GUI SDL2 désactivée ; coeur / réseau / tests | **2/2 tests CTest réussis** |
+| Neural Boundary Lab C++17 | CMake, GUI SDL2 désactivée ; coeur / CLI / tests | **2/2 tests CTest réussis** |
 
-## Verifications natives des six depots
+Les six premiers projets avaient déjà été compilés/testés pour les configurations natives disponibles lors de la précédente livraison. Ce contrôle n'exécute pas le jeu SDL2 dans sa fenêtre native et ne teste pas un LAN réel entre deux ordinateurs.
 
-Le code des depots fournis a ete compile separement avec CMake/CTest pour la cible Linux, puis teste :
+## Compilation WebAssembly
 
-| Projet | Configuration et resultat CTest |
-| --- | --- |
-| Space Telemetry Ground Station | `stgs_tests`, 1/1 PASS |
-| Mission Control Protocol Server | 1/1 PASS |
-| High Performance Binary Log Recorder | 2/2 PASS |
-| Linux Hardware Bus Driver Simulator | 2/2 PASS (dont integration) |
-| Embedded Device Driver Simulator | 1/1 PASS |
-| ScanGUI | GUI OFF, SERVER OFF, tests du coeur 1/1 PASS |
+- Ancien module `labs.wasm` : C++20 freestanding, CRC-32 de contrôle `123456789` → `0xCBF43926`, trames STGS/LHBD/EDDS, session fictive MCPS, FIFO.
+- Nouveau `tetris.wasm` : C++17 freestanding (mouvements, 7-bag, plateau, réserve, collisions, effacement de lignes, heuristique IA 2-ply).
+- Nouveau `neural.wasm` : C++17 freestanding (MLP, backpropagation, métriques, poids ; fonctions math importées du navigateur).
+- Compilation LLVM `clang++ --target=wasm32` et `wasm-ld` réussie. Reproduction : `demos/engine/build.sh` et `demos/engine/build-games.sh`.
 
-Ces resultats n'equivalent pas a une qualification complete des logiciels natifs sur leur materiel cible. ScanGUI n'a pas ete valide avec GTKmm ni PostgreSQL dans cet environnement.
+## Tests automatisés
 
-## Tests interface
+- `node demos/tests/verify.mjs` : **10/10 PASS** (ancien module).
+- `node demos/tests/verify-games.mjs` : **PASS** (pièces, collisions, rotation, réserve, IA, évolution de la partie ; apprentissage XOR 1 et 2 couches, diminution de la perte et précision de test des scénarios fixes).
+- **Comparaison Tetris** : 180 actions avec la même graine et les mêmes contrôles, états successifs du plateau et du jeu identiques au programme natif, zéro divergence observée. Cela ne compare pas les IA native 3-ply et web 2-ply.
+- Test navigateur Chromium isolé : chargement WASM, jeu manuel clavier, IA, pause/reprise, reset, boutons tactiles, responsive sans débordement ; entraînement XOR et diminution de la perte (~0,734 à ~0,027 dans un scénario), passage entre les datasets, réglage des couches, visualisations et contrôles.
+- Contrôles du site : catalogue **8 projets** et filtre IA, accueil, navigation vers les nouvelles démos ; anciens scénarios navigateur conservés, absence d'erreurs JavaScript dans les scénarios parcourus.
 
-Un navigateur Chromium isole a teste la page en injectant les ressources locales en memoire : navigation entre les six ateliers, changement du contenu WASM, corruption/restauration CRC, authentification fictive MCPS, saturation FIFO et recherche maquette. Tous les scenarios ont fonctionne sans erreur JavaScript. L'interface est aussi verifiee en largeurs 1440 et 390 px.
+## Restrictions de qualification
 
-La navigation de Chromium directement vers un serveur localhost est bloquee par la politique de l'environnement de verification. Ces tests ne remplacent donc pas une verification finale sur l'URL publique GitHub Pages apres publication.
-
-## Publication
-
-Le projet reste 100% statique. Le ZIP livre contient la copie complete du portfolio enrichie : `index.html` est a la racine, `.nojekyll` est present, `demos/engine/labs.wasm` est livre. Il reste a copier les fichiers dans la branche de publication du depot GitHub, les pousser, puis controler les URL publiques.
-
-Aucune publication directe sur le depot GitHub n'a ete realisee : la connexion GitHub n'etait pas disponible.
+- Les deux modules sont des adaptations C++ sélectionnées, **pas des exécutables SDL2 ni des logiciels Linux entiers** exécutés dans le navigateur.
+- Pas de sockets TCP natifs, de serveur applicatif ni de multithreading natif dans GitHub Pages.
+- IA Tetris à deux coups d'anticipation au lieu de trois ; pas de mode versus LAN dans la page web.
+- Neural : génération des points et tracés par JavaScript et pseudo-aléatoire différent de l'original ; les résultats peuvent varier.
+- ScanGUI conserve son rôle de maquette HTML sur données fictives, sans GTK/PostgreSQL réels.
+- Le banc Chromium charge les fichiers locaux en mémoire ; la politique de son environnement ne permet pas la navigation directe vers un serveur `localhost`. **Un essai HTTP normal et une vérification sur GitHub Pages après `git push` restent nécessaires**.
+- Aucun accès en écriture au dépôt GitHub depuis ce travail, donc aucune publication distante attestée.

@@ -4,9 +4,9 @@
 
 Le portfolio présente Guillaume Lemonnier avec une orientation **C++ / Linux, systèmes et communications**. Il permet de passer d’une compétence à un projet, puis à une explication d’architecture et au dépôt source correspondant.
 
-L’accueil privilégie trois réalisations : station sol de télémétrie, serveur de commande et de supervision, enregistreur binaire. Les deux simulateurs de périphériques et ScanGUI complètent ce parcours. L’expérience de développement métier à l’ARS Normandie, la recherche et la formation sont présentées séparément des projets personnels C++.
+L’accueil privilégie trois réalisations : station sol de télémétrie, serveur de commande et de supervision, enregistreur binaire. Les deux simulateurs de périphériques, ScanGUI, Tetris AutoCPP et Neural Boundary Lab complètent ce parcours. L’expérience de développement métier à l’ARS Normandie, la recherche et la formation sont présentées séparément des projets personnels C++.
 
-Le périmètre de ce dépôt est celui du **site de présentation**. Les programmes C++, leurs dépendances, leur compilation et leurs suites de tests appartiennent aux dépôts GitHub associés. Leurs sources ne sont pas incluses ici. Les vidéos fournies ont été conservées ; les textes ne doivent pas les présenter comme une nouvelle qualification des programmes effectuée pendant la refonte du site.
+Le périmètre de ce dépôt est celui du **site de présentation**. Les programmes C++, leurs dépendances, leur compilation et leurs suites de tests appartiennent aux dépôts GitHub associés. Leurs sources natives originales ne sont pas incluses ici : seules les adaptations WebAssembly autonomes font partie du site. Les vidéos fournies ont été conservées ; les textes ne doivent pas les présenter comme une nouvelle qualification des programmes effectuée pendant la refonte du site.
 
 ## 2. Architecture statique
 
@@ -17,8 +17,8 @@ Chaque page contient directement son contenu, son en-tête et son pied de page. 
 | Élément | Responsabilité |
 | --- | --- |
 | `index.html` | Accueil, positionnement, sélection de projets, tableau de compétences et expérience. |
-| `src/html/projets.html` | Catalogue des six projets et accès aux rubriques complémentaires. |
-| `src/html/projet-*.html` | Six études de cas techniques. |
+| `src/html/projets.html` | Catalogue des huit projets et accès aux rubriques complémentaires. |
+| `src/html/projet-*.html` | Huit études de cas techniques. |
 | `src/html/cv.html` | Parcours et formation ; lien vers le nouveau CV PDF C++ / Linux. |
 | `src/html/recherche-emploi.html` | Projet professionnel C++ / Linux. |
 | `src/html/contact.html` | Moyens de contact et accès aux profils externes. |
@@ -61,13 +61,13 @@ Le fichier `src/js/script.js` apporte des améliorations progressives et active 
 | Schéma de télémétrie | Deux points animés illustrent le trajet du signal. Chaque animation dure 2,6 secondes et la seconde commence après 0,45 seconde : l’ensemble se termine après environ 3,05 secondes, sans répétition. |
 | Apparition au défilement | `IntersectionObserver` observe les blocs `data-reveal`. À leur première entrée dans la fenêtre, la classe `has-entered` déclenche une transition visuelle de 420 ms, puis le bloc cesse d’être observé. Le contenu reste visible avant ce déclenchement. |
 
-Sans JavaScript, les boutons de filtre restent masqués et les six projets sont visibles. La navigation demeure accessible. Les adresses et commandes restent du texte sélectionnable si la copie automatique n’est pas autorisée.
+Sans JavaScript, les boutons de filtre restent masqués et les huit projets sont visibles. La navigation demeure accessible. Les adresses et commandes restent du texte sélectionnable si la copie automatique n’est pas autorisée.
 
 Les animations sont désactivées avec `prefers-reduced-motion: reduce`. Si cette préférence est activée pendant la consultation, l’observation du défilement est arrêtée. À l’impression, les blocs sont entièrement visibles et les points animés du schéma sont masqués. L’absence d’`IntersectionObserver` laisse les blocs dans leur présentation normale. Cette seconde passe n’ajoute aucune dépendance.
 
 ## 5. Structure des études de cas
 
-Les six pages suivent un parcours commun pour faciliter la comparaison :
+Les huit pages suivent un parcours commun pour faciliter la comparaison :
 
 1. Présentation du projet et de son environnement technique.
 2. Enjeu traité.

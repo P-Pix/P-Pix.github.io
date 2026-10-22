@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Laboratoire C++ interactif : protocoles de telemetrie, CRC, supervision, files bornees et capteurs en WebAssembly.">
+  <meta name="description" content="Huit experiences C++ : protocoles, CRC, files bornees, Tetris jouable et apprentissage de reseau neuronal en WebAssembly.">
   <meta name="theme-color" content="#ffffff">
   <title>Laboratoire C++ interactif | Guillaume Lemonnier</title>
   <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
@@ -24,8 +24,8 @@
     <section class="lab-hero"><div class="shell">
       <nav class="lab-breadcrumb" aria-label="Fil d'Ariane"><a href="../index.html">Accueil</a><span>/</span><a href="../src/html/projets.html">Projets C++</a><span>/</span><strong>Laboratoire interactif</strong></nav>
       <div class="lab-hero-grid">
-        <div><p class="eyebrow">Experimentations dans le navigateur</p><h1>Du code C++.<br><span>Des preuves concr&egrave;tes.</span></h1><p class="lab-hero-lead">Explorez les trames binaires, injectez des erreurs, pilotez une machine d'&eacute;tat ou saturez une file d'&eacute;v&eacute;nements. Le coeur de cinq ateliers s'ex&eacute;cute en C++20 compil&eacute; en WebAssembly, sans serveur.</p><div class="lab-tags"><span>C++20</span><span>WebAssembly</span><span>CRC-32</span><span>Protocoles</span><span>Simulation</span></div></div>
-        <div class="engine-summary"><div class="engine-signal"><span class="signal-led" id="engine-led"></span><span id="engine-state" role="status" aria-live="polite">Initialisation du moteur C++...</span></div><strong>WASM / Navigateur</strong><p>Code natif port&eacute; en adaptateurs C++ sans appels syst&egrave;me Linux. Les sc&eacute;narios s'ex&eacute;cutent localement dans l'onglet.</p><div class="engine-mini"><span>5</span><small>Ateliers WASM</small><span>1</span><small>Maquette HTML</small></div></div>
+        <div><p class="eyebrow">Experimentations dans le navigateur</p><h1>Du code C++.<br><span>Des preuves concr&egrave;tes.</span></h1><p class="lab-hero-lead">Explorez les trames binaires, injectez des erreurs, pilotez une machine d'&eacute;tat ou saturez une file d'&eacute;v&eacute;nements. Cinq ateliers de protocoles et deux nouvelles exp&eacute;riences (Tetris, r&eacute;seau neuronal) utilisent du C++ compil&eacute; en WebAssembly, sans serveur.</p><div class="lab-tags"><span>C++20</span><span>WebAssembly</span><span>CRC-32</span><span>Protocoles</span><span>Simulation</span></div></div>
+        <div class="engine-summary"><div class="engine-signal"><span class="signal-led" id="engine-led"></span><span id="engine-state" role="status" aria-live="polite">Initialisation du moteur C++...</span></div><strong>WASM / Navigateur</strong><p>Code natif port&eacute; en adaptateurs C++ sans appels syst&egrave;me Linux. Les sc&eacute;narios s'ex&eacute;cutent localement dans l'onglet.</p><div class="engine-mini"><span>7</span><small>Moteurs WASM</small><span>1</span><small>Maquette HTML</small></div></div>
       </div>
     </div></section>
     <div class="shell lab-area">
@@ -36,7 +36,7 @@
         <button type="button" role="tab" class="lab-tab" data-demo="bus" aria-selected="false" aria-controls="panel-bus" id="tab-bus"><span class="lab-number">04</span><span><strong>Bus mat&eacute;riel Linux</strong><small>Trame LHBD / Capteurs</small></span><span class="tab-arrow">&#8594;</span></button>
         <button type="button" role="tab" class="lab-tab" data-demo="embedded" aria-selected="false" aria-controls="panel-embedded" id="tab-embedded"><span class="lab-number">05</span><span><strong>P&eacute;riph&eacute;rique embarqu&eacute;</strong><small>Trame EDDS / LE</small></span><span class="tab-arrow">&#8594;</span></button>
         <button type="button" role="tab" class="lab-tab" data-demo="scangui" aria-selected="false" aria-controls="panel-scangui" id="tab-scangui"><span class="lab-number">06</span><span><strong>ScanGUI</strong><small>Maquette d'interface</small></span><span class="tab-arrow">&#8594;</span></button>
-      </div><p class="side-footer">Chaque atelier contient un lien vers le projet C++ complet et sa documentation.</p></aside>
+      </div><div class="lab-more-demos"><p class="side-label">EXPERIENCES COMPLETES</p><a href="tetris/index.html"><span>07 / C++17 + IA</span><strong>Jouer &agrave; Tetris AutoCPP</strong><small>Clavier, score, pilote automatique &rarr;</small></a><a href="neural/index.html"><span>08 / MLP + SGD</span><strong>Neural Boundary Lab</strong><small>Entra&icirc;nement et fronti&egrave;re 2D &rarr;</small></a></div><p class="side-footer">Sept d&eacute;monstrations ex&eacute;cutent du C++ en WebAssembly, et ScanGUI pr&eacute;sente un parcours HTML illustratif.</p></aside>
       <div class="lab-workspace">
         <div class="lab-toolbar"><div><span class="live-tag"><span class="live-pulse"></span> EXECUTION LOCALE</span><span class="runtime-label" id="runtime-label">Moteur : chargement...</span></div><a href="../src/html/projets.html" class="toolbar-back">Voir tous les projets &#8599;</a></div>
         <div id="wasm-error" class="lab-error" role="alert" hidden></div>
@@ -89,7 +89,7 @@
         </section>
       </div>
     </div>
-    <div class="shell lab-technical"><div><p class="eyebrow">A propos de cette demonstration</p><h2>Des limites annonc&eacute;es.<br>Du code v&eacute;rifiable.</h2></div><p>Ces modules WASM r&eacute;impl&eacute;mentent des chemins limit&eacute;s et document&eacute;s des protocoles des projets originaux, avec le m&ecirc;me format d'octets et le m&ecirc;me CRC-32. Les composants Linux (sockets, threads, bases de donn&eacute;es, GTK) restent dans les applications natives. <a href="../demos/README.md">Architecture et proc&eacute;dure de compilation &#8599;</a></p></div>
+    <div class="shell lab-technical"><div><p class="eyebrow">A propos de cette demonstration</p><h2>Des limites annonc&eacute;es.<br>Du code v&eacute;rifiable.</h2></div><p>Les modules WASM adaptent des composants des projets C++ : formats binaires, r&egrave;gles de jeu et calculs neuronaux. Chaque atelier explicite ce qui a &eacute;t&eacute; port&eacute; et ce qui reste natif. Les composants Linux (sockets, threads, bases de donn&eacute;es, GTK) restent dans les applications natives. <a href="../demos/README.md">Architecture et proc&eacute;dure de compilation &#8599;</a></p></div>
   </main>
   <footer class="site-footer"><div class="shell footer-inner"><div><strong>Guillaume Lemonnier</strong><p>Developpement logiciel &middot; C++ / Linux</p></div><div class="footer-links"><a href="../src/html/projets.html">Projets</a><a href="https://github.com/P-Pix" target="_blank" rel="noopener noreferrer">GitHub &#8599;</a><a href="../src/html/contact.html">Contact</a></div><p>&copy; 2026 &middot; Caen, France</p></div></footer>
 </body>

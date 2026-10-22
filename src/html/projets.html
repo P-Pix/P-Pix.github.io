@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Six projets personnels C++ et Linux de Guillaume Lemonnier : télémétrie, TCP, concurrence, journaux binaires, périphériques simulés et application native.">
+  <meta name="description" content="Huit projets personnels C++ et Linux de Guillaume Lemonnier : télémétrie, TCP, concurrence, journaux binaires, périphériques simulés et application native.">
   <meta name="theme-color" content="#ffffff">
   <title>Projets C++ & Linux — Guillaume Lemonnier</title>
   <link rel="canonical" href="https://p-pix.github.io/src/html/projets.html">
@@ -20,21 +20,21 @@
   </div></header>
   <main id="contenu">
     <section class="hero page-hero"><div class="shell hero-grid">
-      <div><nav class="breadcrumbs" aria-label="Fil d’Ariane"><a href="../../index.html">Accueil</a><span aria-hidden="true">/</span><span aria-current="page">Projets C++</span></nav><p class="eyebrow">Portfolio technique</p><h1>Projets C++.<br><span>Du flux au logiciel.</span></h1><p class="hero-summary">Réseau, protocole, concurrence, stockage et interface native : six projets personnels pour explorer les différentes couches d’un système logiciel sous Linux.</p><div class="hero-stack"><span>C++20</span><span>Linux / POSIX</span><span>CMake / CTest</span><span>Code &amp; documentation</span></div></div>
+      <div><nav class="breadcrumbs" aria-label="Fil d’Ariane"><a href="../../index.html">Accueil</a><span aria-hidden="true">/</span><span aria-current="page">Projets C++</span></nav><p class="eyebrow">Portfolio technique</p><h1>Projets C++.<br><span>Du flux au logiciel.</span></h1><p class="hero-summary">Réseau, protocole, concurrence, stockage et interface native : huit projets personnels pour explorer les différentes couches d’un système logiciel sous Linux.</p><div class="hero-stack"><span>C++20</span><span>Linux / POSIX</span><span>CMake / CTest</span><span>Code &amp; documentation</span></div></div>
       <aside class="catalog-summary"><p class="eyebrow">Par où commencer ?</p><h2>La station sol de télémétrie</h2><p>Elle réunit les sujets au cœur de mon orientation : réception TCP/UDP, contrôle des trames, décodage concurrent et exploitation des données.</p><a class="text-link" href="projet-telemetrie.html">Découvrir ce projet <span aria-hidden="true">→</span></a></aside>
     </div></section>
     <section class="section" id="catalogue"><div class="shell">
       <div class="section-heading"><div><p class="eyebrow">Études de cas</p><h2>Choisir un sujet technique.</h2></div><p>Chaque page présente le contexte, l’architecture, les décisions, une démonstration et le périmètre du projet, avec un accès au dépôt source.</p></div>
-      <div class="lab-launch-panel lab-launch-catalog"><div><span class="lab-launch-eyebrow">NOUVEAU / DEMOS EXECUTABLES</span><h3>Un laboratoire C++ dans votre navigateur.</h3><p>5 ateliers WebAssembly + 1 maquette d'interface. Formats binaires, CRC, commande, supervision et files bornees.</p></div><a class="button button-primary" href="../../demos/index.html?demo=telemetry">Lancer les demonstrations &#8599;</a></div>
+      <div class="lab-launch-panel lab-launch-catalog"><div><span class="lab-launch-eyebrow">NOUVEAU / DEMOS EXECUTABLES</span><h3>Un laboratoire C++ dans votre navigateur.</h3><p>7 moteurs WebAssembly + 1 maquette d'interface. Formats binaires, CRC, commande, supervision et files bornees.</p></div><a class="button button-primary" href="../../demos/index.html?demo=telemetry">Lancer les demonstrations &#8599;</a></div>
       <div class="filter-toolbar">
         <div class="project-filters" role="group" aria-label="Filtrer les projets par domaine" data-project-filters hidden>
           <button class="filter-button" type="button" data-filter="tous" aria-pressed="true" aria-controls="project-list">Tous les projets</button>
           <button class="filter-button" type="button" data-filter="reseau" aria-pressed="false" aria-controls="project-list">Réseau &amp; spatial</button>
           <button class="filter-button" type="button" data-filter="concurrence" aria-pressed="false" aria-controls="project-list">Concurrence</button>
           <button class="filter-button" type="button" data-filter="bas-niveau" aria-pressed="false" aria-controls="project-list">Bas niveau</button>
-          <button class="filter-button" type="button" data-filter="interfaces" aria-pressed="false" aria-controls="project-list">Interfaces &amp; données</button>
+          <button class="filter-button" type="button" data-filter="interfaces" aria-pressed="false" aria-controls="project-list">Interfaces &amp; données</button><button class="filter-button" type="button" data-filter="ia" aria-pressed="false" aria-controls="project-list">Simulation &amp; IA</button>
         </div>
-        <p class="project-count" role="status" aria-live="polite" aria-atomic="true" data-project-count>6 projets présentés</p>
+        <p class="project-count" role="status" aria-live="polite" aria-atomic="true" data-project-count>8 projets présentés</p>
       </div>
       <div class="all-projects" id="project-list">
         <article class="project-list-card" data-project data-categories="reseau concurrence bas-niveau">
@@ -54,6 +54,12 @@
         </article>
         <article class="project-list-card" data-project data-categories="interfaces">
           <span class="project-number">06 / INTERFACE NATIVE</span><h2><a href="projet-scangui.html">ScanGUI · application C++ / GTK</a></h2><p>Interface native, modes local/API/hors ligne, serveur HTTP C++ et PostgreSQL. Une architecture organisée autour des sources de données.</p><ul class="tag-list"><li>GTKmm</li><li>API HTTP</li><li>PostgreSQL</li></ul><div class="project-actions"><a class="text-link" href="projet-scangui.html">Étude de cas <span aria-hidden="true">→</span></a><a class="source-link" href="https://github.com/P-Pix/ScanGUI" target="_blank" rel="noopener noreferrer" aria-label="Code source de ScanGUI sur GitHub">Code ↗</a><a class="lab-inline-link" href="../../demos/index.html?demo=scangui">Demo interactive &#8599;</a></div>
+        </article>
+        <article class="project-list-card" data-project data-categories="ia interfaces">
+          <span class="project-number">07 / SIMULATION &amp; IA</span><h2><a href="projet-tetris.html">Tetris AutoCPP · SDL2 &amp; IA</a></h2><p>Moteur de jeu C++17 indépendant du rendu, génération de pièces reproductible, IA heuristique et mode versus LAN dans la version native.</p><ul class="tag-list"><li>SDL2</li><li>C++17</li><li>Recherche IA</li><li>LAN</li></ul><div class="project-actions"><a class="text-link" href="projet-tetris.html">Étude de cas →</a><a class="lab-inline-link" href="../../demos/tetris/index.html">Jouer en WASM ↗</a></div>
+        </article>
+        <article class="project-list-card" data-project data-categories="ia interfaces">
+          <span class="project-number">08 / RÉSEAUX NEURONAUX</span><h2><a href="projet-neural.html">Neural Boundary Lab · apprentissage 2D</a></h2><p>Réseau MLP entraîné en C++17 avec rétropropagation, mini-batches et visualisation interactive de la frontière de décision.</p><ul class="tag-list"><li>Backpropagation</li><li>Classification</li><li>SDL2</li><li>WASM</li></ul><div class="project-actions"><a class="text-link" href="projet-neural.html">Étude de cas →</a><a class="lab-inline-link" href="../../demos/neural/index.html">Entraîner le réseau ↗</a></div>
         </article>
       </div>
     </div></section>
