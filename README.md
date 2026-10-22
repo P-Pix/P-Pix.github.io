@@ -6,12 +6,29 @@ La refonte du 21 octobre 2026 privilégie une lecture professionnelle : dominant
 
 Le schéma de télémétrie reçoit une animation illustrative courte, terminée après environ **3,05 secondes**. Certains blocs bénéficient d’une apparition ponctuelle au défilement avec `IntersectionObserver`. Le contenu reste visible par défaut, y compris sans JavaScript ; la préférence de réduction des animations et l’impression sont respectées. Ces ajustements n’ajoutent aucune dépendance.
 
+## Laboratoire C++ interactif (22 octobre 2026)
+
+[**Lancer le laboratoire**](demos/index.html?demo=telemetry) - cinq ateliers executes par un module WebAssembly compile depuis du C++20, et une maquette illustrative ScanGUI :
+
+- STGS : construire, controler, corrompre et restaurer une trame de telemetrie.
+- MCPS : tester CONNECT/AUTH, les droits et les modes d'une session fictive.
+- HPBLR : visualiser la saturation d'une file circulaire, en `try_push` non bloquant (ce n'est pas le writer natif).
+- LHBD et EDDS : inspecter des trames big-endian/little-endian avec leur CRC-32.
+- ScanGUI : parcourir une maquette HTML avec donnees inventees (pas de GTK ni de PostgreSQL).
+
+Le laboratoire est **precompile et directement publiable sur GitHub Pages**. Pour le tester sur votre poste, utiliser `python3 -m http.server 8000` a la racine du site, puis ouvrir `http://localhost:8000/demos/`. Le simple double-clic sur le fichier HTML (`file://`) est insuffisant pour charger le WASM.
+
+Les modules n'embarquent pas la totalite des projets natifs : le fichier [`demos/README.md`](demos/README.md) precise les chemins de code portes, les limitations et les tests. L'adaptateur C++20 inclus dans `demos/engine/labs.cpp` est distinct des sources originales, qui restent accessibles dans leurs depots.
+
+**Tetris SDL2 non integre :** l'archive recue ne contient que des dossiers vides, sans `.cpp` ni `.hpp` a compiler.
+
 ## Parcours de lecture
 
 | Page | Contenu |
 | --- | --- |
 | [Accueil](index.html) | Positionnement C++/Linux, trois projets prioritaires, compétences reliées au code, expérience et contacts. |
 | [Projets C++](src/html/projets.html) | Six études de cas avec filtres par domaine et accès aux autres réalisations. |
+| [Laboratoire C++ interactif](demos/index.html) | Cinq ateliers WebAssembly et une maquette ScanGUI. |
 | [Parcours](src/html/cv.html) | Expérience ARS, recherche au GREYC, développement scientifique au CERMN et formation. |
 | [Projet professionnel](src/html/recherche-emploi.html) | Orientation vers le développement C++ sous Linux pour le spatial et les télécommunications. |
 | [Contact](src/html/contact.html) | Adresse e-mail, copie de l’adresse, GitHub, LinkedIn et CV. |
@@ -31,7 +48,7 @@ La sélection principale donne la priorité à la station de télémétrie, au s
 
 Chaque page présente le contexte, l’architecture, les décisions, une démonstration, le périmètre et le lien vers le dépôt source. Les mentions de simulation et les limites techniques sont explicites.
 
-**Les sources C++ sont dans les dépôts GitHub associés ; elles ne font pas partie de cette archive du site.** La refonte porte sur le portfolio. Les vidéos et posters fournis dans `assets/demos/` ont été conservés : leur présence ne constitue pas une nouvelle compilation ou exécution des projets pendant cette refonte. Les mesures affichées dans un extrait correspondent à cet extrait, avec ses limites de contexte.
+**Les projets natifs C++ complets sont dans les dépôts GitHub associés ; ils ne font pas partie de cette archive du site.** Un adaptateur C++20 propre aux démonstrations WebAssembly est maintenant livré dans `demos/engine/labs.cpp`. La refonte porte sur le portfolio. Les vidéos et posters fournis dans `assets/demos/` ont été conservés : leur présence ne constitue pas une nouvelle compilation ou exécution des projets pendant cette refonte. Les mesures affichées dans un extrait correspondent à cet extrait, avec ses limites de contexte.
 
 ## Ouvrir le site localement
 
@@ -67,9 +84,9 @@ Les démonstrations historiques chargent également **Leaflet, Plotly et des fon
 
 1. Décompresser l’archive.
 2. Copier **le contenu du dossier `P-Pix.github.io-main` à la racine du dépôt `P-Pix.github.io`**. Le fichier `index.html` doit se trouver directement à cette racine, accompagné de `src/`, `assets/`, du JSON budgétaire et des autres fichiers fournis.
-3. Conserver le fichier **`.nojekyll`**, inclus dans la livraison, pour une publication statique sans traitement Jekyll.
+3. Conserver le fichier **`.nojekyll`**, inclus dans cette livraison, pour une publication statique sans traitement Jekyll.
 4. Enregistrer les changements dans la branche choisie et configurer GitHub Pages pour publier son répertoire racine `/`.
-5. Après publication, vérifier l’accueil, les six études de cas, le CV, les contacts et les démonstrations de données.
+5. Après publication, vérifier l’accueil, les six études de cas, le laboratoire `demos/`, le CV, les contacts et les démonstrations de données.
 
 Ne pas créer un niveau supplémentaire `P-Pix.github.io/P-Pix.github.io-main/` lors de la copie : les fichiers du site doivent être au niveau de publication.
 
@@ -85,6 +102,7 @@ Les URL canoniques et les métadonnées de partage ciblent `https://p-pix.github
 | `src/js/budget-cuclm-updated.js` | Vue budgétaire, filtres fonction/type, carte, graphiques et réinitialisation. |
 | `src/js/carte-twisto.js`, `src/js/marches-caen.js` | Fonctionnement des cartes historiques. |
 | `assets/demos/` | Vidéos et posters fournis. |
+| `demos/` | Laboratoire C++ avec page interactive, moteur `.wasm`, adaptateurs C++20 et tests. |
 | `assets/images/` | Portrait, images existantes et favicon. |
 | `assets/pdf/cv-cpp-linux.pdf` | CV C++ / Linux proposé par les boutons du portfolio. |
 | `assets/pdf/cv.pdf` | Ancien CV conservé à titre d’archive, sans mise en avant dans le site. |

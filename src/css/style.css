@@ -561,3 +561,12 @@ pre code { padding: 0; background: transparent; color: inherit; overflow-wrap: n
   video { max-height: 180px; }
   a { color: #17385e; }
 }
+
+/* WebAssembly laboratory entry points; match existing blue/white editorial system. */
+.lab-launch-panel{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:22px 27px;margin-bottom:31px;border:1px solid #caddef;border-left:3px solid #397fc1;background:linear-gradient(120deg,#f0f6fe,#fafcff)}
+.lab-launch-panel>div{flex:1;min-width:0}.lab-launch-eyebrow{font:.65rem ui-monospace,Consolas,monospace;letter-spacing:.08em;color:#3377b4;font-weight:700}.lab-launch-panel h3{font-size:1.16rem;line-height:1.45;margin:5px 0 3px;letter-spacing:-.015em}.lab-launch-panel p{margin:0;font-size:.77rem;line-height:1.7;color:#63768b;max-width:650px}.lab-launch-panel>a{white-space:nowrap;flex:none}
+.lab-launch-catalog{margin:0 0 25px}
+.lab-inline-link{font-size:.74rem;font-weight:700;color:#245f98;text-decoration:none;border-bottom:1px solid #9ebdde;padding-bottom:2px}.lab-inline-link:hover{color:#173f6b;background:#ecf3fa}
+.demo-live-link{display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap;border:1px solid #cbdff3;border-left:3px solid #2d78b7;background:#f4f9ff;padding:17px 20px;margin:23px 0}
+.demo-live-link>div{flex:1 1 260px}.demo-live-link span{display:block;color:#377db6;font:.63rem ui-monospace,Consolas,monospace;letter-spacing:.08em;margin-bottom:6px}.demo-live-link strong{display:block;font-size:.91rem;color:#243d58}.demo-live-link p{margin:5px 0 0;font-size:.72rem;line-height:1.62;color:#718095}.demo-live-link .button{flex:none}
+@media(max-width:760px){.lab-launch-panel{align-items:flex-start;flex-direction:column;gap:15px;padding:18px}.lab-launch-panel>a{white-space:normal}.demo-live-link{align-items:flex-start;flex-direction:column}.demo-live-link a{width:100%}}
